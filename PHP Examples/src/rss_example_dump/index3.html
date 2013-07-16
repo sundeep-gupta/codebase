@@ -1,0 +1,90 @@
+<html> <head> <title>Ajax RSS Reader</title>
+<style>
+body { font-family: arial, verdana, sans-serif; }
+.title { font-size: 14pt; border-bottom: 1px solid black; }
+.title a { text-decoration: none; }
+.title a:hover { text-decoration: none; }
+.title a:visited { text-decoration: none; }
+.title a:active { text-decoration: none; }
+.title a:link { text-decoration: none; }
+.description { font-size: 9pt; margin-left: 20px; }
+</style>
+<script>
+var g_homeDirectory = 'http://localhost/rss/';
+
+var req = null;
+function processReqChange( handler ) { ...  }
+
+function loadXMLDoc( url, handler ) { ...  }
+
+function parseFeed( dom ) {
+  var ela = document.getElementById( 'elArticles' );
+  ela.innerHTML = '';
+
+  var elTable = document.createElement( 'table' );
+  var elTBody = document.createElement( 'tbody' );
+  elTable.appendChild( elTBody );
+
+  var nl = req.responseXML.getElementsByTagName( 'article' );
+  for( var i = 0; i < nl.length; i++ ) {
+    var nli = nl.item( i );
+    var title = nli.getAttribute( 'title' );
+    var link = nli.getAttribute( 'link' );
+    var description = nli.firstChild.nodeValue;
+
+    var elTR = document.createElement( 'tr' );
+    elTBody.appendChild( elTR );
+
+    var elTD = document.createElement( 'td' );
+    elTR.appendChild( elTD );
+
+    var elTitle = document.createElement( 'h1' );
+    elTitle.className = 'title';
+    elTD.appendChild( elTitle );
+
+    var elTitleLink = document.createElement( 'a' );
+    elTitleLink.href = link;
+    elTitleLink.innerHTML = title;
+    elTitleLink.target = '_blank';
+    elTitle.appendChild( elTitleLink );
+
+    var elDescription = document.createElement( 'p' );
+    elDescription.className = 'description';
+    elDescription.innerHTML = description;
+    elTD.appendChild( elDescription );
+  }
+
+  ela.appendChild( elTable );
+}
+
+function parseFeedList( dom ) {
+  var elfl = document.getElementById( 'elFeedList' );
+  elfl.innerHTML = '';
+
+  var nl = req.responseXML.getElementsByTagName( 'feed' );
+  var firstId = null;
+  for( var i = 0; i < nl.length; i++ ) {
+    var nli = nl.item( i );
+    var id = nli.getAttribute( 'id' );
+    var link = nli.getAttribute( 'link' );
+    var name = nli.getAttribute( 'name' );
+
+    var elOption = document.createElement( 'option' );
+    elOption.value = id;
+    elOption.innerHTML = name;
+    elfl.appendChild( elOption );
+
+    if ( firstId == null ) firstId = id;
+  }
+  loadFeed( firstId );
+}
+
+function loadFeed( id ) { loadXMLDoc( g_homeDirectory+'read.php?id='+id, parseFeed ); }
+
+function getFeedList() { loadXMLDoc( g_homeDirectory+'list.php', parseFeedList ); }
+</script> </head> <body> <div style="width:600px;">
+<select id="elFeedList" 
+  onchange="loadFeed( this.options[this.selectedIndex].value )"> </select>
+<div id="elArticles"> </div>
+<script> getFeedList(); </script>
+</div> </body> </html>

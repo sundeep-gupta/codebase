@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Account Management MAT Test Suite" verbose="2" >
+	<listeners>  
+        <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.ExecutionInterceptor" /> 
+    </listeners>  
+    
+    <test name="Registration Home Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationAndDownloadHomePageTest"/>
+			<methods>
+				<include name="testRegistrationUrlPage" />
+			</methods>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationLicensePageTest"/>
+			<methods>
+				<include name="testRegistrationLicensePage" />
+			</methods>
+						<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDetailsPageTest"></class>
+			<methods>
+				<include name="testEnterDetailsPage" />
+			</methods>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDeclineCancelTest"/>
+			<methods>
+				<include name="testCancel" />
+			</methods>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDeclineReturnTest"/>
+			<methods>
+				<include name="testReturn" />
+			</methods>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDetailsRequiredFieldsTest"/>
+			<methods>
+				<include name="testRequiredFields" />
+			</methods>
+						<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegisterLDAPTest"/>
+			<methods>
+				<include name="testEnterDetailsandDownload" />
+			</methods>
+	   </classes>
+    </test> 
+    
+    
+</suite>
+
+

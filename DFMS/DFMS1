@@ -1,0 +1,18 @@
+
+
+D:\temp\>dir 
+tempvt.exe	file   shown    992936160000   28672
+dheeraj1.txt	file   shown    1110957638000   80
+sai.txt	file   shown    1110957716000   73
+avinash1.txt	file   shown    1110957782000   108
+temp1	dir    shown    1110957790000   0
+sai1.txt	file   shown    1110958220000   108
+avi.txt	file   shown    1110958580000   0
+temp2	dir    shown    1110958804000   0
+D:\temp\>display dheeraj.txt 
+No such file or directory
+D:\temp\>copy dheeraj1.txt sai1.txt 
+File or directory named "sai1.txt" already exists
+D:\temp\>copy dheeraj1.txt sai2.txt 
+
+D:\temp\> 

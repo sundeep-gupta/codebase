@@ -1,0 +1,85 @@
+#############################################################################
+#This script related variables
+#############################################################################
+#Shell command to run after one test script is over
+CommandOnTestOver = reboot
+
+MainScriptpath = `dirname $0`
+
+### Counter filename
+CounterFile = counter
+
+ReportFile = perfresult.txt
+
+### Set this config to 1 if the test is not being run for factory settings
+#change_pref = 0 
+
+### Set the config to run the scan for Read=1, Write=2, Always=3
+#Scan_Config = 3
+
+### Set the counter which indicates no. of times perf_test.command script is to be run
+counter = 1 
+
+#############################################################################
+#Set Perl Script names to be run as given below
+- oas-clean oas-mixed ods-clean ods-mixed applaunch appusage time ss_time
+#############################################################################
+
+list_of_scripts = applaunch appusage 
+
+#############################################################################
+#Pass the type of dataset to be scanned as follows:
+# clean, mixed, clean_mixed/mixed_clean
+#############################################################################
+
+#Scan_Type = clean_mixed
+
+
+#############################################################################
+#Dataset for ODS
+ODS_CleanDatasetPath= /Volumes/DATA/PSS_DATASET/ods/clean/ 
+ODS_MixedDatasetPath= /Volumes/DATA/PSS_DATASET/ods/mixed/ 
+#Dataset for OAS
+OAS_CleanDatasetPath= /Volumes/DATA/PSS_DATASET/oas/clean/ 
+OAS_MixedDatasetPath= /Volumes/DATA/PSS_DATASET/oas/mixed/ 
+
+#############################################################################
+#Virex Application related Information.
+#############################################################################
+
+VirexApplication = /Applications/VirusScan.app
+VirexLogPath = /var/log/VirusScan.log
+VirexLauncherPath = /usr/local/vscanx/VShieldTaskManager
+VirexTaskDb = /Volumes/Data/ssm_perf/Includes/VSMacDatabase.db
+VirexTaskID = 1 
+
+#############################################################################
+#Application Protection related configs
+#############################################################################
+
+package = full 
+
+# Specify the type of tests that are to be test
+runs = scp,firefox-http,safari-http,firefox-ftp
+ 
+scp_destination = 
+scp_files = /Volumes/DATA/ssm_perf/test_download_1.zip,/Volumes/DATA/ssm_perf/test_download_2.zip
+http_destination = 
+http_firefox_username = root
+
+download_file = test_download_1.zip
+
+ftp_destination = 
+ftp_username =
+ftp_password = 
+
+# Make sure the path specified below is same as the one specified in browsers (Safari & Firefox)
+download_file_path = /Volumes/DATA/
+
+safari_cmd = open /Applications/Safari.app/
+firefox_cmd = /Applications/Firefox.app/Contents/MacOS/firefox-bin
+
+#############################################################################
+#Over
+#############################################################################
+

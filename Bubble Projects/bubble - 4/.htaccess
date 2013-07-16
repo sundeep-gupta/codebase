@@ -1,0 +1,4 @@
+#RewriteLog test.log
+RewriteEngine on
+RewriteRule ^/prj1/index.html$ /prj1/controller.php?page=index
+

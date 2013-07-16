@@ -1,0 +1,632 @@
+core file size        (blocks, -c) 0
+data seg size         (kbytes, -d) unlimited
+file size             (blocks, -f) unlimited
+max locked memory     (kbytes, -l) unlimited
+max memory size       (kbytes, -m) unlimited
+open files                    (-n) 4096
+pipe size          (512 bytes, -p) 8
+stack size            (kbytes, -s) 126
+cpu time             (seconds, -t) unlimited
+max user processes            (-u) 4087
+virtual memory        (kbytes, -v) unlimited
+------------------------------------------------------------
+Client connecting to 30.30.20.76, TCP port 5001
+TCP window size: 16.0 KByte (default)
+------------------------------------------------------------
+[302] local 20.20.20.36 port 52378 connected with 30.30.20.76 port 5001
+[  3] local 20.20.20.36 port 52079 connected with 30.30.20.76 port 5001
+[  4] local 20.20.20.36 port 52080 connected with 30.30.20.76 port 5001
+[  5] local 20.20.20.36 port 52081 connected with 30.30.20.76 port 5001
+[  6] local 20.20.20.36 port 52082 connected with 30.30.20.76 port 5001
+[  7] local 20.20.20.36 port 52083 connected with 30.30.20.76 port 5001
+[  8] local 20.20.20.36 port 52084 connected with 30.30.20.76 port 5001
+[  9] local 20.20.20.36 port 52085 connected with 30.30.20.76 port 5001
+[ 10] local 20.20.20.36 port 52086 connected with 30.30.20.76 port 5001
+[ 11] local 20.20.20.36 port 52087 connected with 30.30.20.76 port 5001
+[ 12] local 20.20.20.36 port 52088 connected with 30.30.20.76 port 5001
+[ 13] local 20.20.20.36 port 52089 connected with 30.30.20.76 port 5001
+[ 14] local 20.20.20.36 port 52090 connected with 30.30.20.76 port 5001
+[ 15] local 20.20.20.36 port 52091 connected with 30.30.20.76 port 5001
+[ 16] local 20.20.20.36 port 52092 connected with 30.30.20.76 port 5001
+[ 17] local 20.20.20.36 port 52093 connected with 30.30.20.76 port 5001
+[ 18] local 20.20.20.36 port 52094 connected with 30.30.20.76 port 5001
+[ 19] local 20.20.20.36 port 52095 connected with 30.30.20.76 port 5001
+[ 20] local 20.20.20.36 port 52096 connected with 30.30.20.76 port 5001
+[ 21] local 20.20.20.36 port 52097 connected with 30.30.20.76 port 5001
+[ 22] local 20.20.20.36 port 52098 connected with 30.30.20.76 port 5001
+[ 23] local 20.20.20.36 port 52099 connected with 30.30.20.76 port 5001
+[ 24] local 20.20.20.36 port 52100 connected with 30.30.20.76 port 5001
+[ 25] local 20.20.20.36 port 52101 connected with 30.30.20.76 port 5001
+[ 26] local 20.20.20.36 port 52102 connected with 30.30.20.76 port 5001
+[ 27] local 20.20.20.36 port 52103 connected with 30.30.20.76 port 5001
+[ 28] local 20.20.20.36 port 52104 connected with 30.30.20.76 port 5001
+[ 29] local 20.20.20.36 port 52105 connected with 30.30.20.76 port 5001
+[ 30] local 20.20.20.36 port 52106 connected with 30.30.20.76 port 5001
+[ 31] local 20.20.20.36 port 52107 connected with 30.30.20.76 port 5001
+[ 32] local 20.20.20.36 port 52108 connected with 30.30.20.76 port 5001
+[ 33] local 20.20.20.36 port 52109 connected with 30.30.20.76 port 5001
+[ 34] local 20.20.20.36 port 52110 connected with 30.30.20.76 port 5001
+[ 35] local 20.20.20.36 port 52111 connected with 30.30.20.76 port 5001
+[ 36] local 20.20.20.36 port 52112 connected with 30.30.20.76 port 5001
+[ 37] local 20.20.20.36 port 52113 connected with 30.30.20.76 port 5001
+[ 38] local 20.20.20.36 port 52114 connected with 30.30.20.76 port 5001
+[ 39] local 20.20.20.36 port 52115 connected with 30.30.20.76 port 5001
+[ 40] local 20.20.20.36 port 52116 connected with 30.30.20.76 port 5001
+[ 41] local 20.20.20.36 port 52117 connected with 30.30.20.76 port 5001
+[ 42] local 20.20.20.36 port 52118 connected with 30.30.20.76 port 5001
+[ 43] local 20.20.20.36 port 52119 connected with 30.30.20.76 port 5001
+[ 44] local 20.20.20.36 port 52120 connected with 30.30.20.76 port 5001
+[ 45] local 20.20.20.36 port 52121 connected with 30.30.20.76 port 5001
+[ 46] local 20.20.20.36 port 52122 connected with 30.30.20.76 port 5001
+[ 47] local 20.20.20.36 port 52123 connected with 30.30.20.76 port 5001
+[ 48] local 20.20.20.36 port 52124 connected with 30.30.20.76 port 5001
+[ 49] local 20.20.20.36 port 52125 connected with 30.30.20.76 port 5001
+[ 50] local 20.20.20.36 port 52126 connected with 30.30.20.76 port 5001
+[ 51] local 20.20.20.36 port 52127 connected with 30.30.20.76 port 5001
+[ 52] local 20.20.20.36 port 52128 connected with 30.30.20.76 port 5001
+[ 53] local 20.20.20.36 port 52129 connected with 30.30.20.76 port 5001
+[ 54] local 20.20.20.36 port 52130 connected with 30.30.20.76 port 5001
+[ 55] local 20.20.20.36 port 52131 connected with 30.30.20.76 port 5001
+[ 56] local 20.20.20.36 port 52132 connected with 30.30.20.76 port 5001
+[ 57] local 20.20.20.36 port 52133 connected with 30.30.20.76 port 5001
+[ 58] local 20.20.20.36 port 52134 connected with 30.30.20.76 port 5001
+[ 59] local 20.20.20.36 port 52135 connected with 30.30.20.76 port 5001
+[ 60] local 20.20.20.36 port 52136 connected with 30.30.20.76 port 5001
+[ 61] local 20.20.20.36 port 52137 connected with 30.30.20.76 port 5001
+[ 62] local 20.20.20.36 port 52138 connected with 30.30.20.76 port 5001
+[ 63] local 20.20.20.36 port 52139 connected with 30.30.20.76 port 5001
+[ 64] local 20.20.20.36 port 52140 connected with 30.30.20.76 port 5001
+[ 65] local 20.20.20.36 port 52141 connected with 30.30.20.76 port 5001
+[ 66] local 20.20.20.36 port 52142 connected with 30.30.20.76 port 5001
+[ 67] local 20.20.20.36 port 52143 connected with 30.30.20.76 port 5001
+[ 68] local 20.20.20.36 port 52144 connected with 30.30.20.76 port 5001
+[ 69] local 20.20.20.36 port 52145 connected with 30.30.20.76 port 5001
+[ 70] local 20.20.20.36 port 52146 connected with 30.30.20.76 port 5001
+[ 71] local 20.20.20.36 port 52147 connected with 30.30.20.76 port 5001
+[ 72] local 20.20.20.36 port 52148 connected with 30.30.20.76 port 5001
+[ 73] local 20.20.20.36 port 52149 connected with 30.30.20.76 port 5001
+[ 74] local 20.20.20.36 port 52150 connected with 30.30.20.76 port 5001
+[ 75] local 20.20.20.36 port 52151 connected with 30.30.20.76 port 5001
+[ 76] local 20.20.20.36 port 52152 connected with 30.30.20.76 port 5001
+[ 77] local 20.20.20.36 port 52153 connected with 30.30.20.76 port 5001
+[ 78] local 20.20.20.36 port 52154 connected with 30.30.20.76 port 5001
+[ 79] local 20.20.20.36 port 52155 connected with 30.30.20.76 port 5001
+[ 80] local 20.20.20.36 port 52156 connected with 30.30.20.76 port 5001
+[ 81] local 20.20.20.36 port 52157 connected with 30.30.20.76 port 5001
+[ 82] local 20.20.20.36 port 52158 connected with 30.30.20.76 port 5001
+[ 83] local 20.20.20.36 port 52159 connected with 30.30.20.76 port 5001
+[ 84] local 20.20.20.36 port 52160 connected with 30.30.20.76 port 5001
+[ 85] local 20.20.20.36 port 52161 connected with 30.30.20.76 port 5001
+[ 86] local 20.20.20.36 port 52162 connected with 30.30.20.76 port 5001
+[ 87] local 20.20.20.36 port 52163 connected with 30.30.20.76 port 5001
+[ 88] local 20.20.20.36 port 52164 connected with 30.30.20.76 port 5001
+[ 89] local 20.20.20.36 port 52165 connected with 30.30.20.76 port 5001
+[ 90] local 20.20.20.36 port 52166 connected with 30.30.20.76 port 5001
+[ 91] local 20.20.20.36 port 52167 connected with 30.30.20.76 port 5001
+[ 92] local 20.20.20.36 port 52168 connected with 30.30.20.76 port 5001
+[ 93] local 20.20.20.36 port 52169 connected with 30.30.20.76 port 5001
+[ 94] local 20.20.20.36 port 52170 connected with 30.30.20.76 port 5001
+[ 95] local 20.20.20.36 port 52171 connected with 30.30.20.76 port 5001
+[ 96] local 20.20.20.36 port 52172 connected with 30.30.20.76 port 5001
+[ 97] local 20.20.20.36 port 52173 connected with 30.30.20.76 port 5001
+[ 98] local 20.20.20.36 port 52174 connected with 30.30.20.76 port 5001
+[ 99] local 20.20.20.36 port 52175 connected with 30.30.20.76 port 5001
+[100] local 20.20.20.36 port 52176 connected with 30.30.20.76 port 5001
+[101] local 20.20.20.36 port 52177 connected with 30.30.20.76 port 5001
+[102] local 20.20.20.36 port 52178 connected with 30.30.20.76 port 5001
+[103] local 20.20.20.36 port 52179 connected with 30.30.20.76 port 5001
+[104] local 20.20.20.36 port 52180 connected with 30.30.20.76 port 5001
+[105] local 20.20.20.36 port 52181 connected with 30.30.20.76 port 5001
+[106] local 20.20.20.36 port 52182 connected with 30.30.20.76 port 5001
+[107] local 20.20.20.36 port 52183 connected with 30.30.20.76 port 5001
+[108] local 20.20.20.36 port 52184 connected with 30.30.20.76 port 5001
+[109] local 20.20.20.36 port 52185 connected with 30.30.20.76 port 5001
+[110] local 20.20.20.36 port 52186 connected with 30.30.20.76 port 5001
+[111] local 20.20.20.36 port 52187 connected with 30.30.20.76 port 5001
+[112] local 20.20.20.36 port 52188 connected with 30.30.20.76 port 5001
+[113] local 20.20.20.36 port 52189 connected with 30.30.20.76 port 5001
+[114] local 20.20.20.36 port 52190 connected with 30.30.20.76 port 5001
+[115] local 20.20.20.36 port 52191 connected with 30.30.20.76 port 5001
+[116] local 20.20.20.36 port 52192 connected with 30.30.20.76 port 5001
+[117] local 20.20.20.36 port 52193 connected with 30.30.20.76 port 5001
+[118] local 20.20.20.36 port 52194 connected with 30.30.20.76 port 5001
+[119] local 20.20.20.36 port 52195 connected with 30.30.20.76 port 5001
+[120] local 20.20.20.36 port 52196 connected with 30.30.20.76 port 5001
+[121] local 20.20.20.36 port 52197 connected with 30.30.20.76 port 5001
+[122] local 20.20.20.36 port 52198 connected with 30.30.20.76 port 5001
+[123] local 20.20.20.36 port 52199 connected with 30.30.20.76 port 5001
+[124] local 20.20.20.36 port 52200 connected with 30.30.20.76 port 5001
+[125] local 20.20.20.36 port 52201 connected with 30.30.20.76 port 5001
+[126] local 20.20.20.36 port 52202 connected with 30.30.20.76 port 5001
+[127] local 20.20.20.36 port 52203 connected with 30.30.20.76 port 5001
+[128] local 20.20.20.36 port 52204 connected with 30.30.20.76 port 5001
+[129] local 20.20.20.36 port 52205 connected with 30.30.20.76 port 5001
+[130] local 20.20.20.36 port 52206 connected with 30.30.20.76 port 5001
+[131] local 20.20.20.36 port 52207 connected with 30.30.20.76 port 5001
+[132] local 20.20.20.36 port 52208 connected with 30.30.20.76 port 5001
+[133] local 20.20.20.36 port 52209 connected with 30.30.20.76 port 5001
+[134] local 20.20.20.36 port 52210 connected with 30.30.20.76 port 5001
+[135] local 20.20.20.36 port 52211 connected with 30.30.20.76 port 5001
+[136] local 20.20.20.36 port 52212 connected with 30.30.20.76 port 5001
+[137] local 20.20.20.36 port 52213 connected with 30.30.20.76 port 5001
+[138] local 20.20.20.36 port 52214 connected with 30.30.20.76 port 5001
+[139] local 20.20.20.36 port 52215 connected with 30.30.20.76 port 5001
+[140] local 20.20.20.36 port 52216 connected with 30.30.20.76 port 5001
+[141] local 20.20.20.36 port 52217 connected with 30.30.20.76 port 5001
+[142] local 20.20.20.36 port 52218 connected with 30.30.20.76 port 5001
+[143] local 20.20.20.36 port 52219 connected with 30.30.20.76 port 5001
+[144] local 20.20.20.36 port 52220 connected with 30.30.20.76 port 5001
+[145] local 20.20.20.36 port 52221 connected with 30.30.20.76 port 5001
+[146] local 20.20.20.36 port 52222 connected with 30.30.20.76 port 5001
+[147] local 20.20.20.36 port 52223 connected with 30.30.20.76 port 5001
+[148] local 20.20.20.36 port 52224 connected with 30.30.20.76 port 5001
+[149] local 20.20.20.36 port 52225 connected with 30.30.20.76 port 5001
+[150] local 20.20.20.36 port 52226 connected with 30.30.20.76 port 5001
+[151] local 20.20.20.36 port 52227 connected with 30.30.20.76 port 5001
+[152] local 20.20.20.36 port 52228 connected with 30.30.20.76 port 5001
+[153] local 20.20.20.36 port 52229 connected with 30.30.20.76 port 5001
+[154] local 20.20.20.36 port 52230 connected with 30.30.20.76 port 5001
+[155] local 20.20.20.36 port 52231 connected with 30.30.20.76 port 5001
+[156] local 20.20.20.36 port 52232 connected with 30.30.20.76 port 5001
+[157] local 20.20.20.36 port 52233 connected with 30.30.20.76 port 5001
+[158] local 20.20.20.36 port 52234 connected with 30.30.20.76 port 5001
+[159] local 20.20.20.36 port 52235 connected with 30.30.20.76 port 5001
+[160] local 20.20.20.36 port 52236 connected with 30.30.20.76 port 5001
+[161] local 20.20.20.36 port 52237 connected with 30.30.20.76 port 5001
+[162] local 20.20.20.36 port 52238 connected with 30.30.20.76 port 5001
+[163] local 20.20.20.36 port 52239 connected with 30.30.20.76 port 5001
+[164] local 20.20.20.36 port 52240 connected with 30.30.20.76 port 5001
+[165] local 20.20.20.36 port 52241 connected with 30.30.20.76 port 5001
+[166] local 20.20.20.36 port 52242 connected with 30.30.20.76 port 5001
+[167] local 20.20.20.36 port 52243 connected with 30.30.20.76 port 5001
+[168] local 20.20.20.36 port 52244 connected with 30.30.20.76 port 5001
+[169] local 20.20.20.36 port 52245 connected with 30.30.20.76 port 5001
+[170] local 20.20.20.36 port 52246 connected with 30.30.20.76 port 5001
+[171] local 20.20.20.36 port 52247 connected with 30.30.20.76 port 5001
+[172] local 20.20.20.36 port 52248 connected with 30.30.20.76 port 5001
+[173] local 20.20.20.36 port 52249 connected with 30.30.20.76 port 5001
+[174] local 20.20.20.36 port 52250 connected with 30.30.20.76 port 5001
+[175] local 20.20.20.36 port 52251 connected with 30.30.20.76 port 5001
+[176] local 20.20.20.36 port 52252 connected with 30.30.20.76 port 5001
+[177] local 20.20.20.36 port 52253 connected with 30.30.20.76 port 5001
+[178] local 20.20.20.36 port 52254 connected with 30.30.20.76 port 5001
+[179] local 20.20.20.36 port 52255 connected with 30.30.20.76 port 5001
+[180] local 20.20.20.36 port 52256 connected with 30.30.20.76 port 5001
+[181] local 20.20.20.36 port 52257 connected with 30.30.20.76 port 5001
+[182] local 20.20.20.36 port 52258 connected with 30.30.20.76 port 5001
+[183] local 20.20.20.36 port 52259 connected with 30.30.20.76 port 5001
+[184] local 20.20.20.36 port 52260 connected with 30.30.20.76 port 5001
+[185] local 20.20.20.36 port 52261 connected with 30.30.20.76 port 5001
+[186] local 20.20.20.36 port 52262 connected with 30.30.20.76 port 5001
+[187] local 20.20.20.36 port 52263 connected with 30.30.20.76 port 5001
+[188] local 20.20.20.36 port 52264 connected with 30.30.20.76 port 5001
+[189] local 20.20.20.36 port 52265 connected with 30.30.20.76 port 5001
+[190] local 20.20.20.36 port 52266 connected with 30.30.20.76 port 5001
+[191] local 20.20.20.36 port 52267 connected with 30.30.20.76 port 5001
+[192] local 20.20.20.36 port 52268 connected with 30.30.20.76 port 5001
+[193] local 20.20.20.36 port 52269 connected with 30.30.20.76 port 5001
+[194] local 20.20.20.36 port 52270 connected with 30.30.20.76 port 5001
+[195] local 20.20.20.36 port 52271 connected with 30.30.20.76 port 5001
+[196] local 20.20.20.36 port 52272 connected with 30.30.20.76 port 5001
+[197] local 20.20.20.36 port 52273 connected with 30.30.20.76 port 5001
+[198] local 20.20.20.36 port 52274 connected with 30.30.20.76 port 5001
+[199] local 20.20.20.36 port 52275 connected with 30.30.20.76 port 5001
+[200] local 20.20.20.36 port 52276 connected with 30.30.20.76 port 5001
+[201] local 20.20.20.36 port 52277 connected with 30.30.20.76 port 5001
+[202] local 20.20.20.36 port 52278 connected with 30.30.20.76 port 5001
+[203] local 20.20.20.36 port 52279 connected with 30.30.20.76 port 5001
+[204] local 20.20.20.36 port 52280 connected with 30.30.20.76 port 5001
+[205] local 20.20.20.36 port 52281 connected with 30.30.20.76 port 5001
+[206] local 20.20.20.36 port 52282 connected with 30.30.20.76 port 5001
+[207] local 20.20.20.36 port 52283 connected with 30.30.20.76 port 5001
+[208] local 20.20.20.36 port 52284 connected with 30.30.20.76 port 5001
+[209] local 20.20.20.36 port 52285 connected with 30.30.20.76 port 5001
+[210] local 20.20.20.36 port 52286 connected with 30.30.20.76 port 5001
+[211] local 20.20.20.36 port 52287 connected with 30.30.20.76 port 5001
+[212] local 20.20.20.36 port 52288 connected with 30.30.20.76 port 5001
+[213] local 20.20.20.36 port 52289 connected with 30.30.20.76 port 5001
+[214] local 20.20.20.36 port 52290 connected with 30.30.20.76 port 5001
+[215] local 20.20.20.36 port 52291 connected with 30.30.20.76 port 5001
+[216] local 20.20.20.36 port 52292 connected with 30.30.20.76 port 5001
+[217] local 20.20.20.36 port 52293 connected with 30.30.20.76 port 5001
+[218] local 20.20.20.36 port 52294 connected with 30.30.20.76 port 5001
+[219] local 20.20.20.36 port 52295 connected with 30.30.20.76 port 5001
+[220] local 20.20.20.36 port 52296 connected with 30.30.20.76 port 5001
+[221] local 20.20.20.36 port 52297 connected with 30.30.20.76 port 5001
+[222] local 20.20.20.36 port 52298 connected with 30.30.20.76 port 5001
+[223] local 20.20.20.36 port 52299 connected with 30.30.20.76 port 5001
+[224] local 20.20.20.36 port 52300 connected with 30.30.20.76 port 5001
+[225] local 20.20.20.36 port 52301 connected with 30.30.20.76 port 5001
+[226] local 20.20.20.36 port 52302 connected with 30.30.20.76 port 5001
+[227] local 20.20.20.36 port 52303 connected with 30.30.20.76 port 5001
+[228] local 20.20.20.36 port 52304 connected with 30.30.20.76 port 5001
+[229] local 20.20.20.36 port 52305 connected with 30.30.20.76 port 5001
+[230] local 20.20.20.36 port 52306 connected with 30.30.20.76 port 5001
+[231] local 20.20.20.36 port 52307 connected with 30.30.20.76 port 5001
+[232] local 20.20.20.36 port 52308 connected with 30.30.20.76 port 5001
+[233] local 20.20.20.36 port 52309 connected with 30.30.20.76 port 5001
+[234] local 20.20.20.36 port 52310 connected with 30.30.20.76 port 5001
+[235] local 20.20.20.36 port 52311 connected with 30.30.20.76 port 5001
+[236] local 20.20.20.36 port 52312 connected with 30.30.20.76 port 5001
+[237] local 20.20.20.36 port 52313 connected with 30.30.20.76 port 5001
+[238] local 20.20.20.36 port 52314 connected with 30.30.20.76 port 5001
+[239] local 20.20.20.36 port 52315 connected with 30.30.20.76 port 5001
+[240] local 20.20.20.36 port 52316 connected with 30.30.20.76 port 5001
+[241] local 20.20.20.36 port 52317 connected with 30.30.20.76 port 5001
+[242] local 20.20.20.36 port 52318 connected with 30.30.20.76 port 5001
+[243] local 20.20.20.36 port 52319 connected with 30.30.20.76 port 5001
+[244] local 20.20.20.36 port 52320 connected with 30.30.20.76 port 5001
+[245] local 20.20.20.36 port 52321 connected with 30.30.20.76 port 5001
+[246] local 20.20.20.36 port 52322 connected with 30.30.20.76 port 5001
+[247] local 20.20.20.36 port 52323 connected with 30.30.20.76 port 5001
+[248] local 20.20.20.36 port 52324 connected with 30.30.20.76 port 5001
+[249] local 20.20.20.36 port 52325 connected with 30.30.20.76 port 5001
+[250] local 20.20.20.36 port 52326 connected with 30.30.20.76 port 5001
+[251] local 20.20.20.36 port 52327 connected with 30.30.20.76 port 5001
+[252] local 20.20.20.36 port 52328 connected with 30.30.20.76 port 5001
+[253] local 20.20.20.36 port 52329 connected with 30.30.20.76 port 5001
+[254] local 20.20.20.36 port 52330 connected with 30.30.20.76 port 5001
+[255] local 20.20.20.36 port 52331 connected with 30.30.20.76 port 5001
+[256] local 20.20.20.36 port 52332 connected with 30.30.20.76 port 5001
+[257] local 20.20.20.36 port 52333 connected with 30.30.20.76 port 5001
+[258] local 20.20.20.36 port 52334 connected with 30.30.20.76 port 5001
+[259] local 20.20.20.36 port 52335 connected with 30.30.20.76 port 5001
+[260] local 20.20.20.36 port 52336 connected with 30.30.20.76 port 5001
+[261] local 20.20.20.36 port 52337 connected with 30.30.20.76 port 5001
+[262] local 20.20.20.36 port 52338 connected with 30.30.20.76 port 5001
+[263] local 20.20.20.36 port 52339 connected with 30.30.20.76 port 5001
+[264] local 20.20.20.36 port 52340 connected with 30.30.20.76 port 5001
+[265] local 20.20.20.36 port 52341 connected with 30.30.20.76 port 5001
+[266] local 20.20.20.36 port 52342 connected with 30.30.20.76 port 5001
+[267] local 20.20.20.36 port 52343 connected with 30.30.20.76 port 5001
+[268] local 20.20.20.36 port 52344 connected with 30.30.20.76 port 5001
+[269] local 20.20.20.36 port 52345 connected with 30.30.20.76 port 5001
+[270] local 20.20.20.36 port 52346 connected with 30.30.20.76 port 5001
+[271] local 20.20.20.36 port 52347 connected with 30.30.20.76 port 5001
+[272] local 20.20.20.36 port 52348 connected with 30.30.20.76 port 5001
+[273] local 20.20.20.36 port 52349 connected with 30.30.20.76 port 5001
+[274] local 20.20.20.36 port 52350 connected with 30.30.20.76 port 5001
+[275] local 20.20.20.36 port 52351 connected with 30.30.20.76 port 5001
+[276] local 20.20.20.36 port 52352 connected with 30.30.20.76 port 5001
+[277] local 20.20.20.36 port 52353 connected with 30.30.20.76 port 5001
+[278] local 20.20.20.36 port 52354 connected with 30.30.20.76 port 5001
+[279] local 20.20.20.36 port 52355 connected with 30.30.20.76 port 5001
+[280] local 20.20.20.36 port 52356 connected with 30.30.20.76 port 5001
+[281] local 20.20.20.36 port 52357 connected with 30.30.20.76 port 5001
+[282] local 20.20.20.36 port 52358 connected with 30.30.20.76 port 5001
+[283] local 20.20.20.36 port 52359 connected with 30.30.20.76 port 5001
+[284] local 20.20.20.36 port 52360 connected with 30.30.20.76 port 5001
+[285] local 20.20.20.36 port 52361 connected with 30.30.20.76 port 5001
+[286] local 20.20.20.36 port 52362 connected with 30.30.20.76 port 5001
+[287] local 20.20.20.36 port 52363 connected with 30.30.20.76 port 5001
+[288] local 20.20.20.36 port 52364 connected with 30.30.20.76 port 5001
+[289] local 20.20.20.36 port 52365 connected with 30.30.20.76 port 5001
+[290] local 20.20.20.36 port 52366 connected with 30.30.20.76 port 5001
+[291] local 20.20.20.36 port 52367 connected with 30.30.20.76 port 5001
+[292] local 20.20.20.36 port 52368 connected with 30.30.20.76 port 5001
+[293] local 20.20.20.36 port 52369 connected with 30.30.20.76 port 5001
+[294] local 20.20.20.36 port 52370 connected with 30.30.20.76 port 5001
+[295] local 20.20.20.36 port 52371 connected with 30.30.20.76 port 5001
+[296] local 20.20.20.36 port 52372 connected with 30.30.20.76 port 5001
+[297] local 20.20.20.36 port 52373 connected with 30.30.20.76 port 5001
+[298] local 20.20.20.36 port 52374 connected with 30.30.20.76 port 5001
+[299] local 20.20.20.36 port 52375 connected with 30.30.20.76 port 5001
+[300] local 20.20.20.36 port 52376 connected with 30.30.20.76 port 5001
+[301] local 20.20.20.36 port 52377 connected with 30.30.20.76 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[158]  0.0-60.5 sec  5.87 MBytes   814 Kbits/sec
+[184]  0.0-60.5 sec  4.41 MBytes   612 Kbits/sec
+[232]  0.0-60.5 sec  5.66 MBytes   785 Kbits/sec
+[251]  0.0-60.5 sec  5.27 MBytes   732 Kbits/sec
+[252]  0.0-60.5 sec  4.59 MBytes   637 Kbits/sec
+[143]  0.0-60.5 sec  5.98 MBytes   829 Kbits/sec
+[168]  0.0-60.5 sec  3.88 MBytes   538 Kbits/sec
+[ 75]  0.0-60.5 sec  4.95 MBytes   687 Kbits/sec
+[121]  0.0-60.5 sec  4.45 MBytes   616 Kbits/sec
+[ 27]  0.0-60.5 sec  6.84 MBytes   948 Kbits/sec
+[124]  0.0-60.5 sec  3.78 MBytes   524 Kbits/sec
+[230]  0.0-60.5 sec  4.59 MBytes   636 Kbits/sec
+[ 70]  0.0-60.5 sec  5.18 MBytes   718 Kbits/sec
+[ 76]  0.0-60.5 sec  4.66 MBytes   646 Kbits/sec
+[ 18]  0.0-60.5 sec  6.22 MBytes   862 Kbits/sec
+[ 39]  0.0-60.5 sec  5.07 MBytes   703 Kbits/sec
+[ 41]  0.0-60.5 sec  6.03 MBytes   836 Kbits/sec
+[ 58]  0.0-60.5 sec  4.75 MBytes   659 Kbits/sec
+[ 52]  0.0-60.5 sec  5.96 MBytes   827 Kbits/sec
+[294]  0.0-60.5 sec  4.73 MBytes   657 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[190]  0.0-60.5 sec  4.09 MBytes   567 Kbits/sec
+[240]  0.0-60.5 sec  3.42 MBytes   475 Kbits/sec
+[111]  0.0-60.5 sec  4.60 MBytes   638 Kbits/sec
+[179]  0.0-60.5 sec  4.93 MBytes   684 Kbits/sec
+[237]  0.0-60.5 sec  4.74 MBytes   658 Kbits/sec
+[253]  0.0-60.5 sec  4.07 MBytes   564 Kbits/sec
+[ 77]  0.0-60.5 sec  5.27 MBytes   730 Kbits/sec
+[155]  0.0-60.5 sec  5.09 MBytes   706 Kbits/sec
+[262]  0.0-60.5 sec  4.89 MBytes   678 Kbits/sec
+[248]  0.0-60.5 sec  5.64 MBytes   782 Kbits/sec
+[ 91]  0.0-60.5 sec  4.58 MBytes   635 Kbits/sec
+[ 93]  0.0-60.5 sec  4.40 MBytes   610 Kbits/sec
+[236]  0.0-60.5 sec  4.59 MBytes   636 Kbits/sec
+[ 62]  0.0-60.5 sec  5.26 MBytes   729 Kbits/sec
+[ 23]  0.0-60.5 sec  5.59 MBytes   774 Kbits/sec
+[267]  0.0-60.5 sec  6.04 MBytes   837 Kbits/sec
+[205]  0.0-60.5 sec  5.52 MBytes   766 Kbits/sec
+[129]  0.0-60.5 sec  4.08 MBytes   565 Kbits/sec
+[130]  0.0-60.5 sec  4.46 MBytes   618 Kbits/sec
+[298]  0.0-60.5 sec  4.70 MBytes   651 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-60.5 sec  5.30 MBytes   734 Kbits/sec
+[113]  0.0-60.5 sec  5.56 MBytes   771 Kbits/sec
+[164]  0.0-60.5 sec  5.06 MBytes   702 Kbits/sec
+[162]  0.0-60.5 sec  4.91 MBytes   681 Kbits/sec
+[296]  0.0-60.5 sec  4.80 MBytes   666 Kbits/sec
+[268]  0.0-60.5 sec  5.31 MBytes   737 Kbits/sec
+[214]  0.0-60.6 sec  5.05 MBytes   699 Kbits/sec
+[256]  0.0-60.6 sec  3.15 MBytes   436 Kbits/sec
+[194]  0.0-60.6 sec  4.30 MBytes   595 Kbits/sec
+[172]  0.0-60.6 sec  4.28 MBytes   592 Kbits/sec
+[189]  0.0-60.6 sec  4.47 MBytes   618 Kbits/sec
+[254]  0.0-60.6 sec  4.73 MBytes   654 Kbits/sec
+[191]  0.0-60.6 sec  5.29 MBytes   732 Kbits/sec
+[217]  0.0-60.6 sec  5.18 MBytes   717 Kbits/sec
+[  8]  0.0-60.7 sec  5.22 MBytes   722 Kbits/sec
+[159]  0.0-60.6 sec  4.16 MBytes   576 Kbits/sec
+[180]  0.0-60.6 sec  4.93 MBytes   682 Kbits/sec
+[299]  0.0-60.6 sec  5.21 MBytes   721 Kbits/sec
+[239]  0.0-60.6 sec  4.02 MBytes   557 Kbits/sec
+[153]  0.0-60.6 sec  3.94 MBytes   545 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[278]  0.0-60.6 sec  5.16 MBytes   713 Kbits/sec
+[ 81]  0.0-60.6 sec  5.40 MBytes   747 Kbits/sec
+[ 61]  0.0-60.6 sec  5.80 MBytes   802 Kbits/sec
+[ 49]  0.0-60.7 sec  4.59 MBytes   634 Kbits/sec
+[105]  0.0-60.6 sec  4.16 MBytes   576 Kbits/sec
+[200]  0.0-60.8 sec  4.84 MBytes   667 Kbits/sec
+[133]  0.0-60.8 sec  5.95 MBytes   821 Kbits/sec
+[122]  0.0-60.8 sec  3.78 MBytes   521 Kbits/sec
+[183]  0.0-60.8 sec  5.42 MBytes   748 Kbits/sec
+[250]  0.0-60.8 sec  4.77 MBytes   657 Kbits/sec
+[249]  0.0-60.8 sec  5.38 MBytes   741 Kbits/sec
+[216]  0.0-60.8 sec  4.27 MBytes   588 Kbits/sec
+[235]  0.0-60.8 sec  5.38 MBytes   741 Kbits/sec
+[207]  0.0-60.8 sec  4.05 MBytes   558 Kbits/sec
+[261]  0.0-60.8 sec  4.70 MBytes   648 Kbits/sec
+[ 80]  0.0-60.8 sec  4.91 MBytes   678 Kbits/sec
+[101]  0.0-60.8 sec  5.36 MBytes   739 Kbits/sec
+[259]  0.0-60.8 sec  3.85 MBytes   531 Kbits/sec
+[255]  0.0-60.8 sec  4.24 MBytes   585 Kbits/sec
+[293]  0.0-60.8 sec  3.31 MBytes   457 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[281]  0.0-60.8 sec  3.05 MBytes   420 Kbits/sec
+[ 84]  0.0-60.8 sec  6.72 MBytes   926 Kbits/sec
+[104]  0.0-60.8 sec  4.50 MBytes   620 Kbits/sec
+[169]  0.0-60.8 sec  4.82 MBytes   665 Kbits/sec
+[ 55]  0.0-60.8 sec  4.94 MBytes   681 Kbits/sec
+[ 74]  0.0-60.8 sec  5.12 MBytes   706 Kbits/sec
+[209]  0.0-60.8 sec  5.17 MBytes   713 Kbits/sec
+[ 95]  0.0-60.8 sec  4.66 MBytes   643 Kbits/sec
+[ 51]  0.0-60.8 sec  5.35 MBytes   738 Kbits/sec
+[125]  0.0-60.8 sec  6.44 MBytes   888 Kbits/sec
+[ 98]  0.0-60.8 sec  5.56 MBytes   767 Kbits/sec
+[198]  0.0-60.8 sec  4.44 MBytes   612 Kbits/sec
+[292]  0.0-60.8 sec  4.87 MBytes   671 Kbits/sec
+[225]  0.0-60.8 sec  3.73 MBytes   515 Kbits/sec
+[202]  0.0-60.8 sec  4.65 MBytes   641 Kbits/sec
+[301]  0.0-60.8 sec  5.40 MBytes   745 Kbits/sec
+[139]  0.0-60.8 sec  4.37 MBytes   602 Kbits/sec
+[243]  0.0-60.8 sec  4.39 MBytes   605 Kbits/sec
+[224]  0.0-60.8 sec  5.62 MBytes   775 Kbits/sec
+[ 78]  0.0-60.8 sec  5.06 MBytes   698 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 35]  0.0-60.8 sec  3.88 MBytes   534 Kbits/sec
+[ 53]  0.0-60.8 sec  6.11 MBytes   842 Kbits/sec
+[286]  0.0-60.8 sec  4.72 MBytes   651 Kbits/sec
+[ 59]  0.0-60.8 sec  4.70 MBytes   647 Kbits/sec
+[  5]  0.0-60.8 sec  5.64 MBytes   778 Kbits/sec
+[148]  0.0-60.8 sec  4.70 MBytes   649 Kbits/sec
+[107]  0.0-60.8 sec  5.37 MBytes   740 Kbits/sec
+[272]  0.0-60.8 sec  4.80 MBytes   662 Kbits/sec
+[151]  0.0-60.8 sec  4.69 MBytes   646 Kbits/sec
+[134]  0.0-60.8 sec  4.16 MBytes   574 Kbits/sec
+[264]  0.0-60.8 sec  4.55 MBytes   628 Kbits/sec
+[ 54]  0.0-60.8 sec  5.00 MBytes   689 Kbits/sec
+[218]  0.0-60.8 sec  5.94 MBytes   819 Kbits/sec
+[280]  0.0-60.8 sec  4.62 MBytes   638 Kbits/sec
+[ 83]  0.0-60.8 sec  5.94 MBytes   819 Kbits/sec
+[257]  0.0-60.8 sec  5.73 MBytes   790 Kbits/sec
+[ 30]  0.0-60.8 sec  4.98 MBytes   687 Kbits/sec
+[196]  0.0-60.8 sec  6.24 MBytes   861 Kbits/sec
+[ 44]  0.0-60.8 sec  4.11 MBytes   567 Kbits/sec
+[ 24]  0.0-60.8 sec  3.92 MBytes   541 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 90]  0.0-60.8 sec  5.42 MBytes   748 Kbits/sec
+[ 50]  0.0-60.8 sec  3.72 MBytes   513 Kbits/sec
+[ 17]  0.0-60.8 sec  4.11 MBytes   567 Kbits/sec
+[241]  0.0-60.8 sec  4.16 MBytes   573 Kbits/sec
+[246]  0.0-60.8 sec  4.24 MBytes   585 Kbits/sec
+[295]  0.0-60.8 sec  4.38 MBytes   603 Kbits/sec
+[229]  0.0-60.8 sec  4.97 MBytes   685 Kbits/sec
+[144]  0.0-60.8 sec  4.87 MBytes   671 Kbits/sec
+[ 37]  0.0-60.8 sec  4.28 MBytes   590 Kbits/sec
+[297]  0.0-60.8 sec  3.93 MBytes   542 Kbits/sec
+[277]  0.0-60.8 sec  4.43 MBytes   611 Kbits/sec
+[ 26]  0.0-60.8 sec  3.91 MBytes   539 Kbits/sec
+[ 19]  0.0-60.8 sec  4.08 MBytes   562 Kbits/sec
+[ 63]  0.0-60.8 sec  4.79 MBytes   660 Kbits/sec
+[258]  0.0-60.8 sec  4.63 MBytes   639 Kbits/sec
+[302]  0.0-60.8 sec  5.65 MBytes   779 Kbits/sec
+[208]  0.0-60.8 sec  3.70 MBytes   510 Kbits/sec
+[132]  0.0-60.8 sec  4.62 MBytes   638 Kbits/sec
+[291]  0.0-60.8 sec  4.94 MBytes   681 Kbits/sec
+[146]  0.0-60.8 sec  5.73 MBytes   791 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[269]  0.0-60.8 sec  5.14 MBytes   709 Kbits/sec
+[187]  0.0-60.8 sec  4.09 MBytes   563 Kbits/sec
+[203]  0.0-60.8 sec  5.17 MBytes   713 Kbits/sec
+[ 20]  0.0-60.8 sec  4.57 MBytes   630 Kbits/sec
+[120]  0.0-60.8 sec  5.12 MBytes   707 Kbits/sec
+[288]  0.0-60.8 sec  4.18 MBytes   576 Kbits/sec
+[226]  0.0-60.8 sec  5.91 MBytes   816 Kbits/sec
+[192]  0.0-60.8 sec  5.91 MBytes   814 Kbits/sec
+[227]  0.0-60.8 sec  4.48 MBytes   618 Kbits/sec
+[136]  0.0-60.8 sec  4.50 MBytes   620 Kbits/sec
+[178]  0.0-60.8 sec  4.42 MBytes   610 Kbits/sec
+[270]  0.0-60.8 sec  5.14 MBytes   709 Kbits/sec
+[228]  0.0-60.8 sec  4.90 MBytes   675 Kbits/sec
+[123]  0.0-60.8 sec  4.65 MBytes   641 Kbits/sec
+[ 73]  0.0-60.8 sec  5.56 MBytes   767 Kbits/sec
+[181]  0.0-60.8 sec  4.62 MBytes   638 Kbits/sec
+[274]  0.0-60.8 sec  5.30 MBytes   730 Kbits/sec
+[219]  0.0-60.8 sec  3.55 MBytes   489 Kbits/sec
+[128]  0.0-60.8 sec  5.61 MBytes   773 Kbits/sec
+[283]  0.0-60.8 sec  3.30 MBytes   456 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[150]  0.0-60.8 sec  4.41 MBytes   609 Kbits/sec
+[140]  0.0-60.8 sec  6.16 MBytes   849 Kbits/sec
+[206]  0.0-60.8 sec  3.59 MBytes   496 Kbits/sec
+[238]  0.0-60.8 sec  3.80 MBytes   524 Kbits/sec
+[263]  0.0-60.8 sec  5.45 MBytes   752 Kbits/sec
+[  7]  0.0-60.8 sec  5.83 MBytes   803 Kbits/sec
+[290]  0.0-60.8 sec  4.70 MBytes   647 Kbits/sec
+[171]  0.0-60.8 sec  4.30 MBytes   594 Kbits/sec
+[174]  0.0-60.8 sec  4.25 MBytes   586 Kbits/sec
+[119]  0.0-60.8 sec  4.41 MBytes   609 Kbits/sec
+[115]  0.0-60.8 sec  5.43 MBytes   749 Kbits/sec
+[ 10]  0.0-60.8 sec  4.27 MBytes   589 Kbits/sec
+[ 68]  0.0-60.8 sec  5.34 MBytes   736 Kbits/sec
+[100]  0.0-60.8 sec  5.54 MBytes   764 Kbits/sec
+[ 15]  0.0-60.8 sec  4.88 MBytes   672 Kbits/sec
+[166]  0.0-60.8 sec  5.94 MBytes   819 Kbits/sec
+[199]  0.0-60.8 sec  4.09 MBytes   564 Kbits/sec
+[220]  0.0-60.8 sec  5.05 MBytes   697 Kbits/sec
+[  3]  0.0-60.8 sec  3.94 MBytes   543 Kbits/sec
+[141]  0.0-60.8 sec  5.77 MBytes   796 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[102]  0.0-60.8 sec  4.48 MBytes   618 Kbits/sec
+[177]  0.0-60.8 sec  5.95 MBytes   821 Kbits/sec
+[231]  0.0-60.8 sec  5.40 MBytes   744 Kbits/sec
+[ 48]  0.0-60.8 sec  6.30 MBytes   869 Kbits/sec
+[127]  0.0-60.8 sec  4.63 MBytes   639 Kbits/sec
+[279]  0.0-60.8 sec  6.16 MBytes   849 Kbits/sec
+[126]  0.0-60.8 sec  4.31 MBytes   595 Kbits/sec
+[149]  0.0-60.8 sec  5.15 MBytes   710 Kbits/sec
+[223]  0.0-60.8 sec  5.29 MBytes   729 Kbits/sec
+[163]  0.0-60.8 sec  4.65 MBytes   641 Kbits/sec
+[265]  0.0-60.8 sec  5.14 MBytes   709 Kbits/sec
+[109]  0.0-60.8 sec  4.41 MBytes   607 Kbits/sec
+[160]  0.0-60.8 sec  5.77 MBytes   795 Kbits/sec
+[137]  0.0-60.8 sec  4.26 MBytes   587 Kbits/sec
+[221]  0.0-60.8 sec  3.77 MBytes   519 Kbits/sec
+[ 13]  0.0-60.9 sec  4.76 MBytes   656 Kbits/sec
+[266]  0.0-60.8 sec  5.18 MBytes   714 Kbits/sec
+[ 14]  0.0-60.9 sec  5.58 MBytes   769 Kbits/sec
+[276]  0.0-60.8 sec  3.68 MBytes   507 Kbits/sec
+[ 94]  0.0-60.9 sec  4.35 MBytes   599 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  9]  0.0-60.9 sec  4.66 MBytes   641 Kbits/sec
+[ 79]  0.0-60.9 sec  4.84 MBytes   666 Kbits/sec
+[ 97]  0.0-60.9 sec  5.37 MBytes   739 Kbits/sec
+[ 11]  0.0-60.9 sec  5.68 MBytes   782 Kbits/sec
+[185]  0.0-60.9 sec  3.67 MBytes   506 Kbits/sec
+[ 25]  0.0-60.9 sec  5.16 MBytes   711 Kbits/sec
+[ 99]  0.0-60.9 sec  3.80 MBytes   524 Kbits/sec
+[186]  0.0-60.9 sec  4.53 MBytes   624 Kbits/sec
+[ 43]  0.0-60.9 sec  4.48 MBytes   617 Kbits/sec
+[157]  0.0-60.9 sec  5.96 MBytes   821 Kbits/sec
+[  6]  0.0-60.9 sec  5.80 MBytes   798 Kbits/sec
+[ 12]  0.0-60.9 sec  6.79 MBytes   935 Kbits/sec
+[201]  0.0-60.9 sec  5.59 MBytes   769 Kbits/sec
+[ 86]  0.0-60.9 sec  7.38 MBytes  1.02 Mbits/sec
+[152]  0.0-60.9 sec  4.58 MBytes   631 Kbits/sec
+[234]  0.0-60.9 sec  4.88 MBytes   672 Kbits/sec
+[242]  0.0-60.9 sec  6.05 MBytes   834 Kbits/sec
+[165]  0.0-60.9 sec  5.45 MBytes   751 Kbits/sec
+[ 64]  0.0-60.9 sec  3.97 MBytes   547 Kbits/sec
+[108]  0.0-60.9 sec  5.39 MBytes   743 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[142]  0.0-60.9 sec  4.41 MBytes   607 Kbits/sec
+[210]  0.0-60.9 sec  4.39 MBytes   605 Kbits/sec
+[175]  0.0-60.9 sec  4.52 MBytes   623 Kbits/sec
+[193]  0.0-60.9 sec  5.14 MBytes   708 Kbits/sec
+[145]  0.0-60.9 sec  4.60 MBytes   634 Kbits/sec
+[284]  0.0-60.9 sec  4.32 MBytes   595 Kbits/sec
+[ 47]  0.0-60.9 sec  6.69 MBytes   921 Kbits/sec
+[ 87]  0.0-60.9 sec  3.54 MBytes   487 Kbits/sec
+[ 66]  0.0-60.9 sec  4.46 MBytes   614 Kbits/sec
+[ 72]  0.0-60.9 sec  4.71 MBytes   649 Kbits/sec
+[247]  0.0-60.9 sec  7.48 MBytes  1.03 Mbits/sec
+[222]  0.0-60.9 sec  3.52 MBytes   484 Kbits/sec
+[103]  0.0-60.9 sec  5.54 MBytes   763 Kbits/sec
+[ 67]  0.0-60.9 sec  4.99 MBytes   688 Kbits/sec
+[173]  0.0-60.9 sec  5.21 MBytes   718 Kbits/sec
+[215]  0.0-60.9 sec  3.56 MBytes   491 Kbits/sec
+[ 31]  0.0-60.9 sec  4.57 MBytes   629 Kbits/sec
+[138]  0.0-60.9 sec  4.75 MBytes   654 Kbits/sec
+[131]  0.0-60.9 sec  4.02 MBytes   554 Kbits/sec
+[ 71]  0.0-60.9 sec  4.23 MBytes   582 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 92]  0.0-60.9 sec  4.39 MBytes   605 Kbits/sec
+[244]  0.0-60.9 sec  5.81 MBytes   801 Kbits/sec
+[170]  0.0-60.9 sec  4.23 MBytes   582 Kbits/sec
+[289]  0.0-60.9 sec  5.05 MBytes   696 Kbits/sec
+[300]  0.0-60.9 sec  3.30 MBytes   455 Kbits/sec
+[114]  0.0-60.9 sec  5.08 MBytes   699 Kbits/sec
+[195]  0.0-60.9 sec  5.23 MBytes   720 Kbits/sec
+[211]  0.0-60.9 sec  5.57 MBytes   767 Kbits/sec
+[285]  0.0-60.9 sec  4.55 MBytes   627 Kbits/sec
+[204]  0.0-60.9 sec  4.42 MBytes   609 Kbits/sec
+[182]  0.0-60.9 sec  5.51 MBytes   758 Kbits/sec
+[282]  0.0-60.9 sec  5.64 MBytes   776 Kbits/sec
+[154]  0.0-60.9 sec  5.15 MBytes   709 Kbits/sec
+[176]  0.0-60.9 sec  4.60 MBytes   633 Kbits/sec
+[ 28]  0.0-61.0 sec  4.70 MBytes   647 Kbits/sec
+[118]  0.0-60.9 sec  5.55 MBytes   763 Kbits/sec
+[233]  0.0-60.9 sec  4.48 MBytes   617 Kbits/sec
+[117]  0.0-60.9 sec  4.71 MBytes   648 Kbits/sec
+[110]  0.0-60.9 sec  4.21 MBytes   580 Kbits/sec
+[156]  0.0-60.9 sec  4.68 MBytes   644 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[273]  0.0-60.9 sec  6.43 MBytes   885 Kbits/sec
+[ 29]  0.0-61.0 sec  4.02 MBytes   554 Kbits/sec
+[116]  0.0-60.9 sec  4.41 MBytes   608 Kbits/sec
+[ 46]  0.0-61.0 sec  4.75 MBytes   654 Kbits/sec
+[ 42]  0.0-61.0 sec  5.62 MBytes   773 Kbits/sec
+[135]  0.0-61.0 sec  7.24 MBytes   997 Kbits/sec
+[ 34]  0.0-61.0 sec  5.28 MBytes   727 Kbits/sec
+[188]  0.0-61.0 sec  6.62 MBytes   912 Kbits/sec
+[275]  0.0-60.9 sec  3.97 MBytes   546 Kbits/sec
+[260]  0.0-60.9 sec  6.01 MBytes   827 Kbits/sec
+[161]  0.0-61.0 sec  4.54 MBytes   625 Kbits/sec
+[245]  0.0-61.0 sec  7.23 MBytes   996 Kbits/sec
+[271]  0.0-60.9 sec  4.44 MBytes   611 Kbits/sec
+[ 36]  0.0-61.0 sec  5.07 MBytes   698 Kbits/sec
+[167]  0.0-61.0 sec  5.52 MBytes   759 Kbits/sec
+[ 69]  0.0-61.0 sec  5.00 MBytes   688 Kbits/sec
+[ 57]  0.0-61.0 sec  5.14 MBytes   707 Kbits/sec
+[ 65]  0.0-61.0 sec  5.66 MBytes   778 Kbits/sec
+[197]  0.0-61.0 sec  4.94 MBytes   680 Kbits/sec
+[212]  0.0-61.0 sec  4.56 MBytes   628 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 85]  0.0-61.0 sec  5.38 MBytes   741 Kbits/sec
+[ 45]  0.0-61.0 sec  4.73 MBytes   650 Kbits/sec
+[ 82]  0.0-61.0 sec  5.30 MBytes   730 Kbits/sec
+[ 21]  0.0-61.0 sec  5.51 MBytes   758 Kbits/sec
+[287]  0.0-60.9 sec  4.62 MBytes   637 Kbits/sec
+[ 60]  0.0-61.0 sec  5.55 MBytes   763 Kbits/sec
+[ 56]  0.0-61.0 sec  6.06 MBytes   834 Kbits/sec
+[ 40]  0.0-61.0 sec  5.09 MBytes   701 Kbits/sec
+[147]  0.0-61.1 sec  3.45 MBytes   473 Kbits/sec
+[ 38]  0.0-61.1 sec  4.91 MBytes   675 Kbits/sec
+[ 89]  0.0-61.1 sec  5.70 MBytes   784 Kbits/sec
+[106]  0.0-61.1 sec  3.77 MBytes   518 Kbits/sec
+[213]  0.0-61.1 sec  3.81 MBytes   524 Kbits/sec
+[ 22]  0.0-61.1 sec  6.09 MBytes   835 Kbits/sec
+[ 96]  0.0-61.1 sec  5.22 MBytes   716 Kbits/sec
+[ 33]  0.0-61.1 sec  4.55 MBytes   624 Kbits/sec
+[ 16]  0.0-61.1 sec  6.85 MBytes   940 Kbits/sec
+[112]  0.0-61.1 sec  4.70 MBytes   646 Kbits/sec
+[ 88]  0.0-61.2 sec  6.48 MBytes   888 Kbits/sec
+[ 32]  0.0-61.2 sec  4.73 MBytes   648 Kbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[SUM]  0.0-61.2 sec  12.4 Gbits   202 Mbits/sec

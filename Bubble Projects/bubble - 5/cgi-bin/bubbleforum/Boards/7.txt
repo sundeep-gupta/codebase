@@ -1,0 +1,3 @@
+1194258493|How to rename or move a directory in Linux|Sundeep|sundeep.techie@yahoo.co.in|1194296512|1|sundeep.techie|xx|0
+1193726790|How to change colors in xterm|sundeep.techie|sundeep.techie@yahoo.co.in|1193833100|1|sundeep.techie|xx|0
+1193816579|Set environment variables using shell script - csh|sundeep.techie|sundeep.techie@yahoo.co.in|1193816579|0|sundeep.techie|xx|0

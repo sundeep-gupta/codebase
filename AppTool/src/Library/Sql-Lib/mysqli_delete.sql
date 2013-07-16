@@ -1,0 +1,1 @@
+DELETE FROM adodb_results WHERE ResultsID > '8550'

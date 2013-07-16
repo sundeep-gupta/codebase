@@ -1,0 +1,116 @@
+
+sundeep_techie: Morning dude
+sundeep_techie: Hi
+saivamsy: morning man 
+saivamsy has signed out. (4/12/2006 7:32 PM)
+
+sundeep_techie: How r u
+sundeep_techie: howz ur prep
+saivamsy: how is it going 
+saivamsy: I am fine man 
+sundeep_techie: as ususal 
+sundeep_techie: Got my SCJP Certificate today 
+saivamsy: da 
+saivamsy: great 
+saivamsy: going on dude 
+saivamsy: and hey are u free 
+saivamsy: now 
+sundeep_techie: why?
+sundeep_techie: a bit free
+sundeep_techie: any work?
+saivamsy: ok 
+saivamsy: I have a C program with me 
+sundeep_techie: ok
+saivamsy: Its a little complex one 
+sundeep_techie: Oh
+saivamsy: I want u to change the whole look of it 
+saivamsy: I have the code with me 
+sundeep_techie: what do u mean by look? is it a GUI generating code?
+sundeep_techie: ok send me
+saivamsy: no da 
+saivamsy: I mean 
+sundeep_techie: Ok u mean the way code looks right
+sundeep_techie: Ok then send me
+saivamsy: u have to change the code that I give u ,so that it looks completely different 
+saivamsy: but the thing is when can u give me the new code 
+sundeep_techie: tell me when do u need it?
+saivamsy: It does not take u much more than 2-3 hrs 
+saivamsy: actually I had to submit it long time back 
+saivamsy: but could not 
+sundeep_techie: will it be ok for you to take it tomorrow morning (i.e today evening for you)
+saivamsy: yeah 
+saivamsy: I was asking that 
+saivamsy: wait a sec 
+sundeep_techie: Cool then. Just send it right now
+saivamsy: can u give me 15 mins time 
+sundeep_techie: Ok
+saivamsy: sundeep 
+sundeep_techie: yeah
+saivamsy: hey I did not use getch command over there 
+saivamsy: because we do it in unix background 
+sundeep_techie: Ok.
+saivamsy: we have other commands to compile 
+saivamsy: u can include those files then 
+saivamsy: i mean those commands 
+sundeep_techie: Just send it across & give me a brief about what this code is for?
+saivamsy: code is about clustering da 
+saivamsy: its about chromosomes 
+saivamsy: its a 3 dimension 
+sundeep_techie: excellent. Now i'm more excited tosee the code
+saivamsy: each chromosome is of a 3 dimensioon 
+saivamsy: and we caliculate the fitness of each chromosome 
+saivamsy: and the best chromosome is taken 
+saivamsy: thats the basic idea 
+saivamsy: of the program 
+saivamsy: what I have implemented 
+saivamsy: I have taken a function called IRIS function 
+saivamsy: which has 150 data sets 
+saivamsy: where each data set 
+saivamsy: is of 4 points 
+saivamsy: and I take a data set randomly 
+saivamsy: and compare it with remaining datasets 
+saivamsy: and make 3 clusters out of the 4 data sets 
+saivamsy: hey sundeep 
+saivamsy: r u there 
+sundeep_techie: one min yar
+sundeep_techie: josu is online
+sundeep_techie: in the mean time you send the file
+sundeep_techie: r u there?
+saivamsy: YEAH 
+
+
+
+saivamsy: i am there ra 
+
+
+
+saivamsy: the code i am sending u 
+
+saivamsy: is done by my roommate and me 
+saivamsy: i could not be with him for the whole project as i was doing other code 
+
+sundeep_techie: great! you guys are really working hard. Keep it up
+saivamsy: so i want u to work on this code 
+
+
+
+
+saivamsy: sundeep i sent u the code 
+
+
+
+
+sundeep_techie: to which ID?
+sundeep_techie: yahoo aa?
+saivamsy: send it to me as soon as possible <to applabs
+
+sundeep_techie: ok
+saivamsy: and one more thing dude
+sundeep_techie: tell
+saivamsy: there is set of iris data points < i want u to read those points from a seperate file <name it something like iris>dat and use file open and file read files 
+
+
+sundeep_techie: ok
+sundeep_techie: what else?
+
+ 

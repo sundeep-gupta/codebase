@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009  McAfee, Inc. All rights reserved. -->
+<FMConfiguration> 
+    <FMName>Anti-malware</FMName>
+    <FMDescription>AntiMalware Functional Module</FMDescription>   
+    <FMID>20</FMID>   
+    <PRODID>VSCANMAC9000</PRODID>
+    <FMTYPE>management</FMTYPE>   
+    <FMVersion>9.0.0</FMVersion>
+	<FMPControlledStartup>false</FMPControlledStartup>
+	<FMPControlledHC>false</FMPControlledHC>
+        <ActivityListAvailable>false</ActivityListAvailable>	
+    <StartCommand>/usr/local/McAfee/AntiMalware/VSControl start</StartCommand> 
+    <StopCommand>/usr/local/McAfee/AntiMalware/VSControl stop</StopCommand>  
+    <StatusCommand>/usr/local/McAfee/AntiMalware/VSControl status</StatusCommand>  
+    <UnInstallScript>NOTAVailable</UnInstallScript>
+    <MaxStartTime>120</MaxStartTime>  
+    <Language>0409</Language>
+    <BuildNumber>4012</BuildNumber>
+    <InstalledPath>/usr/local/McAfee/AntiMalware/VShieldService</InstalledPath>
+    <LicensePath>/Library/Preferences/.com.mcafee.antimalware.license</LicensePath>
+    <LicenseType>none</LicenseType>
+    <CustomLogPath>/tmp/custom.log</CustomLogPath>
+    <CustomLogEnable>true</CustomLogEnable>
+    <SyslogEnable>true</SyslogEnable>
+    <DblogEnable>true</DblogEnable>
+    <EpologEnable>true</EpologEnable>
+    <XMLEventsAndDbValid>true</XMLEventsAndDbValid>
+    <LogLevel>debug</LogLevel>
+    <HostName>MacOSX</HostName>
+    <User>root</User>
+    <MerToolPath>/usr/local/McAfee/AntiMalware/AntiMalwareMertool</MerToolPath>
+</FMConfiguration>

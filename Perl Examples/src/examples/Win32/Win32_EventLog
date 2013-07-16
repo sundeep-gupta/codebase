@@ -1,0 +1,29 @@
+
+use Win32::EventLog;
+# each event has a type, this is a translation of the common types
+%type = (1 => "ERROR",
+2 => "WARNING",
+4 => "INFORMATION",
+8 => "AUDIT_SUCCESS",
+16 => "AUDIT_FAILURE");
+
+# if this is set, we also retrieve the full text of every
+# message on each Read( )
+$Win32::EventLog::GetMessageText = 1;
+
+# open the System event log
+$log = new Win32::EventLog("System")
+or die "Unable to open system log:$^En";
+$cnt = 0;
+# read through it one record at a time, starting with the first entry
+while ($log->Read((EVENTLOG_SEQUENTIAL_READ|EVENTLOG_BACKWARDS_READ),
+1,$entry) && $cnt < 5){
+if(  ($entry->{EventType} != 4)) {
+	$cnt++;
+	print scalar localtime($entry->{TimeGenerated})." ";
+	print $entry->{Computer}."[".($entry->{EventID} &
+	0xffff)."] ";
+	print $entry->{Source}.":".$type{$entry->{EventType}};
+	print $entry->{Message};
+} 
+}

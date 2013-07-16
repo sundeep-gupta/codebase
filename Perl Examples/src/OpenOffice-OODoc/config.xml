@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testcase>
+<ip_address>172.16.6.153</ip_address>
+<share>/root/test</share>
+<login>administrator</login>
+<password>@lt12345</password>
+<file>MyFile.sxw</file>
+</testcase>
+
+
+

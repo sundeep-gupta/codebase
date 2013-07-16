@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ConfigTest Apply="True">
+
+	<ModifyItem Category="MCPS_CONFIG_USERS" Type="IMcConfigCollection">
+		<Setting Property="MCPS_USER_NAME" Value="user" Type="String">
+			<Setting Property="MCPS_USER_CLASS" Value="1" Type="Integer" />
+		</Setting>
+	</ModifyItem>
+
+	<Display Category="MCPS_CONFIG_USERS" Type="IMcConfigCollection">
+		<Setting Property="MCPS_USER_NAME" Type="String" />
+		<Setting Property="MCPS_USER_CLASS" Type="Integer" />
+
+		<Setting Property="MCPS_USER_RESTRICT_TO_ALLOW_LIST" Type="Boolean" />
+		<Setting Property="MCPS_USER_RESTRICT_BY_TIME" Type="Boolean" />
+	</Display>
+
+</ConfigTest>

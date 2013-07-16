@@ -1,0 +1,53 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+Scan engine v5.1.00 for MacOSX.
+
+Virus data file v4997 created Mar 31 2007
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      Memory: 512 MB
+      Serial Number: YM406MMDPC1
+          Serial Number: 
+          Serial Number: 3JV8SGXV
+      IPv4 Addresses: 172.16.222.116
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A343)
+      Kernel Version: Darwin 9.0.0d6
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Mon Apr  2 15:03:44 BTT 2007
+
+Apr  2 16:29:41 users-power-mac-g4-2 VirusScan[245]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Mon Apr  2 16:40:26 BTT 2007
+
+Apr  2 18:14:29 users-power-mac-g4-2 VirusScan[246]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Mon Apr  2 18:23:48 BTT 2007
+
+Apr  2 19:50:10 users-power-mac-g4-2 VirusScan[238]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Mon Apr  2 20:00:27 BTT 2007
+
+Apr  2 23:07:42 users-power-mac-g4-2 VirusScan[248]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Mon Apr  2 23:14:52 BTT 2007
+
+Apr  3 02:15:16 users-power-mac-g4-2 VirusScan[241]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Tue Apr  3 02:22:15 BTT 2007
+
+Apr  3 05:22:38 users-power-mac-g4-2 VirusScan[240]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~

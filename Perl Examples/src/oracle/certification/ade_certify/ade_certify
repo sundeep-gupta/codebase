@@ -1,0 +1,20 @@
+#!/bin/sh
+lrg=$1
+view=$2$lrg
+script_dir=$HOME/ade_certify
+csh=$HOME/regress/setup_mydb$lrg.csh
+
+ade useview $view <<VIEW
+echo '--------------------------- STEP 1 -----------------------'
+cat $csh
+echo '---------------------------- STEP 1.2 ------------------'
+source  $csh
+echo '--------------------------- STEP 2 -----------------------'
+oratst -initfile \$ADE_VIEW_ROOT/nde/ade/test/utl/ade_oratst.ini -d testini db_ground
+echo '--------------------------- STEP 3 -----------------------'
+$script_dir/sql_test
+echo '--------------------------- STEP 4 -----------------------'
+oratst -initfile \$ADE_VIEW_ROOT/nde/ade/test/utl/ade_oratst.ini -d tkmain_t$lrg db_testini
+echo '------------------------ STEP 5 - FINISH --------------------------'
+VIEW
+

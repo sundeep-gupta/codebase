@@ -1,0 +1,13 @@
+#format:
+#keyword = IP_address
+#--------------------
+remHost1  lin76
+locHost1  lin36
+remHost2  lin78
+locHost2  lin38
+remHost3  lin79
+locHost3  lin39
+locOrb  orb1m
+remOrb  prox1
+DR  20.20.20.1
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+<FMConfiguration>
+    <FMName>Firewall</FMName>
+    <FMDescription>Firewall functional module</FMDescription>
+    <FMID>4</FMID>
+    <PRODID>FWALLMAC1000</PRODID>
+    <FMTYPE>service</FMTYPE>
+    <FMVersion>1.0.0</FMVersion>
+        <FMPControlledStartup>true</FMPControlledStartup>
+        <FMPControlledHC>true</FMPControlledHC>
+        <ActivityListAvailable>false</ActivityListAvailable>	
+    <StartCommand>/usr/local/McAfee/Firewall/bin/FirewallControl start</StartCommand>
+    <StopCommand>/usr/local/McAfee/Firewall/bin/FirewallControl stop</StopCommand>
+    <StatusCommand>/usr/local/McAfee/Firewall/bin/FirewallControl status</StatusCommand>
+    <UnInstallScript>/usr/local/McAfee/Firewall/bin/UninstallFirewall.sh</UnInstallScript>
+    <MerToolPath>/usr/local/McAfee/Firewall/bin/FirewallMertool</MerToolPath>
+    <MaxStartTime>40</MaxStartTime>
+    <Language>0409</Language>
+    <BuildNumber>126</BuildNumber>
+    <InstalledPath>/usr/local/McAfee/Firewall</InstalledPath>
+    <UpdateType>product</UpdateType>
+    <CheckUpdate> </CheckUpdate>
+    <LicensePath>/Library/Preferences/.com.mcafee.ssm.nwfw.license</LicensePath>
+    <LicenseType>none</LicenseType>
+    <CustomLogPath>/tmp/FWService.log</CustomLogPath>
+    <CustomLogEnable>true</CustomLogEnable>
+    <SyslogEnable>true</SyslogEnable>
+    <DblogEnable>true</DblogEnable>
+    <EpologEnable>true</EpologEnable>
+    <XMLEventsAndDbValid>true</XMLEventsAndDbValid>
+    <LogLevel>information</LogLevel>
+    <HostName>MacOSX</HostName>
+    <User>root</User>
+</FMConfiguration>

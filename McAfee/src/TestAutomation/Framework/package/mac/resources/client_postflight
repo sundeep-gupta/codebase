@@ -1,0 +1,52 @@
+#!/bin/bash
+# Copyright (C) 2010 McAfee, Inc. All Rights Reserved.
+TMPDIR=/tmp/tafInstall.$$
+setup()
+{
+    mkdir -p $TMPDIR
+}
+installSTAF()
+{
+    # Install the STAF 
+    if [ "`uname -m`" = "i386" -o "`uname -m`" = "x86_64" ]
+    then
+        ARCH=i386
+        echo "Installing STAF on Intel Architecture"
+    else
+        ARCH=ppc
+        echo "Installing STAF on PPC Architecture"
+    fi
+    mv /usr/local/TAF/STAF/STAFInstallableFiles.tar.gz $TMPDIR
+    pushd $TMPDIR
+    tar -zxf STAFInstallableFiles.tar.gz
+    tar -zxvf STAF341-macosx-${ARCH}.tar.gz
+    pushd staf
+    ./STAFInst -acceptlicense -target /usr/local/TAF/STAF -type f
+    popd
+    popd     
+    mkdir -p /Library/staf/codepage
+    ln -sf /usr/local/TAF/STAF/codepage/alias.txt /Library/staf/codepage/alias.txt
+}
+updateServerConfigDetails()
+{
+    echo "TRUST DEFAULT LEVEL 5" >> /usr/local/TAF/STAF/bin/STAF.cfg
+
+}
+doInstall()
+{
+    installSTAF
+    chmod +x $3/usr/local/TAF/bin/uninstallTAF.sh
+    chown root:wheel $3/Library/LaunchDaemons/com.mcafee.taf.staf.plist
+    updateServerConfigDetails
+    chown -R root:wheel /usr/local/TAF
+    chmod -R 755 /usr/local/TAF
+    launchctl load $3/Library/LaunchDaemons/com.mcafee.taf.staf.plist
+}
+cleanup()
+{
+    rm -rf $TMPDIR
+}
+setup
+doInstall
+cleanup
+exit 0

@@ -1,0 +1,85 @@
+#!/bin/bash
+# Copyright (C) 2010 McAfee, Inc. All Rights Reserved.
+TMPDIR=/tmp/tafInstall.$$
+setup()
+{
+    mkdir -p $TMPDIR
+}
+installSTAF()
+{
+    # Install the STAF 
+    if [ "`uname -m`" = "i386" -o "`uname -m`" = "x86_64" ]
+    then
+        ARCH=i386
+        echo "Installing STAF on Intel Architecture"
+    else
+        ARCH=ppc
+        echo "Installing STAF on PPC Architecture"
+    fi
+    mv /usr/local/TAF/STAF/STAFInstallableFiles.tar.gz $TMPDIR
+    pushd $TMPDIR
+    tar -zxf STAFInstallableFiles.tar.gz
+    tar -zxvf STAF341-macosx-${ARCH}.tar.gz
+    pushd staf
+    ./STAFInst -acceptlicense -target /usr/local/TAF/STAF -type f
+    popd
+    popd     
+    mkdir -p /Library/staf/codepage
+    ln -sf /usr/local/TAF/STAF/codepage/alias.txt /Library/staf/codepage/alias.txt
+}
+updateConfigurationFile()
+{
+    if [ ! -f /root/TAF_INSTALL_PROPERTIES ]
+    then
+        echo "TAF Install proerties file not found"
+        exit -1
+    fi
+    . /root/TAF_INSTALL_PROPERTIES
+    if [ -z $SVN_USERNAME -o -z $SVN_PASSWORD -o -z $SMTP_SERVER_IP_ADDRESS ]
+    then
+        echo "TAF Install properties file did not provide all properties"
+        exit -1
+    fi
+    cat $3/usr/local/TAF/config/ServerConfig.xml | sed -e s/__SVN_USERNAME__/"$SVN_USERNAME"/g > $3/usr/local/TAF/config/ServerConfig.xml.tmp
+    mv $3/usr/local/TAF/config/ServerConfig.xml.tmp $3/usr/local/TAF/config/ServerConfig.xml
+
+    cat $3/usr/local/TAF/config/ServerConfig.xml | sed -e s/__SVN_PASSWORD__/"$SVN_PASSWORD"/g > $3/usr/local/TAF/config/ServerConfig.xml.tmp
+    mv $3/usr/local/TAF/config/ServerConfig.xml.tmp $3/usr/local/TAF/config/ServerConfig.xml
+    
+    IP=
+    IP=`ifconfig | grep 'broadcast' | awk '{print $2}' | head -1`
+    if [ -z "$IP" ]
+    then
+        IP=`/sbin/ifconfig -a | sed -n '/inet /{s/[[:space:]]*inet \([^[:space:]]*\).*/\1/p;q;}'`
+    fi
+
+    cat $3/usr/local/TAF/config/ServerConfig.xml | sed -e s/__SERVER_IP__/"$IP"/g > $3/usr/local/TAF/config/ServerConfig.xml.tmp
+    mv $3/usr/local/TAF/config/ServerConfig.xml.tmp $3/usr/local/TAF/config/ServerConfig.xml
+    
+    echo "SERVICE email LIBRARY JSTAF EXECUTE /usr/local/TAF/lib/STAFEmail.jar  \
+                    PARMS \"MAILSERVER ${SMTP_SERVER_IP_ADDRESS}\" " >> /usr/local/TAF/STAF/bin/STAF.cfg
+    echo "TRUST DEFAULT LEVEL 5" >> /usr/local/TAF/STAF/bin/STAF.cfg
+
+}
+doInstall()
+{
+    installSTAF
+    updateConfigurationFile 
+    chown root:wheel $3/Library/LaunchDaemons/com.mcafee.taf.harnessserver.plist
+    chown root:wheel $3/Library/LaunchDaemons/com.mcafee.taf.staf.plist
+    mkdir $3/usr/local/TAF/var
+    chmod +x $3/usr/local/TAF/bin/uninstallTAF.sh
+
+    chown -R root:wheel /usr/local/TAF
+    chmod -R 755 /usr/local/TAF
+    launchctl load $3/Library/LaunchDaemons/com.mcafee.taf.staf.plist
+    launchctl load $3/Library/LaunchDaemons/com.mcafee.taf.harnessserver.plist
+}
+cleanup()
+{
+    rm -rf $TMPDIR
+}
+setup
+doInstall
+cleanup
+exit 0

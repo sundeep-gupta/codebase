@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Agent Clean Up Suite Suite" verbose="2" >
+
+<test name="CleanUpAgentTest">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tools.cleanup.AgentCleanUpTest"/>
+			<methods>
+				<include name="testAgentCleanUp" />
+			</methods>
+		</classes>
+	</test>
+
+</suite>
+
+

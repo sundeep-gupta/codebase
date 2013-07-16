@@ -1,0 +1,108 @@
+	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AgentSettingsApi.xml" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<!--TestcaseID: 42902-->
+<test name="Default Options">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="defaultOptions" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42901-->
+<test name="Mutual Exclusivity1">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="mutualExclusivity1" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42901-->
+<test name="Mutual Exclusivity2">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="mutualExclusivity2" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42901-->
+<test name="Mutual Exclusivity3">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="mutualExclusivity3" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42900-->
+<test name="Multiple Combination1">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="multiCombination1" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42900-->
+<test name="Multiple Combination2">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="multiCombination2" />
+			</methods>
+		</classes>
+		
+<!--TestcaseID: 42900-->		
+</test><test name="Multiple Combination3">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="multiCombination3" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42900-->
+<test name="Multiple Combination4">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="multiCombination4" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 42898-->
+<test name="Non Boolean values">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="nonBoolean" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: N/A This is just to revert the settings to default settings after completions of tests-->
+<test name="Revert Options to Default">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentSettingsTest"/>
+			<methods>
+				<include name="revertToDefault" />
+			</methods>
+		</classes>
+</test>
+</suite>

@@ -1,0 +1,54 @@
+    <section>
+        <name>Send wishes from Bubble</name>
+        <p>
+	   Fill the form below and send wishes to your relatives, friends and 
+dear ones. 
+        </p>
+        <form method='POST' action='/celebrate.php'>
+          <table align = 'center' width = '90%' cellpadding='3'>
+                <tr>		    
+		    <td align='right'>
+                       From -  Name
+		    </td>
+                    <td>
+                        <input type='text' size='20' name='f_name' value=''></input>
+                    </td>
+                    <td align='right'>
+                        Email
+                    </td>
+                    <td>
+                        <input type='text' size='30' name='f_mail' value=''></input>
+                    </td>
+                </tr>
+                <tr>		    
+		    <td align='right'>
+                       To -  Name
+		    </td>
+                    <td>
+                        <input type='text' size='20' name='t_name' value=''></input>
+                    </td>
+                    <td align='right'>
+                        Email
+                    </td>
+                    <td>
+                        <input type='text' size='30' name='t_mail' value=''></input>
+                    </td>
+                </tr><tr>
+                    <td align='right' valign='top'>
+                        Your Message
+                    </td>
+                    <td colspan='3'>
+                        <textarea cols='50' rows='10' name='message' value=''  ></textarea>
+                    </td>
+                </tr>
+                     <tr><td></td><td></td></tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td align='center'>
+                        <input type='submit' value='Send'></input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>

@@ -1,0 +1,196 @@
+/**
+ * Copyright (C) 2010 TopCoder Inc., All Rights Reserved
+ */
+package com.topcoder.kestrel;
+
+import java.util.Properties;
+import java.io.*;
+/**
+ * 
+ *
+ * @author TCSDEVELOPER
+ * @version 1.0
+ * 
+ */
+public class CopyrightStatementUpdater {
+    final Logger logger = Logger.getLogger(this.getClass());
+    final Properties properties;
+    String[] searchPhrases, preImportantPhrases, postImportantPhrases;
+    String copyrightSingle, copyrightDouble, sourceFileLocation, targetFileLocation;
+    int numberOfLines;
+    boolean originalFilesAlter;
+    CopyrightStatementParser csp;
+    
+    public CopyrightStatementUpdater() throws CopyrightStatementUpdaterConfigurationException {
+        
+        this.properties = new Properties();
+        try {
+            properties.load(new FileInputStream("configurationFileName"));
+            this.validateProperties();
+        } catch(IOException ioe ) {
+            throw new CopyrightStatementUpdaterConfigurationException("Failed to load the configuration file", ioe);
+        } 
+    }
+    
+    private void validateProperties() {
+        /* TODO : Validate properties and throw exception if invalid */
+    	/* Read all the properties first */
+        searchPhrases= properties.getProperty("SearchPhrases").split(";");
+        preImportantPhrases = properties.getProperty("preImportantPhrases").split("#");
+        postImportantPhrases = properties.getProperty("postImportantPhrases").split("#");
+        copyrightSingle = properties.getProperty("copyrightSingle");
+        copyrightDouble = properties.getProperty("copyrightDouble");
+        sourceFileLocation = properties.getProperty("sourceFileLocation");
+        targetFileLocation = properties.getProperty("sourceFileLocation");
+        String originalFilesAlter = properties.getProperty("OriginalFilesAlter");
+        String numberOfLines = properties.getProperty("NumberOfLines");
+        
+        /* validate search phrase values */
+        if (searchPhrases == null ) {
+        	throw new CopyrightStatementUpdaterConfigurationException("searchPhrases not found in config file");
+        }
+        for(int i = 0 ; i < searchPhrases.length; i++) {
+            if( searchPhrases[i].equals("") ) {
+            	throw new CopyrightStatementUpdaterConfigurationException("Empty searchPhrases found in config file");
+            }
+        }
+        
+        /* TODO : Validate preImportantPhrases  and postImportantPhrase
+         *  For now we assume whatever is present int hem is all valid. empty phrases are treated as new lines.
+         */
+        
+        /* Validate sourceFileLocation */
+        if(sourceFileLocation == null ) {
+        	throw new CopyrightStatementUpdaterConfigurationException("sourceFileLocation not found in config file");
+        }
+        if (new File(sourceFileLocation).isDirectory() == false) {
+        	throw new CopyrightStatementUpdaterConfigurationException(
+        			      "sourceFileLocation does not exist or is not a directory");
+        }
+        
+        
+        /* Check original files alter */
+        if(originalFilesAlter == null) {
+        	throw new CopyrightStatementUpdaterConfigurationException("originalFilesAlter key not found in config file");
+        }
+        this.originalFilesAlter = Boolean.parseBoolean(originalFilesAlter);
+        if(this.originalFilesAlter) {
+            /* Check if targetLocation is present or not */
+        	if(targetFileLocation == null ) {
+        		throw new CopyrightStatementUpdaterConfigurationException("targetFileLocation key not found in config file");
+        	}
+        	if(targetFileLocation.equals("")) {
+        		throw new CopyrightStatementUpdaterConfigurationException("targetFileLocation value not found in config file");
+        	}
+        }
+    	
+        /* Validate singleCommentLine */
+        if(copyrightSingle == null) {
+        	throw new CopyrightStatementUpdaterConfigurationException("copyrightSingle value not found in config file");
+        }
+        if( (copyrightSingle.equals("Copyright IBM Corp. {0}") || 
+             copyrightSingle.equals("Copyright IBM Corporation. {0}")) == false ) {
+            throw new CopyrightStatementUpdaterConfigurationException("Invalid value for copyrightSingle found in config file");
+        }
+        
+        
+        /* Validate copyrightDouble */
+        if(copyrightDouble == null) {
+        	throw new CopyrightStatementUpdaterConfigurationException("copyrightDouble value not found in config file");
+        }
+        if( (copyrightDouble.equals("Copyright IBM Corp. {0}, {1}") || 
+        		copyrightDouble.equals("Copyright IBM Corporation. {0}, {1}")) == false ) {
+            throw new CopyrightStatementUpdaterConfigurationException("Invalid value for copyrightDouble found in config file");
+        }
+        
+        if(numberOfLines == null) {
+        	throw new CopyrightStatementUpdaterConfigurationException("'NumberOfLines' key not found in config file");
+        }
+        try {
+            this.numberOfLines = Integer.parseInt(numberOfLines);
+        } catch (NumberFormatException nfe) {
+        	throw new CopyrightStatementUpdaterConfigurationException("Value for 'NumberOfLines' must be a positive number");
+        }
+        if( this.numberOfLines <= 0) {
+        	throw new CopyrightStatementUpdaterConfigurationException("Invalid value for 'NumberOfLines'");
+        }
+        this.csp = new CopyrightStatementParser(this.numberOfLines, this.searchPhrases, this.copyrightSingle, 
+        		                                 this.copyrightDouble, 
+        		                                this.preImportantPhrases, this.postImportantPhrases);
+    }
+    public void process() throws CopyrightStatementUpdaterConfigurationException, CopyrightStatementUpdaterException {
+        this.processDirectory(new File(this.sourceFileLocation), false);
+    }
+	
+    public FileItem[] preview() {
+        this.processDirectory(new File( this.sourceFileLocation), true);
+    }
+    private void processDirectory(File dir, boolean preview) {
+        if( dir.isDirectory() == false) {
+            return;
+        }
+        File[] filesList = dir.listFiles();
+        for(int i = 0; i < filesList.length; i++) {
+            /* Skip if hidden file */
+            if(filesList[i].isHidden()) {
+                continue;
+            }
+            /* recurse if a directory for depth first */
+            if(filesList[i].isDirectory()) {
+                this.processDirectory(filesList[i], preview);
+            }
+            /* Now it is a non-hidden file. So process this */
+            this.processFile(filesList[i], preview);
+        }
+    }
+    
+    private void processFile(File file, boolean preview) {
+ //   	FileItem fileItem = new FileItem(file);
+        BufferedReader reader = new BufferedReader( new FileReader( file ));
+        csp.parse(reader, file.getPath());
+        
+        String[] preChange = csp.getPreChange();
+        String[] postChange = csp.getPostChange();
+        boolean requiresChange = csp.isRequireChange();
+        
+        /* TODO Here we must have what is pre text, what is post text */
+        if ( preview ) {
+            System.out.println("================================================================================");
+            System.out.println(file.getCanonicalPath());
+	        if(requiresChange) {
+	            System.out.println("================================================================================");
+	            System.out.println("--------------------------------------------------------------------------------");
+	            System.out.println("                               BEFORE                                           ");
+	            System.out.println("--------------------------------------------------------------------------------");
+	            System.out.println(preChange)
+	            System.out.println("--------------------------------------------------------------------------------");
+	            System.out.println("                               AFTER                                           ");
+	            System.out.println("--------------------------------------------------------------------------------");
+	            System.out.println(postChange);
+	            System.out.println("--------------------------------------------------------------------------------");
+            } else {
+            	System.out.println("*No Change Required*");
+	            System.out.println("================================================================================");
+            }
+            
+        } else {
+            File targetFile = this.getTargetFile(file);
+            BufferedWriter writer = new BufferedWriter( new FileWriter( new File (
+            		                    this.getTargetFileName( file.getPath() ))));
+            /* If file does not need change, just copy it */
+            
+            if(requiresChange == false ) {
+                writer.writeLine(preChange);
+            } else {
+            	writer.writeLine(postChange);
+            }
+            /* Write remaining part of file */
+            String line;
+            while((line = reader.readLine() ) != null ) {
+                writer.write(line)
+            }
+            writer.close();            
+        }
+        reader.close();
+    }
+}

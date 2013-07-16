@@ -1,0 +1,14 @@
+#!/bin/sh
+lrg=$1
+label=$3
+view=$2$lrg
+
+ade createview -label $label $view
+ade useview $view <<VIEW
+source \$HOME/regress/setup_mydb$lrg.csh
+oratst -initfile \$ADE_VIEW_ROOT/nde/ade/test/utl/ade_oratst.ini -d testini db_ground
+./sql_test
+oratst -initfile \$ADE_VIEW_ROOT/nde/ade/test/utl/ade_oratst.ini -d tkmain_t$lrg db_testini
+VIEW
+
+

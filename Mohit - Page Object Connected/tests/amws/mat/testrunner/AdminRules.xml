@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rules>
+  <SkipRule>
+    <Skip><![CDATA[C]]></Skip>
+  </SkipRule>
+  <Rule>
+    <Folder><![CDATA[*]]></Folder>
+    <FileName><![CDATA[*]]></FileName>
+    <Extension><![CDATA[*]]></Extension>
+    <FileType>3</FileType>
+    <Name><![CDATA[Exclude All Files]]></Name>
+    <Source>2</Source>
+    <Recursive>1</Recursive>
+    <Locked>1</Locked>
+    <Id>0</Id>
+  </Rule>
+  <Rule>
+    <Folder><![CDATA[D:\Auto-Backup-Dir]]></Folder>
+    <FileName><![CDATA[*]]></FileName>
+    <Extension><![CDATA[*]]></Extension>
+    <FileType>1</FileType>
+    <Name><![CDATA[Include Auto-Backup-Dir]]></Name>
+    <Source>2</Source>
+    <Recursive>1</Recursive>
+    <Locked>1</Locked>
+    <Id>0</Id>
+  </Rule>
+</Rules>

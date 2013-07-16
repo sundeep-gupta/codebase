@@ -1,0 +1,67 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="BrandingApiTestSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+<test name="Get Branding Info Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetBrandingInfoTest"/>
+			<methods>
+				<include name="testGetBrandingInfo" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+</test>
+<test name="Verify Default Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.VerifyDefaultBrandingTest"/>
+			<methods>
+				<include name="verifyDefaultBranding" />
+			</methods>
+		</classes>
+</test>
+<test name="Apply And Verify Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.ApplyAndVerifyBrandingTest"/>
+			<methods>
+				<include name="applyAndVerifyDefaultBranding" />
+			</methods>
+		</classes>
+</test>
+<test name="Apply Change And Reset Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.ApplyChangeResetBrandingTest"/>
+			<methods>
+				<include name="applyChangeResetBranding" />
+			</methods>
+		</classes>
+</test>
+<test name="Rename a Branded Community Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.RenameBrandedCommunityTest"/>
+			<methods>
+				<include name="renameBrandedCommunity" />
+			</methods>
+		</classes>
+</test>
+<test name="Move Account To Branded Community Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.MoveAccountToBrandedCommunityTest"/>
+			<methods>
+				<include name="moveAccountToBrandedCommunity" />
+			</methods>
+		</classes>
+</test>
+<test name="Branding Inheritance Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.BrandingInheritanceTest"/>
+			<methods>
+				<include name="brandingInheritance" />
+			</methods>
+		</classes>
+</test>
+</suite>

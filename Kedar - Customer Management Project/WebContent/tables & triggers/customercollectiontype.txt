@@ -1,0 +1,4 @@
+drop table customercollectiontype;
+
+create table customercollectiontype(collectiontypeid number(8) constraint pcolltype primary key,
+collectiontypename varchar2(30) not null);

@@ -1,0 +1,11 @@
+search.live.com/results.aspx?
+www.google.com/search?
+search.aol.com/aol/search?
+www.baidu.com/s?
+search.yahoo.com/SEARCH?
+www.kazaa.com/kazaa/perf
+www.preeso.com/preeso/perf
+www.mail.com/mail/perf
+http://192.168.1.4/apache2-default/webperf/perf/somebadimages.htm
+http://192.168.1.4/apache2-default/webperf/perf/bad1.htm
+http://192.168.1.4/apache2-default/webperf/perf/blocked.htm

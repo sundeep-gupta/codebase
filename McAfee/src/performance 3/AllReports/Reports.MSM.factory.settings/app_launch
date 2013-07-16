@@ -1,0 +1,22 @@
+----APPLICATIONS-LAUNCH-TEST----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+
+Address Book     		12     		1     		2     		0     7   0.5
+Activity Monitor     		5     		1     		2     		1     3.5   1
+Console     		2     		0     		3     		1     2.5   0.5
+Disk Utility     		5     		2     		3     		1     4   1.5
+Network Utility     		1     		1     		1     		1     1   1
+Mail     		4     		1     		10     		1     7   1
+Safari     		2     		0     		3     		0     2.5   0
+Adium     		6     		1     		8     		1     7   1
+Firefox     		7     		1     		8     		1     7.5   1
+Google Earth     		14     		3     		14     		5     14   4
+iTunes     		10     		5     		9     		5     9.5   5
+NetNewsWire     		6     		2     		4     		1     5   1.5
+Remote Desktop Connection     		4     		1     		2     		1     3   1
+TinkerTool     		5     		0     		1     		0     3   0
+VNCViewer     		20     		1     		8     		2     14   1.5
+Microsoft Entourage     		20     		4     		14     		3     17   3.5
+Microsoft Excel     		10     		3     		8     		3     9   3
+Microsoft PowerPoint     		8     		8     		19     		9     13.5   8.5
+Microsoft Word     		10     		14     		13     		9     11.5   11.5
+LAUNCH&CLOSE~TOTALTIME    	 151   	 49   	 132   	 45    141.5   47

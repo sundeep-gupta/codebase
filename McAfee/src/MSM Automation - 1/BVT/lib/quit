@@ -1,0 +1,9 @@
+# Copyright (c) 2010, McAfee Inc.  All rights reserved.
+#!/bin/sh
+
+echo | osascript <<EOF
+tell application "$*"
+  quit
+end tell
+EOF
+

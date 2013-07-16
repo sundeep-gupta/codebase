@@ -1,0 +1,44 @@
+---------Creating System Profile for reference-----------
+NWA seems to be installed on the system
+	<string>VirusScan 8.6 Version (build 191) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.6 Version (build 191) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+
+
+      Memory: 512 MB
+      Serial Number: YM406MMCPC1
+          Serial Number: 
+          Serial Number: 3JV8PHC4
+      IPv4 Addresses: 172.16.222.98
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A527)
+      Kernel Version: Darwin 9.0.0b5
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 17:45:31 IST 2007
+Tue Sep 18 18:37:55 IST 2007
+Time taken in seconds for this scan : 3143 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 18:39:39 IST 2007
+Tue Sep 18 19:31:42 IST 2007
+Time taken in seconds for this scan : 3123 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 19:33:18 IST 2007
+Tue Sep 18 20:26:31 IST 2007
+Time taken in seconds for this scan : 3193 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 20:28:18 IST 2007
+Tue Sep 18 21:21:12 IST 2007
+Time taken in seconds for this scan : 3174 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 21:23:15 IST 2007
+Tue Sep 18 22:16:03 IST 2007
+Time taken in seconds for this scan : 3168 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+<Testcase>
+	<FileName>testAppProtectionUTDemo.py</FileName>
+	<TestcaseID>testAppProtectionUTDemo</TestcaseID>
+	<LaunchProgram>python</LaunchProgram>
+</Testcase>

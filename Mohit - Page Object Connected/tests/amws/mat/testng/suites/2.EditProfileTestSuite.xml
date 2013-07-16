@@ -1,0 +1,136 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Edit Profile Test Suite" verbose="2" >
+
+<listeners>  
+    <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.ExecutionInterceptor" />
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="Support center Custom SubCommunity Configuration Test" >
+		<classes>
+ 			 <class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCCustomSubCommunityConfigTest" /> 
+		 <methods>
+  			<include name="testCreateSubCommunity" /> 
+ 		 </methods>
+  		</classes>
+  		<parameter name="ConfigName" value="DefaultAutoConfig" /> 
+ 		 <parameter name="ConfigDesc" value="Default Description" /> 
+ 		 <parameter name="TechnicianId" value="admin" /> 
+ 		 <parameter name="Password" value="1connected" /> 
+ 		 <parameter name="ProfileName" value="SubCustomAutoProfile" /> 
+  		<parameter name="Description" value="Automation Description" /> 
+  		<parameter name="VersionName" value="SubCustomAutoVersion" /> 
+  		<parameter name="AgentSettingsName" value="SubCustom Auto Agent Settings" /> 
+  		<parameter name="CustomLabel" value="Auto Custom Field" /> 
+  		<parameter name="DefValue" value="CustomValue" /> 
+  		<parameter name="CompDefValue" value="Iron Mountain" /> 
+  		<parameter name="LocDefValue" value="Bangalore" /> 
+  		<parameter name="EmplDefValue" value="E2010300" /> 
+  		<parameter name="AgentRuleName" value="PC 8.5 English Data Only Rule Set" />
+  		<parameter name="AgentRuleSettingsName" value="PC 8.5 English Data Only Rule Set"/>
+  		<parameter name="AgentVersion" value="English 8.5"/>
+  </test>
+
+ 	<test name="Edit Profile Change Password Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileChangePasswordTest"/>
+			<methods>
+				<include name="testEditPassword" />
+			</methods>
+		</classes>
+		<parameter name="newPassword" value="2connected"/>
+	</test>	
+	<test name="Edit Contact Information Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileContactInformationFieldsTest"/>
+			<methods>
+				<include name="testContactInformationFields" />
+			</methods>
+		</classes>
+		<parameter name="company" value="Iron Mountain"/>
+		<parameter name="country" value="United States"/>
+		<parameter name="addressLine1" value="My address"/>
+		<parameter name="city" value="Bangalore"/>
+		<parameter name="state" value="California"/>
+		<parameter name="zipCode" value="56008"/>
+		<parameter name="phone" value="12345-67890"/>
+	</test>
+	
+	<test name="Edit Email Address Field Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileEmailAddressFieldTest"/>
+			<methods>
+				<include name="testEmailAddressField" />
+			</methods>
+		</classes>
+		<parameter name="newEmailAddress" value="testing@test.com"/>
+	</test>	
+    <test name="Edit Name Fields">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileNameFieldsTest"/>
+			<methods>
+				<include name="testEditNameFields" />
+			</methods>
+		</classes>
+		m<parameter name="firstname" value="Auto"/>
+		<parameter name="lastname" value="Tester"/>
+		<parameter name="middlename" value="Mat"/>
+		<parameter name="firstnameNew" value="Tested"/>
+		<parameter name="lastnameNew" value="LastNameNew"/>
+		<parameter name="middlenameNew" value="MiddleNew"/> 
+	</test>
+		<test name="Edit Profile Custom Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileCustomFieldTest"/>
+			<methods>
+				<include name="testCustomField" />
+			</methods>
+		</classes>
+		<parameter name="customFieldLabel" value="Auto Custom Field"/>
+		<parameter name="customFieldValue" value="CustomValue"/>
+	</test>	
+	
+	<test name="Edit Profile Default Value Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileDefaultFieldTest"/>
+			<methods>
+				<include name="testDefaultValueField" />
+			</methods>
+		</classes>
+		<parameter name="location" value="Bangalore"/>
+		<parameter name="newLocation" value="Boston"/>
+	</test>	
+			
+	<test name="Edit Profile Page Navigations Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfilePageLinksNavigationTest"/>
+			<methods>
+				<include name="testPageNavigationsFromEditProfile" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Edit Profile Read Only Field Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileReadOnlyFieldTest"/>
+			<methods>
+				<include name="testReadOnlyField" />
+			</methods>
+		</classes>
+		<parameter name="company" value="Iron Mountain"/>
+	</test>	
+	
+	<test name="Edit Profile Required Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.editprofile.EditProfileRequiredFieldTest"/>
+			<methods>
+				<include name="testRequiredField" />
+			</methods>
+		</classes>
+		<parameter name="employeeId" value="E2010300"/>
+	</test>
+	
+</suite>
+
+

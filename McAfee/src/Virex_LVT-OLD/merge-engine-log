@@ -1,0 +1,127 @@
+#!/usr/bin/perl -w
+# $Id: merge-nails-engine-logs,v 1.2 2004/08/22 10:08:58 girish Exp $ */
+# Merge the engine logs from the scanner children and the cleaning children. We take
+# the results from the cleaner in preference to the scanner
+#
+#	$1 - engine log directory with renamed files in it
+#
+# Copyright (C) 2003 Networks Associates Technology Inc.
+# All rights reserved.
+#
+# $Revision: 1.2 $
+#
+#
+
+use strict;
+
+my $logDir = $ARGV[0];
+my $prefix = $ARGV[1];
+
+if (!opendir(DIR, $logDir)) {
+    die "cannot read directory $logDir - $!";
+}
+
+my @files = readdir(DIR);
+if (!scalar(@files)) {
+    die "directory $logDir is empty";
+}
+
+my @cleanFiles;
+my @scannerFiles;
+for my $f (@files) {
+    my $path = $logDir . "/" . $f;
+    next if ( ! -f $path);
+    if ($f =~ /^scan.*\.rep$/) {
+	push(@scannerFiles, $path);
+	next;
+    }
+    if ($f =~ /.*scanner$/) {
+	push(@scannerFiles, $path);
+	next;
+    }
+}
+
+my %res;
+my %scanRes;
+for my $f (@cleanFiles) {
+    my $id = $f;
+    $id =~ s:^.*/::;
+    parseFile($f, $prefix, sub {
+	my ($object, @args) = @_;
+	$res{$object} = [] if (!defined($res{$object}));
+	push(@{$res{$object}}, [ @args ]);
+    }
+    );
+}
+
+for my $f (@scannerFiles) {
+    my $id = $f;
+    $id =~ s:^.*/::;
+    parseFile($f, $prefix, sub {
+	my ($object, @args) = @_;
+	if (!defined($res{$object})) {
+	    $res{$object} = [];
+	    $scanRes{$object} = 1;
+	}
+	if ($scanRes{$object}) {
+	    if (0 && scalar(@args) == 1 && $args[0] ne 'is ok.') {
+		push(@args, "not repaired (code 0)");
+	    }
+	    push(@{$res{$object}}, [ @args ]);
+	}
+    }
+    );
+
+}
+
+for my $f (keys(%res)) {
+    foreach (@{$res{$f}}) {
+	print join(",", $f, @$_), "\n";
+    }
+}
+
+sub parseFile
+{
+    my ($sf, $prefix, $action) = @_;
+    if (!open(F, "< $sf")) {
+	die "failed top open $sf - $!";
+    }
+    my $line;
+    while (defined($line = <F>)) {
+	while (length($line)) {
+	    my $l;
+	    if (length($line) >= 8191) {
+		$l = substr($line, 0, 8191);
+		$line = substr($line, 8192);
+		print STDERR "splitting line [$line]\n";
+	    } else {
+		$l = $line;
+		$line = "";
+	    }
+	    # print STDERR "prefix=$prefix, l=$l\n";
+	    chomp($l);
+	    next if ($l !~ m{^$prefix} && $l !~ /\.\.\./);
+	    $l =~ s/
+$//g;
+	    next if ($l =~ m{entering subdirectory.$});
+	    my ($path, @args) = split(/,/, $l);
+		if($l =~ /\.\.\./)
+		{
+			my @args = split(/\//,$prefix);	
+			my $lNode = pop(@args);
+			chomp $lNode;
+			$path =~ s:^.*$lNode::;
+			next if ($path =~ m{...});
+		}
+		else
+		{
+		    $path =~ s:^$prefix::;
+		}
+		next if ($path =~ /\.\.\./);
+	    &$action($path, @args);
+	}
+    }
+    close(F);
+}
+
+0;

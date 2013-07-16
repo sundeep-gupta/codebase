@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>ccNewsletter</name>
+	<license>GNU General Public License v2, see LICENSE.php</license>
+	<author>Chill Creations</author>
+	<copyright>2009 Chill Creations-All rights reserved</copyright>
+	<creationDate>February 2010</creationDate>
+	<authorEmail>info@chillcreations.com</authorEmail>
+	<authorUrl>http://www.chillcreations.com</authorUrl>
+	<version>1.0.7</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>ccNewsletter is a free Joomla! 1.5 Native Open Source newsletter component. It is the easiest way to send newsletters to your users, fans or clients in Joomla! 1.5. You can be sending newsletters in just under 10 minutes from now!</description>
+
+	<!-- Site Main File Copy Section -->
+	<files>
+		<filename>index.html</filename>
+		<filename>ccnewsletter.php</filename>
+		<filename>controller.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">languages/site/en-GB.com_ccnewsletter.ini</language>
+	</languages>
+
+<install>
+	<sql>
+		<file driver="mysql" charset="utf8">install.sql</file>
+	</sql>
+</install>
+<uninstall>
+	<sql>
+		<file driver="mysql" charset="utf8">uninstall.sql</file>
+	</sql>
+</uninstall>
+
+<installfile>install.ccnewsletter.php</installfile>
+<uninstallfile>uninstall.ccnewsletter.php</uninstallfile>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_ccnewsletter/assets/cc_icon_small.png" link="option=com_ccnewsletter">ccNewsletter</menu>
+		<submenu>
+         <menu  controller="sendNewsletter">Send Newsletter</menu>
+         <menu  controller="subscriber">Subscribers</menu>
+         <menu  controller="newsletter">Newsletters</menu>
+         <menu  controller="acknowledgement">Acknowledgement</menu>
+         <menu  controller="import">Import/Export</menu>
+         <menu  controller="about">About</menu>
+      </submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>admin.ccnewsletter.php</filename>
+			<filename>install.sql</filename>
+			<filename>uninstall.sql</filename>
+			<filename>config.xml</filename>
+
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>ccnewsletter</folder>
+		</files>
+		<languages>
+			<language tag="en-GB">languages/admin/en-GB.com_ccnewsletter.ini</language>
+		</languages>
+	</administration>
+</install>
+

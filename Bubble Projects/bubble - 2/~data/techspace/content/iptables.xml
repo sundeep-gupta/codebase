@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title>IPTABLES - How to handle them... </title>
+    <author></author>
+    <section>
+        <p>
+      In this article we will quickly focus on usage of iptables command to apply set of filter rules on filter table or simply put, to block or enable traffic based on protocols and ports.
+ 
+        </p>
+<p>
+<b>Note:</b> To know more about different kinds of table visit reference url given at the end of the article.
+</p>
+<p>
+Iptables are nothing but the default the firewall of Linux system. Hence the firewall configuration through UI or during the Linux installation actually sets up Iptables. 
+</p>
+
+<p>
+In general, the default Linux firewall is a packet filter firewall. So it works on set of rules to decide what to do with the network packet. Iptables command is used to build these rules. 
+</p>
+
+<p>
+The usual syntax of setting up rule is,<br>
+</br>iptables[-t table] command [match] [target/jump]<br> 
+
+</br>where first we are looking on to a table (nat, filter or raw table) and trying to match a criteria. If the match occurs, we’ll either execute some target instruction or jump to next rule/chain.
+
+</p> 
+
+<p>
+Let us have a look at commands and options available to set the Rules/chain, <br>
+Mostly used Commands and their description,</br>	
+<br></br>
+<pre>
+Command 	Description
+-A    Append Rule at the end
+-D    Delete the Rule
+-P    Set policy on default chains. 
+		  INPUT, FORWARD and OUTPUT are the default chains
+-X    Create a new chain
+-R    Replace existing Rule with the new Rule
+-I    Insert Rule in between the chain
+-L    List existing Rules
+-F    Flushes all the Rules in the specified chain. 
+-X    Deletes entire chain (chain and table are a unanimous word)
+-E    Rename a chain
+
+Mostly used Commands and their description,
+Option 	  Description
+-v    Verbose output. Used along –A, -D, -R, -I commands
+--modprobe  To determine which module to use when probing for modules 
+            or adding them to the kernel
+-p    Protocol (tcp,icmp,udp etcetera)
+-s    source address
+-d    destination address
+-j    Jump to a chain/action
+-t    Target option
+--sport   Source Port
+--dport   Destination port
+
+target/jump options for packet filtering,
+Options	Description
+DROP	Drop matching packets
+ACCEPT	Accept matching packets
+REJECT	Reject matching packets and inform the sender regarding the same
+
+</pre>
+
+
+
+</p>
+
+<p>
+Let us apply these in following scenarios,
+</p>
+
+<p>
+<b>Scenario 1: Block all incoming icmp traffic,</b><br>
+
+</br>#iptables –A INPUT –p icmp –j DROP<br>
+
+</br>As you can see, we are appending a new Rule to the INPUT chain to DROP all icmp packets (incoming and outgoing)
+
+
+</p>
+
+<p>
+<b>Scenario 2: Block all incoming icmp traffic from a specified source say 192.168.1.1</b> <br>
+
+</br>#iptables –A INPUT –p icmp –s 192.168.1.1 –j DROP<br>
+
+</br>Only addition here from the above example is the source address.  So the icmp packets only from 192.168.1.1 are dropped.
+
+
+</p>
+
+<p>
+
+<b>Scenario 3:  Block FTP connection from a particular host say from 192.168.1.1 </b> <br>
+
+</br>#iptables –A INPUT –p tcp - -dport  21 –s 192.168.1.1 –j REJECT <br>
+
+</br>Here, --dport has been used to specify port number of the FTP service. Since we have used REJECT as action, it rejects packet as well as notifies connecting host about the status. 
+
+</p>
+
+<p>
+<b>Scenario 4: Block outgoing and incoming FTP connection from and to a specific host </b> <br>
+
+</br>#iptables –A INPUT –p tcp - -dport 21 –s 192.168.1.1 –j DROP<br>
+#iptables –A OUTPUT –p tcp  - -dport 21 –d 192.168.1.1 –s localhost_ip –j DROP</br>
+
+<br>As you see above, first rule blocks incoming FTP connection from 192.168.1.1
+Second rule blocks FTP connection from the localhost to 192.168.1.1</br>
+</p>
+
+<p>
+<b>Scenario 5: Setting up default policy if no rule matches </b> <br>
+
+</br>By default ACCEPT policy is set on default (INPUT,OUTPUT and FORWARD) chains. This implies that, if no rule matches within the chain, default action would be to accept the packet.<br>
+
+</br>To setup ACCEPT as default policy to INPUT chain type,<br>
+
+</br>#iptables –P INPUT ACCEPT<br>
+</br>To setup REJECT as default policy to OUTPUT chain type,<br>
+
+</br>#iptables –P OUTPUT REJECT
+
+</p>
+
+<p>
+<b> Scenario 6: Create a new chain and pass on control to it. </b> <br>
+
+</br>Let us create a chain called bubble. Inside that we’ll create Rule to block icmp traffic. Then we’ll create rule inside INPUT chain to pass control to bubble chain if the packet is from a specific host say from 192.168.1.1<br>
+
+</br>#iptables –N bubble<br> 
+#iptables –A bubble –p icmp –j DROP</br>
+
+bubble chain is created with the rule. Now the next step<br>
+
+</br>#iptables –A INPUT –s 192.168.1.1 –j bubble<br>
+
+</br>Here we have set the rule to forward the control (jump) to bubble chain of it is from 192.168.1.1<br> 
+</br>This is how you create your own set of chains and cascade access rules.
+
+</p>
+
+<p>
+Above we considered some generic examples which can be extended to build other Rules and chains as per requirements. We would be glad to help you if you find difficulty in setting up chains for you requirement. 
+</p>
+
+<p>
+
+In next article we’ll look at NAT setup using Iptables.
+</p>
+
+<p>
+If you want to know in details about IP Tables and working of TCP/IP visit,<br>
+
+</br><a href="http://iptables-tutorial.frozentux.net/iptables-tutorial.html">http://iptables-tutorial.frozentux.net/iptables-tutorial.html</a>
+
+</p>
+
+
+        <p><b>--Razikh</b><br/>
+	</p>
+    </section>
+</article>

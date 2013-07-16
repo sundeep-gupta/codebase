@@ -1,0 +1,1270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B0688F011AE6C0000782FC3 /* TCPUDPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B0688E611AE6BE100782FC3 /* TCPUDPClient.c */; };
+		2B3004C711AD1C0300E7ED7A /* NonDepLibApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B3004B511AD18A800E7ED7A /* NonDepLibApp.c */; };
+		2B9F591611A6B5E7001A8105 /* ParentApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F590711A6B5B4001A8105 /* ParentApp.c */; };
+		2B9F591711A6B5EB001A8105 /* ChildApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F590611A6B5AA001A8105 /* ChildApp.c */; };
+		7B7DB33F11A5292C00122DD7 /* TwoSharedlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB33E11A5292C00122DD7 /* TwoSharedlib.c */; };
+		7B7DB34211A5293900122DD7 /* Sample1.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB34011A5293900122DD7 /* Sample1.c */; };
+		7B7DB34311A5293900122DD7 /* Sample1.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7DB34111A5293900122DD7 /* Sample1.h */; };
+		7B7DB34611A5294800122DD7 /* Sample2.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB34411A5294800122DD7 /* Sample2.c */; };
+		7B7DB34711A5294800122DD7 /* Sample2.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7DB34511A5294800122DD7 /* Sample2.h */; };
+		7B7DB37611A52A3B00122DD7 /* TCPServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB37511A52A3B00122DD7 /* TCPServer.c */; };
+		7B7DB38811A52B0800122DD7 /* TCPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB38711A52B0800122DD7 /* TCPClient.c */; };
+		7B7DB39811A52BB100122DD7 /* UDPClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB39711A52BB100122DD7 /* UDPClient.c */; };
+		7B7DB3A811A52C1100122DD7 /* UDPServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB3A711A52C1100122DD7 /* UDPServer.c */; };
+		7B7DB46E11A5455C00122DD7 /* HttpRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB46D11A5455C00122DD7 /* HttpRequest.cpp */; };
+		7B7DB4A511A552FA00122DD7 /* FTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DB4A411A552FA00122DD7 /* FTPRequest.cpp */; };
+		8DD76F6A0486A84900D96B5E /* SampleApplications.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* SampleApplications.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B7DB3DB11A52E2B00122DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7DB30811A51CF500122DD7;
+			remoteInfo = Sample1;
+		};
+		7B7DB3DD11A52E2F00122DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B7DB30F11A51D0300122DD7;
+			remoteInfo = Sample2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* SampleApplications.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B0688E611AE6BE100782FC3 /* TCPUDPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCPUDPClient.c; sourceTree = "<group>"; };
+		2B0688EC11AE6BF100782FC3 /* TCPUDPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCPUDPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3004B511AD18A800E7ED7A /* NonDepLibApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NonDepLibApp.c; sourceTree = "<group>"; };
+		2B3004C311AD1BF000E7ED7A /* NonDepLibApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NonDepLibApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9F590611A6B5AA001A8105 /* ChildApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ChildApp.c; sourceTree = "<group>"; };
+		2B9F590711A6B5B4001A8105 /* ParentApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ParentApp.c; sourceTree = "<group>"; };
+		2B9F590B11A6B5C6001A8105 /* ParentApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ParentApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B9F591211A6B5DC001A8105 /* ChildApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChildApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB2FE11A51CAD00122DD7 /* TwoSharedLibs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoSharedLibs; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB30911A51CF500122DD7 /* libSample1.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSample1.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB31011A51D0300122DD7 /* libSample2.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libSample2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB33E11A5292C00122DD7 /* TwoSharedlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TwoSharedlib.c; sourceTree = "<group>"; };
+		7B7DB34011A5293900122DD7 /* Sample1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Sample1.c; sourceTree = "<group>"; };
+		7B7DB34111A5293900122DD7 /* Sample1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample1.h; sourceTree = "<group>"; };
+		7B7DB34411A5294800122DD7 /* Sample2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Sample2.c; sourceTree = "<group>"; };
+		7B7DB34511A5294800122DD7 /* Sample2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample2.h; sourceTree = "<group>"; };
+		7B7DB35C11A529F300122DD7 /* TCPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB36311A52A0A00122DD7 /* TCPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB36A11A52A1B00122DD7 /* UDPClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UDPClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB37111A52A2B00122DD7 /* UDPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UDPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB37511A52A3B00122DD7 /* TCPServer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCPServer.c; sourceTree = "<group>"; };
+		7B7DB38711A52B0800122DD7 /* TCPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCPClient.c; sourceTree = "<group>"; };
+		7B7DB39711A52BB100122DD7 /* UDPClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UDPClient.c; sourceTree = "<group>"; };
+		7B7DB3A711A52C1100122DD7 /* UDPServer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UDPServer.c; sourceTree = "<group>"; };
+		7B7DB46911A5454700122DD7 /* HttpRequest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HttpRequest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB46D11A5455C00122DD7 /* HttpRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HttpRequest.cpp; sourceTree = "<group>"; };
+		7B7DB4A011A552DE00122DD7 /* FTPRequest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FTPRequest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7DB4A411A552FA00122DD7 /* FTPRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FTPRequest.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* SampleApplications */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SampleApplications; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* SampleApplications.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SampleApplications.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B0688EA11AE6BF100782FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3004C111AD1BF000E7ED7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9F590911A6B5C6001A8105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9F591011A6B5DC001A8105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB2FC11A51CAD00122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB30711A51CF500122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB30E11A51D0300122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB35A11A529F300122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36111A52A0A00122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36811A52A1B00122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36F11A52A2B00122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB46711A5454700122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB49E11A552DE00122DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* SampleApplications */ = {
+			isa = PBXGroup;
+			children = (
+				2B0688E611AE6BE100782FC3 /* TCPUDPClient.c */,
+				2B9F590711A6B5B4001A8105 /* ParentApp.c */,
+				2B9F590611A6B5AA001A8105 /* ChildApp.c */,
+				7B7DB4A411A552FA00122DD7 /* FTPRequest.cpp */,
+				7B7DB46D11A5455C00122DD7 /* HttpRequest.cpp */,
+				7B7DB3A711A52C1100122DD7 /* UDPServer.c */,
+				7B7DB39711A52BB100122DD7 /* UDPClient.c */,
+				7B7DB38711A52B0800122DD7 /* TCPClient.c */,
+				7B7DB37511A52A3B00122DD7 /* TCPServer.c */,
+				7B7DB34411A5294800122DD7 /* Sample2.c */,
+				7B7DB34511A5294800122DD7 /* Sample2.h */,
+				7B7DB34011A5293900122DD7 /* Sample1.c */,
+				7B7DB34111A5293900122DD7 /* Sample1.h */,
+				7B7DB33E11A5292C00122DD7 /* TwoSharedlib.c */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				2B3004B511AD18A800E7ED7A /* NonDepLibApp.c */,
+			);
+			comments = "\n/*\n *  Copyright (C) 2010 McAfee, Inc.  All rights reserved.\n */";
+			name = SampleApplications;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* SampleApplications */,
+				7B7DB2FE11A51CAD00122DD7 /* TwoSharedLibs */,
+				7B7DB30911A51CF500122DD7 /* libSample1.dylib */,
+				7B7DB31011A51D0300122DD7 /* libSample2.dylib */,
+				7B7DB35C11A529F300122DD7 /* TCPServer */,
+				7B7DB36311A52A0A00122DD7 /* TCPClient */,
+				7B7DB36A11A52A1B00122DD7 /* UDPClient */,
+				7B7DB37111A52A2B00122DD7 /* UDPServer */,
+				7B7DB46911A5454700122DD7 /* HttpRequest */,
+				7B7DB4A011A552DE00122DD7 /* FTPRequest */,
+				2B9F590B11A6B5C6001A8105 /* ParentApp */,
+				2B9F591211A6B5DC001A8105 /* ChildApp */,
+				2B3004C311AD1BF000E7ED7A /* NonDepLibApp */,
+				2B0688EC11AE6BF100782FC3 /* TCPUDPClient */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* SampleApplications.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7B7DB30511A51CF500122DD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB34311A5293900122DD7 /* Sample1.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB30C11A51D0300122DD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB34711A5294800122DD7 /* Sample2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B0688EB11AE6BF100782FC3 /* TCPUDPClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B0688F211AE6C1F00782FC3 /* Build configuration list for PBXNativeTarget "TCPUDPClient" */;
+			buildPhases = (
+				2B0688E911AE6BF100782FC3 /* Sources */,
+				2B0688EA11AE6BF100782FC3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCPUDPClient;
+			productName = TCPUDPClient;
+			productReference = 2B0688EC11AE6BF100782FC3 /* TCPUDPClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		2B3004C211AD1BF000E7ED7A /* NonDepLibApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B3004D011AD1C5D00E7ED7A /* Build configuration list for PBXNativeTarget "NonDepLibApp" */;
+			buildPhases = (
+				2B3004C011AD1BF000E7ED7A /* Sources */,
+				2B3004C111AD1BF000E7ED7A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NonDepLibApp;
+			productName = NonDepLibApp;
+			productReference = 2B3004C311AD1BF000E7ED7A /* NonDepLibApp */;
+			productType = "com.apple.product-type.tool";
+		};
+		2B9F590A11A6B5C6001A8105 /* ParentApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B9F592A11A6B684001A8105 /* Build configuration list for PBXNativeTarget "ParentApp" */;
+			buildPhases = (
+				2B9F590811A6B5C6001A8105 /* Sources */,
+				2B9F590911A6B5C6001A8105 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParentApp;
+			productName = ParentApp;
+			productReference = 2B9F590B11A6B5C6001A8105 /* ParentApp */;
+			productType = "com.apple.product-type.tool";
+		};
+		2B9F591111A6B5DC001A8105 /* ChildApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B9F592B11A6B684001A8105 /* Build configuration list for PBXNativeTarget "ChildApp" */;
+			buildPhases = (
+				2B9F590F11A6B5DC001A8105 /* Sources */,
+				2B9F591011A6B5DC001A8105 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChildApp;
+			productName = ChildApp;
+			productReference = 2B9F591211A6B5DC001A8105 /* ChildApp */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB2FD11A51CAD00122DD7 /* TwoSharedLibs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB30211A51CCC00122DD7 /* Build configuration list for PBXNativeTarget "TwoSharedLibs" */;
+			buildPhases = (
+				7B7DB2FB11A51CAD00122DD7 /* Sources */,
+				7B7DB2FC11A51CAD00122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B7DB3DC11A52E2B00122DD7 /* PBXTargetDependency */,
+				7B7DB3DE11A52E2F00122DD7 /* PBXTargetDependency */,
+			);
+			name = TwoSharedLibs;
+			productName = TwoSharedLibs;
+			productReference = 7B7DB2FE11A51CAD00122DD7 /* TwoSharedLibs */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB30811A51CF500122DD7 /* Sample1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB31311A51D2200122DD7 /* Build configuration list for PBXNativeTarget "Sample1" */;
+			buildPhases = (
+				7B7DB30511A51CF500122DD7 /* Headers */,
+				7B7DB30611A51CF500122DD7 /* Sources */,
+				7B7DB30711A51CF500122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sample1;
+			productName = Sample1;
+			productReference = 7B7DB30911A51CF500122DD7 /* libSample1.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		7B7DB30F11A51D0300122DD7 /* Sample2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB31411A51D2200122DD7 /* Build configuration list for PBXNativeTarget "Sample2" */;
+			buildPhases = (
+				7B7DB30C11A51D0300122DD7 /* Headers */,
+				7B7DB30D11A51D0300122DD7 /* Sources */,
+				7B7DB30E11A51D0300122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sample2;
+			productName = Sample2;
+			productReference = 7B7DB31011A51D0300122DD7 /* libSample2.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		7B7DB35B11A529F300122DD7 /* TCPServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB37711A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "TCPServer" */;
+			buildPhases = (
+				7B7DB35911A529F300122DD7 /* Sources */,
+				7B7DB35A11A529F300122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCPServer;
+			productName = TCPServer;
+			productReference = 7B7DB35C11A529F300122DD7 /* TCPServer */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB36211A52A0A00122DD7 /* TCPClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB37811A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "TCPClient" */;
+			buildPhases = (
+				7B7DB36011A52A0A00122DD7 /* Sources */,
+				7B7DB36111A52A0A00122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCPClient;
+			productName = TCPClient;
+			productReference = 7B7DB36311A52A0A00122DD7 /* TCPClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB36911A52A1B00122DD7 /* UDPClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB37911A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "UDPClient" */;
+			buildPhases = (
+				7B7DB36711A52A1B00122DD7 /* Sources */,
+				7B7DB36811A52A1B00122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UDPClient;
+			productName = UDPClient;
+			productReference = 7B7DB36A11A52A1B00122DD7 /* UDPClient */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB37011A52A2B00122DD7 /* UDPServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB37A11A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "UDPServer" */;
+			buildPhases = (
+				7B7DB36E11A52A2B00122DD7 /* Sources */,
+				7B7DB36F11A52A2B00122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UDPServer;
+			productName = UDPServer;
+			productReference = 7B7DB37111A52A2B00122DD7 /* UDPServer */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB46811A5454700122DD7 /* HttpRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB46F11A5455D00122DD7 /* Build configuration list for PBXNativeTarget "HttpRequest" */;
+			buildPhases = (
+				7B7DB46611A5454700122DD7 /* Sources */,
+				7B7DB46711A5454700122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HttpRequest;
+			productName = HttpRequest;
+			productReference = 7B7DB46911A5454700122DD7 /* HttpRequest */;
+			productType = "com.apple.product-type.tool";
+		};
+		7B7DB49F11A552DE00122DD7 /* FTPRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B7DB4A611A552FA00122DD7 /* Build configuration list for PBXNativeTarget "FTPRequest" */;
+			buildPhases = (
+				7B7DB49D11A552DE00122DD7 /* Sources */,
+				7B7DB49E11A552DE00122DD7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTPRequest;
+			productName = FTPRequest;
+			productReference = 7B7DB4A011A552DE00122DD7 /* FTPRequest */;
+			productType = "com.apple.product-type.tool";
+		};
+		8DD76F620486A84900D96B5E /* SampleApplications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "SampleApplications" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleApplications;
+			productInstallPath = "$(HOME)/bin";
+			productName = SampleApplications;
+			productReference = 8DD76F6C0486A84900D96B5E /* SampleApplications */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "SampleApplications" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* SampleApplications */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* SampleApplications */,
+				7B7DB2FD11A51CAD00122DD7 /* TwoSharedLibs */,
+				7B7DB30811A51CF500122DD7 /* Sample1 */,
+				7B7DB30F11A51D0300122DD7 /* Sample2 */,
+				7B7DB35B11A529F300122DD7 /* TCPServer */,
+				7B7DB36211A52A0A00122DD7 /* TCPClient */,
+				7B7DB36911A52A1B00122DD7 /* UDPClient */,
+				7B7DB37011A52A2B00122DD7 /* UDPServer */,
+				7B7DB46811A5454700122DD7 /* HttpRequest */,
+				7B7DB49F11A552DE00122DD7 /* FTPRequest */,
+				2B9F590A11A6B5C6001A8105 /* ParentApp */,
+				2B9F591111A6B5DC001A8105 /* ChildApp */,
+				2B3004C211AD1BF000E7ED7A /* NonDepLibApp */,
+				2B0688EB11AE6BF100782FC3 /* TCPUDPClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B0688E911AE6BF100782FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0688F011AE6C0000782FC3 /* TCPUDPClient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B3004C011AD1BF000E7ED7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B3004C711AD1C0300E7ED7A /* NonDepLibApp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9F590811A6B5C6001A8105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9F591611A6B5E7001A8105 /* ParentApp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B9F590F11A6B5DC001A8105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9F591711A6B5EB001A8105 /* ChildApp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB2FB11A51CAD00122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB33F11A5292C00122DD7 /* TwoSharedlib.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB30611A51CF500122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB34211A5293900122DD7 /* Sample1.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB30D11A51D0300122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB34611A5294800122DD7 /* Sample2.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB35911A529F300122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB37611A52A3B00122DD7 /* TCPServer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36011A52A0A00122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB38811A52B0800122DD7 /* TCPClient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36711A52A1B00122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB39811A52BB100122DD7 /* UDPClient.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB36E11A52A2B00122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB3A811A52C1100122DD7 /* UDPServer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB46611A5454700122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB46E11A5455C00122DD7 /* HttpRequest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B7DB49D11A552DE00122DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7DB4A511A552FA00122DD7 /* FTPRequest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B7DB3DC11A52E2B00122DD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B7DB30811A51CF500122DD7 /* Sample1 */;
+			targetProxy = 7B7DB3DB11A52E2B00122DD7 /* PBXContainerItemProxy */;
+		};
+		7B7DB3DE11A52E2F00122DD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B7DB30F11A51D0300122DD7 /* Sample2 */;
+			targetProxy = 7B7DB3DD11A52E2F00122DD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = SampleApplications;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = SampleApplications;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Release;
+		};
+		2B0688EE11AE6BF200782FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPUDPClient;
+			};
+			name = Debug;
+		};
+		2B0688EF11AE6BF200782FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPUDPClient;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		2B3004C511AD1BF100E7ED7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = NonDepLibApp;
+			};
+			name = Debug;
+		};
+		2B3004C611AD1BF100E7ED7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = NonDepLibApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		2B9F590D11A6B5C7001A8105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = ParentApp;
+			};
+			name = Debug;
+		};
+		2B9F590E11A6B5C7001A8105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = ParentApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		2B9F591411A6B5DD001A8105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = ChildApp;
+			};
+			name = Debug;
+		};
+		2B9F591511A6B5DD001A8105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = ChildApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB30011A51CAE00122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-lSample1",
+					"-lSample2",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TwoSharedLibs;
+			};
+			name = Debug;
+		};
+		7B7DB30111A51CAE00122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-lSample1",
+					"-lSample2",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TwoSharedLibs;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB30A11A51CF500122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Sample1;
+			};
+			name = Debug;
+		};
+		7B7DB30B11A51CF500122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Sample1;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB31111A51D0300122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Sample2;
+			};
+			name = Debug;
+		};
+		7B7DB31211A51D0300122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Sample2;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB35E11A529F400122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPServer;
+			};
+			name = Debug;
+		};
+		7B7DB35F11A529F400122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPServer;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB36511A52A0A00122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPClient;
+			};
+			name = Debug;
+		};
+		7B7DB36611A52A0A00122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = TCPClient;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB36C11A52A1C00122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = UDPClient;
+			};
+			name = Debug;
+		};
+		7B7DB36D11A52A1C00122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = UDPClient;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB37311A52A2C00122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = UDPServer;
+			};
+			name = Debug;
+		};
+		7B7DB37411A52A2C00122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = UDPServer;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB46B11A5454700122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-lcurl";
+				PREBINDING = NO;
+				PRODUCT_NAME = HttpRequest;
+			};
+			name = Debug;
+		};
+		7B7DB46C11A5454700122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-lcurl";
+				PREBINDING = NO;
+				PRODUCT_NAME = HttpRequest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		7B7DB4A211A552DE00122DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-lcurl";
+				PREBINDING = NO;
+				PRODUCT_NAME = FTPRequest;
+			};
+			name = Debug;
+		};
+		7B7DB4A311A552DE00122DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-lcurl";
+				PREBINDING = NO;
+				PRODUCT_NAME = FTPRequest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "SampleApplications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "SampleApplications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B0688F211AE6C1F00782FC3 /* Build configuration list for PBXNativeTarget "TCPUDPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B0688EE11AE6BF200782FC3 /* Debug */,
+				2B0688EF11AE6BF200782FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B3004D011AD1C5D00E7ED7A /* Build configuration list for PBXNativeTarget "NonDepLibApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B3004C511AD1BF100E7ED7A /* Debug */,
+				2B3004C611AD1BF100E7ED7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B9F592A11A6B684001A8105 /* Build configuration list for PBXNativeTarget "ParentApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9F590D11A6B5C7001A8105 /* Debug */,
+				2B9F590E11A6B5C7001A8105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B9F592B11A6B684001A8105 /* Build configuration list for PBXNativeTarget "ChildApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9F591411A6B5DD001A8105 /* Debug */,
+				2B9F591511A6B5DD001A8105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB30211A51CCC00122DD7 /* Build configuration list for PBXNativeTarget "TwoSharedLibs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB30011A51CAE00122DD7 /* Debug */,
+				7B7DB30111A51CAE00122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB31311A51D2200122DD7 /* Build configuration list for PBXNativeTarget "Sample1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB30A11A51CF500122DD7 /* Debug */,
+				7B7DB30B11A51CF500122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB31411A51D2200122DD7 /* Build configuration list for PBXNativeTarget "Sample2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB31111A51D0300122DD7 /* Debug */,
+				7B7DB31211A51D0300122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB37711A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "TCPServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB35E11A529F400122DD7 /* Debug */,
+				7B7DB35F11A529F400122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB37811A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "TCPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB36511A52A0A00122DD7 /* Debug */,
+				7B7DB36611A52A0A00122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB37911A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "UDPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB36C11A52A1C00122DD7 /* Debug */,
+				7B7DB36D11A52A1C00122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB37A11A52A3B00122DD7 /* Build configuration list for PBXNativeTarget "UDPServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB37311A52A2C00122DD7 /* Debug */,
+				7B7DB37411A52A2C00122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB46F11A5455D00122DD7 /* Build configuration list for PBXNativeTarget "HttpRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB46B11A5454700122DD7 /* Debug */,
+				7B7DB46C11A5454700122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B7DB4A611A552FA00122DD7 /* Build configuration list for PBXNativeTarget "FTPRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B7DB4A211A552DE00122DD7 /* Debug */,
+				7B7DB4A311A552DE00122DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

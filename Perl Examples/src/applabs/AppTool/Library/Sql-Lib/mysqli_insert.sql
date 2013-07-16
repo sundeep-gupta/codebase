@@ -1,0 +1,1 @@
+INSERT INTO `adodb_results` VALUES ('', 1000, 2000, 'pass', '', 'Build 1.0 of AppTool', 'sole_comparison', '00:10:00', '00:11:59', '2005-09-28', 'complete', 'cmdline', '1120889959', NULL);

@@ -1,0 +1,1 @@
+DOM configuration in Perl|razikh|razikh@bubble.co.in|1193083025|razikh|xx|0|123.236.175.76|[font=monospace]Can any1 tell me how to enable DOM in php?? As phpinfo shows that DOM is disabled..<br /><br />PHP Version: 5.1<br />System: Fedora 6.0<br /><br />Thanks,<br />Razikh<br /><br />[/font]||||

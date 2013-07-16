@@ -1,0 +1,41 @@
+hi amit,
+i was try to display uploaded in jsp with the following code
+
+<%@ page import ="java.io.*" %>
+<%--
+<jsp:useBean id="upload" class="net.kmmatrimony.TestUploadActionForm" scope="session">
+</jsp:useBean> --%>
+<%
+byte[] rgb=(byte[])session.getAttribute("byte");
+if (rgb != null)
+{
+response.setContentType("image/gif");
+OutputStream stream = response.getOutputStream();
+stream.write(rgb);
+}
+else
+{
+response.setContentType("text");
+response.getWriter().write("attribute byArr not found");
+}
+%>
+<!--
+The image data is now on the request object.
+Forward the user to the showImage servlet.
+That servlet will process and display the image data contained on the request object.
+-->
+<%--
+Image is<p>
+<jsp:forward page="/showimage" /> 
+
+--%>
+
+but i was getting the error message as : 
+java.lang.IllegalStateException: getOutputStream() has already been called for this response
+
+so please suggest me what should i do to get the image. (rest of the code of Action class n Action Form is urs).
+
+please give me answer ASAP i m in big need of it.
+
+thanks 
+sapna

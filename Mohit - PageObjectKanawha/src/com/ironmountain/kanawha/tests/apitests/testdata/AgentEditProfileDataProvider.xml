@@ -1,0 +1,12 @@
+<suite>
+<test name="TestSuiteParameters">
+	<input>
+		<param name="defaultUsername">kuser@cb.com</param>
+		<param name="defaultPassword">1Connected</param>
+		
+	    /* JSON String for Default Automatic Schedule 
+		<param name="defaultEditProfileInfo"></param>
+	</input>
+</test>
+
+</suite>

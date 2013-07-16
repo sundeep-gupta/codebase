@@ -1,0 +1,10 @@
+$Group{'Global Moderator'} = 'Global Moderator|5|stargmod.gif|blue|0|0|0|0|0|0';
+$Group{'Administrator'} = 'Bubble Space Administrator|5|staradmin.gif|red|0|0|0|0|0|0';
+$Group{'Moderator'} = 'YaBB Moderator|5|starmod.gif|green|0|0|0|0|0|0';
+$Post{'50'} = 'Junior Member|2|stargold.gif||0|0|0|0|0|0';
+$Post{'250'} = 'Senior Member|4|stargold.gif||0|0|0|0|0|0';
+$Post{'500'} = 'God Member|5|starsilver.gif||0|0|0|0|0|0';
+$Post{'100'} = 'Full Member|3|starblue.gif||0|0|0|0|0|0';
+$Post{'-1'} = 'Bubble Newbies|1|stargold.gif||0|0|0|0|0|0';
+
+1;

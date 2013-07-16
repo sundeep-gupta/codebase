@@ -1,0 +1,13 @@
+use Data::Dumper;
+use Net::FTP;
+our $a = 'b';
+our $b = 'c';
+print $$a;
+$a = 'Net::FTP';
+$b = 'new';
+my $obj = $a->$b('10.200.2.103');
+#print login($a);
+print Dumper($obj);
+my @arr =  keys %main::;
+$" = "\t";
+#print "@arr";

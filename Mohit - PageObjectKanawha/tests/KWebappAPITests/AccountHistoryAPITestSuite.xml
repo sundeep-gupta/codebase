@@ -1,0 +1,235 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AccountHistoryAPITestSuite" verbose="2" >
+
+	<listeners>  
+	    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+	    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<test name="History Summary test for Large Number of Files">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestBigAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for Large Number of Files">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestBigAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for Large Number of Files">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestBigAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for MAC Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestMACAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for MAC Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestMACAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for MAC Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestMACAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for Account with no backup">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestEmptyAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for Account with no backup">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestEmptyAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for Account with no backup">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestEmptyAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for Account with one backup Date">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestOneDay" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for Account with one backup Date">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestOneDay" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for Account with one backup Date">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestOneDay" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for all dates of an Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestAllDates" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for 10 Dates at a time / as per UI">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestTenDates" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for Canceled Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestCancelAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for Canceled Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestCancelAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for Canceled Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestCancelAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Summary test for On Hold Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historySummaryTestOnHoldAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Notifications test for On Hold Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyNotificationsTestOnHoldAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History File List test for On Hold Account">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyFileListTestOnHoldAcc" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Test for account number as 0">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyTestZeroAccNum" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Test for account number as -1">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyTestMinusOneAccNum" />
+			</methods>
+		</classes>		
+	</test>
+	
+		<test name="History Test for account number random Negetive Number">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyTestMinusOneAccNum" />
+			</methods>
+		</classes>		
+	</test>
+	
+		<test name="History Test for account number as random positive number less than 100000000">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyTestRandomPositiveAccNum" />
+			</methods>
+		</classes>		
+	</test>
+	
+	<test name="History Test for Inavlid Dates">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountHistoryTest"/>
+			<methods>
+				<include name="historyTestInvalidDates" />
+			</methods>
+		</classes>		
+	</test>
+	
+</suite>

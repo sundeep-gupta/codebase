@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigTest Apply="True">
+
+	<RemoveAll Desc="RemoveAll Allowed_sites" Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection"/>
+
+	<AddItem Desc="Add Allowed_sites" Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection">
+
+<Item value="qamoon"/>
+<Item value="qamoon.wateng.org"/>
+
+<Item Value="qamoon/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+<Item Value="qamoon.wateng.org/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+
+<Item value="172.16.16.36"/>
+<Item Value="172.16.16.36/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+
+<Item value="qastar"/>
+
+<Item Value="qastar/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+<Item Value="qastar.wateng.org/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+
+<Item value="172.16.19.89"/>
+<Item Value="172.16.19.89/mps_backend/mb_test_allowed_urls_blocked_content.php"/>
+
+	</AddItem>
+
+	<!-- DisplayAll Category="MCPS_CONFIG_ALLOWED_SITES"/ -->
+
+	<Display Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection"/>
+
+
+</ConfigTest>

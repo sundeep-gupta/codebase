@@ -1,0 +1,83 @@
+<?xml version="2.5" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>AdBrite</name>
+	<author>Joomlaspan</author>
+	<creationDate>July 2008</creationDate>
+	<copyright>Joomlaspan!</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>admin@joomlaspan.com</authorEmail>
+	<authorUrl>http://www.joomlaspan.com</authorUrl>
+	<version>1.1 (J!15)</version>
+	<description>More information is available on Joomlaspan.com</description>
+	<files>
+		<filename module="mod_adbrite">mod_adbrite.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+<params>  
+		<param name="js_adtype" type="radio" default="1" label="Adbrite Ad Type" description="The type of Ad that you have chosen on AdBrite.">
+			<option value="1">Banner and Text Ad</option>
+			<option value="2">Text Ad Only</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label=" " description="The parameters below are used if Banner and Text ads are selected above" />	
+		<param name="@spacer" type="spacer" default="IF BANNER and TEXT AD" label=" " description="The parameters below are used if Banner and Text ads are selected above" />	
+		<param name="b_sid" type="text" default="" label="Adbrite sid" description="Enter your Adbrite sid here" />
+		<param name="b_zsid" type="text" default="" label="Adbrite zs" description="Enter your Adbrite zs number here" />
+		<param name="b_title_color" type="text" default="0000FF" label="Title Color" description="Title color, in hex, without #" />
+		<param name="b_text_color" type="text" default="000000" label="Text Color" description="Text color, in hex, without #" />
+		<param name="b_url_color" type="text" default="008000" label="URL Color" description="URL color, in hex, without #" />
+		<param name="b_bg_color" type="text" default="FFFFFF" label="Background Color" description="Background color, in hex, without #" />
+		<param name="b_border_color" type="text" default="FFFFFF" label="Border Color" description="Border color, in hex, without #" />	
+
+		<param name="@spacer" type="spacer" default="" label=" " description="The parameters below are used if Banner and Text ads are selected above" />	
+		<param name="@spacer" type="spacer" default="IF TEXT AD ONLY" label=" " description="The parameters below are used if Text Ads Only is selected above" />	
+		<param name="t_sid" type="text" default="" label="Adbrite sid" description="Enter your Adbrite sid here" />
+		<param name="t_headline_weight" type="list" default="bold" label="Title Font Weight" description="Title Font Weight. Default is bold.">
+			<option value="bold">bold</option>
+			<option value="normal">normal</option>
+		</param>	
+		<param name="t_headline_size" type="text" default="10" label="Title Font Size" description="Title Font Size in pt. Please type only a number here, no alphabets. Default is 10." />
+		<param name="t_headline_face" type="text" default="Arial" label="Title Font Facetype" description="Title Font Facetype. Default is Arial." />
+		<param name="t_headline_decoration" type="list" default="underline" label="Title Font Decoration" description="Title Font Decoration.  default is underline">
+			<option value="none">none</option>
+			<option value="underline">underline</option>
+			<option value="overline">overline</option>
+		</param>
+		<param name="t_headline_color" type="text" default="0000FF" label="Title Font Color" description="Title Font color, in hex, without #. Default is 0000FF" />	
+
+		<param name="t_text_weight" type="list" default="normal" label="Text Font Weight" description="Text Font Weight. Default is normal.">
+			<option value="bold">bold</option>
+			<option value="normal">normal</option>
+		</param>	
+		<param name="t_text_size" type="text" default="10" label="Text Font Size" description="Text Font Size in pt. Please type only a number here, no alphabets. Default is 10." />
+		<param name="t_text_face" type="text" default="Arial" label="Text Font Facetype" description="Text Font Facetype. Default is Arial." />
+		<param name="t_text_decoration" type="list" default="none" label="Text Font Decoration" description="Text Font Decoration.  default is none.">
+			<option value="none">none</option>
+			<option value="underline">underline</option>
+			<option value="overline">overline</option>
+		</param>
+		<param name="t_text_color" type="text" default="000000" label="Text Font Color" description="Text Font color, in hex, without #. Default is 000000" />	
+
+		<param name="@spacer" type="spacer" default="" label="" description=" " />	
+		<param name="js_adbrite_link" type="list" default="1" label="Show AdBrite Link?" description="Do you want to show a link to AdBrite - Your Ad Here - at the bottom?">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>	
+		<param name="js_adbrite_target" type="list" default="_blank" label="Open AdBrite Link in" description="Do you want to open a link in new page or same page?">
+				<option value="_blank">New Tab/Window</option>
+				<option value="_top">Same Page</option>
+		</param>	
+		<param name="js_adbrite_link_css" type="text" default="font-weight:bold;font-family:Arial;font-size:12px;" label="AdBrite Link CSS codes" description="Input any css code that you want here." />
+		<param name="js_adbrite_link_text" type="text" default="Your Ad Here" label="AdBrite Link Text" description="Input any text for the AdBrite Link." />
+		<param name="js_attribute" type="list" default="1" label="Attribution" description="Select yes to allow attribution">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+		</param>
+</params>   
+<params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="js_ad_css" type="text" default="text-align:center;" label="Div CSS codes" description="Input any css code that you want here." />
+</params>   
+</install>

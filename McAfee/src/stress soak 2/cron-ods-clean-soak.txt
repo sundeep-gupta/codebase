@@ -1,0 +1,19 @@
+
+# Virex Schedule Editor Task 03082006182856756
+00 01 */1 * * /usr/local/McAfee/Antimalware/VShieldTaskManager 1 &
+
+# Virex Schedule Editor Task 03082006183318214
+00 13 */1 * * /usr/local/McAfee/Antimalware/VShieldTaskManager 1 &
+
+# Virex Schedule Editor Task 03082006183333975
+00 17 */1 * * /usr/local/McAfee/Antimalware/VShieldTaskManager 1 &
+
+# Virex Schedule Editor Task 03082006183208204
+00 05 */1 * * /usr/local/McAfee/Antimalware/VShieldTaskManager 1 &
+
+# Virex Schedule Editor Task 03082006183237804
+00 09 */1 * * /usr/local/McAfee/Antimalware/VShieldTaskManager 1 &
+
+# Virex Schedule Editor Task 03082006185051008
+36 21 */1 * * launchctl start com.mcafee.virusscan.eupdate
+

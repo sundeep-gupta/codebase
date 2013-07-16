@@ -1,0 +1,61 @@
+<html> <head> <title>Ajax RSS Reader</title>
+<style>
+body { font-family: arial, verdana, sans-serif; }
+</style>
+<script>
+var g_homeDirectory = 'http://localhost/php-practice/';
+
+var req = null;
+function processReqChange( handler ) {
+  if (req.readyState == 4 && req.status == 200 && req.responseXML ) {
+    handler( req.responseXML ); }
+}
+
+function loadXMLDoc( url, handler ) {
+  if(window.XMLHttpRequest) {
+    try { req = new XMLHttpRequest(); } catch(e) { req = false; }
+  }  else if(window.ActiveXObject)  {
+    try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch(e) {
+    try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch(e) { req = false; } }
+  }
+
+  if(req) {
+
+    req.onreadystatechange = handler;
+//function() { processReqChange( handler ); };
+    req.open("GET", url, true);
+    req.send("");
+
+  }
+}
+
+function parseFeedList( dom) {
+
+  var elfl = document.getElementById( 'elFeedList' );
+  elfl.innerHTML = '';
+
+  var response = req.responseXML.documentElement;
+
+  x = response.getElementsByTagName("feed");
+
+  for( var i = 0; i < x.length; i++ ) {
+
+    var id   = x[i].getAttribute( 'id' );
+    var link = x[i].getAttribute( 'link' );
+    var name = x[i].getAttribute( 'name' );
+
+    var elOption = document.createElement( 'option' );
+    elOption.value = id;
+    elOption.innerHTML = name;
+   
+    elfl.add( elOption ,null);
+  }
+}
+
+function getFeedList() {
+  loadXMLDoc( g_homeDirectory+'list.php', parseFeedList );
+}
+</script> </head> <body>
+<select id="elFeedList"> </select>
+<script> getFeedList(); </script>
+</body> </html>

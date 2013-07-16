@@ -1,0 +1,6 @@
+This is based on the analysis done for the 
+Tic Tac Toe .. and hence some / all points may / may not be applicable.
+
+1. Find out ALL possible win conditions
+2. MinMax(), MinMove(), MaxMove() and many other
+   Functions have to be designed...

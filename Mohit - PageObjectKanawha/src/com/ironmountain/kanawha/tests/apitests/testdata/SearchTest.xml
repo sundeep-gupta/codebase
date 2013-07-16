@@ -1,0 +1,125 @@
+<suite>
+<test name="SimplePosTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">a.txt</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\SubFolder01\</param>
+		<param name="pathassert2">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\SubFolder01\</param>
+		<param name="searchFileName2">a.txt</param>
+		<param name="noOfFiles">1</param>
+		</output>
+</test>
+<test name="BackupDateTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">a.txt</param>
+		<param name="searchFileName2">a$.txt</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDateAll">All</param>
+		<param name="startBackupDateRecent">Recent</param>
+		<param name="startBackupDateSpecific">3/3/2011 10:38:13 PM</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="pathassertall1">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\SubFolder01\</param>
+		<param name="pathassertall2">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\SubFolder01\</param>
+		<param name="searchFileName3">a.txt</param>
+		<param name="pathassertspecific">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\Special char folder\</param>
+		<param name="noOfFilesall">1</param>
+		<param name="noOfFilesrecent">0</param>
+		<param name="noOfFilesspecific">1</param>
+		</output>
+</test>
+<test name="Neg2Test">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">mn.txt</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="pathassert"></param>
+		<param name="noOfFiles">0</param>
+		</output>
+</test>
+<test name="EmoTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="accountNumber">101001882</param>
+		<param name="searchFileNamePST">MF_1_NP.pst</param>
+		<param name="searchFileNameNSF">NoPassTest_NSF_530MB.nsf</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\Emo test data\</param>
+		<param name="noOfFiles">1</param>
+		</output>
+</test>
+<test name="WildCharTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="accountNumber">101001882</param>
+		<param name="searchFileName1">*</param>
+		<param name="searchFileName2">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\SANDBOX\00-Basic Content\SUBDIR\</param>
+		<param name="startBackupDate">Most Recent</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="noOfFiles">4</param>
+		</output>
+</test>
+<test name="SpecialCharactersTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="accountNumber">101001882</param>
+		<param name="searchFileName1">a$.txt</param>
+		<param name="searchFileName2">a;.txt</param>
+		<param name="searchFileName3">a..txt</param>
+		<param name="searchFileName4">a,.txt</param>
+		<param name="searchFileName5">a'.txt</param>
+		<param name="searchFileName6">a_.txt</param>
+		<param name="searchFileName7">a#.txt</param>
+		<param name="searchFileName8">a^.txt</param>
+		<param name="searchFileName9">a@.txt</param>
+		<param name="searchFileName10">a!.txt</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="noOfFiles">1</param>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\Special char folder\</param>
+		</output>
+</test>
+<test name="MultiInstancesExtensionsTest">
+	<input>
+		<param name="userName">searchapiuser@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="accountNumber">101001882</param>
+		<param name="searchFileName">SymLinkFile.txt</param>
+		<param name="path">C:\</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		</input>
+		<output>
+		<param name="noOfFiles">5</param>
+		<param name="pathassert2">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\SubFolder02\SubFolder02.03\</param>
+		<param name="pathassert1">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\2GB Data Folder\</param>
+		</output>
+</test>
+</suite>

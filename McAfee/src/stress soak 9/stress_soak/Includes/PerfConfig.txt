@@ -1,0 +1,86 @@
+#############################################################################
+#This script related variables
+#############################################################################
+#Shell command to run after one test script is over
+CommandOnTestOver = reboot
+
+MainScriptpath = `dirname $0`
+
+#Counter filename
+CounterFilename = counter.txt
+
+ReportFile = perfresult.txt
+
+#############################################################################
+#Set Perl Script names and number ofTimes to run script values here.
+#############################################################################
+
+FirstTestScript = ods-clean.pl
+FirstTestRuns = 0
+
+SecondTestScript =  ods-mixed.pl
+SecondTestRuns = 0
+
+ThirdTestScript =  oas-clean.pl
+ThirdTestRuns = 0
+
+FourthTestScript =  oas-mixed.pl
+FourthTestRuns = 0
+
+FifthTestScript = applaunch-oas-always.pl
+FifthTestRuns = 5
+
+SixthTestScript = appusage-oas-always.pl
+SixthTestRuns = 0
+
+#SixthTestScript = applaunch-oas-none.pl
+#SixthTestRuns = 0
+
+SeventhTestScript = applaunch-oas-read.pl
+SeventhTestRuns = 0
+
+EighthTestScript =applaunch-oas-write.pl
+EighthTestRuns = 0
+
+NinethTestScript = ods-clean-noapplemail.pl
+NinethTestRuns = 0
+
+TenthTestScript = ods-clean-noarchive.pl
+TenthTestRuns = 0
+
+EleventhTestScript = ods-clean-alldisabled.pl
+EleventhTestRuns = 0
+
+TwelvethTestScript = ods-clean-alldisabled.pl
+TwelvethTestRuns = 0
+
+
+
+#############################################################################
+#Set path of datasets relevant ot OAS and ODS ( clean and mixed) here.
+#############################################################################
+#Dataset for ODS
+ODS_CleanDatasetPath= /Volumes/DATA/PSS_DATASET/ods/clean/
+ODS_MixedDatasetPath= /Volumes/DATA/PSS_DATASET/ods/mixed/
+#ODS_CleanDatasetPath= /Volumes/DATA/stress_soak
+#ODS_MixedDatasetPath= /Volumes/DATA/ssm_perf
+#Dataset for OAS
+#OAS_CleanDatasetPath= /Volumes/DATA/stress_soak 
+#OAS_MixedDatasetPath= /Volumes/DATA/ssm_perf
+OAS_CleanDatasetPath= /Volumes/DATA/PSS_DATASET/oas/clean/
+OAS_MixedDatasetPath= /Volumes/DATA/PSS_DATASET/oas/mixed/
+
+#############################################################################
+#Virex Application related Information.
+#############################################################################
+
+VirexApplication = /Applications/VirusScan.app
+VirexLogPath = /var/log/VirusScan.log
+VirexLauncherPath = /usr/local/McAfee/AntiMalware/VShieldTaskManager
+VirexTaskDb = Includes/VSMacDatabase.db
+VirexTaskID = 1
+
+#############################################################################
+#Over
+#############################################################################
+

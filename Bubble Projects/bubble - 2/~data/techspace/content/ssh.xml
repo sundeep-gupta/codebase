@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <article>
+        <title>Bypassing SSH Password</title>
+        <author><a href="mailto:razikh@gmail.com">--Razikh</a></author>
+        <section>
+            <p>
+                Focus of this article is to explain procedure to bypass
+                password for SSH connection.
+            </p>
+            <p>
+                <b>SSH</b> stands for <b>S</b>ecure <b>SH</b>ell.
+                It was developed in order to enable secure remote administration
+                of <b>Linux</b>/<b>UNIX </b>machine. SSH is widely used to
+                connect to Linux machine form a Windows machine. The most
+                popular SSH client utility on Windows is <b>PuTTY</b>. 
+                This can be downloaded from the following location:
+            </p>
+            <p>
+                <a style="color: blue; text-decoration: underline;"
+                   href="http://www.putty.nl/download.html">
+                http://www.putty.nl/download.html</a>
+            </p>
+            <p>
+                Authentication through SSH happens by RSA or DSA key pair
+                exchange.
+            </p>
+            <section>
+                <name>Procedure to Bypass password:</name>
+                <p>
+                    As we know that the authentication in case of SSH happens by key
+                    pair exchange, we'll start by generating <b>Private</b> 
+                    &amp;<b>Public</b> key pair.
+                </p>
+                <p>
+                    Private Key will remain with the <b>host</b> (local host from
+                    which we want to connect) &amp; Public key will be placed in <b>
+                    remote host</b> (to which we want to connect without password)
+                </p>
+                <p>
+                    To generate keys, issue following command:
+                </p>
+                <section>
+                <p>
+                    <code>ssh-keygen -t rsa</code>
+                </p>
+                <p>
+                    For <b>password/paraphrase prompts</b>, just hit <b>ENTER </b>
+                </p>
+                </section>
+                <p>
+                    This generates public &amp; private RSA keys in <b>.ssh</b>
+                    directory of user's <b>home directory</b> as <b>id_rsa</b>
+                    &amp; <b>id_rsa.pub</b>
+                </p>
+                <p>For example,</p>
+                <section>
+                    <p>
+                        For <b>root</b> user, these keys will be generated <b>in
+                        /root/.ssh/</b> directory
+                    </p>
+                    <p>
+                        For <b>daffy</b> user, these keys will be generated in
+                        <b>/home/daffy/.ssh/</b> directory
+                    </p>
+                </section>
+                <p>
+                    Once generation is done, place <b>id_rsa.pub</b> file in remote
+                    <b>.ssh</b> directory located under <b>user's</b>
+                    <b>home</b> directory.
+                </p>
+                <p>
+                    For example, for <b>root</b> user,
+                </p>
+                <section>
+                    <p>
+                        Copy <b>id_rsa.pub</b> to remote host's <b>/root/.ssh/</b> 
+                        directory. This can be done as following,
+                    </p>
+                    <p>
+                        From .ssh directory (/root/.ssh)
+                    </p>
+                    <p>
+                        <code>
+                            #scp id_rsa.pub remotehost_machine:/root/.ssh
+                        </code>
+                    </p><p>
+                        For <b>daffy</b>,
+                    </p><p>
+                        Copy <b>id_rsa.pub</b> to remote user <b>daffy's</b> .ssh 
+                        directory, i.e., <b>/home/daffy/.ssh/</b> directory. as
+                        following,
+                    </p><p>
+                        From .ssh directory, (/home/daffy/.ssh)
+                    </p><p>
+                        <code>#scp id_rsa.pub remotehost_machine:/home/daffy/.ssh</code>
+                    </p>
+	          </section>
+             </section>
+            <p>
+                After id_rsa.pub is copied to remote machine, login to the
+                remote machine and copy content of <b>id_rsa.pub</b> file to <b>
+                authorized_keys</b> file in <b>.ssh</b> directory. This can be
+                done as following,
+            </p><p>
+                <code>#cat id_rsa.pub &gt;&gt;authorized_keys</code>
+            </p><p>
+                <b>Create authorized_keys file if it doesn't exist.</b>
+            </p><p>
+                Create .ssh directory if doesn't exist in case of services
+                which are set with <i>nologin</i> shell (Ex: apache user for
+                apache webserver)
+            </p><p>
+                Now you are ready to check your connectivity.
+            </p><p>
+                Try accessing remote host through <b>ssh</b>. <b>You will be
+                able to access without a password</b>.
+            </p><p>
+                <b>Bypassing password for SSH connection helps a lot in
+                developing automation scripts for Linux machine monitoring, data 
+                collection &amp; test scripts execution.</b>
+            </p>
+          
+        </section>
+    </article>

@@ -1,0 +1,19 @@
+/Applications/Address Book.app/Contents/MacOS/Address Book,Allow Execution with full Network Access
+/Applications/Utilities/Activity Monitor.app/Contents/MacOS/Activity Monitor,Allow Execution with full Network Access
+/Applications/Utilities/Console.app/Contents/MacOS/Console,Allow Execution with full Network Access
+/Applications/Utilities/Disk Utility.app/Contents/MacOS/Disk Utility,Allow Execution with full Network Access
+/Applications/Utilities/Network Utility.app/Contents/MacOS/Network Utility,Allow Execution with full Network Access
+/Applications/Mail.app/Contents/MacOS/Mail,Allow Execution with full Network Access
+/Applications/Safari.app/Contents/MacOS/Safari,Allow Execution with full Network Access
+/Applications/Adium.app/Contents/MacOS/Adium,Allow Execution with full Network Access
+/Applications/Firefox.app/Contents/MacOS/firefox-bin,Allow Execution with full Network Access
+/Applications/Google Earth.app/Contents/MacOS/Google Earth,Allow Execution with full Network Access
+/Applications/iTunes.app/Contents/MacOS/iTunes,Allow Execution with full Network Access
+/Applications/NetNewsWire.app/Contents/MacOS/NetNewsWire,Allow Execution with full Network Access
+/Applications/Remote Desktop Connection.app/Contents/MacOS/Remote Desktop Connection,Allow Execution with full Network Access
+/Applications/TinkerTool.app/Contents/MacOS/TinkerTool,Allow Execution with full Network Access
+/Applications/VNCViewer.app/Contents/MacOS/VNCViewer,Allow Execution with full Network Access
+/Applications/Microsoft Office 2008/Microsoft Entourage.app/Contents/MacOS/Microsoft Entourage,Allow Execution with full Network Access
+/Applications/Microsoft Office 2008/Microsoft Excel.app/Contents/MacOS/Microsoft Excel,Allow Execution with full Network Access
+/Applications/Microsoft Office 2008/Microsoft PowerPoint.app/Contents/MacOS/Microsoft PowerPoint,Allow Execution with full Network Access
+/Applications/Microsoft Office 2008/Microsoft Word.app/Contents/MacOS/Microsoft Word,Allow Execution with full Network Access

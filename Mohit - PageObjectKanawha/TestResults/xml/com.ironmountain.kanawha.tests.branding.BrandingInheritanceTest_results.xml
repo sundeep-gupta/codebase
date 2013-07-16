@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ironmountain.kanawha.tests.branding.BrandingInheritanceTest"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="161.211">
+  <properties />
+      <testcase name="brandingInheritance" time="161.211">
+            <failure type="java.lang.AssertionError"
+                  message="Invalid site header text found expected:&lt;Spider Man&gt; but was:&lt;Bat Man&gt;"
+              >
+<![CDATA[java.lang.AssertionError: Invalid site header text found expected:<Spider Man> but was:<Bat Man>
+  org.testng.Assert.fail(Assert.java:87)
+  org.testng.Assert.failNotEquals(Assert.java:441)
+  org.testng.Assert.assertEquals(Assert.java:111)
+  org.testng.Assert.assertEquals(Assert.java:132)
+  com.ironmountain.kanawha.tests.branding.BrandingUtils.verifyBrandingResponse(BrandingUtils.java:272)
+  com.ironmountain.kanawha.tests.branding.BrandingUtils.verifyBrandingInfo(BrandingUtils.java:246)
+  com.ironmountain.kanawha.tests.branding.BrandingInheritanceTest.brandingInheritance(BrandingInheritanceTest.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:546)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+  org.testng.TestRunner.runWorkers(TestRunner.java:909)
+  org.testng.TestRunner.privateRun(TestRunner.java:618)
+  org.testng.TestRunner.run(TestRunner.java:499)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+  org.testng.SuiteRunner.run(SuiteRunner.java:204)
+  org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:915)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:879)
+  org.testng.TestNG.run(TestNG.java:787)
+  org.testng.TestNG.privateMain(TestNG.java:952)
+  org.testng.TestNG.main(TestNG.java:925)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

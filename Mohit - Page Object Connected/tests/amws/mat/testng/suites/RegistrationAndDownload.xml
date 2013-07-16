@@ -1,0 +1,137 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Registration and Download Test Suite" verbose="2" >
+<HPQC Path="CONNECTED BACKUP\8.x\Agent"/>	
+
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="AgentVersionName" value="Default PC 8.5 Agent"/>
+		<parameter name="AgentSettingsName" value="Default PC 8.5 Settings"/>
+		<parameter name="AgentRuleSettingsName" value="EmptyRuleSet"/>
+
+
+<test name="Support center LDAP Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCLDAPCommunityConfigTest"/>
+			<methods>
+				<include name="testLDAPCommunity" />
+			</methods>
+		</classes>
+		<parameter name="LDAPUrl" value="ldap://vmacmedomain.englab.qa/dc=acme, dc=qa"/>
+		<parameter name="LogonDN" value="scarter@acme.qa"/>
+		<parameter name="ConnPassword" value="sprain"/>
+		<parameter name="UserClass" value="user"/>
+		<parameter name="LoginID" value="UserPrincipalName"></parameter>
+		<parameter name="UniqueID" value="ObjectGUID"/>
+		<parameter name="Email" value="mail"/>
+		<parameter name="LDAPConfigName" value="LDAPConfig"/>
+		<parameter name="LDAPConfigDesc" value="LDAPDescription"/>
+		<parameter name="LDAPVersionName" value="Default PC 8.5 Agent"/>
+		<parameter name="LDAPAgentSettingsName" value="Default PC 8.5 Settings"/>
+</test> 
+
+
+<test name="Support center Default Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCDefaultCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateCommunity" />
+			</methods>
+		</classes>
+		<parameter name="ConfigDesc" value="Default Description"/>
+</test>
+
+
+<test name="Registration Home Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationAndDownloadHomePageTest"/>
+			<methods>
+				<include name="testRegistrationUrlPage" />
+			</methods>
+		</classes>
+</test> 
+
+<test name="Registration License Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationLicensePageTest"/>
+			<methods>
+				<include name="testRegistrationLicensePage" />
+			</methods>
+		</classes>
+</test> 
+
+<test name="Registration Enter Details Page">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDetailsPageTest"/>
+			<methods>
+				<include name="testEnterDetailsPage" />
+			</methods>
+		</classes>
+</test> 
+ 
+<test name="Registration Decline Cancel Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDeclineCancelTest"/>
+			<methods>
+				<include name="testCancel" />
+			</methods>
+		</classes>
+</test>
+
+<test name="Registration Decline Return Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDeclineReturnTest"/>
+			<methods>
+				<include name="testReturn" />
+			</methods>
+		</classes>
+</test>
+
+<test name="Registration Required Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegistrationDetailsRequiredFieldsTest"/>
+			<methods>
+				<include name="testRequiredFields" />
+			</methods>
+		</classes>
+</test>
+
+
+<test name="LDAP Registration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegisterLDAPTest"/>
+			<methods>
+				<include name="testEnterDetailsandDownload" />
+			</methods>
+		</classes>
+		<parameter name="LDAPId" value="autotester1@acme.qa"/>
+		<parameter name="LDAPPass" value="1connected"/>
+</test>
+
+
+<test name="Register and Download Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.registrationanddownload.RegisterAndDownloadTest"></class>
+			<methods>
+				<include name="testEnterDetailsandDownload" />
+			</methods>
+		</classes>
+		<parameter name="FirstName" value="Auto"></parameter>
+		<parameter name="LastName" value="Tester"/>
+		<parameter name="MiddleName" value="Mat"/>
+		<parameter name="ConfirmPassword" value="1connected"/>
+		<parameter name="Company" value="IRM"/>
+		<parameter name="PhoneNumber" value="000010000"/> 
+		<parameter name="ZipCode" value="012245"/>
+		<parameter name="State" value="KAR"/>
+		<parameter name="City" value="BANG"/>
+		<parameter name="AddressLine3" value="AP ROAD"/> 
+		<parameter name="AddressLine1" value="DD"/>
+		<parameter name="Country" value="India"/>
+		<parameter name="AddressLine2" value="2 FLR"/>
+		<parameter name="Password" value="1connected"/>
+	
+</test>
+
+</suite>

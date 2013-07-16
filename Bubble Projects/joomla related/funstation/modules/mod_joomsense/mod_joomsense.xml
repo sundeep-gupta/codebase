@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>JoomSense</name>
+	<author>Shelley Shyan</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>(C) 2009 PHP Architecture. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>shelleyshyan@gmail.com</authorEmail>
+	<authorUrl>www.phparch.cn</authorUrl>
+	<version>1.0.0</version>
+	<description>JoomSense displays a Google Ad safely and easily. For more information and updates, please have a look at http://www.phparch.cn</description>
+	<files>
+		<filename module="mod_joomsense">mod_joomsense.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<params>
+		<param name="client" type="text" default="" label="Client" description="Google Ad Client" />
+		<param name="slot" type="text" default="" label="Slot" description="Google Ad Slot" />
+		<param name="width" type="text" default="" label="Width" description="Google Ad Width" />
+		<param name="height" type="text" default="" label="Height" description="Google Ad Height" />
+        <param name="textAlign" type="list" default="center" label="Text align" description="Text align">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

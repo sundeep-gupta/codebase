@@ -1,0 +1,134 @@
+Queries found in index.php
+---------------------------
+select count(*) as total from TABLE_PRODUCTS_TO_CATEGORIES  where categories_id = $current_category_id ;
+select count(*) as total from TABLE_CATEGORIES where parent_id = $current_category_id
+
+select cd.categories_name, c.categories_image from TABLE_CATEGORIES c, TABLE_CATEGORIES_DESCRIPTION .cd 
+where c.categories_id = $current_category_id and cd.categories_id = $current_category_id and cd.language_id = $languages_id
+
+select count(*) as total from TABLE_CATEGORIES  c,  TABLE_CATEGORIES_DESCRIPTION  cd
+where c.parent_id = $category_links[$i]  and c.categories_id = cd.categories_id and cd.language_id = $languages_id
+
+select c.categories_id, cd.categories_name, c.categories_image, c.parent_id 
+from  TABLE_CATEGORIES c, TABLE_CATEGORIES_DESCRIPTION cd 
+where c.parent_id = $category_links[$i] and c.categories_id = cd.categories_id and cd.language_id = $languages_id 
+order by sort_order, cd.categories_name
+
+
+select c.categories_id, cd.categories_name, c.categories_image, c.parent_id 
+from TABLE_CATEGORIES c, TABLE_CATEGORIES_DESCRIPTION  cd 
+where c.parent_id = $current_category_id and c.categories_id = cd.categories_id and cd.language_id = $languages_id 
+order by sort_order, cd.categories_name
+
+select $select_column_list  p.products_id, p.manufacturers_id, p.products_price, p.products_tax_class_id, 
+       IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, 
+       IF(s.status, s.specials_new_products_price, p.products_price) as final_price 
+from TABLE_PRODUCTS  p, TABLE_PRODUCTS_DESCRIPTION  pd, TABLE_MANUFACTURERS  m, TABLE_PRODUCTS_TO_CATEGORIES p2c 
+left join TABLE_SPECIALS s on p.products_id = s.products_id 
+where p.products_status = '1' and p.manufacturers_id = m.manufacturers_id and 
+      m.manufacturers_id = $HTTP_GET_VARS['manufacturers_id'] and p.products_id = p2c.products_id and 
+      pd.products_id = p2c.products_id and pd.language_id = $languages_id and 
+      p2c.categories_id = $HTTP_GET_VARS['filter_id']
+
+select $select_column_list p.products_id, p.manufacturers_id, p.products_price, p.products_tax_class_id, 
+       IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, 
+       IF(s.status, s.specials_new_products_price, p.products_price) as final_price
+from TABLE_PRODUCTS p, TABLE_PRODUCTS_DESCRIPTION  pd, TABLE_MANUFACTURERS  m 
+left join TABLE_SPECIALS s on p.products_id = s.products_id 
+where p.products_status = '1' and pd.products_id = p.products_id and pd.language_id = $languages_id and
+      p.manufacturers_id = m.manufacturers_id and m.manufacturers_id = $HTTP_GET_VARS['manufacturers_id']
+
+select $select_column_list p.products_id, p.manufacturers_id, p.products_price, p.products_tax_class_id, 
+       IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, 
+       IF(s.status, s.specials_new_products_price, p.products_price) as final_price 
+from TABLE_PRODUCTS p, TABLE_PRODUCTS_DESCRIPTION pd, TABLE_MANUFACTURERS m, TABLE_PRODUCTS_TO_CATEGORIES p2c 
+left join TABLE_SPECIALS s on p.products_id = s.products_id 
+where p.products_status = '1' and p.manufacturers_id = m.manufacturers_id and 
+m.manufacturers_id = $HTTP_GET_VARS['filter_id'] and p.products_id = p2c.products_id and 
+pd.products_id = p2c.products_id and pd.language_id =$languages_id and p2c.categories_id = $current_category_id 
+
+select $select_column_list  p.products_id, p.manufacturers_id, p.products_price, p.products_tax_class_id,
+       IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, 
+       IF(s.status, s.specials_new_products_price, p.products_price) as final_price 
+from TABLE_PRODUCTS_DESCRIPTION  pd,  TABLE_PRODUCTS  p
+left join TABLE_MANUFACTURERS m on p.manufacturers_id = m.manufacturers_id,  TABLE_PRODUCTS_TO_CATEGORIES p2c 
+left join  TABLE_SPECIALS s on p.products_id = s.products_id 
+where p.products_status = '1' and p.products_id = p2c.products_id and pd.products_id = p2c.products_id and 
+      pd.language_id = $languages_id and p2c.categories_id = $current_category_id 
+
+
+
+select distinct c.categories_id as id, cd.categories_name as name 
+from  TABLE_PRODUCTS  p, TABLE_PRODUCTS_TO_CATEGORIES  p2c,  TABLE_CATEGORIES c, TABLE_CATEGORIES_DESCRIPTION  cd 
+where p.products_status = '1' and p.products_id = p2c.products_id and p2c.categories_id = c.categories_id and  
+      p2c.categories_id = cd.categories_id and cd.language_id = $languages_id and 
+      p.manufacturers_id =  $HTTP_GET_VARS['manufacturers_id'] 
+order by cd.categories_name"
+
+select distinct m.manufacturers_id as id, m.manufacturers_name as name 
+from TABLE_PRODUCTS  p,  TABLE_PRODUCTS_TO_CATEGORIES  p2c, TABLE_MANUFACTURERS  m 
+where p.products_status = '1' and p.manufacturers_id = m.manufacturers_id and p.products_id = p2c.products_id and
+      p2c.categories_id = $current_category_id 
+order by m.manufacturers_name
+
+-------------------------End of queries in index.php -----------------------------------------------------
+--------------------- From account_edit.php -------------------------------------------
+select count(*) as total from  TABLE_CUSTOMERS 
+where customers_email_address = tep_db_input($email_address)  and customers_id != $customer_id
+
+ tep_db_perform(TABLE_CUSTOMERS, $sql_data_array, 'update', "customers_id = '" . (int)$customer_id . "'");
+
+update TABLE_CUSTOMERS_INFO set customers_info_date_account_last_modified = now() where customers_info_id =  $customer_id
+
+tep_db_perform(TABLE_ADDRESS_BOOK, $sql_data_array, 'update', "customers_id = '" . (int)$customer_id . "' and address_book_id = '" . (int)$customer_default_address_id . "'");
+
+select customers_gender, customers_firstname, customers_lastname, customers_dob, customers_email_address, customers_telephone, customers_fax from TABLE_CUSTOMERS where customers_id = $customer_id 
+
+--------------------- End of account_edit.php queries -------------------------------------------
+
+----------------------- account.php -----------------------------------------
+select o.orders_id, o.date_purchased, o.delivery_name, o.delivery_country, o.billing_name, o.billing_country,
+       ot.text as order_total, s.orders_status_name 
+from TABLE_ORDERS  o, TABLE_ORDERS_TOTAL ot, TABLE_ORDERS_STATUS s 
+where o.customers_id = $customer_id  and o.orders_id = ot.orders_id and ot.class = 'ot_total' and 
+      o.orders_status = s.orders_status_id and s.language_id = $languages_id 
+order by orders_id desc limit 3s
+
+-------------------- end of account.php --------------------------------------
+
+----------------------account_newsletter.php --------------------------
+select customers_newsletter from TABLE_CUSTOMERS where customers_id = $customer_id 
+-------------------- end of account_newsletter.php ------------------------------
+
+--------------------- account_notifications.php ------------------------------------
+select global_product_notifications from  TABLE_CUSTOMERS_INFO where customers_info_id = $customer_id 
+update TABLE_CUSTOMERS_INFO set global_product_notifications =  $product_global where customers_info_id = $customer_id 
+
+select count(*) as total from TABLE_PRODUCTS_NOTIFICATIONS 
+where customers_id = $customer_id and products_id not in ( implode(',', $products_parsed))
+
+delete from TABLE_PRODUCTS_NOTIFICATIONS  
+where customers_id = $customer_id  and products_id not in (implode(',', $products_parsed)
+
+select count(*) as total from  TABLE_PRODUCTS_NOTIFICATIONS  where customers_id = $customer_id 
+
+delete from  TABLE_PRODUCTS_NOTIFICATIONS  where customers_id = $customer_id 
+
+select count(*) as total from  TABLE_PRODUCTS_NOTIFICATIONS  where customers_id = $customer_id
+
+select pd.products_id, pd.products_name from TABLE_PRODUCTS_DESCRIPTION  pd,  TABLE_PRODUCTS_NOTIFICATIONS pn 
+where pn.customers_id = $customer_id and pn.products_id = pd.products_id and pd.language_id = $languages_id 
+order by pd.products_name
+
+
+--------------------- end of account_notifications.php ------------------------------------
+
+
+account_password.php
+--------------------
+
+select customers_password from  TABLE_CUSTOMERS  where customers_id = $customer_id
+
+update TABLE_CUSTOMERS set customers_password = tep_encrypt_password($password_new) where customers_id = $customer_id 
+update TABLE_CUSTOMERS_INFO set customers_info_date_account_last_modified = now() where customers_info_id =  $customer_id
+

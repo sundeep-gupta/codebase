@@ -1,0 +1,16 @@
+<project name='Command Client' default='client' basedir='.'>
+
+    <target name="client" >
+        <orion-command command="jump" host="localhost:8080" method="post" user="sa" password="sa">
+            <param name="param1" value="foo"/>
+            <param name="param2" value="bar"/>
+        </orion-command>
+
+        <orion-command command="jump" host="localhost:8080" method="soap" user="sa" password="sa">
+            <param name="param1" value="foo"/>
+            <param name="param2" value="bar"/>
+        </orion-command>
+
+    </target>
+
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datacenterconfig>	
+<!-- DataCenter Related Properties -->
+
+<!-- Set this property if the data center configuration is mirrored (yes/no)-->
+
+
+     <DataCenterMirrored>no</DataCenterMirrored>
+     <DataCenterClustered>no</DataCenterClustered>
+     <CustomerFolderLocation>C:\\Customers</CustomerFolderLocation>
+ 
+<!-- If the data center is Standalone enter the Primary details -->
+<!-- If the data center is Mirrored enter the primary, secondary details (only 1 pair) -->
+<!-- If the data center is Clustered enter the primary, secondary details (2 pair) -->
+	
+
+    <PrimaryDataCenterRegistryMachineName>10.145.12.133</PrimaryDataCenterRegistryMachineName>
+    <SecondaryDataCenterRegistryMachineName>10.145.11.228</SecondaryDataCenterRegistryMachineName>
+    <PrimaryDataCenterDirectoryMachineName>10.145.12.133</PrimaryDataCenterDirectoryMachineName>
+    <SecondaryDataCenterDirectoryMachineName>10.145.11.228</SecondaryDataCenterDirectoryMachineName>			
+
+		
+</datacenterconfig>

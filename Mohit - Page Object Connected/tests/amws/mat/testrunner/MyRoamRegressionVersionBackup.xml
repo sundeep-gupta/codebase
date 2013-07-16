@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+    <Actions>
+    	<Action>
+			<Name>DeleteTestFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderDeleteAction</Class>
+			<Destination>BaseFolder</Destination>
+		</Action>	
+        <Action Name ="GenerateBaseFile">
+            <Class>FileCreateAction</Class>
+            <Destination>BaseFile</Destination>
+            <FileType>Text</FileType>
+            <Size>150</Size>
+            <SizeSpread>250</SizeSpread>
+            <ExcecutionMethod>sequential</ExcecutionMethod> 
+        </Action> 
+ 		<Action>
+			<Name>CopyDataToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCopyAction</Class>
+			<Source>BaseFolder</Source>
+			<Destination>BackupFolder</Destination>
+		</Action>
+		<Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>BackupFolder</Destination>
+		</Action>
+		<Action Name ="GenerateNewBaseFile">
+            <Class>FileCreateAction</Class>
+            <Destination>NewBaseFile</Destination>
+            <FileType>Text</FileType>
+            <Size>250</Size>
+            <SizeSpread>270</SizeSpread>
+            <ExcecutionMethod>sequential</ExcecutionMethod> 
+        </Action>
+        <Action>
+			<Name>CopyDataToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCopyAction</Class>
+			<Source>BaseFolder</Source>
+			<Destination>BackupFolder</Destination>
+		</Action> 
+		<Action>
+			<Name>AddDeltaToFile</Name>
+			<Class>FileModifyAction</Class>
+			<Destination>BackupFile</Destination>
+			<FileType>Text</FileType>			
+			<ModificationType>Add</ModificationType>			
+			<ModificationPosition>Random</ModificationPosition>			
+			<ModificationSize>80</ModificationSize>			
+		</Action>		
+		<Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>BackupFolder</Destination>
+		</Action>
+    </Actions>
+    
+    <ActionObjects>
+        <ActionObject Name="BaseFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[c:\VersionFolder\VersionTestFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="NewBaseFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[c:\VersionFolder\VersionTestFileNew.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="BaseFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[c:\VersionFolder]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupRootFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\VersionFolder]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\VersionFolder\VersionTestFile.txt]]></Path>
+        </ActionObject>     
+        <ActionObject Name="NewBackupFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\VersionFolder\VersionTestFileNew.txt]]></Path>
+        </ActionObject>           
+    </ActionObjects>
+</Runner>

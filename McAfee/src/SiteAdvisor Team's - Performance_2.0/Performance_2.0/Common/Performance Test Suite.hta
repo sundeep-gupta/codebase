@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Performance Test Suite</title>
+<link rel="stylesheet" type="text/css" href="./Resources/styles/style.css" />
+<HTA:APPLICATION
+	ID=""
+	APPLICATIONNAME="LVTSetup"
+	SCROLL="auto"
+	SYSMENU="yes"
+	MAXIMIZEBUTTON="no"
+	CAPTION="yes"
+	ICON="explorer.exe"
+	SINGLEINSTANCE="yes"
+	WINDOWSTATE=""
+	innerBorder="yes"
+	navigable="yes"
+	scrollFlat="yes"
+	contextMenu="yes"
+	selection="yes">
+</HTA:APPLICATION>
+<script type="text/vbscript" src="./Resources/scripts/PerformanceTestSuite.vbs"></script>
+</head>
+<body onload="LoadSettings" class="body1">
+<form name="form_main">
+<table width="100%" id="HeaderTable">
+<tr><td id="McAfeeLogo"></td></tr>
+<tr>
+	<td class="NavBar">
+		<ul id="navTop">
+			<li><a href="ProductScenarios.hta" class="Link1">Product Scenarios</a></li>
+			<li><a href="User Scenarios.hta" class="Link1">User Scenarios</a></li>
+			<li><a target="_blank" href="Main.ini" class="Link1">View Config</a></li>
+			<li><a target="_blank" href="../Reports" class="Link1">View Reports</a></li>
+			<li><a href="Help.html" class="Link1">Help</a></li>
+		</ul>
+	</td>
+</tr>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--<big><span style="font-weight: bold;" >Select the Scenarios:</span></big><br>-->
+
+
+<table align="center" width="50%" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+    	<td>&nbsp;</td>
+    	<td style="text-align: center; font-weight: bold;"><big>Setup and Help</big></td>
+    	<td style="text-align: center;"><a href="Help.html">Read Me</a></td>
+    </tr>
+    
+    <tr>
+
+      <td style="text-align: center;"><input name="chk_Product_Scenarios" value="product" type="checkbox"></td>
+
+      <td style="text-align: center; font-weight: bold;"><big>Product Scenarios</big></td>
+
+      <td style="text-align: center;"><a href="ProductScenarios.hta" target="_top">Configure</a></td>
+
+    </tr>
+
+    <tr>
+
+      <td style="text-align: center;"><input name="chk_user_scenarios" value="User" type="checkbox"></td>
+
+      <td style="text-align: center; font-weight: bold;"><big>User Scenarios</big></td>
+
+      <td style="text-align: center;"><a href="User%20Scenarios.hta">Configure</a></td>
+
+    </tr>
+    <tr align="center">
+      <td><input type="checkbox" name="chk_restart"></td>
+      <td><b>Restart before every iteration</b></td>
+      <td>&nbsp;</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+<table align="center">
+<tr>
+<td><input name="btn_save" value="Save !!!" type="button" onclick="SaveConfig()"></td>
+<td><input name="btn_save" value="Run Test" type="button" onclick="RunTest()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

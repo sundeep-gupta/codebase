@@ -1,0 +1,3 @@
+Rule1,Deny,IP,Outbound,en0,Me,Others,NA,74.125.127.100,0-65535,0-65535
+Rule2,Allow,IP, Both,en0,Me,Others,NA,69.147.114.224,0-65535,0-65535
+Rule1,Deny,IP,Outbound,en0,Me,Others,NA,209.85.225.83,0-65535,0-65535

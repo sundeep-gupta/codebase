@@ -1,0 +1,71 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Support Center Pre Requisite Test Suite" verbose="2" >
+<HPQC Path="CONNECTED BACKUP\8.x\Agent"/>	
+
+<test name="Support center Default Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCDefaultCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateCommunity" />
+			</methods>
+		</classes>
+		<parameter name="ConfigName" value="DefaultAutoConfig"/>
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+</test> 
+
+<test name="Support center Custom Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCCustomCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateCommunity" />
+			</methods>
+		</classes>
+		<parameter name="ConfigName" value="DefaultAutoConfig"/>
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="ProfileName" value="CustomAutoProfile"/>
+		<parameter name="Description" value="Automation Description"/>
+		<parameter name="VersionName" value="CustomAutoVersion"/>
+		<parameter name="AgentSettingsName" value="Custom Auto Agent Settings"/>
+</test> 
+
+<test name="Support center LDAP Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCLDAPCommunityConfigTest"/>
+			<methods>
+				<include name="testLDAPCommunity" />
+			</methods>
+		</classes>
+		<parameter name="LDAPUrl" value="ldap://vmacmedomain/dc=acme, dc=qa"/>
+		<parameter name="LogonDN" value="scarter@acme.qa"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="ConnPassword" value="sprain"/>
+		<parameter name="UserClass" value="user"/>
+		<parameter name="LoginID" value="UserPrincipalName"/>
+		<parameter name="UniqueID" value="ObjectGUID"/>
+		<parameter name="Email" value="mail"/>
+</test> 
+
+<test name="Support center Custom SubCommunity Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCCustomSubCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateSubCommunity" />
+			</methods>
+		</classes>
+			<parameter name="ConfigName" value="DefaultAutoConfig"/>
+			<parameter name="ConfigDesc" value="Default Description"/>
+			<parameter name="TechnicianId" value="admin"/>
+			<parameter name="Password" value="1connected"/>
+			<parameter name="ProfileName" value="CustomAutoProfile"/>
+			<parameter name="Description" value="Automation Description"/>
+			<parameter name="VersionName" value="CustomAutoVersion"/>
+			<parameter name="AgentSettingsName" value="Custom Auto Agent Settings"/>
+</test>
+				
+</suite>

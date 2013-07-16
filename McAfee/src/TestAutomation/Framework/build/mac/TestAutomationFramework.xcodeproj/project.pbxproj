@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54094261117C64AE00386445 /* ExecutionRun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54094260117C64AE00386445 /* ExecutionRun.cpp */; };
+		541D514911785AC8002F4737 /* ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 541D514811785AC8002F4737 /* ErrorCodes.h */; };
+		5453087C1176E0CD0005D415 /* ClientInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308651176E0CD0005D415 /* ClientInterface.cpp */; };
+		5453087D1176E0CD0005D415 /* ExecutionEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308671176E0CD0005D415 /* ExecutionEngine.cpp */; };
+		5453087F1176E0CD0005D415 /* LogReportManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453086B1176E0CD0005D415 /* LogReportManager.cpp */; };
+		545308801176E0CD0005D415 /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453086D1176E0CD0005D415 /* NodeController.cpp */; };
+		545308811176E0CD0005D415 /* ReportManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453086F1176E0CD0005D415 /* ReportManager.cpp */; };
+		545308821176E0CD0005D415 /* ServerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308711176E0CD0005D415 /* ServerController.cpp */; };
+		545308831176E0CD0005D415 /* SMTPReportManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308731176E0CD0005D415 /* SMTPReportManager.cpp */; };
+		545308841176E0CD0005D415 /* STAFInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308751176E0CD0005D415 /* STAFInterface.cpp */; };
+		545308851176E0CD0005D415 /* SVNInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308771176E0CD0005D415 /* SVNInterface.cpp */; };
+		545308861176E0CD0005D415 /* TestExecutionRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308791176E0CD0005D415 /* TestExecutionRequest.cpp */; };
+		545308871176E0CD0005D415 /* TestlinkReportManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453087A1176E0CD0005D415 /* TestlinkReportManager.cpp */; };
+		545308931176E1040005D415 /* TestExecutionRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453088D1176E1040005D415 /* TestExecutionRequest.cpp */; };
+		545308941176E1040005D415 /* TestNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5453088E1176E1040005D415 /* TestNode.cpp */; };
+		545308981176E13E0005D415 /* CLIMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545308971176E13E0005D415 /* CLIMain.cpp */; };
+		545308C51176E2F00005D415 /* libTFCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545308591176E0740005D415 /* libTFCommon.dylib */; };
+		545308C81176E3080005D415 /* libTFCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 545308591176E0740005D415 /* libTFCommon.dylib */; };
+		54DC07D611770B3C004FB1F6 /* UDPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DC07D411770B3C004FB1F6 /* UDPServer.h */; };
+		54DC07D711770B3C004FB1F6 /* UDPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54DC07D511770B3C004FB1F6 /* UDPServer.cpp */; };
+		54DC07E211770C03004FB1F6 /* TestExecutionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DC07DC11770C03004FB1F6 /* TestExecutionRequest.h */; };
+		54DC07E311770C03004FB1F6 /* TestNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DC07DD11770C03004FB1F6 /* TestNode.h */; };
+		54DC0836117730CB004FB1F6 /* MSGHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DC0835117730CB004FB1F6 /* MSGHeader.h */; };
+		54DC084411773181004FB1F6 /* UDPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DC084311773181004FB1F6 /* UDPClient.h */; };
+		54DC0846117733B0004FB1F6 /* UDPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54DC0845117733B0004FB1F6 /* UDPClient.cpp */; };
+		7BA09AB0117C2370002846CA /* TestNodeDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BA09AAF117C2370002846CA /* TestNodeDetails.h */; };
+		7BFAE76A117C252900074AC6 /* TestRunDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BFAE769117C252900074AC6 /* TestRunDetails.h */; };
+		A422832A117DAF8D00E954A9 /* LibXmlWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A4228329117DAF8D00E954A9 /* LibXmlWrapper.h */; };
+		A422833D117DB04500E954A9 /* trace.h in Headers */ = {isa = PBXBuildFile; fileRef = A422833C117DB04500E954A9 /* trace.h */; };
+		A46FABB5117DE8AC001FBACD /* Testcase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A46FABB2117DE8AC001FBACD /* Testcase.cpp */; };
+		A46FABB6117DE8AC001FBACD /* TestcaseFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A46FABB3117DE8AC001FBACD /* TestcaseFinder.cpp */; };
+		A46FABB7117DE8AC001FBACD /* TestPlan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A46FABB4117DE8AC001FBACD /* TestPlan.cpp */; };
+		A485373A1182AF920081E15E /* ExecutionNodeRun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A48537391182AF920081E15E /* ExecutionNodeRun.cpp */; };
+		A4B6EC95117C6E5F007DB49A /* ExecutionSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4B6EC93117C6E5F007DB49A /* ExecutionSequence.cpp */; };
+		A4C64A40117CC05E0081AA67 /* LibXmlWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4C64A3F117CC05E0081AA67 /* LibXmlWrapper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		545308C31176E2EB0005D415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 545308341176DF420005D415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 545308581176E0740005D415;
+			remoteInfo = TFCommon;
+		};
+		545308C61176E3040005D415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 545308341176DF420005D415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 545308581176E0740005D415;
+			remoteInfo = TFCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5409422D117C5ED800386445 /* ExecutionRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExecutionRun.h; path = ../../src/common/Server/ExecutionRun.h; sourceTree = SOURCE_ROOT; };
+		54094260117C64AE00386445 /* ExecutionRun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExecutionRun.cpp; path = ../../src/common/Server/ExecutionRun.cpp; sourceTree = SOURCE_ROOT; };
+		541D514811785AC8002F4737 /* ErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorCodes.h; path = ../../src/include/ErrorCodes.h; sourceTree = SOURCE_ROOT; };
+		5453084F1176E0010005D415 /* harnessServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = harnessServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		545308591176E0740005D415 /* libTFCommon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libTFCommon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		545308601176E0A60005D415 /* harnessCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = harnessCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		545308651176E0CD0005D415 /* ClientInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClientInterface.cpp; path = ../../src/common/Server/ClientInterface.cpp; sourceTree = SOURCE_ROOT; };
+		545308661176E0CD0005D415 /* ClientInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClientInterface.h; path = ../../src/common/Server/ClientInterface.h; sourceTree = SOURCE_ROOT; };
+		545308671176E0CD0005D415 /* ExecutionEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExecutionEngine.cpp; path = ../../src/common/Server/ExecutionEngine.cpp; sourceTree = SOURCE_ROOT; };
+		545308681176E0CD0005D415 /* ExecutionEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExecutionEngine.h; path = ../../src/common/Server/ExecutionEngine.h; sourceTree = SOURCE_ROOT; };
+		5453086B1176E0CD0005D415 /* LogReportManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogReportManager.cpp; path = ../../src/common/Server/LogReportManager.cpp; sourceTree = SOURCE_ROOT; };
+		5453086C1176E0CD0005D415 /* LogReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogReportManager.h; path = ../../src/common/Server/LogReportManager.h; sourceTree = SOURCE_ROOT; };
+		5453086D1176E0CD0005D415 /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeController.cpp; path = ../../src/common/Server/NodeController.cpp; sourceTree = SOURCE_ROOT; };
+		5453086E1176E0CD0005D415 /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeController.h; path = ../../src/common/Server/NodeController.h; sourceTree = SOURCE_ROOT; };
+		5453086F1176E0CD0005D415 /* ReportManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReportManager.cpp; path = ../../src/common/Server/ReportManager.cpp; sourceTree = SOURCE_ROOT; };
+		545308701176E0CD0005D415 /* ReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReportManager.h; path = ../../src/common/Server/ReportManager.h; sourceTree = SOURCE_ROOT; };
+		545308711176E0CD0005D415 /* ServerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServerController.cpp; path = ../../src/common/Server/ServerController.cpp; sourceTree = SOURCE_ROOT; };
+		545308721176E0CD0005D415 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerController.h; path = ../../src/common/Server/ServerController.h; sourceTree = SOURCE_ROOT; };
+		545308731176E0CD0005D415 /* SMTPReportManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SMTPReportManager.cpp; path = ../../src/common/Server/SMTPReportManager.cpp; sourceTree = SOURCE_ROOT; };
+		545308741176E0CD0005D415 /* SMTPReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMTPReportManager.h; path = ../../src/common/Server/SMTPReportManager.h; sourceTree = SOURCE_ROOT; };
+		545308751176E0CD0005D415 /* STAFInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STAFInterface.cpp; path = ../../src/common/Server/STAFInterface.cpp; sourceTree = SOURCE_ROOT; };
+		545308761176E0CD0005D415 /* STAFInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAFInterface.h; path = ../../src/common/Server/STAFInterface.h; sourceTree = SOURCE_ROOT; };
+		545308771176E0CD0005D415 /* SVNInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SVNInterface.cpp; path = ../../src/common/Server/SVNInterface.cpp; sourceTree = SOURCE_ROOT; };
+		545308781176E0CD0005D415 /* SVNInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVNInterface.h; path = ../../src/common/Server/SVNInterface.h; sourceTree = SOURCE_ROOT; };
+		545308791176E0CD0005D415 /* TestExecutionRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestExecutionRequest.cpp; path = ../../src/common/Server/TestExecutionRequest.cpp; sourceTree = SOURCE_ROOT; };
+		5453087A1176E0CD0005D415 /* TestlinkReportManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestlinkReportManager.cpp; path = ../../src/common/Server/TestlinkReportManager.cpp; sourceTree = SOURCE_ROOT; };
+		5453087B1176E0CD0005D415 /* TestlinkReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestlinkReportManager.h; path = ../../src/common/Server/TestlinkReportManager.h; sourceTree = SOURCE_ROOT; };
+		5453088D1176E1040005D415 /* TestExecutionRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestExecutionRequest.cpp; path = ../../src/common/Core/TestExecutionRequest.cpp; sourceTree = SOURCE_ROOT; };
+		5453088E1176E1040005D415 /* TestNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestNode.cpp; path = ../../src/common/Core/TestNode.cpp; sourceTree = SOURCE_ROOT; };
+		545308971176E13E0005D415 /* CLIMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CLIMain.cpp; path = ../../src/common/CLI/CLIMain.cpp; sourceTree = SOURCE_ROOT; };
+		54751CDE117EBBC100E9EE69 /* ServerConfigData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerConfigData.h; path = ../../src/common/Server/ServerConfigData.h; sourceTree = "<group>"; };
+		54DC07D411770B3C004FB1F6 /* UDPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDPServer.h; path = ../../src/include/UDPServer.h; sourceTree = SOURCE_ROOT; };
+		54DC07D511770B3C004FB1F6 /* UDPServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UDPServer.cpp; path = ../../src/common/Core/UDPServer.cpp; sourceTree = SOURCE_ROOT; };
+		54DC07DC11770C03004FB1F6 /* TestExecutionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestExecutionRequest.h; path = ../../src/include/TestExecutionRequest.h; sourceTree = SOURCE_ROOT; };
+		54DC07DD11770C03004FB1F6 /* TestNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestNode.h; path = ../../src/include/TestNode.h; sourceTree = SOURCE_ROOT; };
+		54DC0835117730CB004FB1F6 /* MSGHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSGHeader.h; path = ../../src/include/MSGHeader.h; sourceTree = SOURCE_ROOT; };
+		54DC084311773181004FB1F6 /* UDPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDPClient.h; path = ../../src/include/UDPClient.h; sourceTree = SOURCE_ROOT; };
+		54DC0845117733B0004FB1F6 /* UDPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UDPClient.cpp; path = ../../src/common/Core/UDPClient.cpp; sourceTree = SOURCE_ROOT; };
+		7BA09AAF117C2370002846CA /* TestNodeDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestNodeDetails.h; path = ../../src/include/TestNodeDetails.h; sourceTree = SOURCE_ROOT; };
+		7BFAE769117C252900074AC6 /* TestRunDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestRunDetails.h; path = ../../src/include/TestRunDetails.h; sourceTree = SOURCE_ROOT; };
+		A4228329117DAF8D00E954A9 /* LibXmlWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibXmlWrapper.h; path = ../../../../CommonUtils/utilities/common/LibXmlWrapper.h; sourceTree = SOURCE_ROOT; };
+		A422833C117DB04500E954A9 /* trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trace.h; path = ../../../../CommonUtils/utilities/common/trace.h; sourceTree = SOURCE_ROOT; };
+		A46FABB2117DE8AC001FBACD /* Testcase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Testcase.cpp; path = ../../src/common/Server/Testcase.cpp; sourceTree = SOURCE_ROOT; };
+		A46FABB3117DE8AC001FBACD /* TestcaseFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestcaseFinder.cpp; path = ../../src/common/Server/TestcaseFinder.cpp; sourceTree = SOURCE_ROOT; };
+		A46FABB4117DE8AC001FBACD /* TestPlan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestPlan.cpp; path = ../../src/common/Server/TestPlan.cpp; sourceTree = SOURCE_ROOT; };
+		A48537381182AF700081E15E /* ExecutionNodeRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExecutionNodeRun.h; path = ../../src/common/Server/ExecutionNodeRun.h; sourceTree = SOURCE_ROOT; };
+		A48537391182AF920081E15E /* ExecutionNodeRun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExecutionNodeRun.cpp; path = ../../src/common/Server/ExecutionNodeRun.cpp; sourceTree = SOURCE_ROOT; };
+		A4A2E744117DE7DB00C6793B /* Testcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Testcase.h; path = ../../src/common/Server/Testcase.h; sourceTree = SOURCE_ROOT; };
+		A4A2E745117DE7DB00C6793B /* TestcaseFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestcaseFinder.h; path = ../../src/common/Server/TestcaseFinder.h; sourceTree = SOURCE_ROOT; };
+		A4A2E746117DE7DB00C6793B /* TestPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestPlan.h; path = ../../src/common/Server/TestPlan.h; sourceTree = SOURCE_ROOT; };
+		A4B6EC93117C6E5F007DB49A /* ExecutionSequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExecutionSequence.cpp; path = ../../src/common/Server/ExecutionSequence.cpp; sourceTree = SOURCE_ROOT; };
+		A4B6EC94117C6E5F007DB49A /* ExecutionSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExecutionSequence.h; path = ../../src/common/Server/ExecutionSequence.h; sourceTree = SOURCE_ROOT; };
+		A4C64A3F117CC05E0081AA67 /* LibXmlWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LibXmlWrapper.cpp; path = ../../../../CommonUtils/utilities/common/LibXmlWrapper.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5453084D1176E0010005D415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545308C81176E3080005D415 /* libTFCommon.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545308571176E0740005D415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5453085E1176E0A60005D415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545308C51176E2F00005D415 /* libTFCommon.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		545308321176DF420005D415 = {
+			isa = PBXGroup;
+			children = (
+				54DC07D811770BF0004FB1F6 /* include */,
+				545308961176E1130005D415 /* harnessCLI */,
+				545308891176E0EC0005D415 /* libTFCommon */,
+				545308881176E0D20005D415 /* harnessServer */,
+				545308501176E0010005D415 /* Products */,
+			);
+			comments = "Copyright (C) 2010 McAfee, Inc. All rights reserved.";
+			sourceTree = "<group>";
+		};
+		545308501176E0010005D415 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5453084F1176E0010005D415 /* harnessServer */,
+				545308591176E0740005D415 /* libTFCommon.dylib */,
+				545308601176E0A60005D415 /* harnessCLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		545308881176E0D20005D415 /* harnessServer */ = {
+			isa = PBXGroup;
+			children = (
+				A46FABB4117DE8AC001FBACD /* TestPlan.cpp */,
+				A4A2E746117DE7DB00C6793B /* TestPlan.h */,
+				A46FABB2117DE8AC001FBACD /* Testcase.cpp */,
+				A4A2E744117DE7DB00C6793B /* Testcase.h */,
+				A46FABB3117DE8AC001FBACD /* TestcaseFinder.cpp */,
+				A4A2E745117DE7DB00C6793B /* TestcaseFinder.h */,
+				A4B6EC93117C6E5F007DB49A /* ExecutionSequence.cpp */,
+				A4B6EC94117C6E5F007DB49A /* ExecutionSequence.h */,
+				545308671176E0CD0005D415 /* ExecutionEngine.cpp */,
+				545308681176E0CD0005D415 /* ExecutionEngine.h */,
+				54094260117C64AE00386445 /* ExecutionRun.cpp */,
+				5409422D117C5ED800386445 /* ExecutionRun.h */,
+				A48537391182AF920081E15E /* ExecutionNodeRun.cpp */,
+				A48537381182AF700081E15E /* ExecutionNodeRun.h */,
+				545308651176E0CD0005D415 /* ClientInterface.cpp */,
+				545308661176E0CD0005D415 /* ClientInterface.h */,
+				5453086B1176E0CD0005D415 /* LogReportManager.cpp */,
+				5453086C1176E0CD0005D415 /* LogReportManager.h */,
+				5453086D1176E0CD0005D415 /* NodeController.cpp */,
+				5453086E1176E0CD0005D415 /* NodeController.h */,
+				5453086F1176E0CD0005D415 /* ReportManager.cpp */,
+				545308701176E0CD0005D415 /* ReportManager.h */,
+				545308711176E0CD0005D415 /* ServerController.cpp */,
+				545308721176E0CD0005D415 /* ServerController.h */,
+				545308731176E0CD0005D415 /* SMTPReportManager.cpp */,
+				545308741176E0CD0005D415 /* SMTPReportManager.h */,
+				545308751176E0CD0005D415 /* STAFInterface.cpp */,
+				545308761176E0CD0005D415 /* STAFInterface.h */,
+				545308771176E0CD0005D415 /* SVNInterface.cpp */,
+				545308781176E0CD0005D415 /* SVNInterface.h */,
+				545308791176E0CD0005D415 /* TestExecutionRequest.cpp */,
+				5453087A1176E0CD0005D415 /* TestlinkReportManager.cpp */,
+				5453087B1176E0CD0005D415 /* TestlinkReportManager.h */,
+				54751CDE117EBBC100E9EE69 /* ServerConfigData.h */,
+			);
+			name = harnessServer;
+			sourceTree = "<group>";
+		};
+		545308891176E0EC0005D415 /* libTFCommon */ = {
+			isa = PBXGroup;
+			children = (
+				A4C64A3F117CC05E0081AA67 /* LibXmlWrapper.cpp */,
+				5453088D1176E1040005D415 /* TestExecutionRequest.cpp */,
+				5453088E1176E1040005D415 /* TestNode.cpp */,
+				54DC07D511770B3C004FB1F6 /* UDPServer.cpp */,
+				54DC0845117733B0004FB1F6 /* UDPClient.cpp */,
+			);
+			name = libTFCommon;
+			sourceTree = "<group>";
+		};
+		545308961176E1130005D415 /* harnessCLI */ = {
+			isa = PBXGroup;
+			children = (
+				545308971176E13E0005D415 /* CLIMain.cpp */,
+			);
+			name = harnessCLI;
+			sourceTree = "<group>";
+		};
+		54DC07D811770BF0004FB1F6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A422833C117DB04500E954A9 /* trace.h */,
+				A4228329117DAF8D00E954A9 /* LibXmlWrapper.h */,
+				7BFAE769117C252900074AC6 /* TestRunDetails.h */,
+				54DC0835117730CB004FB1F6 /* MSGHeader.h */,
+				54DC07D411770B3C004FB1F6 /* UDPServer.h */,
+				54DC07DC11770C03004FB1F6 /* TestExecutionRequest.h */,
+				7BA09AAF117C2370002846CA /* TestNodeDetails.h */,
+				54DC07DD11770C03004FB1F6 /* TestNode.h */,
+				54DC084311773181004FB1F6 /* UDPClient.h */,
+				541D514811785AC8002F4737 /* ErrorCodes.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		545308551176E0740005D415 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54DC07D611770B3C004FB1F6 /* UDPServer.h in Headers */,
+				54DC07E211770C03004FB1F6 /* TestExecutionRequest.h in Headers */,
+				54DC07E311770C03004FB1F6 /* TestNode.h in Headers */,
+				54DC0836117730CB004FB1F6 /* MSGHeader.h in Headers */,
+				54DC084411773181004FB1F6 /* UDPClient.h in Headers */,
+				541D514911785AC8002F4737 /* ErrorCodes.h in Headers */,
+				7BA09AB0117C2370002846CA /* TestNodeDetails.h in Headers */,
+				7BFAE76A117C252900074AC6 /* TestRunDetails.h in Headers */,
+				A422832A117DAF8D00E954A9 /* LibXmlWrapper.h in Headers */,
+				A422833D117DB04500E954A9 /* trace.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5453084E1176E0010005D415 /* harnessServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545308541176E0020005D415 /* Build configuration list for PBXNativeTarget "harnessServer" */;
+			buildPhases = (
+				54A21FD611802B7E004C9962 /* ShellScript */,
+				5453084C1176E0010005D415 /* Sources */,
+				5453084D1176E0010005D415 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				545308C71176E3040005D415 /* PBXTargetDependency */,
+			);
+			name = harnessServer;
+			productName = harnessServer;
+			productReference = 5453084F1176E0010005D415 /* harnessServer */;
+			productType = "com.apple.product-type.tool";
+		};
+		545308581176E0740005D415 /* TFCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5453085C1176E09E0005D415 /* Build configuration list for PBXNativeTarget "TFCommon" */;
+			buildPhases = (
+				545308551176E0740005D415 /* Headers */,
+				545308561176E0740005D415 /* Sources */,
+				545308571176E0740005D415 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFCommon;
+			productName = TFCommon;
+			productReference = 545308591176E0740005D415 /* libTFCommon.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		5453085F1176E0A60005D415 /* harnessCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545308641176E0C80005D415 /* Build configuration list for PBXNativeTarget "harnessCLI" */;
+			buildPhases = (
+				5453085D1176E0A60005D415 /* Sources */,
+				5453085E1176E0A60005D415 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				545308C41176E2EB0005D415 /* PBXTargetDependency */,
+			);
+			name = harnessCLI;
+			productName = harnessCLI;
+			productReference = 545308601176E0A60005D415 /* harnessCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		545308341176DF420005D415 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 545308371176DF420005D415 /* Build configuration list for PBXProject "TestAutomationFramework" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 0;
+			mainGroup = 545308321176DF420005D415;
+			productRefGroup = 545308501176E0010005D415 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5453084E1176E0010005D415 /* harnessServer */,
+				545308581176E0740005D415 /* TFCommon */,
+				5453085F1176E0A60005D415 /* harnessCLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54A21FD611802B7E004C9962 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PROJECT_DIRECTORY=`pwd`\nset -x\necho \"Untarring the STAF-SDK\"\ncp ${PROJECT_DIRECTORY}/../../../../CommonUtils/3rd-party/other/STAF/STAF-SDK.tar.gz .\nif [ -d STAF-SDK ]\nthen\n\trm -rf STAF-SDK\nfi\nmkdir STAF-SDK\npushd STAF-SDK\ntar -zxvf ../STAF-SDK.tar.gz\nret=$?\npopd\nrm -rf STAF-SDK.tar.gz\nif [ $ret -ne 0 ]\nthen\n\texit -1\nelse\n\texit 0\nfi";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5453084C1176E0010005D415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545308841176E0CD0005D415 /* STAFInterface.cpp in Sources */,
+				5453087C1176E0CD0005D415 /* ClientInterface.cpp in Sources */,
+				5453087D1176E0CD0005D415 /* ExecutionEngine.cpp in Sources */,
+				5453087F1176E0CD0005D415 /* LogReportManager.cpp in Sources */,
+				545308801176E0CD0005D415 /* NodeController.cpp in Sources */,
+				545308811176E0CD0005D415 /* ReportManager.cpp in Sources */,
+				545308821176E0CD0005D415 /* ServerController.cpp in Sources */,
+				545308831176E0CD0005D415 /* SMTPReportManager.cpp in Sources */,
+				545308851176E0CD0005D415 /* SVNInterface.cpp in Sources */,
+				545308861176E0CD0005D415 /* TestExecutionRequest.cpp in Sources */,
+				545308871176E0CD0005D415 /* TestlinkReportManager.cpp in Sources */,
+				A4B6EC95117C6E5F007DB49A /* ExecutionSequence.cpp in Sources */,
+				54094261117C64AE00386445 /* ExecutionRun.cpp in Sources */,
+				A46FABB5117DE8AC001FBACD /* Testcase.cpp in Sources */,
+				A46FABB6117DE8AC001FBACD /* TestcaseFinder.cpp in Sources */,
+				A46FABB7117DE8AC001FBACD /* TestPlan.cpp in Sources */,
+				A485373A1182AF920081E15E /* ExecutionNodeRun.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545308561176E0740005D415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545308931176E1040005D415 /* TestExecutionRequest.cpp in Sources */,
+				545308941176E1040005D415 /* TestNode.cpp in Sources */,
+				54DC07D711770B3C004FB1F6 /* UDPServer.cpp in Sources */,
+				54DC0846117733B0004FB1F6 /* UDPClient.cpp in Sources */,
+				A4C64A40117CC05E0081AA67 /* LibXmlWrapper.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5453085D1176E0A60005D415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545308981176E13E0005D415 /* CLIMain.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		545308C41176E2EB0005D415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 545308581176E0740005D415 /* TFCommon */;
+			targetProxy = 545308C31176E2EB0005D415 /* PBXContainerItemProxy */;
+		};
+		545308C71176E3040005D415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 545308581176E0740005D415 /* TFCommon */;
+			targetProxy = 545308C61176E3040005D415 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		545308351176DF420005D415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/STAF-SDK/include",
+					"$(SRCROOT)/../../src/include",
+					"/usr/local/boost/include/boost-1_32/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/boost/lib/,
+					"$(SRCROOT)/STAF-SDK/lib",
+				);
+				OTHER_LDFLAGS = "-lboost_serialization";
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		545308361176DF420005D415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/STAF-SDK/include",
+					"$(SRCROOT)/../../src/include",
+					"/usr/local/boost/include/boost-1_32/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/boost/lib/,
+					"$(SRCROOT)/STAF-SDK/lib",
+				);
+				OTHER_LDFLAGS = "-lboost_serialization";
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		545308521176E0020005D415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2,
+					"$(SRCROOT)/../../src/common/Server",
+					"/usr/local/boost/include/boost-1_32",
+					"$(SRCROOT)/../../src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/boost/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lSTAF",
+					"-lxml2",
+					"-lboost_filesystem-1_32",
+					"$(inherited)",
+					"-lboost_thread-1_32",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = harnessServer;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/boost/include/boost-1_32";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		545308531176E0020005D415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = (
+					/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2,
+					"$(inherited)",
+					"$(SRCROOT)/../../src/common/Server",
+					"/usr/local/boost/include/boost-1_32",
+					"$(SRCROOT)/../../src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lboost_filesystem-1_32",
+					"-lxml2",
+					"-lSTAF",
+					"$(inherited)",
+					"-lboost_thread-1_32",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = harnessServer;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/boost/include/boost-1_32";
+				VALID_ARCHS = i386;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		5453085A1176E0750005D415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../src/include";
+				INSTALL_PATH = /usr/local/TAF/lib;
+				LIBRARY_SEARCH_PATHS = /usr/local/boost/lib;
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TFCommon;
+				USER_HEADER_SEARCH_PATHS = "/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2 /usr/local/boost/include/boost-1_32";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		5453085B1176E0750005D415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = 4.0;
+				INSTALL_PATH = /usr/local/TAF/lib;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TFCommon;
+				USER_HEADER_SEARCH_PATHS = "/Developer/SDKs/MacOSX10.5.sdk/usr/include/libxml2 /usr/local/boost/include/boost-1_32";
+				VALID_ARCHS = i386;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		545308621176E0A60005D415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /usr/local/boost/lib/;
+				OTHER_LDFLAGS = (
+					"-lTFCommon",
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = harnessCLI;
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		545308631176E0A60005D415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = /usr/local/boost/lib/;
+				OTHER_LDFLAGS = (
+					"-lTFCommon",
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = harnessCLI;
+				VALID_ARCHS = i386;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		545308371176DF420005D415 /* Build configuration list for PBXProject "TestAutomationFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545308351176DF420005D415 /* Debug */,
+				545308361176DF420005D415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545308541176E0020005D415 /* Build configuration list for PBXNativeTarget "harnessServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545308521176E0020005D415 /* Debug */,
+				545308531176E0020005D415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5453085C1176E09E0005D415 /* Build configuration list for PBXNativeTarget "TFCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5453085A1176E0750005D415 /* Debug */,
+				5453085B1176E0750005D415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545308641176E0C80005D415 /* Build configuration list for PBXNativeTarget "harnessCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545308621176E0A60005D415 /* Debug */,
+				545308631176E0A60005D415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 545308341176DF420005D415 /* Project object */;
+}

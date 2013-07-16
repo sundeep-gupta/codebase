@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testconfig>
+
+<!-- If the test is not specifying any of the test specific properties, the system will take it as 
+a base selenium test and use these properties. This is applicable if we need to test only one web application 
+using the same code base -->
+
+	<protocol>http</protocol>
+	<hostname>192.168.1.166</hostname>
+	<port>8080</port>
+	<appendurl>supportcenter/login.asp</appendurl>
+		
+<!-- Root directory where the locator files are existing, no need to change this -->
+	<locatorbasedir>com\ironmountain\pageobject\webobjects\connected\pages</locatorbasedir>
+<!-- Directory where the TestRunner xml files are kept -->	
+	<testrunnerfilepath>tests\amws\mat\testrunner</testrunnerfilepath>
+
+<!-- Browser is currently a property which is shared across the test and Framework level. We may
+need to change if we need to make the test browser different for different applications...
+Try to use the selenium browser names here (Ex: iexplore, firefox, safari, custom, safariproxy etc..)-->	
+			
+	<browser>iexplore</browser>		
+	
+<!-- If the test has its own properties, the we need to define them here base on the application
+and use them in the SeleniumTest sub-classes -->
+	
+	<supportcenterprotocol>http</supportcenterprotocol>
+	<supportcenterurl>DC2A-C1-SC.ironsides.englab.local</supportcenterurl>
+	<supportcenterport>80</supportcenterport>
+	<supportcenterappendurl>supportcenter/login.asp</supportcenterappendurl>
+	<supportcentertestdatadir>testdata\supportcenter</supportcentertestdatadir>
+	
+<!-- AccountManagement Test properties -->	
+	<accountmanagementprotocol>http</accountmanagementprotocol>
+	<accountmanagementurl>DC2A-C1-SSWS.ironsides.englab.local</accountmanagementurl>
+	<accountmanagementport>80</accountmanagementport>
+	<accountmanagementappendurl>ssws/faces/login.jsp</accountmanagementappendurl>	
+
+	<AgentSetupFile>AgentSetup.msi</AgentSetupFile>
+	<ArchiveFile>MyRoamRetrieve.zip</ArchiveFile>
+	<downloadsdir>Downloads</downloadsdir>
+	<OS>win</OS>
+	<accountmanagementtestdatadir>testdata\amws</accountmanagementtestdatadir>
+		
+</testconfig>

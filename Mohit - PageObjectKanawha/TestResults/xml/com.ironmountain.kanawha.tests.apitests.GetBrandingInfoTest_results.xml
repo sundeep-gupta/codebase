@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ironmountain.kanawha.tests.apitests.GetBrandingInfoTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.848">
+  <properties />
+  
+  
+      <testcase name="testGetBrandingInfo" time="6.848" />
+  
+</testsuite>

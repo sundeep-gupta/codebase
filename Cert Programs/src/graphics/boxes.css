@@ -1,0 +1,84 @@
+.teaser {
+	padding:0 0 0 11px;
+	margin:10px;
+	background:url("tsr-l.gif") top left no-repeat;
+}
+.teaser h3 {
+	background:url("tsr-r.gif") top right no-repeat;
+	margin:0;
+	padding:8px 0 0.5em 0;
+}
+.teaser p {
+	margin:0 0 0 -11px;
+	padding:0 11px 0.5em;
+	border:1px solid #d8d8d8;
+	border-width:0 1px;
+	background:#fff;
+}
+.teaser div {
+	margin:0 0 0 -11px;
+	padding-left:11px;
+	background:url("tsr-l.gif") bottom left no-repeat;
+}
+.teaser a.more {
+	display:block;
+	text-align:right;
+	padding:0 10px 10px 0;
+	background:url("tsr-r.gif") bottom right no-repeat;
+}
+	
+div.greyboxheader {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	width: 95%;
+	text-align: left;
+}
+
+div.greybox {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+	border-top: 0 solid #FFFFFF;
+	border-bottom: 0 solid #FFFFFF;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	align: left;
+	width: 90%;
+	text-align: left;
+}
+
+div.greyboxfooter {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	width: 95%;
+}
+
+div.toplessgreybox {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+	border-top: 0 solid #FFFFFF;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	align: left;
+	width: 90%;
+	text-align: left;
+}
+
+
+div.whitebox {
+    padding: 5px;
+    border: 1px dashed #2f6fab;
+    color: Black;
+    background-color: #FFFFFF;
+    line-height: 1em; 
+	align: left;
+	width: 97%;
+	text-align: left;
+}	

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbcconfig>
+
+<!-- Properties required to connect to the database -->
+
+	<DBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</DBDriver>
+	<!-- DBServerType represents the Database Server in use, Values should be taken from(MSSQL, Oracle, SQLLite, MySQL...) -->
+	<DBServerType>MSSQL</DBServerType>
+	<DBServerUrl>jdbc:sqlserver://10.145.12.133</DBServerUrl>
+	<DBPort>1433</DBPort>
+	<DBUsername>sqluser</DBUsername>
+	<DBPassword>1Connected</DBPassword>
+	
+
+<!-- Properties required to connect to the database which is Mirrored/Clustered -->
+<!-- If the DB is Standalone fill the Primary details of Both Registry and Directory(Same information as there is only one DB Server)-->
+<!-- If the DB is Mirrored fill the Primary, Secondary details of Both Registry and Directory( Only one pair) -->
+<!-- If the DB is Clustered fill the Primary, Secondary details,  of Both Registry and Directory(2 pair) -->
+	
+	<PrimaryRegistryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</PrimaryRegistryDBDriver>
+	<PrimaryRegistryType>MSSQL</PrimaryRegistryType>
+	<PrimaryRegistryDBUrl>jdbc:sqlserver://10.145.12.133</PrimaryRegistryDBUrl>
+	<PrimaryRegistryDBPort>1433</PrimaryRegistryDBPort>
+	<PrimaryRegistryDBUsername>sqluser</PrimaryRegistryDBUsername>
+	<PrimaryRegistryDBPassword>1Connected</PrimaryRegistryDBPassword>
+
+	<SecondaryRegistryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</SecondaryRegistryDBDriver>
+	<SecondaryRegistryType>MSSQL</SecondaryRegistryType>
+	<SecondaryRegistryDBUrl>jdbc:sqlserver://10.145.11.228</SecondaryRegistryDBUrl>
+	<SecondaryRegistryDBPort>1433</SecondaryRegistryDBPort>
+	<SecondaryRegistryDBUsername>sqluser</SecondaryRegistryDBUsername>
+	<SecondaryRegistryDBPassword>1Connected</SecondaryRegistryDBPassword>
+
+	<PrimaryDirectoryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</PrimaryDirectoryDBDriver>
+	<PrimaryDirectoryType>MSSQL</PrimaryDirectoryType>
+	<PrimaryDirectoryDBUrl>jdbc:sqlserver://10.145.12.133</PrimaryDirectoryDBUrl>
+	<PrimaryDirectoryDBPort>1433</PrimaryDirectoryDBPort>
+	<PrimaryDirectoryDBUsername>sqluser</PrimaryDirectoryDBUsername>
+	<PrimaryDirectoryDBPassword>1Connected</PrimaryDirectoryDBPassword>
+
+	<SecondaryDirectoryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</SecondaryDirectoryDBDriver>
+	<SecondaryDirectoryType>MSSQL</SecondaryDirectoryType>
+	<SecondaryDirectoryDBUrl>jdbc:sqlserver://10.145.11.228</SecondaryDirectoryDBUrl>
+	<SecondaryDirectoryDBPort>1433</SecondaryDirectoryDBPort>
+	<SecondaryDirectoryDBUsername>sqluser</SecondaryDirectoryDBUsername>
+	<SecondaryDirectoryDBPassword>1Connected</SecondaryDirectoryDBPassword>
+		
+</jdbcconfig>

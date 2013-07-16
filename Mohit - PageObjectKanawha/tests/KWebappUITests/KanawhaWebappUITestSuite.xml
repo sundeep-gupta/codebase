@@ -1,0 +1,180 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Kanawha Webapp UI Test Suite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="MyRoam Sanity Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.myroam.LoginVerifyDataForDeviceTest"/>
+			<methods>
+				<include name="loginVerifyDataForDevice" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="backupdate" value="All"/>
+</test>
+<test name="Verify Backup Dates Test And All Backup Date">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.myroam.VerifyBackupDatesTest"/>
+			<methods>
+				<include name="verifyBackupDatesAndAllData" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+
+</test>
+<test name="Search Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.myroam.MyRoamSearchTest"/>
+			<methods>
+				<include name="search" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Advanced Search Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.myroam.MyRoamSearchTest"/>
+			<methods>
+				<include name="advancedSearch" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Content Search Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.myroam.MyRoamSearchTest"/>
+			<methods>
+				<include name="contentSearch" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Account Messages Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.home.AccountMessagesTest"/>
+			<methods>
+				<include name="verifyAccountMessages" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Canceled Account Messages Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.home.AccountMessagesTest"/>
+			<methods>
+				<include name="verifyCanceledAccountMessage" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="OnHold Account Messages and Sorting Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.home.AccountMessagesTest"/>
+			<methods>
+				<include name="verifyOnHoldAccountMessageAndSorting" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Settings Verification Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.settings.SettingsTest"/>
+			<methods>
+				<include name="editAndVerifySettings" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Verify Default Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.VerifyDefaultBrandingTest"/>
+			<methods>
+				<include name="verifyDefaultBranding" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="communityName" value="sprint15"/>		
+</test>
+<test name="Apply And Verify Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.ApplyAndVerifyBrandingTest"/>
+			<methods>
+				<include name="applyAndVerifyDefaultBranding" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="communityName" value="sprint15"/>
+		<parameter name="imagePath" value="C:\workspace\PageObjectKanawha\resources\SiteImageHeaderSpiderMan.png"/>
+		<parameter name="siteName" value="Spider Man"/>
+</test>
+<test name="Apply Change And Reset Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.ApplyChangeResetBrandingTest"/>
+			<methods>
+				<include name="applyChangeResetBranding" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="communityName" value="sprint15"/>
+		<parameter name="imagePath1" value="C:\workspace\PageObjectKanawha\resources\SiteImageHeaderSpiderMan.png"/>
+		<parameter name="siteName1" value="Spider Man"/>
+		<parameter name="imagePath2" value="C:\workspace\PageObjectKanawha\resources\SiteHeaderBatMan.png"/>
+		<parameter name="siteName2" value="Bat Man"/>
+</test>
+<test name="Verify Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.VerifyBrandingTest"/>
+			<methods>
+				<include name="verifyBranding" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<test name="Verify Apply and Reset Branding Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.branding.VerifyBrandingTest"/>
+			<methods>
+				<include name="verifyApplyAndResetBranding" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>		
+</test>
+<!-- test name="Apply Branding Test">
+		<classes>
+			<class name="com.ironmountain.connected.supportcenter.tests.accounts.ApplyBrandingTest"/>
+			<methods>
+				<include name="testApplyBranding" />
+			</methods>
+		</classes>
+		<parameter name="communityName" value="sprint15"/>
+		<parameter name="imagePath" value="C:\workspace\PageObjectKanawha\resources\SiteImageHeaderSpiderMan.png"/>		
+</test>
+<test name="Reset Branding Test">
+		<classes>
+			<class name="com.ironmountain.connected.supportcenter.tests.accounts.ApplyBrandingTest"/>
+			<methods>
+				<include name="testResetBranding" />
+			</methods>
+		</classes>
+		<parameter name="communityName" value="sprint15"/>
+</test-->
+</suite>		 

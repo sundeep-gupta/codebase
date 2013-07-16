@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Account Summary Test Suite" verbose="2" >
+
+<test name="Support center Default Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCDefaultCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateCommunity" />
+			</methods>
+		</classes>
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="AgentVersionName" value="Default PC 8.5 Agent"/>
+		<parameter name="AgentSettingsName" value="Default PC 8.5 Settings"/>
+		<parameter name="AgentRuleSettingsName" value="EmptyRuleSet"/>
+</test>
+
+<test name="Account Summary Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.accountsummary.SummaryPageTest"></class>
+			<methods>
+				<include name="testSummaryPage" />
+			</methods>
+		</classes>
+		<parameter name="FirstName" value="SummaryTest"/>
+		<parameter name="LastName" value="User"/>
+		<parameter name="ConfirmPassword" value="1connected"/>
+		</test>		
+			
+<test name="Mutiple Accounts Summary Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.accountsummary.SelectAccountTest"/>
+			<methods>
+				<include name="testSelectAccount" />
+			</methods>
+		</classes>
+		<parameter name="accountRow" value="0"/>
+		</test>
+
+</suite>		 

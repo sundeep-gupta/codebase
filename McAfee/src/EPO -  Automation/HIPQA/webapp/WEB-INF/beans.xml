@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- Registered Commands -->
+    <bean id="hipqa.getProperties" class="com.mcafee.entercept.qa.commands.GetPropertiesCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.importPolicies" class="com.mcafee.entercept.qa.commands.ImportPoliciesCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.assignPolicy" class="com.mcafee.entercept.qa.commands.AssignPolicyCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.newPolicy" class="com.mcafee.entercept.qa.commands.NewPolicyCommand"
+        scope="prototype">
+    </bean>    
+
+    <bean id="hipqa.modifyPolicy" class="com.mcafee.entercept.qa.commands.ModifyPolicyCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.modifyPolicyByRule" class="com.mcafee.entercept.qa.commands.ModifyPolicyByRuleCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.deletePolicy" class="com.mcafee.entercept.qa.commands.DeletePolicyCommand"
+        scope="prototype">
+    </bean>
+
+    <bean id="hipqa.retPolicyData" class="com.mcafee.entercept.qa.commands.RetPolicyDataCommand"
+        scope="prototype">
+    </bean>
+</beans>

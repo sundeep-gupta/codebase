@@ -1,0 +1,119 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+Scan engine v5.1.00 for MacOSX.
+
+Virus data file v4997 created Mar 31 2007
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      Memory: 512 MB
+      Serial Number: YM406MMDPC1
+          Serial Number: 
+          Serial Number: 3JV8SGXV
+      IPv4 Addresses: 172.16.222.116
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A343)
+      Kernel Version: Darwin 9.0.0d6
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Safari------34
+Mail------34
+iTunes------33
+Adobe Photoshop CS------33
+Acrobat Distiller 6.0------33
+Acrobat 6.0 Professional------32
+iChat------33
+Microsoft Excel------33
+Microsoft Word------36
+TOTAL TIME-----301
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Safari------34
+Mail------33
+iTunes------32
+Adobe Photoshop CS------33
+Acrobat Distiller 6.0------33
+Acrobat 6.0 Professional------32
+iChat------33
+Microsoft Excel------33
+Microsoft Word------35
+TOTAL TIME-----298
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Safari------32
+Mail------32
+iTunes------31
+Adobe Photoshop CS------31
+Acrobat Distiller 6.0------31
+Acrobat 6.0 Professional------30
+iChat------31
+Microsoft Excel------31
+Microsoft Word------32
+TOTAL TIME-----281
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Safari------32
+Mail------31
+iTunes------31
+Adobe Photoshop CS------30
+Acrobat Distiller 6.0------31
+Acrobat 6.0 Professional------31
+iChat------31
+Microsoft Excel------31
+Microsoft Word------31
+TOTAL TIME-----279
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Safari------34
+Mail------34
+iTunes------33
+Adobe Photoshop CS------33
+Acrobat Distiller 6.0------33
+Acrobat 6.0 Professional------32
+iChat------33
+Microsoft Excel------33
+Microsoft Word------36
+TOTAL TIME-----301
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Safari------35
+Mail------34
+iTunes------35
+Adobe Photoshop CS------33
+Acrobat Distiller 6.0------32
+Acrobat 6.0 Professional------32
+iChat------33
+Microsoft Excel------32
+Microsoft Word------36
+TOTAL TIME-----302
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Safari------32
+Mail------31
+iTunes------31
+Adobe Photoshop CS------31
+Acrobat Distiller 6.0------31
+Acrobat 6.0 Professional------30
+iChat------31
+Microsoft Excel------31
+Microsoft Word------32
+TOTAL TIME-----280
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Safari------33
+Mail------31
+iTunes------31
+Adobe Photoshop CS------30
+Acrobat Distiller 6.0------32
+Acrobat 6.0 Professional------30
+iChat------31
+Microsoft Excel------30
+Microsoft Word------32
+TOTAL TIME-----280
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.1">
+	<name>Sponsored Links</name>
+	<author>Joomlaspan</author>
+	<creationDate>August, 2007</creationDate>
+	<copyright>Joomlaspan!</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>admin@joomlaspan.com</authorEmail>
+	<authorUrl>http://www.joomlaspan.com</authorUrl>
+	<version>3.0 ClickSafe</version>
+	<description><![CDATA[
+	<h3><a href="http://extensions.joomla.org/component/option,com_mtree/task,listfeatured/cat_id,0/Itemid,35/" target="_blank">EDITOR'S PICK</a>: The best simple solution for implementing Google AdSense ads in Joomla!</h3>
+	<h3>Our Request: If you like this extension, PLEASE vote for it on <a href="http://extensions.joomla.org/component/option,com_mtree/task,viewlink/link_id,2851/Itemid,35/" target="_blank">Joomla! Extensions Directory!</a></h3>
+	<p>Please DONATE to support the development of this module!</p>
+	<h3><script type="text/javascript"><!--
+	google_ad_client = "pub-1107008511660248";
+	google_ad_output = "textlink";
+	google_ad_format = "ref_text";
+	google_cpa_choice = "CAAQnfzw4AIaCJwZC9ix5DwoKN2uuIEBMAA";
+	google_ad_channel = "1406587237";
+	//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script> if you haven't so far...</h3>
+	]]></description>
+	<files>
+		<filename module="mod_adsense_joomlaspan_3_ClickSafe">mod_adsense_joomlaspan_3_ClickSafe.php</filename>
+	</files>
+	<params>
+		<param name="@spacer" type="spacer" default="IP Block and other advanced optional features are included in Advanced Parameters below" label=" " description=" " />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="joomlaspan_ad_css" type="text" default="text-align:center;" label="Div CSS codes" description="Input any css code that you want here. By default, width and height are autoadjusted based on the ad format that you choose." />
+
+		<param name="joomlaspan_ad_client" type="text" default="" label="Publisher ID" description="Please type your Publisher ID provided by Google AdSense. It is an alphanumerical string like pub-123456789876543. If you do not have an ID, please click on the - SignUp for AdSense - link on the left." />
+		<param name="joomlaspan_ad_channel" type="text" default="" label="Channel number" description="Type the channel number that you may have set in Google AdSense. It is a numerical string like 54656789 and NOT any text string that you can choose." />
+
+		<param name="joomlaspan_ad_type" type="list" default="text_image" label="Ad Type" description="Choose the ad types you would like to display on your page. If you are choosing Image Ads only option, plase use only these sizes: 728X90 - Leaderboard, 468X60 - Banner, 300X250 - Medium Rectangle, 160X600 - Wide Skyscraper and 120X600 - Skyscraper">
+				<option value="text_image">Text and image (default)</option>
+				<option value="text">Text only</option>
+			  	<option value="image">Image Only</option>
+		</param>
+		<param name="joomlaspan_ad_uifeatures"	type="list" default="6" label="Corner Styles" description="Optionally, choose from one of the pre-designed corner styles.">
+				<option value=""> Select corner style </option> 
+				<option value="0"> Square corners </option> 
+				<option value="6"> Slightly rounded corners </option> 
+				<option value="10"> Very rounded corners </option>
+		</param>
+
+		<param name="joomlaspan_ad_format" type="list" default="120x240_as" label="Ad layout" description="Choose the ad format and size that you would like to display on your page.">
+			<option value="468x60_as"> 468 x 60 Banner </option> 
+			<option value="234x60_as"> 234 x 60 Half Banner </option> 
+			
+			<option value=""> --- </option> 
+			<option value="120x600_as"> 120 x 600 Skyscraper </option> 
+			<option value="160x600_as"> 160 x 600 Wide Skyscraper </option> 
+			<option value="120x240_as"> 120 x 240 Vertical Banner </option> 
+			
+			<option value=""> --- </option>
+			<option value="336x280_as"> 336 x 280 Large Rectangle </option>
+			<option value="300x250_as"> 300 x 250 Medium rectangle </option> 
+			<option value="250x250_as"> 250 x 250 Square </option> 
+			<option value="200x200_as"> 200 x 200 Small Square </option>
+			<option value="180x150_as"> 180 x 150 Small Rectangle </option>
+			<option value="125x125_as"> 125 x 125 Button </option>
+			
+			<option value=""> --- </option>			
+			<option value="728x90_as"> 728 x 90 Leaderboard </option>
+			
+			<option value=""> --- </option>
+			<option value="728x15_0ads_al">728 x 15 Adlink 4 links</option>
+			<option value="468x15_0ads_al">468 x 15 Adlink 4 links</option>
+			<option value="120x90_0ads_al">120 x 90 Adlink 4 links</option>
+			<option value="160x90_0ads_al">160 x 90 Adlink 4 links</option>
+			<option value="180x90_0ads_al">180 x 90 Adlink 4 links</option>
+			<option value="200x90_0ads_al">200 x 90 Adlink 4 links</option>
+			
+			<option value=""> --- </option>
+			<option value="728x15_0ads_al_s">728 x 15 Adlink 5 links</option>
+			<option value="468x15_0ads_al_s">468 x 15 Adlink 5 links</option>
+			<option value="120x90_0ads_al_s">120 x 90 Adlink 5 links</option>
+			<option value="160x90_0ads_al_s">160 x 90 Adlink 5 links</option>
+			<option value="180x90_0ads_al_s">180 x 90 Adlink 5 links</option>
+			<option value="200x90_0ads_al_s">200 x 90 Adlink 5 links</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default=" " label=" " description=" " />
+		<param name="joomlaspan_color_border1" type="text" default="D5D5D5" label="Border Color" description="Border color, in hex, without #" />
+		<param name="joomlaspan_color_bg1" type="text" default="FFFFFF" label="Background Color" description="Background color, in hex, without #" />
+		<param name="joomlaspan_color_link1" type="text" default="0033FF" label="Link Color" description="Link color, in hex, without #" />
+		<param name="joomlaspan_color_text1" type="text" default="333333" label="Text Color" description="Text color, in hex, without #" />
+		<param name="joomlaspan_color_url1" type="text" default="008000" label="URL Color" description="URL color, in hex, without #" />
+
+</params>
+<params group="advanced">
+		<param name="joomlaspan_ip_block1" type="text" default="" label="IP Block (Clicksafe) 1" description="Enter an IP number here that you wish to block Google Ads from." />
+			<param name="joomlaspan_ip_block2" type="text" default="" label="IP Block (Clicksafe) 2" description="Enter an IP number here that you wish to block Google Ads from." />
+			<param name="joomlaspan_ip_block3" type="text" default="" label="IP Block (Clicksafe) 3" description="Enter an IP number here that you wish to block Google Ads from." />
+			<param name="joomlaspan_ip_block4" type="text" default="" label="IP Block (Clicksafe) 4" description="Enter an IP number here that you wish to block Google Ads from." />
+			<param name="joomlaspan_ip_block5" type="text" default="" label="IP Block (Clicksafe) 5" description="Enter an IP number here that you wish to block Google Ads from." />
+		<param name="ip_block_alt_code" type="textarea" default="" label="Alternate code if IP blocked" description="Enter anything (text or html code) here to show when Google Ads are blocked in IPs as above." cols="30" rows="8" />
+		<param name="joomlaspan_alternate_ad_url" type="text" default="" label="Alternate Ad URL" description="Alternate Ad URL to specify other ads when no ads are available." />
+		<param name="joomlaspan_alternate_color" type="text" default="" label="Alternate Color" description="Alternate color when no ads are available, in hex, without #" />
+
+		<param name="@spacer" type="spacer" default="More color choices here, only if you want to use rotating colors" label="More..." description="Enter upto 3 additional colors in hex, without #, for activation of the Chameleon codes for AdSense! If you DO NOT want this option, leave them blank" />
+			<param name="joomlaspan_color_border2" type="text" default="" label="Border Color 2" description="Border color, in hex, without #" />
+			<param name="joomlaspan_color_border3" type="text" default="" label="Border Color 3" description="Border color, in hex, without #" />
+			<param name="joomlaspan_color_border4" type="text" default="" label="Border Color 4" description="Border color, in hex, without #" />
+		<param name="@spacer" type="spacer" default=" " label=" " description=" " />
+		<param name="joomlaspan_color_bg2" type="text" default="" label="Background Color 2" description="Background color, in hex, without #" />
+			<param name="joomlaspan_color_bg3" type="text" default="" label="Background Color 3" description="Background color, in hex, without #" />
+			<param name="joomlaspan_color_bg4" type="text" default="" label="Background Color 4" description="Background color, in hex, without #" />
+		<param name="@spacer" type="spacer" default=" " label=" " description=" " />
+			<param name="joomlaspan_color_link2" type="text" default="" label="Link Color 2" description="Link color, in hex, without #" />
+			<param name="joomlaspan_color_link3" type="text" default="" label="Link Color 3" description="Link color, in hex, without #" />
+			<param name="joomlaspan_color_link4" type="text" default="" label="Link Color 4" description="Link color, in hex, without #" />
+		<param name="@spacer" type="spacer" default=" " label=" " description=" " />
+			<param name="joomlaspan_color_text2" type="text" default="" label="Text Color 2" description="Text color, in hex, without #" />
+			<param name="joomlaspan_color_text3" type="text" default="" label="Text Color 3" description="Text color, in hex, without #" />
+			<param name="joomlaspan_color_text4" type="text" default="" label="Text Color 4" description="Text color, in hex, without #" />
+		<param name="@spacer" type="spacer" default=" " label=" " description=" " />		
+			<param name="joomlaspan_color_url2" type="text" default="" label="URL Color 2" description="URL color, in hex, without #" />
+			<param name="joomlaspan_color_url3" type="text" default="" label="URL Color 3" description="URL color, in hex, without #" />
+			<param name="joomlaspan_color_url4" type="text" default="" label="URL Color 4" description="URL color, in hex, without #" />
+
+</params>		
+</install>

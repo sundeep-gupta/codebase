@@ -1,0 +1,36 @@
+com_city_movies
+	 ID
+         Name
+	 Director
+	 Actor
+	 Rating
+	 Released Date
+	 Genre
+	 Time
+	 Language
+	 Reviews
+
+com_city_theater
+	Theater Name
+	ID
+	Location_ID
+	Screens#
+
+com_city
+	ID
+	Street
+        Locality
+	Remarks
+
+com_city_playing
+	PLAYING_ID
+	MOVIE_ID
+	THEATER_ID
+	SCREEN
+
+com_city_play_time
+        Playing_id
+	TIME
+	START_DATE
+	END_DATE
+	

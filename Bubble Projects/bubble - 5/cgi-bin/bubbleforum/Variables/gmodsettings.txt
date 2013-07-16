@@ -1,0 +1,100 @@
+### Gmod Releated Setttings ###
+
+$allow_gmod_admin = "on"; #
+
+### Areas Gmods can Access ### 
+
+%gmod_access = (
+'modsettings',"",
+'flood_control',"",
+'advsettings',"on",
+'smilies',"on",
+'helpadmin',"on",
+'setcensor',"on",
+'detailedversion',"on",
+'managecats',"",
+'manageboards',"",
+'editnews',"on",
+'modagreement',"on",
+'modtemp',"",
+'modcss',"",
+'referer_control',"",
+'viewmembers',"on",
+'modmemgr',"",
+'mailing',"on",
+'ipban',"on",
+'setreserve',"on",
+'clean_log',"on",
+'boardrecount',"",
+'membershiprecount',"",
+'rebuildmemlist',"",
+'deleteoldthreads',"",
+'manageattachments',"on",
+'stats',"on",
+'showclicks',"on",
+'errorlog',"on",
+'view_reglog',"on",
+);
+
+%gmod_access2 = (
+admin => "on",
+deleteattachment => "on",
+manageattachments2 => "on",
+removeoldattachments => "on",
+removebigattachments => "on",
+
+delgroup => "",
+editgroup => "",
+editAddGroup2 => "",
+modmemgr2 => "",
+assigned => "",
+assigned2 => "",
+
+reordercats => "",
+modifycatorder => "",
+modifycat => "",
+createcat => "",
+catscreen => "",
+reordercats2 => "",
+addcat => "",
+addcat2 => "",
+
+modifyboard => "",
+addboard => "",
+addboard2 => "",
+reorderboards2 => "",
+
+smilieput => "on",
+smilieindex => "on",
+smiliemove => "on",
+addsmilies => "on",
+
+addmember => "on",
+addmember2 => "on",
+deletemultimembers => "on",
+
+mailmultimembers => "on",
+mailing2 => "on",
+
+del_regentry => "on",
+clean_reglog => "on",
+
+cleanerrorlog => "on",
+deleteerror => "on",
+
+do_clean_log => "on",
+modagreement2 => "on",
+modsettings2 => "",
+advsettings2 => "on",
+ml => "on",
+referer_control2 => "",
+removeoldthreads => "",
+ipban2 => "on",
+setcensor2 => "on",
+setreserve2 => "on",
+editnews2 => "on",
+
+flood_control2,"",
+);
+
+1;

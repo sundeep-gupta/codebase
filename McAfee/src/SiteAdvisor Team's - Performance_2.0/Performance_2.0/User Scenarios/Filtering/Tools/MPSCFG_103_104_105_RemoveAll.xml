@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigTest Apply="True">
+
+	<RemoveAll Desc="RemoveAll Allowed_sites" Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection"/>
+	<RemoveAll Desc="RemoveAll Blocked_sites" Category="MCPS_CONFIG_BLOCKED_SITES" Type="IMcCollection"/>
+
+</ConfigTest>

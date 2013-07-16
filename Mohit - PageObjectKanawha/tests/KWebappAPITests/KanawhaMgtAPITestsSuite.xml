@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="KanawhaMgtAPITestsSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+
+<test name="Backup Dates Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetBackupDatesTest"/>
+			<methods>
+				<include name="testGetBackupDates" />
+			</methods>
+			<parameter name="username" value="autouser1@ui.com"/>
+			<parameter name="password" value="1Connected"/>
+		</classes>
+</test>
+<!--test name="Devices Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetDevicesTest"/>
+			<methods>
+				<include name="testGetDevices" />
+			</methods>
+		</classes>
+		<parameter name="username" value="autouser1@ui.com"/>
+		<parameter name="password" value="1Connected"/>
+</test-->
+</suite>		 

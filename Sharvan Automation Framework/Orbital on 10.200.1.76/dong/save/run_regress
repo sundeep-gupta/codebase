@@ -1,0 +1,66 @@
+#!/tools/bin/perl -w 
+
+use Test::More  tests => 2 ; # the number of tests
+use Carp;
+use strict;
+use Time::localtime;
+my $testcase = 'run_regress';
+
+my $tm=localtime;
+$tm = sprintf("%02d%02d%04d", $tm->mday,($tm->mon)+1, $tm->year+1900);
+
+my $log_file = "\/logs\/TestResult\/"."$testcase"."_$tm".".log";
+   open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+
+#is (run_test('/tools/tests/dong/performance_reg -o 20.20.20.50 -s 30.30.20.76 -c 1',$log_file), 1, "IPerf Performance Regression");
+#is (run_test('/tools/tests/dong/ab.pl -o 20.20.20.50 -s 30.30.20.76',$log_file), 1, "Apache Benchmark Regression");
+if (run_test('/tools/tests/dong/performance.pl -o 20.20.20.50 -s 30.30.20.76 -c 1',$log_file)) {
+   print LOG  "\nIPerf Performance Regression:  PASS \n"
+   } else { print LOG  "\nIPerf Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+if (run_test('/tools/tests/dong/apache.pl -o 20.20.20.50 -s 30.30.20.76',$log_file)) {
+   print LOG  "\nApache Benchmark Regression:  PASS \n"
+   } else { print LOG  "\nApache Benchmark Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#print `mail \-s \"Regression Test Results\" dong\@orbitaldata.com \< $log_file`; 
+print `mail \-s \"Regression Test Results\" regression-list \< $log_file`; 
+
+#*******************************************************************************
+sub run_test
+{
+    my $test = shift ;
+    my $log_file = shift;
+    my $pass = 1;        #set result to pass by default;
+    open (LOG,  ">> $log_file") || die "Could not open the file $log_file \n";
+    my $invoke = "/tools/bin/perl $test" ;
+    print "\nRunning:  $invoke \n" ;
+    print LOG "\nRunning: $invoke \n";
+    sleep 2 ;
+    my @result = `$invoke` ;
+#    print LOG "@result \n";
+
+#The test results is stored in the format
+# 1..3
+# ok 1 - desc
+# ok 2 - desc
+# not ok
+#now sparse thru the results start from the second line
+   my $i = 0;
+   while ($result[$i]) {
+     if ($result[$i]=~ /ok\s/) {
+        print LOG "Sub-Case $result[$i]";
+     } elsif ($result[$i] =~ /not ok\s/) {
+            print LOG  "Sub-Case $result[$i]\n";
+            $pass = 0;      #test fails because at least one sub-case fails.
+            }
+     ++$i;
+   }  #end of while, means all sub-cases pass!
+    if (!$pass) {                
+        print LOG "\nTest Failed!!! \n";
+        print LOG "Check the logs of individual testcase for more details.\n";
+    }   
+    return $pass ;
+}
+
+

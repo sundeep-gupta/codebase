@@ -1,0 +1,127 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My Roam Test Suite" verbose="2" >
+<HPQC Path="CONNECTED BACKUP\8.x\Agent"/>	
+
+		<parameter name="FirstName" value="Auto"/>
+		<parameter name="LastName" value="Tester"/>
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="AgentVersionName" value="Default PC 8.5 Agent"/>
+		<parameter name="AgentSettingsName" value="Default PC 8.5 Settings"/>
+		<parameter name="backedupDrive" value="C:\"/>
+		<parameter name="backedupFolder" value="backupdata"/>
+		<parameter name="TechId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		
+	
+<test name="My Roam SC Setup Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.SCSetupforMyRoam"/>
+			<methods>
+				<include name="createConfigForMyRoamTest" />
+			</methods>
+			<parameter name="TechnicianId" value="admin"/>
+			<parameter name="Password" value="1connected"/>
+		
+		</classes>
+		</test>
+<test name="My Roam Home Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamHomeTest"/>
+			<methods>
+				<include name="testMyRoamHome" />
+			</methods>
+		</classes>
+		</test> 
+<test name="My Roam Welcome Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamWelcomeTest"/>
+			<methods>
+				<include name="testMyRoamWelcome" />
+			</methods>
+		</classes>
+		</test>	
+	
+<test name="My Roam to Summary Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamToSummaryTest"/>
+			<methods>
+				<include name="testMyRoamToSummary" />
+			</methods>
+		</classes>
+</test>	
+		
+<test name="My Roam All Versions Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamAllVersionsTest"/>
+			<methods>
+				<include name="testMyRoamAllVersions" />
+			</methods>
+		</classes>
+		<parameter name="ShowVersionsValue" value="All"/>
+		<parameter name="ShowVersions" value="ALL"/>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>
+		</test>	
+	
+<test name="My Roam Most Versions Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamMostRecentVersionTest"/>
+			<methods>
+				<include name="testMyRoamMostRecentVersions" />
+			</methods>
+		<parameter name="ShowVersionsValue" value="Most Recent"/>
+		<parameter name="ShowVersions" value="MOST_RECENT"/>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>	
+		</classes>
+
+		</test>			
+		
+<test name="My Roam As Of Backupdate Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamAsOfVersionTest"/>
+			<methods>
+				<include name="testMyRoamAsOfVersions" />
+			</methods>
+		</classes>
+		<parameter name="ShowVersionsValue" value="As of Backup Date..."/>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>
+		</test>	
+		
+<test name="My Roam Retrieve Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamRetrieveTest"/>
+			<methods>
+				<include name="testMyRoamRetrieve" />
+			</methods>
+		</classes>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>
+		</test>		
+
+
+<test name="My Roam Archive Exe Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamArchiveExeTest"/>
+			<methods>
+				<include name="testMyRoamArchiveFormats" />
+			</methods>
+		</classes>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>
+		<parameter name="windowsZipText" value="ZIP File - restores data only"/>
+		<parameter name="windowsExeText" value="Windows Executable - restores data and metadata"/>
+		
+		</test>		
+
+<test name="My Roam Archive Zip Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.myroam.MyRoamArchiveZipTest"/>
+			<methods>
+				<include name="testMyRoamArchiveFormats" />
+			</methods>
+		</classes>
+		<parameter name="searchText" value="Static Data File for Backup.docx"/>
+		<parameter name="windowsZipText" value="ZIP File - restores data only"/>
+		<parameter name="windowsExeText" value="Windows Executable - restores data and metadata"/>
+		
+		</test>
+			
+</suite>

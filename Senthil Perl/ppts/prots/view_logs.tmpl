@@ -1,0 +1,68 @@
+<HTML>
+  
+ <meta http-equiv="refresh" content="300">
+
+    <HEAD><TITLE><TMPL_VAR NAME="NAME"> - Log View - PPTS :: ProTS</TITLE>
+  <style type=text/css>
+  .pstyle {
+        font-family: verdana, arial, helvetica;
+        font-size: 10pt;
+        margin-left: 6px;
+        margin-right: 6px;
+  }
+  </style>
+  <script language="javascript">
+    function go_submit( form )
+    {
+       form.submit() ;
+    }
+  </script>
+
+
+   </HEAD>
+  <BODY BGCOLOR ="#29085a" Text="#29085a">
+<h2><font face="verdana, arial, helvetica" color="#ffc842"><TMPL_VAR NAME="NAME"></font><font face="verdana, arial, helvetica" color="white"> - Log View<br>
+User Logged: <font color=#ffc842><TMPL_VAR NAME="WHOIS"></font></font></h2>
+
+<table><tr>
+<td>
+<form action="index.cgi" method="post">
+  <input type="hidden" name="PID" value="<TMPL_VAR NAME="PID">">
+  <input type="submit" name="checkNow" value="Back to Project">
+</form> 
+</tr>
+</table>
+<table border=1 width="750" bordercolor="white" bgcolor="#ffc842" cellpadding=4 cellspacing=0>
+   <tr><td class="pstyle" align="center" width="70"><b>LogID</b></td>
+       <td class="pstyle" align="center" with="60"><b>UserID</b></td>
+       <td class="pstyle" align="center" width="120"><b>Date</b></td>
+       <td class="pstyle" align="center" width="500"><b>Log</b></td>
+   </tr>
+   <TMPL_LOOP NAME=LOG_LOOP>
+    <tr><td class="pstyle" align="center">
+    <TMPL_VAR NAME=ID>  
+    </td>
+    <td  class="pstyle" align="center">
+      <TMPL_VAR NAME="USERID">
+    </td>
+    <td  class="pstyle">
+      <TMPL_VAR NAME="DATE">&nbsp;
+    </td>
+    <td  class="pstyle" align="center">
+<TMPL_VAR NAME="LOG">&nbsp;
+    </td>
+    </tr>
+   </TMPL_LOOP>
+
+</table>
+<table><tr>
+<td>
+<form action="index.cgi" method="post">
+  <input type="hidden" name="PID" value="<TMPL_VAR NAME="PID">">
+  <input type="submit" name="checkNow" value="Back to Project">
+</form>
+</tr>
+</table>
+
+</BODY>
+</HTML>

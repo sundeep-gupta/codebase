@@ -1,0 +1,90 @@
+<html> <head> <title>Ajax RSS Reader</title>
+<style>
+...
+</style>
+<script>
+var g_homeDirectory = 'http://localhost/php-practice/';
+
+// The same transfer functions as before
+
+function addFeed()
+{
+  var url = prompt( "Url" );
+  loadXMLDoc( g_homeDirectory+'add.php?url='+escape( url ), parseAddReturn );
+  window.setTimeout( getFeedList, 1000 );
+}
+function loadXMLDoc(url, cb) {
+  xmlhttp=null;
+  // code for Mozilla, etc.
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else if (window.ActiveXObject)  {  // code for IE
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  if (xmlhttp!=null)  {
+    xmlhttp.onreadystatechange=cb;
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send(null) ;
+  } else {
+     alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function parseFeedList() {
+
+  if(xmlhttp.status == 200) {
+    var response = xmlhttp.responseXML.documentElement;
+    var elSel = document.getElementById("elFeedList");
+    var elOptNew = document.createElement("option");
+    x=response.getElementsByTagName("feed");
+    for (i=0;i<x.length;i++) {
+      var elOptNew = document.createElement("option");
+      elOptNew.text  = x[i].getAttribute('name');
+      elOptNew.value = x[i].getAttribute('id');
+      try {
+        elSel.add(elOptNew); // standards compliant; doesn't work in IE
+      } catch(ex) {
+        elSel.add(elOptNew, null); // IE only
+      }
+    }
+  }
+}
+
+function parseFeed() {
+
+  if(xmlhttp.status == 200) {
+
+    var response = xmlhttp.responseXML.documentElement;
+    var elArticles    = document.getElementById("elArticles");
+
+
+    x=response.getElementsByTagName("article");
+    for (i=0;i<x.length;i++) {
+      var elP = document.createElement("p");
+      elArticles.innerHTML  = x[i].getAttribute("title")+"<br/>";
+      elArticles.innerHTML = elArticles.innerHTML + x[i].firstChild.nodeValue+"<br/><br/>";  
+     
+    }
+  }
+}
+
+function loadFeed( id ) { 
+   loadXMLDoc( g_homeDirectory+'read.php?id='+id, parseFeed ); 
+}
+
+function getFeedList() { 
+
+  xmlObj = loadXMLDoc( g_homeDirectory+'list.php',parseFeedList); 
+
+
+
+
+}
+</script> </head> <body> <div style="width:600px;">
+<select id="elFeedList" onchange="loadFeed( this.options[this.selectedIndex].value )">
+</select>
+<input type="button" onclick="addFeed()" value="Add Feed..." />
+<div id="elArticles">Hi There </div>
+<script> getFeedList(); </script>
+</div> </body> </html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+  <name>Google Search</name>
+  <author>kksou</author>
+  <creationDate>May 2008</creationDate>
+  <copyright>(C) kksou.com. All Rights Reserved.</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail>support@kksou.com</authorEmail>
+  <authorUrl>www.kksou.com/php-gtk2/</authorUrl>
+  <version>1.5.15</version>
+  <description>This module complements the googleSearch component. It allows you to add a Google search form as a module. The search result will be displayed in the googleSearch component - right inside your Joomla page!</description>
+  <files>
+    <filename module="mod_googlesearch">mod_googlesearch.php</filename>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<filename>tmpl/default.php</filename>
+	<filename>tmpl/index.html</filename>
+  </files>
+  <params>
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+  </params>
+</install>

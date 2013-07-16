@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+    <name>Content - Article Table of Contents</name>
+    <author>Straton IT</author>
+    <creationDate>October 2009</creationDate>
+    <copyright>Copyright (C) 2009, Straton IT</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>tequeter@straton-it.fr</authorEmail>
+    <authorUrl>www.straton-it.fr</authorUrl>
+    <version>1.2</version>
+    <description>Displays a table of contents for articles. This is similar to page navigation, but uses the headings' hierarchy rather than page breaks. Additionally, it also numbers the headings for easier navigation. Note: do not use both headings and page breaks in the same article. Documentation: http://en.straton-it.fr/article-table-of-contents-joomla-plugin</description>
+    <files>
+        <filename plugin="toc">toc.php</filename>
+        <filename plugin="toc">toc.css</filename>
+        <filename plugin="toc">toc.js</filename>
+    </files>
+    <params>
+        <param name="enabled" type="radio" default="1" label="Enable Plugin" description="PARAMENABLED">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="addNumbering" type="radio" default="1" label="Add numbering to headings" description="PARAMENABLED">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="addToc" type="radio" default="1" label="Display the ToC" description="PARAMENABLED">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="indentToc" type="radio" default="1" label="Indent the ToC items" description="PARAMENABLED">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="displayToc" type="radio" default="table" label="Display mode" description="PARAMENABLED">
+            <option value="table">Table</option>
+            <option value="drop_down">Drop down menu</option>
+        </param>
+    </params>
+</install>

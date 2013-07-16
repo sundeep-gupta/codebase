@@ -1,0 +1,7 @@
+drop table customergroup;
+
+create table customergroup(customergroupid number(20) constraint pcstrgrpid primary key,
+groupname varchar2(50) not null,
+shortname varchar2(10),
+description varchar2(200),
+creationdate date not null);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testcase>
+<host_address>172.16.2.2</host_address>
+<username>sundeep.gupta</username>
+<password>hash@dollar</password>
+<from>sundeep.gupta@applabs.com</from>
+<to>sundeep.gupta@applabs.com</to>
+<subject>A message with 2 parts</subject>
+</testcase>
+
+

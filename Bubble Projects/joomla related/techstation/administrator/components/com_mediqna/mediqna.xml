@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>MediQnA</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>December 2008</creationDate>
+	<author>Famous Websites</author>
+	<authorEmail>b19gpx@gmail.com</authorEmail>
+	<authorUrl>http://www.FamousWebsites.biz/JED/MediQnA/MediQnA.php</authorUrl>
+	<copyright>Original code copyright (c) Famous Websites 2008</copyright>
+	<license>GPL, Free to use</license>
+	<!--  The version string is recorded in the components table -->
+	<version>MediQnA v1.1</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Medical Websites Question and Answer system</description>
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>mediqna.php</filename>
+		<filename>controller.php</filename>
+		<filename>views/index.html</filename>
+		<filename>views/mediqna/index.html</filename>
+		<filename>views/mediqna/view.html.php</filename>
+		<filename>views/mediqna/tmpl/index.html</filename>
+		<filename>views/mediqna/tmpl/default.php</filename>
+		<filename>views/mediqna/tmpl/noqs.php</filename>
+		<filename>views/listing/index.html</filename>
+		<filename>views/listing/view.html.php</filename>
+		<filename>views/listing/tmpl/index.html</filename>
+		<filename>views/listing/tmpl/default.php</filename>
+		<filename>models/GetThisQ.php</filename>
+		<filename>models/InitSetSesh.php</filename>
+		<filename>graphics/Previous.jpg</filename>
+		<filename>graphics/ShowAnswer.jpg</filename>
+		<filename>graphics/Next.jpg</filename>
+	</files>
+<install>
+	<queries>
+		<query>
+			DROP TABLE IF EXISTS `qna_QuestionSets`;
+		</query>
+		<query>
+			DROP TABLE IF EXISTS `qna_Questions`;
+		</query>
+		<query>
+			CREATE TABLE `qna_QuestionSets` (
+			  `RecID` int(6) NOT NULL auto_increment,
+			  `SetName` varchar(32) NOT NULL default 'set-name',
+			  `SetDesc` varchar(64) NOT NULL default 'set-description',
+			  `Status` char(3) NOT NULL default 'on',
+			  `DateAdded` varchar(10) NOT NULL default '00-00-0000',
+			  PRIMARY KEY  (`RecID`)
+			) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+		</query>
+		<query>
+			CREATE TABLE `qna_Questions` (
+			  `RecID` int(6) NOT NULL auto_increment,
+			  `Status` char(3) default 'on',
+			  `DateAdded` varchar(10) NOT NULL default '00-00-0000',
+			  `Question` text,
+			  `Answer` text,
+			  `AssignedSet` int(11) NOT NULL default '0',
+			  `QAlias` varchar(32) NOT NULL default 'Alias',
+			  PRIMARY KEY  (`RecID`)
+			) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+		</query>
+	</queries>
+</install>
+
+<uninstall>
+  <queries>
+	<query>
+		DROP TABLE IF EXISTS `qna_QuestionSets`;
+	</query>
+	<query>
+		DROP TABLE IF EXISTS `qna_Questions`;
+	</query>
+  </queries>
+</uninstall> 
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu act="sub1">MediQnA</menu>
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+	<!-- Site Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>admin.mediqna.php</filename>
+			<filename>AddNewQSet.php</filename>
+			<filename>AddQPrep.php</filename>
+			<filename>DisplayQList.php</filename>
+			<filename>DisplayQSetsList.php</filename>
+			<filename>EditQPrep.php</filename>
+			<filename>EditQSetPrep.php</filename>
+			<filename>models/AddQSet.php</filename>
+			<filename>models/EditQSetProc.php</filename>
+			<filename>models/Question_proc.php</filename>
+			<filename>graphics/minus.jpg</filename>
+			<filename>graphics/plus.jpg</filename>
+			<filename>graphics/pwroff.jpg</filename>
+			<filename>graphics/pwron.jpg</filename>
+			<filename>graphics/yes.jpg</filename>
+			<filename>graphics/edit.jpg</filename>
+			<filename>graphics/left.jpg</filename>
+			<filename>graphics/QnA-AddAnswer.jpg</filename>
+			<filename>graphics/QnA-AddQuestion.jpg</filename>
+			<filename>graphics/QnA-AddSet.jpg</filename>
+			<filename>graphics/QnA-QSets.jpg</filename>
+			<filename>graphics/MediQnA-Logo.jpg</filename>
+		</files>
+	</administration>
+</install>

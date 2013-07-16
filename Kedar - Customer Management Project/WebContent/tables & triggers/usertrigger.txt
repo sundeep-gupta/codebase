@@ -1,0 +1,15 @@
+drop trigger userid_incr;
+
+create or replace trigger userid_incr
+before insert on kuser
+for each row
+declare
+	temp kuser.userid%type;
+begin
+	select max(userid) into temp from kuser;
+	if temp is null then temp:=1;
+	else temp:=temp+1;
+	end if;
+
+	:new.userid:=temp;
+end;

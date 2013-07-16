@@ -1,0 +1,7 @@
+admin	admin|webmaster@yoursite.com|Administrator|2|
+razsun	Razikh|code.script@gmail.com|YaBB Newbies|1|
+test	test|test@ram.com|YaBB Newbies|0|
+kedar	kedar|sun1@bubble.com|YaBB Newbies|0|
+Sundeep	Sundeep|sundeep@bubble.co.in|YaBB Newbies|0|
+sundeep1	sundeep1|sundeep.gupta@india.com|YaBB Newbies|0|
+ARS	ARS|sun@bubble.com|YaBB Newbies|0|

@@ -1,0 +1,81 @@
+﻿.body1 {
+	/*background-color: #C0C0C0;*/
+	background-repeat: no-repeat;
+	background-position: left;
+	background-image:url('../images/midbackgnd21.jpg');
+	background-attachment: fixed;
+	/*background-color: #999966;*/
+}
+
+body {
+	/*background-color: #C0C0C0;*/
+	background-repeat: no-repeat;
+	background-position: left;
+	background-image:url('../images/notebook1.jpg');
+	background-attachment: fixed;
+	/*background-color: #999966;*/
+}
+#McAfeeLogo {
+	background-image: url('../images/McAfeeHeader.jpg');
+	/*background-repeat: no-repeat;
+	width: 50px;
+	height: 30px;*/
+	width: 100%;
+	height: 65px;
+}
+.NavBar {
+	background-image: url('../images/navBg.gif');
+	background-repeat: repeat-x;
+	width: 40%;
+	height: 10px;
+	/*padding-left: 15px;*/
+	text-align: left;
+}
+a {
+	text-decoration:none;
+	/*color: #FFFFFF;*/
+	color: blue
+}
+
+.DownloadLink{
+  color: #FFFFFF;
+  font-weight: bold
+}
+.HeaderTable {
+	/*	text-indent: 20px;*/
+	background-color: #FFFFFF;
+	width: 100%;
+}
+.TableHdr {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url('../images/navBg.gif');
+    font-weight: bold
+}
+.ContentTBL {
+	border: thin solid #000000;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.ContentRow {
+	color: #000000;
+	font-family: "Times New Roman", Times, serif;
+}
+#navTop li{
+	display: inline;
+	padding: 0 10px;
+	border-right: 1px solid #fff;
+	font: bold 13px "Arial";
+}
+.InfoBar {
+	background-image: url('../images/navBg.gif');
+	background-repeat: repeat-x;
+	background-position: left center;
+	color: #FFFFFF;
+	font: bold 12px "Arial";
+}
+
+.Link1 {
+	text-decoration:none;
+	color: #FFFFFF;*/
+}

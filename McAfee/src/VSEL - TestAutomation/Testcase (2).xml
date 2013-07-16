@@ -1,0 +1,53 @@
+<testcases>
+<testcase id='32452' desc='Install MSM'>
+    <init>
+        <action method='commonFns.cleanLogs'/>
+        <verify method='commonFns.isProductInstalled' return='false'/>
+        <property name='buildPath' argv='1'/>
+        <property name='mountPt' value='/Volumes/TempMountPt'/>
+    </init>
+    <steps>
+        <action module='commonFns.mountDMG'>
+            <param ref='buildPath'/>
+            <param ref='mountPt'/>
+        </action>
+        <property name='packgeFile' value='${mountPt}${file}.mpkg'>
+        <action module='subprocess.call'>
+        </action>
+        <subprocess method='call' capture-stdout='true' capture-stderr='true' shell='false'>
+            <param value='installer, -pkg, ${packageFile}, '/>
+            <param value='-pkg'/>
+            <param ref='packageFile'/>
+            <param value='-target'/>
+            <param value='/Applictions'/>    
+        </subprocess>
+    </steps>
+</testcase>
+<testcase id="1234" desc="This is sample tc desc" depends="1111">
+    <init>
+         <verify method='commonFns.isProductInstalled' return='true'/>
+         <action method='CommonAntiMalwareFns.resetToDefaults'/>
+         <verify method='CommonAntiMalwareFns.isOASEnabled' match='true' action='123' else='234'/>
+         <action method='commonFns.createFile' type='eicar' file-name='abc/def.txt'/>
+         <action method='AntiMalware.installAntimalwareTestTool'/>
+         <action method='AntiMalware.OAS'>
+             <param pos='1' value='true'/>
+         </action>
+    </init>
+    <steps>
+        <action method='commonFns.readFile'>
+            <param name='file_name' value='abc/def.txt'/>
+        </action>
+    </steps>
+    <validate>
+        <verify method='AntiMalware.isFileQuarantined' return='true'>
+            <param name='file_name' value='abc/def.txt'/>
+        </verify>
+    </validate>
+    <cleanup>
+        <action method='commonFns.cleanLogs'/>
+        <action method='resetToDefaults'/>
+        <action method='commonFns.copyLogs'/>
+    </cleanup>
+</testcase>
+</testcases>

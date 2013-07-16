@@ -1,0 +1,216 @@
+/* Crea2ive.com. A Bubble company */
+/*Developed by Razikh. 22/11/2008*/
+
+body {
+  text-align: center;
+/*text-align: -moz-center; /*for firefox :) */
+  font-family: Georgia, Serif;
+    margin:0;
+    scrollbar-face-color: #fff538;
+    scrollbar-shadow-color: #333333;
+    scrollbar-highlight-color: #ffbe07;
+    scrollbar-3dlight-color: #ffcb0e;
+    scrollbar-darkshadow-color: #333333;
+    scrollbar-track-color: #726b3d;
+    scrollbar-arrow-color: #000000;
+
+}
+
+#frame {
+  width:1000px;
+  margin-top:0px;
+  text-align:left;
+  background: #ffde2f;
+}
+
+#bar {
+  float: left;
+  width: 1000px;
+  height: 50px;
+  margin:0px;
+  background: url(images/title.png);
+}
+
+#main {
+background: #ffde2f;
+background-image: url(images/cr6.png);
+width: 1000px;
+height:600px;
+float: left;
+
+}
+
+#dul {
+
+float: left;
+width: 70px;
+height:360px;
+}
+
+#cdata {
+
+
+ /*margin:79px,0px,0px,70px;*/
+ margin-top: 79px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:70px;
+ float: left;
+ width: 635px;
+ height: 360px;
+overflow: auto;
+ background: url(images/feth1.png) repeat;
+ font: 13px Bodani MT;
+  text-align: justify;
+}
+#rm {
+  /*margin:95px,0px,0px,75px;  */
+  margin-top: 95px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:75px;
+  float:left;
+  width:70px;
+  height:360px;
+
+}
+
+#bottom {
+    background-image: url(images/footer.png);
+   float: left;
+   width: 1000px;
+   height: 20px;
+
+}
+
+#cdata1 {
+  width:550px;
+  /*margin:10px,0px,0px,20px; */
+  margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:20px;
+}
+
+#cdata1l {
+ width:280px;
+ float: left;
+ font: 13px Book Antiqua;
+ text-align: justify;
+
+}
+
+#cdata1r {
+/*margin:0px,0px,0px,50px;  */
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:50px;
+ width:220px;
+ float: left;
+ font: 13px Book Antiqua;
+ text-align: justify;
+
+}
+
+ #cdata2 {
+  width:550px;
+  /*margin:10px,0px,0px,20px;    */
+  margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:20px;
+}
+
+#cdata2l {
+ width:280px;
+ float: left;
+ font: 13px Book Antiqua;
+ text-align: justify;
+
+}
+
+#cdata2r {
+/*margin:0px,0px,0px,50px; */
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:50px;
+ width:220px;
+ float: left;
+ font: 13px Book Antiqua;
+ text-align: justify;
+
+}
+
+
+
+
+h1 {
+
+  color: #761508;
+  font: 24px Book Antiqua;
+  font-weight: bold ;
+}
+
+h3 {
+  font: 15px Paletino Linotype;
+}
+
+p {
+  margin:0px;
+font: 13px Bodani MT;
+}
+
+p.pline
+{
+
+font: 13px Paletino Linotype;
+  font-style: italic;
+}
+
+
+a:link,a:visited,a:active{
+	text-decoration:none;
+	border-bottom: Orange 1px dotted;
+	color:#A52A2A;
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+a:hover {
+  color: red;
+
+}
+
+b {
+ color: #71051a;
+ font: 15px Book Antiqua;
+  font-weight: bold;
+}
+
+p.footer{
+font: 11px Book Antiqua;
+  text-align: center;
+  font-weight: bold;
+}
+
+b.q {
+  color: red;
+  font: 15px Book Antiqua;
+  font-weight: bold;
+}
+
+p.plans{
+font: 13px Book Antiqua;
+ font-weight: bold;
+}
+
+.icon_mail{
+padding:6px 0px 3px 18px;
+background:url(images/emailicon1.gif) no-repeat left;
+}
+
+
+

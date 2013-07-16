@@ -1,0 +1,102 @@
+.greenHead{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 25px;
+color : #2B5026;
+font-weight : bold;
+text-decoration : none;
+}
+
+.greenHeadSmall{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 20px;
+color : #2B5026;
+font-weight : bold;
+text-decoration : none;
+}
+
+.orangeHead{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 25px;
+color : orange;
+font-weight : bold;
+text-decoration : none;
+}
+
+.maroonHead{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 25px;
+color : maroon;
+font-weight : bold;
+text-decoration : none;
+}
+
+.redHead{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 13px;
+color : #9E0000;
+font-weight : bold;
+text-decoration : none;
+}
+
+TD.greenData{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 13px;
+color : #2B5026;
+font-weight : bold;
+text-decoration : none;
+}
+
+
+TD.blackData{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 13px;
+color : Black;
+text-decoration : none;
+}
+
+TD.folderNames{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 15px;
+color : Black;
+text-decoration : none;
+}
+
+A.greenLink{
+	text-decoration : none;
+	color : #2B5026;
+}
+
+A.redLink{
+	text-decoration : none;
+	color : #9E0000;
+}
+
+A.blackLink{
+	text-decoration : none;
+	color : Black;
+}
+
+.blackText{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 13px;
+color : #000000;
+}
+
+INPUT.Button{
+	background-color : #D9D4C5;
+	border : 1px solid Silver;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight:bold;
+	color: #666666
+	width:125px;
+}
+
+INPUT.TextField{
+	background-color : White;
+	border : 1px solid Silver;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight:bold;
+	color:Black;
+}

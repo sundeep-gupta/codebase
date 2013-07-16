@@ -1,0 +1,55 @@
+/* CSS style - Core Design Web Gallery plugin for Joomla! 1.5 - fade */
+
+/* Gallery container */
+#webgallery .webgallery_fade {
+	/* Empty style */
+}
+
+/* Gallery cleaner */
+#webgallery hr.webgallery_clr {
+	clear:both;
+   height:1px;
+   margin: -1px 0 0 0;
+	padding:0;
+   border:none;
+   visibility: hidden;
+}
+
+/* Thumbnails set */
+#webgallery .webgallery_fade ul {
+	list-style: none;
+	margin: 0 0 0 8px;
+	padding: 0;
+	line-height: 0;
+}
+
+/* Thumbnail container */
+#webgallery .webgallery_fade ul li {
+	float: left;
+	position: relative;
+	margin: 2px;
+	padding: 0;
+	background: none;
+}
+
+/* Thumbnail container hover */
+#webgallery .webgallery_fade ul li:hover {
+	/* Empty style */
+}
+
+/* Thumbnail image */
+#webgallery .webgallery_fade ul li img {
+	border: 1px solid silver;
+	padding: 1px;
+}
+
+/* Thumbnail image hover */
+#webgallery .webgallery_fade ul li img:hover {
+	/* Empty style */
+}
+
+/* Thumbnail link arround */
+#webgallery .webgallery_fade ul li a {
+	text-decoration: none;
+	background: none;
+}

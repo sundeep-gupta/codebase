@@ -1,0 +1,185 @@
+<suite>
+
+<test name="advancedRule">
+	<input>
+		<param name="userName">deepak@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="rulesCategory">user</param>
+		<param name="AfterFileCreatedDate"></param>
+		<param name="AfterFileModifiedDate"></param>
+		<param name="BeforeFileCreatedDate"></param>
+		<param name="BeforeFileModifiedDate"></param>
+		<param name="ExcludeFileExtension"></param>
+		<param name="ExcludeFolderPath"></param>
+		<param name="FileExtension">*</param>
+		<param name="FileName">*</param>
+		<param name="FolderPath">*</param>
+		<param name="Name">DeepakRule01</param>
+		<param name="Id">10</param>
+		<param name="FileCreatedWithinLastSpecificDays">0</param>
+		<param name="FileModifiedWithinLastSpecificDays">0</param>
+		<param name="RuleOrder">3</param>
+		<param name="RuleType">2</param>
+		<param name="Category">3</param>
+		<param name="ExcludeFileSize">0</param>
+		<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":2,"FileExtension":"*","RuleOrder":3,"ExcludeFileSize":0,"Name":"DeepakRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"*","AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":"*","ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":null,"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="basicRule">
+	<input>
+	<param name="RuleType">1</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"DeepakRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+
+
+<test name="renameRule">
+	<input>
+	<param name="RuleType">2</param>
+	<param name="Name">RenamedAdvancedRule01</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":2,"FileExtension":"*","RuleOrder":3,"ExcludeFileSize":0,"Name":"RenamedAdvancedRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"*","AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":"*","ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":null,"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="renamebasicRule">
+	<input>
+	<param name="RuleType">1</param>
+	<param name="Name">RenamedBasicRule01</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"RenamedBasicRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="specialRule">
+	<input>
+		<param name="ExcludeFileExtension"></param>
+		<param name="ExcludeFolderPath">C:\\Program Files\*</param>
+		<param name="FileExtension">*</param>
+		<param name="FileName">This#4*@</param>
+		<param name="FolderPath">*</param>
+		<param name="Name">Test#()Rule01</param>
+	    <param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":2,"FileExtension":"*","RuleOrder":3,"ExcludeFileSize":0,"Name":"Test#()Rule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"*","AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":"This#4*@","ExcludeFolderPath":"C:\\\\Program Files\\*","Id":0,"ExcludeFileExtension":null,"BasicRules":null,"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="deletebasicRule">
+	<input>
+		<param name="userName">deepak@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="rulesCategory">user</param>
+		<param name="AfterFileCreatedDate"></param>
+		<param name="AfterFileModifiedDate"></param>
+		<param name="BeforeFileCreatedDate"></param>
+		<param name="BeforeFileModifiedDate"></param>
+		<param name="ExcludeFileExtension"></param>
+		<param name="ExcludeFolderPath"></param>
+		<param name="FileExtension">*</param>
+		<param name="FileName">*</param>
+		<param name="FolderPath">*</param>
+		<param name="Name"></param>
+		<param name="Id">10</param>
+		<param name="FileCreatedWithinLastSpecificDays">0</param>
+		<param name="FileModifiedWithinLastSpecificDays">0</param>
+		<param name="RuleOrder">3</param>
+		<param name="RuleType">1</param>
+		<param name="Category">3</param>
+		<param name="ExcludeFileSize">0</param>
+		<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[0,0,0,0,0,0,0,0,0,0,0],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="deleteadvRule">
+	<input>
+		<param name="userName">deepak@cb.com</param>
+		<param name="password">1Connected</param>
+		<param name="rulesCategory">user</param>
+		<param name="AfterFileCreatedDate"></param>
+		<param name="AfterFileModifiedDate"></param>
+		<param name="BeforeFileCreatedDate"></param>
+		<param name="BeforeFileModifiedDate"></param>
+		<param name="ExcludeFileExtension"></param>
+		<param name="ExcludeFolderPath"></param>
+		<param name="FileExtension">*</param>
+		<param name="FileName">*</param>
+		<param name="FolderPath">*</param>
+		<param name="Name"></param>
+		<param name="Id">10</param>
+		<param name="FileCreatedWithinLastSpecificDays">0</param>
+		<param name="FileModifiedWithinLastSpecificDays">0</param>
+		<param name="RuleOrder">3</param>
+		<param name="RuleType">2</param>
+		<param name="Category">3</param>
+		<param name="ExcludeFileSize">0</param>
+		<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":2,"FileExtension":"*","RuleOrder":3,"ExcludeFileSize":0,"Name":"","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"*","AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":"*","ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":null,"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="editbasicRule">
+	<input>
+	<param name="RuleType">1</param>
+	<param name="Name">EditedBasicRule01</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"EditedBasicRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="editadvRule">
+	<input>
+	<param name="RuleType">2</param>
+	<param name="Name">EditedAdvanceRule01</param>
+	<param name="AfterFileCreatedDate">02/11/2010</param>
+	<param name="AfterFileModifiedDate">02/11/2010</param>
+	<param name="BeforeFileCreatedDate">02/11/2010</param>
+	<param name="BeforeFileModifiedDate">02/11/2010</param>
+	<param name="ExcludeFileExtension">*.txt</param>
+	<param name="ExcludeFolderPath">C:\\Program Files\\</param>
+	<param name="FileExtension">*.doc</param>
+	<param name="FileName">Edited Adv Rule</param>
+	<param name="FolderPath">D:\\Testing\\</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":"02/11/2010","RuleType":2,"FileExtension":"*.doc","RuleOrder":3,"ExcludeFileSize":0,"Name":"EditedAdvanceRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"D:\\\\Testing\\\\","AfterFileModifiedDate":"02/11/2010","FileCreatedWithinLastSpecificDays":0,"FileName":"Edited Adv Rule","ExcludeFolderPath":"C:\\\\Program Files\\\\","Id":0,"ExcludeFileExtension":"*.txt","BasicRules":null,"BeforeFileModifiedDate":"02/11/2010","AfterFileCreatedDate":"02/11/2010"}]}</param>
+	</input>			
+</test>
+
+<test name="basicRulewithoutname">
+	<input>
+	<param name="RuleType">1</param>
+	<param name="Name"></param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="advRulewithoutname">
+	<input>
+	<param name="Name"></param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":2,"FileExtension":"*","RuleOrder":3,"ExcludeFileSize":0,"Name":"","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":"*","AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":"*","ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":null,"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="increaseRulepriority">
+	<input>
+	<param name="Id">12</param>
+	<param name="Name">Test Rule1</param>
+	<param name="RuleType">1</param>
+	<param name="RuleOrder">1</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"Test Rule1","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="decreaseRulepriority">
+	<input>
+	<param name="Id">11</param>
+	<param name="Name">Test Rule 2</param>
+	<param name="RuleType">1</param>
+	<param name="RuleOrder">3</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"Test Rule 2","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+
+<test name="copyofRule">
+	<input>
+	<param name="RuleType">1</param>
+	<param name="Name">Copy of DeepakRule01</param>
+	<param name="Validator">{"Rules":[{"BeforeFileCreatedDate":null,"RuleType":1,"FileExtension":null,"RuleOrder":3,"ExcludeFileSize":0,"Name":"Copy of DeepakRule01","FileModifiedWithinLastSpecificDays":0,"Category":3,"FolderPath":null,"AfterFileModifiedDate":null,"FileCreatedWithinLastSpecificDays":0,"FileName":null,"ExcludeFolderPath":null,"Id":0,"ExcludeFileExtension":null,"BasicRules":[1,2,3,4,5,6,7,8,9,10,11],"BeforeFileModifiedDate":null,"AfterFileCreatedDate":null}]}</param>
+	</input>			
+</test>
+</suite>

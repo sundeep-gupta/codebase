@@ -1,0 +1,86 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SearchAPITestsSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="SimplePosTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="SimplePosTest" />
+			</methods>
+		</classes>
+</test>
+<test name="MultiInstancesExtensionsTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="MultiInstancesExtensionsTest" />
+			</methods>
+		</classes>
+</test>
+<test name="SpecialCharactersTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="SpecialCharactersTest" />
+			</methods>
+		</classes>
+</test>
+<test name="EmoTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="EmoTest" />
+			</methods>
+		</classes>		
+</test>
+<test name="WildCharTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="WildCharTest" />
+			</methods>
+		</classes>
+</test>
+
+
+<test name="Neg2Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="Neg2Test" />
+			</methods>
+		</classes>
+</test>
+<!--test name="NegativeTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="NegativeTest" />
+			</methods>
+		</classes>
+		<parameter name="userNameWild" value="rishithr@test.com"/>
+		<parameter name="passwordWild" value="1Connected"/>
+		<parameter name="accountNumberWild" value="101001882"/>
+		<parameter name="searchFileNameNeg" value="file|.txt"/>
+		<parameter name="pathNeg" value="D:\"/>
+		<parameter name="startBackupDateNeg" value="All"/>
+		<parameter name="includeSubFoldersNeg" value="true"/>
+</test--> 
+
+<test name="BackupDateTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.SearchTest"/>
+			<methods>
+				<include name="BackupDateTest" />
+			</methods>
+		</classes>
+</test>
+
+
+</suite>		 

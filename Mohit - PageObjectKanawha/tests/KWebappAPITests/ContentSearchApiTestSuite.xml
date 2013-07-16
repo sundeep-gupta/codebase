@@ -1,0 +1,127 @@
+	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ContentSearchApiTestSuite.xml" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<!--TestcaseID: 43013-->
+<test name="ContentSearchSanity">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchSanity" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43020-->
+<test name="CaseSensitiveSearch">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="caseSensitiveSearch" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43021-->
+<test name="exSubfolderSearch">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="exSubfolderSearch" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43021-->
+<test name="inSubfolderSearch">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="inSubfolderSearch" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43026-->
+<test name="ContentSearchScope">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchScope" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43022-->
+<test name="ContentSearchInvalid">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchInvalid" />
+			</methods>
+		</classes>
+		
+<!--TestcaseID: 43023-->		
+</test><test name="ContentSearchWildChar">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchWildChar" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43024-->
+<test name="ContentSearchUnicode">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchUnicode" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43028-->
+<test name="ContentSearchVersion">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchversion" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43027-->
+<test name="ContentSearchSendOnce">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchSendOnce" />
+			</methods>
+		</classes>
+		
+<!--TestcaseID: 43013-->
+<test name="Content Search MacOS">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchMacOS" />
+			</methods>
+		</classes>
+</test>
+
+<!--TestcaseID: 43025-->
+<test name="ContentSearchMultiDrive">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContentSearchTest"/>
+			<methods>
+				<include name="contentSearchSanity" />
+			</methods>
+		</classes>
+</test>
+</suite>

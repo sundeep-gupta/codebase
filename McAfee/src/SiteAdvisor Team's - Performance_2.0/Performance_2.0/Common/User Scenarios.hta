@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>User Scenarios</title>
+  <HTA:APPLICATION
+		ID=""
+		APPLICATIONNAME="LVTSetup"
+		SCROLL="auto"
+		SYSMENU="yes"
+		MAXIMIZEBUTTON="no"
+		CAPTION="yes"
+		ICON="explorer.exe"
+		SINGLEINSTANCE="yes"
+		WINDOWSTATE=""
+		innerBorder="yes"
+		navigable="yes"
+		scrollFlat="yes"
+		contextMenu="yes"
+		selection="yes">
+</HTA:APPLICATION>
+<script type="text/vbscript" src="./Resources/scripts/UserScenarios.vbs"></script>
+<link rel="stylesheet" type="text/css" href="./Resources/styles/style.css" />
+</head>
+<body onload="LoadConfig">
+<form name="frm_userscenarios">
+<table width="100%">
+<tr><td id="McAfeeLogo"></td></tr>
+<tr>
+	<td class="NavBar">
+		<ul id="navTop">
+			<li><a href="Performance Test Suite.hta" class="Link1">Home</a></li>
+			<li><a href="ProductScenarios.hta" class="Link1">Product Scenarios</a></li>
+			<li><a target="_blank" href="../User Scenarios/UserScenariosConfig.ini" class="Link1">View Config</a></li>
+			<li><a href="Help.html" class="Link1">Help</a></li>
+		</ul>
+	</td>
+</tr>
+</table>
+	
+	<!--webbot bot="PurpleText" PREVIEW="Table containing all the test cases" -->
+	<br>
+	<br>
+	<table width="40%">
+			<tr>
+				<td>
+				<font>Number of Iterations:</font>
+				<select name="cmb_iterations" size="1">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="100">100</option>
+				</select>
+				</td>
+				<td>Sleep Time</td>
+				<td>
+					<select name="cmb_sleeptime" size="1">
+					<option value="1">1</option>
+					<option value="3" selected>3</option>
+					<option value="5">5</option>
+					<option value="7">7</option>
+					<option value="10">10</option>
+					<option value="12">12</option>
+					<option value="15">15</option>
+					<option value="18">18</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					</select>
+					<font>&nbsp;Mins</font>
+				</td>
+			</tr>
+	</table>
+	
+	
+	<table width="100%" id="tbl_usrtestcases">
+		<tbody>
+			<tr><td>&nbsp;</td></tr>
+			<tr>
+				<td>
+					<fieldset><legend>File Copying</legend>
+						<input type="checkbox" name="chk_runfilecopy" value="1" onclick="GetFileCopySrcDest"><b><font color="#990000">Run</font></b>&nbsp;&nbsp;
+						<font>Source Directory&nbsp;</font><input type="text" name="txt_copysrc" size="40" value="" readonly>&nbsp;&nbsp;
+						<font>Destination Directory&nbsp;</font><input type="text" name="txt_copydst" size="40" value="" readonly>
+					</fieldset>
+				</td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<fieldset><legend>Applications</legend>
+						<input type="checkbox" name="chk_runapps" value="1"><b><font color="#990000">Run</font></b>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_word" value="word"><font>MSWord</font>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_excel" value="excel"><font>Excel</font>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_ppt" value="ppt"><font>PPT</font>&nbsp;&nbsp;						
+						<input type="checkbox" name="chk_pdf" value="pdf"><font>PDF</font>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_mp3" value="mp3"><font>MP3</font>
+					</fieldset>
+				</td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<fieldset><legend>IE:about blank</legend>
+						<input type="checkbox" name="chk_ieblankrun"><b><font color="#990000">Run</font></b>
+					</fieldset>
+				</td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<fieldset><legend>IE:Home Page</legend>
+						<input type="checkbox" name="chk_iehomepagerun" onclick="SetHomepagelist"><b><font color="#990000">Run</font></b>&nbsp;&nbsp;
+						<font>Home page list&nbsp;&nbsp;</font><input type="text" name="txt_homepagefilelist" size="80" readonly>
+					</fieldset>
+				</td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<fieldset><legend>IE:Red/Green/Yellow Sites</legend>
+						<input type="checkbox" name="chk_iergysites" onclick="SetRGYSiteslist"><b><font color="#990000">Run</font></b>&nbsp;&nbsp;
+						<font>Site list&nbsp;&nbsp;</font><input type="text" name="txt_rgysitelist" size="80" readonly>
+					</fieldset>
+				</td>
+			</tr>
+			
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<fieldset><legend>Filtering</legend>
+						<input type="checkbox" name="chk_runfiltering">&nbsp;<b><font color="#990000">Run</font></b>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_websitefiltering">&nbsp;<font>Website Filtering</font>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_keywordfiltering">&nbsp;<font>Keyword Filtering</font>&nbsp;&nbsp;
+						<input type="checkbox" name="chk_imagefiltering">&nbsp;<font>Image Filtering</font>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+						<font>Limited User Name</font>&nbsp;<input type="text" name="txt_limitedusername" value="User" readonly>&nbsp;&nbsp;
+						<font>Password</font>&nbsp;<input type="text" name="txt_limpassword" value="a" readonly><br><br>
+						<font>Admin User Name&nbsp;</font>&nbsp;<input type="text" name="txt_adminusername">&nbsp;&nbsp;
+						<font>Password</font>&nbsp;<input type="text" name="txt_adminpassword">
+						
+					</fieldset>
+				</td>
+			</tr>
+
+			
+			<tr>
+				<td>
+					<fieldset><legend>Firefox</legend>
+						<input type="Checkbox" name="chk_firefox" value="1">&nbsp;<font>Firefox Startup time</font>
+					</fieldset>
+				</td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+			
+			<tr>
+				<td>
+					<input type="button" value="Save !!!" onclick="SaveConfig">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MultipleAccountTestsSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="test Multiple Accounts for Cancelled Acc">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsforCancelledAcc" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Multiple Accounts for On Hold Acc">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsforOnHoldAcc" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Multiple Accounts for Active Acc wo backup">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsforActiveAccwobackup" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Multiple Accounts for Completed Status">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsforCompletedStatus" />
+			</methods>
+		</classes>		
+</test>
+
+
+<test name="test Multiple Accounts Data Usage Limit Settings">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsDataUsageLimitSetting" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Multiple Accounts Data Usage ">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsDataUsage" />
+			</methods>
+		</classes>		
+</test>
+<test name="test Multiple Accounts For Invalid UserName After Authorisation ">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.MultipleAccountsTest"/>
+			<methods>
+				<include name="testMultipleAccountsForInvalidUserNameAfterAuthorisation" />
+			</methods>
+		</classes>		
+</test>
+</suite>

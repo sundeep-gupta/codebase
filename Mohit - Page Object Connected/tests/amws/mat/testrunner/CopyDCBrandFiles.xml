@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+	<Actions>
+	  	<Action>
+			<Name>CreateTemporaryFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCreateAction</Class>
+			<Destination>BrandingTestDir</Destination>
+		</Action>
+		<Action>
+			<Name>CopyDataToTestFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCopyAction</Class>
+			<Source>SourceTempDir</Source>
+			<Destination>BrandingTestDir</Destination>
+		</Action>
+	</Actions> 
+	<ActionObjects> 
+		<ActionObject>
+		    <Name>BrandingTestDir</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+			<Path>C:\DCBrandingFiles</Path> 
+		</ActionObject>
+		<ActionObject>
+			<Name>SourceTempDir</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+			<Path>Z:\Configuration$\Brands</Path> 
+		</ActionObject>
+		<ActionObject> 
+			<Name>GenericDummyDestination</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class> 
+			<Path>C:\</Path>
+			<UseDesination>YES</UseDesination>
+		</ActionObject> 			
+	</ActionObjects> 
+</Runner>

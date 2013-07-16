@@ -1,0 +1,12 @@
+create or replace trigger cstrid_incr
+before insert on customer
+for each row 
+declare 
+	temp customer.customerid%type;
+begin
+	select max(customerid) into temp from customer;
+	if temp is null then temp:=1;
+	else temp:=temp+1;
+	end if;
+	:new.customerid:=temp;
+end;

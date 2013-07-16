@@ -1,0 +1,131 @@
+@import url("mainstyle.css");
+@import url("tabs.css");
+@import url("boxes.css");
+@import url("cory.css");
+
+  body,
+  html{
+    margin:0;
+    padding:0;
+    height: 100%;
+    font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+  }
+  body{
+  	min-width: 720px;
+  }
+  
+  div#top {
+    position: absolute;
+    z-index: 1;
+    width: 100%;    
+    top: 0;
+    left: 0;
+    height: 65px;
+  }
+  
+  body>div#top {
+  	position: fixed;
+  }
+  
+  div#header {
+   height: 65px;
+   width: 100%;
+   margin: 0 auto;  
+   /* i have to set the bgcolor so that it doesn't end up transparent */   
+   background: #ffffff;   
+   /* border: solid #333333; */
+   /* top right bottom left */
+   /* border-width: 0 0 1px 0; */
+  }
+  
+  div#middle {
+   /*  this is for when there is a bottom frame
+  	padding: 45px 0 65px 0; */
+   position: absolute;
+   top: 66px;
+   left; 0;
+   height: 0;
+  	padding: 0 0 0 0;
+   margin-bottom: 0;
+   margin-left: 0;
+   margin-right: 0;
+   voice-family: "\"}\"";
+   voice-family: inherit;
+  }
+  
+  div#middlelogin {
+   /*  this is for when there is a bottom frame
+  	padding: 45px 0 65px 0; */
+   position: absolute;
+   top: 66px;
+   width: 100%;
+   left; 0;
+   height: 0;
+  	padding: 0 0 0 0;
+   margin-bottom: 0;
+   margin-left: 0;
+   margin-right: 200em;
+   voice-family: "\"}\"";
+   voice-family: inherit;
+  }
+  
+  body>div#middle {
+  	margin-left: 0;
+   margin-right: 0;
+  }        
+  
+  div#middle2 {
+   margin: 0 auto;
+  }  
+  
+  div#left {
+    width: 150px;
+    float: left;
+   border: solid #333333;
+   /* top right bottom left */
+   border-width: 0 1px 0 0;
+   background: #ffffff;
+  }
+  
+  div#right {
+  	padding: 0 10px;
+   margin-left:150px;
+   border: solid #333333;
+   /* top right bottom left */
+   border-width: 0 0 0 1px;
+   background: #ffffff;
+  }
+  
+  div#bottom {
+  	width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 65px;
+  }
+  
+  body>div#bottom {
+  	position: fixed;
+  }
+  
+  div#footer {
+  	height: 65px;
+   width: 100%;
+   margin: 0 auto;
+   border: solid #333333;
+   /* top right bottom left */
+   border-width: 1px 0 0 0;
+   background: #ffffff;   
+  }
+  
+  div#leftfullheight {
+    height: 100%;
+    width: 150px;
+    position:absolute;
+    top:0;
+    left:0;
+   border: solid #333333;
+   /* top right bottom left */
+   border-width: 0 1px 0 0;
+  }

@@ -1,0 +1,47 @@
+#!/usr/bin/perl -w
+use lib '/tools/lib/perl5/site_perl/5.8.4'; 
+#use strict;
+use FindBin;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_constants;
+use orbital_rpc;
+use Getopt::Std; 
+#
+# Initialization code
+#
+my $orb = "10.200.38.63" ;
+getopt ("o");
+if ($opt_o) {
+$orb=$opt_o;
+chomp($orb);}
+my $url = "http://$orb:2050/RPC2";
+my $Rpc = Orbital::Rpc->new($url);
+#my $Rpc = Orbital::Rpc->new("http://$orb:2050/RPC2");
+#my $Rpc = Orbital::Rpc->new('http://localhost:2050/RPC2');
+sleep 3;
+print "Test started.\n";
+   #
+   # If there was an Alert, display it
+   #
+   (my $NumAlerts, my @Alerts) = $Rpc->get_alerts();
+      print("Displaying Alert!\n");
+      print" @Alerts \n";
+ 
+   my $MaxAllowedThroughput = $Rpc->get_throughput();
+   print "MAX THROUGHPUT: $MaxAllowedThroughput \n";
+   my $IsPassthrough = $Rpc->get_parameter("PassThrough");
+   print("PassThrough: $IsPassthrough\n");
+   
+  my $i = $Rpc->get_parameter("SlowSendRate");
+  print "SENDRATE = $i \n";
+
+  $i = $Rpc->get_parameter("SlowRecvRate");
+  print "Receive RATE $i \n";
+  my $sendrate = 30000;
+  print "set sendrate", $Rpc->set_parameter('SlowSendRate', $sendrate);
+  my $i = $Rpc->get_parameter("SlowSendRate");
+  print "MY new sendrate is: $i";
+#  $i = $Rpc->get_parameter("UI.Softboost");
+#  print "Print 1 if SB is enabled $i \n";
+                                                                                                                 

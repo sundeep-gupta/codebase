@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Account Management MAT Test Suite" verbose="2" >
+	<suite-files>
+	<suite-file path="tests/amws/mat/testng/suites/7.OrderCdOrDvdTestSuite.xml"/>
+	<suite-file path="tests/amws/mat/testng/suites/3.ReinstallAgent.xml"/>
+	<suite-file path="tests/amws/mat/testng/suites/5.ContactSupportSuite.xml"/>
+	<suite-file path="tests/amws/mat/testng/suites/1.RegistrationAndDownload.xml"/>
+	</suite-files>
+</suite>
+
+

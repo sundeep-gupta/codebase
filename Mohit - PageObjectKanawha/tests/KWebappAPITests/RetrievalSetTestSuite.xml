@@ -1,0 +1,208 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RetrievalSetTestSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="GetRetrievalSetOneKBFile">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalSetOneKBFile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="GetRetrievalOneMBfile">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalOneMBfile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="GetRetrievalSetTenMBFile">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalSetTenMBFile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="GetRetrievalSetHundredMBFile">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalSetHundredMBFile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="GetRetrievalSetThousandMBFile">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalSetThousandMBFile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="GetRetrievalSetOverTousandMBFile">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="GetRetrievalSetOverTousandMBFile" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="MultiFileRetrieval">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="MultiFileRetrieval" />
+			</methods>
+		</classes>		
+</test>
+<test name="RetrievalSpecificDateTime">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="RetrievalSpecificDateTime" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="FileWithoutExtensionTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="FileWithoutExtensionTest" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="FileRenameAndRetrieve">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="FileRenameAndRetrieve" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="WinSevenRetrievalTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="WinSevenRetrievalTest" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="IncorrectPasswordDuringDownload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="IncorrectPasswordDuringDownload" />
+			</methods>
+		</classes>		
+</test>
+<test name="NullPasswordDuringDownload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="NullPasswordDuringDownload" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="BlankPasswordDuringDownload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="BlankPasswordDuringDownload" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="PasswordCaseSensitivityDuringDownload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="PasswordCaseSensitivityDuringDownload" />
+			</methods>
+		</classes>		
+</test>
+<test name="AllRevisionsGetRetrievalSet">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="AllRevisionsGetRetrievalSet" />
+			</methods>
+		</classes>		
+</test>
+<test name="SpecificBackupDateGetRetrievalSet">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="SpecificBackupDateGetRetrievalSet" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="AlphaNumericPwdonRetrieve">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="AlphaNumericPwdonRetrieve" />
+			</methods>
+		</classes>		
+</test>
+<test name="SmallFolderRetrieveTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="smallFolderRetrieve" />
+			</methods>
+		</classes>		
+</test>
+<test name="LargeFolderRetrieveTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="largeFolderRetrieve" />
+			</methods>
+		</classes>		
+</test>
+<test name="CompressedFilesRetrievalTest">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="compressedFilesRetrievalTest" />
+			</methods>
+		</classes>		
+</test>
+<test name="PDFAndNSFRetrieve">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="pdfAndNSFRetrievalTest" />
+			</methods>
+		</classes>		
+</test>
+<test name="5000FilesRetrieve">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.GetRetrievalSetTest"/>
+			<methods>
+				<include name="fiveThousandFilesFolderRetrieve" />
+			</methods>
+		</classes>		
+</test>
+
+</suite>

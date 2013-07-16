@@ -1,0 +1,243 @@
+<suite>
+<!-- Account number:1010030397
+Name:Content Search
+Email address:consearch1@search.com
+Account number:1010030496
+Name:Content Search
+Email address:consearch2@search.com
+Account number:1010030595
+Name:Content Search
+Email address:consearchmac1@search.com -->
+<test name="ContentSearchSanity">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">taluka</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Anna_Hazare.htm</param>
+		<param name="noOfFiles">1</param>
+		<param name="fileSize">187598</param>
+		</output>
+</test>
+<test name="CaseSensitiveSearch">
+	<input>
+	    <param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">true</param>
+		<param name="caseSensitive2">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">instrUMEntal</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		<param name="noOfFiles2">1</param>
+		</output>
+</test>
+<test name="exSubfolderSearch">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">false</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">Android</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		</output>
+</test>
+<test name="inSubfolderSearch">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">Froyo</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Android.txt</param>
+		<param name="noOfFiles">1</param>
+		<param name="fileSize">87353</param>
+		</output>
+</test>
+<test name="ContentSearchScope">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">Android</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">false</param>
+		<param name="includeSubFolders2">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">Strawberry</param>
+		<param name="fileContent2">Gingerbread</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Android.txt</param>
+		<param name="noOfFiles2">1</param>
+		<param name="fileSize">87353</param>
+		</output>
+</test>
+<test name="ContentSearchInvalid">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">872adfa@srtq#34sxg</param>
+		<param name="fileContent2">Froyo</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Android.txt</param>
+		<param name="noOfFiles2">1</param>
+		<param name="fileSize">87353</param>
+		</output>
+</test>
+<test name="ContentSearchWildChar">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">*.txt</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">Hazare</param>
+		<param name="fileContent2">Visual</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		<param name="noOfFiles2">3</param>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		
+		<param name="searchFileName">Android.txt</param>
+		<param name="fileSize">87353</param>
+		<param name="searchFileName2">Intelli.txt</param>
+		<param name="fileSize2">8933</param>
+		<param name="searchFileName3">VS.txt</param>
+		<param name="fileSize3">80454</param>
+		</output>
+</test>
+<test name="ContentSearchUnicode">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">Ελλη</param>
+		</input>
+		<output>
+		<param name="noOfFiles">0</param>
+		</output>
+</test>
+<test name="ContentSearchVersion">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\TextSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">JDK</param>
+		<param name="fileContent2">interpreter</param>
+		</input>
+		<output>
+		<param name="noOfFiles">6</param>
+		<param name="noOfFiles2">1</param>
+		</output>
+</test>
+<test name="ContentSearchSendOnce">
+	<input>
+		<param name="userName">consearch2@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path">C:\kanawhaqa\Kanahwa test data\ContentSearch</param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">taluka</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Anna_Hazare.htm</param>
+		<param name="noOfFiles">1</param>
+		<param name="fileSize">187598</param>
+		</output>
+</test>
+<test name="ContentSearchMacOS">
+	<input>
+		<param name="userName">consearchmac1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path"></param>
+		<param name="startBackupDate">Most Recent</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">test</param>
+		</input>
+		<output>
+		<param name="pathassert"></param>
+		<param name="searchFileName">test.txt</param>
+		<param name="noOfFiles">1</param>
+		<param name="fileSize">187598</param>
+		</output>
+</test>
+<test name="ContentSearchMultiDrive">
+	<input>
+		<param name="userName">consearch1@search.com</param>
+		<param name="password">1Connected</param>
+		<param name="searchFileName">%</param>
+		<param name="path"></param>
+		<param name="startBackupDate">All</param>
+		<param name="includeSubFolders">true</param>
+		<param name="caseSensitive">false</param>
+		<param name="searchScope">0</param>
+		<param name="fileContent">taluka</param>
+		</input>
+		<output>
+		<param name="pathassert">C:\kanawhaqa\Kanahwa Test Data\ContentSearch\Wikipedia\General\</param>
+		<param name="searchFileName">Anna_Hazare.htm</param>
+		<param name="noOfFiles">1</param>
+		<param name="fileSize">187598</param>
+		</output>
+</test>
+</suite>

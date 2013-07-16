@@ -1,0 +1,89 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="KanawhaMgtAPITestsSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+<test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="backupHistoryTest" />
+			</methods>
+		</classes>
+		<parameter name="username" value="api1@test.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="Type1" value="Backup"/>
+		<parameter name="Type2" value="Retrieve"/>
+		<parameter name="Type3" value="Registration"/>
+		<parameter name="Type4" value="AccountRecovery"/>
+		<parameter name="Status1" value="Canceled"/>
+		<parameter name="Status2" value="Completed_with_warnings"/>
+		<parameter name="Status3" value="Incomplete"/>
+		<parameter name="Status4" value="Completed"/>
+		<parameter name="Status5" value="Sync_cancelled"/>
+		<parameter name="Status6" value="Completed_with_errors"/>
+</test>
+
+<test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="accountSizeLimitTest" />
+			</methods>
+		</classes>
+		<parameter name="username" value="api1@test.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="AccountSizeLimit" value="30GB"/>
+</test>
+
+<test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="accountActivationTimeTest" />
+			</methods>
+		</classes>
+		<parameter name="username" value="api1@test.com"/>
+		<parameter name="password" value="1Connected"/>
+</test>
+
+<test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="orderMediaTestDvD" />
+			</methods>
+		</classes>
+		<parameter name="username" value="api1@test.com"/>
+		<parameter name="password" value="1Connected"/>
+		<parameter name="mediaType" value="DVD"/>
+		<parameter name="mediaQuantity" value="1"/>
+</test>
+<test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="orderMediaTestCD" />
+			</methods>
+		</classes>
+		<parameter name="usernameCd" value="api3@test.com"/>
+		<parameter name="passwordCd" value="1Connected"/>
+		<parameter name="mediaTypeCd" value="CD"/>
+		<parameter name="mediaQuantityCd" value="5"/>
+</test>
+
+<!--test name="History Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.HistoryTest"/>
+			<methods>
+				<include name="myRoamRetrievalTest" />
+			</methods>
+		</classes>
+		<parameter name="username" value="api1@test.com"/>
+		<parameter name="password" value="1Connected"/>
+</test-->
+
+</suite>

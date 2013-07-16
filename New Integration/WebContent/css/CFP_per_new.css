@@ -1,0 +1,218 @@
+A {
+	text-decoration : none;
+	color : #000000;
+}
+
+A:HOVER {
+		text-decoration : underline;
+		color : #688211;
+		font-weight:bold
+}
+
+A.news {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #FF6633;
+}
+A.news:HOVER {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #FF6633;
+}
+
+
+TD.alert{
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 16px;
+color : blue;
+font-weight : bold;
+}
+
+
+TD.runningtext {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 11px;
+color : #000000;
+}
+
+TD.mesg {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 14px;
+color :blue;
+}
+
+TD.messagetext {
+	font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size : 10px;
+	line-height: 14px;
+	color : #000000;
+}
+
+TD.footertext {
+	font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size : 10px;
+	line-height: 14px;
+	color : #000000;
+	background:#AFCBE3
+}
+
+
+TABLE.tabinside {
+	border : 1px solid;
+	border-color :#8AB1D3;
+	padding : 2
+	}
+
+TD.tabtd {
+background-color: #EEEEEE;
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #000000;
+text-decoration : none;
+}
+
+TD.tabtd1 {
+background-color: #F6F6F6;
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #000000;
+text-decoration : none;
+}
+
+TD.tdstroke {
+border : solid;
+border-width : 1px;
+border-bottom-color : #CCCCCC;
+border-left-color : #CCCCCC;
+border-right-color : #CCCCCC;
+border-top-color : #CCCCCC;
+
+}
+	
+TD.linkstext {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #000000;
+text-decoration : none;
+}
+
+TD.fieldnames {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 11px;
+color : #5994C6;
+font-weight : bold;
+text-decoration : none;
+}
+
+.orangetext {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+color : #FF6633;
+}
+
+TD.tabheading {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 12px;
+font-weight:bold;
+color : #666666;
+background:#DAE7F2
+border : solid;
+border-width : 1px;
+border-bottom-color : #CCCCCC;
+border-left-color : #CCCCCC;
+border-right-color : #CCCCCC;
+border-top-color : #CCCCCC;
+}
+
+.titleblacktext {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 11px;
+color : #000000;
+}
+
+TD.WELCOME{
+font-size : 13px; font-weight:bold;
+color : #000000;
+}
+
+
+.headlinks {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 10px;
+font-weight : bold;
+color : #000000;
+text-transform : uppercase;
+}
+INPUT.textfield {
+	border : 1px solid #B1CCE4;
+	font : normal;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : ThreedShadow;
+	vertical-align : middle;
+	width:150px
+}
+
+INPUT.textfieldP {
+	border : 1px solid #CCCCCC;
+	font : normal;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : ThreedShadow;
+	vertical-align : middle;
+	width:100px
+}
+
+INPUT.Button{
+	background-color : #D9D4C5;
+	border : 1px solid Silver;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-weight:bold;
+	color:#666666
+
+}
+
+INPUT.InternButton{
+	background-color : #efefef;
+	border : 1px solid Silver;
+	font-family : Verdana, Impact, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	font-Weight : Bold;
+	color:#666666
+}
+
+SELECT.Dropmenu{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	color: #333333; 
+	text-decoration:none; 
+	width="100"
+}
+TD.distribution {
+font-family : Verdana, Arial, Helvetica, sans-serif;
+font-size : 22px;
+color : #666666;
+font-weight : bold;
+text-decoration : none;
+}
+toptext {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 12px;
+color : #000000;
+}
+TD.heading {
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 15px;
+color : #000000;
+text-decoration : none;
+font-Weight : Bold;
+}
+TD.tabtddiff {
+background-color: #EEEEEE;
+font-family : Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size : 15px;
+color : #000000;
+text-decoration : none;
+font-Weight : Bold;
+}

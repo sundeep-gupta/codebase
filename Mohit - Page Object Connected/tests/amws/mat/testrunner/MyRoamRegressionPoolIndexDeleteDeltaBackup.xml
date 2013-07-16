@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+    <Actions>
+        <Action>
+			<Name>AddDeltaToFile</Name>
+			<Class>FileModifyAction</Class>
+			<Destination>BackupFile</Destination>
+			<FileType>Text</FileType>			
+			<ModificationType>Add</ModificationType>			
+			<ModificationPosition>Random</ModificationPosition>			
+			<ModificationSize>80</ModificationSize>			
+		</Action>	
+		<Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>BackupFolder</Destination>
+		</Action>
+    </Actions>
+    
+    <ActionObjects>
+        <ActionObject Name="BackupFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\PoolIndexDeleteFolder]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\PoolIndexDeleteFolder\PoolIndexDeleteFile.txt]]></Path>
+        </ActionObject>                
+    </ActionObjects>
+</Runner>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testconfig>
+
+<!-- If the test is not specifying any of the test specific properties, the system will take it as 
+a base selenium test and use these properties. This is applicable if we need to test only one web application 
+using the same code base -->
+
+	<protocol>http</protocol>
+	<hostname>sprint12webapp.qa.englab.local</hostname>
+	<port>80</port>
+	<appendurl>ManagementSite/Login.aspx</appendurl>
+		
+<!-- Root directory where the locator files are existing, no need to change this -->
+	<locatorbasedir>com\ironmountain\kanawha\pages</locatorbasedir>
+<!-- Directory where the TestRunner xml files are kept -->	
+	<testrunnerfilepath>tests\amws\mat\testrunner</testrunnerfilepath>
+
+<!-- Browser is currently a property which is shared across the test and Framework level. We may
+need to change if we need to make the test browser different for different applications...
+Try to use the selenium browser names here (Ex: iexplore, firefox, safari, custom, safariproxy etc..)-->	
+			
+	<browser>iexplore</browser>		
+	
+<!-- If the test has its own properties, the we need to define them here base on the application
+and use them in the testsub-classes -->
+	
+	<kanawhaprotocol>http</kanawhaprotocol>
+	<kanawhaurl>sprint12webapp.qa.englab.local</kanawhaurl>
+	<kanawhaport>80</kanawhaport>
+	<kanawhaappendurl>ManagementSite/Login.aspx</kanawhaappendurl>
+	<kanawhalogoffurl>ManagementSite/Logoff.aspx</kanawhalogoffurl>
+	<kanawhatestdatadir>testdata</kanawhatestdatadir>
+	
+	<scprotocol>http</scprotocol>
+	<schost>kdcprimary.qa.englab.local</schost>
+	<scport>80</scport>
+	<scappendurl>supportcenter/login.asp</scappendurl>
+	<sctestdatadir>testdata</sctestdatadir>
+	<scadmin>admin</scadmin>
+	<scpassword>1Connected</scpassword>
+	<kanawhawebappcommunity>sprint15</kanawhawebappcommunity>
+		
+	<apiprotocol>http</apiprotocol>
+	<apihost>sprint12webapp.qa.englab.local</apihost>
+	<apiport>80</apiport>
+	
+</testconfig>

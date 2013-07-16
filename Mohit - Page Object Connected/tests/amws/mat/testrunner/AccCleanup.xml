@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+	<Actions>
+	    <Action>
+			 <Name>CompactorAction</Name>
+			 <Class>com.ironmountain.digital.qa.automation.TestRunner.actions.AccountActions.CompactorAction</Class>
+			 <Destination>BackupTestDir</Destination>
+			 <StartCommand>"cmd.exe /C sc start compactor /account 101003565"</StartCommand>
+			 <StopCommand>cmd.exe /C sc stop compactor > cmd.log</StopCommand>
+			 <Machine>suscomp01.englab.qa</Machine>
+		</Action>	
+		<ActionObject>
+			<Name>BackupTestDir</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+			<Path>C:/</Path>
+		</ActionObject>	
+	</Actions>	
+</Runner>

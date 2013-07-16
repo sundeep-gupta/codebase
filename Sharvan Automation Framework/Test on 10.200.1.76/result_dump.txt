@@ -1,0 +1,360 @@
+October 10, 2006-16:39:14: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83038032
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83038032
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:19: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82702288
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82702288
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:24: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82749872
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82749872
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:29: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82759008
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82759008
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:34: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83367056
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83367056
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:39: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83306672
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83306672
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:44: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82786576
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82786576
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:49: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83378496
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83378496
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:54: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82837248
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82837248
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:39:59: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83236400
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83236400
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:04: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82832272
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82832272
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:09: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82857952
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82857952
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:14: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83259792
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83259792
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:20: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82949872
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82949872
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:25: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82572720
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82572720
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:30: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83053120
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83053120
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:35: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83097328
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83097328
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:40: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83056672
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83056672
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:45: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   84012496
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   84012496
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:50: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82778976
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82778976
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:40:55: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83097744
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83097744
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:00: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   83377200
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   83377200
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:05: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   82952944
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   82952944
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:10: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85197728
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85197728
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:15: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85590960
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85590960
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:20: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85653472
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85653472
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:41:25: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85339616
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85339616
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:42:35: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   86516272
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   86516272
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:42:40: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   87119296
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   87119296
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:42:45: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   87359120
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   87359120
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:42:50: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   87601408
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   87601408
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:42:55: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   87854576
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   87854576
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:43:00: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   86978096
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   86978096
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:43:05: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   86747296
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   86747296
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:43:10: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85544448
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85544448
+max mmap regions =          0
+max mmap bytes   =          0
+> 
+October 10, 2006-16:43:15: calling malloc_stats()
+Arena 0:
+system bytes     =  486952960
+in use bytes     =   85012400
+Total (incl. mmap):
+system bytes     =  486952960
+in use bytes     =   85012400
+max mmap regions =          0
+max mmap bytes   =          0
+> 

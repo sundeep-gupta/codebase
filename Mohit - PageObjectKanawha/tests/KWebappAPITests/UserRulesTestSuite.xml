@@ -1,0 +1,161 @@
+	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="UserRulesTestSuite.xml" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+//Test caseID: 
+<test name="createAdvancedRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="createAdvancedRule" />
+			</methods>		
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="createBasicRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="createBasicRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="deleteAdvancedRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="deleteAdvancedRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="deleteBasicRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="deleteBasicRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="editAdvancedRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="editAdvancedRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="editBasicRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="editBasicRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="includeBasicRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="includeBasicRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="renameAdvancedRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="renameAdvancedRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="renameBasicRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="renameBasicRule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="specialCharactersinRuleName">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="specialCharactersinRuleName" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="createBasicRulewithoutname">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="createBasicRulewithoutname" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="createAdvRulewithoutname">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="createAdvRulewithoutname" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="increaseRulePriority">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="increaseRulePriority" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="decreaseRulePriority">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="decreaseRulePriority" />
+			</methods>
+		</classes>
+</test>
+
+
+//Test caseID: 
+<test name="createCopyofRule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.UserRulesTest"/>
+			<methods>
+				<include name="createCopyofRule" />
+			</methods>
+		</classes>
+</test>
+
+</suite>

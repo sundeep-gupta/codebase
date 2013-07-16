@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigTest Apply="True">
+
+	<RemoveAll Desc="RemoveAll Blocked_sites" Category="MCPS_CONFIG_BLOCKED_SITES" Type="IMcCollection"/>
+
+	<AddItem Desc="Add Blocked_sites" Type="IMcCollection" Category="MCPS_CONFIG_BLOCKED_SITES">
+
+	<Item Value="www.symantec.com"/>
+	</AddItem>
+
+	<Display Type="IMcCollection" Category="MCPS_CONFIG_BLOCKED_SITES"/>
+</ConfigTest>

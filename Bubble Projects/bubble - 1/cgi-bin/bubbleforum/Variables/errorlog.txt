@@ -1,0 +1,50 @@
+1187852690|1187852690|66.249.67.65|Personal Messaging is only for members|im||||
+1187894917|1187894917|85.113.33.1|There is an invalid character in the Username field. Valid Characters are Letters(a-z), Numbers (0-9), and ( # + - . @ ^ _ )|register2|||oiuu;hrftasdfasd|
+1188258732|1188258732|66.249.67.65|Personal Messaging is only for members|im||||
+1188313263|1188313263|202.75.200.7|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||kuldeep_adhikari|kuldeep
+1188615507|1188615507|84.19.188.158|The e-mail address (mika@buy-24h.net.ru) is being used by a registered member already! If you feel this is a mistake, please go to the login page and use the password reminder.|register2|||merlingood|
+1189073696|1189073696|89.37.161.24|Sorry, you must register before using this feature!|viewprofile||||
+1189214866|1189214866|66.249.67.65|Personal Messaging is only for members|im||||
+1189423086|1189423086|66.249.67.65|Personal Messaging is only for members|im||||
+1189735511|1189735511|59.92.138.236|(wasp) The username you tried to register already exists.|register2|||wasp|
+1189735522|1189735522|59.92.138.236|(wasp) The username you tried to register already exists.|register2|||wasp|
+1189736559|1189736559|89.0.67.180|(cash007) The username you tried to register already exists.|register2|||cash007|
+1189828204|1189828203|66.249.67.65|Personal Messaging is only for members|im||||
+1189965825|1189965825|59.92.167.75|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||wasiqh|830i
+1189965865|1189965865|59.92.167.75|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|reminder2||||
+1189965876|1189965876|59.92.167.75|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|reminder2||||
+1189966141|1189966141|59.92.167.75|You have an invalid ID.  Please try again.|resetpass||||
+1189966154|1189966154|59.92.167.75|You have an invalid ID.  Please try again.|resetpass||||
+1189966340|1189966340|59.92.167.75|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||wasp|830i
+1190011302|1190011302|124.30.163.138|Sorry, you must register before using this feature!|viewprofile||||
+1190012966|1190012966|219.47.122.234|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||tameem|nortmas
+1190012976|1190012976|219.47.122.234|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||tameem|simbola
+1190134053|1190134053|66.249.67.65|Personal Messaging is only for members|im||||
+1190222234|1190222234|84.19.188.158|The e-mail address (mika@buy-24h.net.ru) is being used by a registered member already! If you feel this is a mistake, please go to the login page and use the password reminder.|register2|||gremlinbug|
+1190635604|1190635604|202.54.176.11|Sorry, you must register before using this feature!|viewprofile||||
+1190635630|1190635630|202.54.176.11|You should fill in a username.|login2||||
+1190817492|1190817492|124.30.163.122|You should fill in a username.|login2||||
+1190817513|1190817513|124.30.163.122|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|reminder2||||
+1192148296|1192148296|87.118.112.25|You tried to use scripting in the url or form input, which is not allowed!|register Result: registered (registering only mode is ON)||||
+1192223558|1192223557|60.254.79.118|You have an invalid ID.  Please try again.|resetpass|||razikh|
+1192224640|1192224640|60.254.79.118|For security, you cannot use your username as your password.|profile2|||admin|
+1192262134|1192262134|85.140.249.87|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||Kannankapef|5qe4mNf996
+1192262138|1192262137|85.140.249.87|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||Kannankapef|5qe4mNf996
+1192262340|1192262340|85.140.249.87|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||Kannankapef|5qe4mNf996
+1192659802|1192659802|91.192.104.2|The registration feature has been disabled on this forum.|register||||
+1192686178|1192686178|66.249.67.65|The registration feature has been disabled on this forum.|register||||
+1192794099|1192794099|91.192.104.2|The registration feature has been disabled on this forum.|register||||
+1192889407|1192889407|59.162.68.1|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||kuldeep|kuldeep
+1192889421|1192889421|59.162.68.1|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||kuldeepadhikari|symantec
+1192911203|1192911203|195.244.128.247|The registration feature has been disabled on this forum.|register||||
+1192937151|1192937151|87.118.112.25|The registration feature has been disabled on this forum.|register||||
+1193086536|1193086536|121.246.234.203|You are not allowed to access this section.||1193083025|11||
+1193086648|1193086648|121.246.234.203|You are not allowed to access this section.||1193083025|11||
+1193088874|1193088874|121.246.234.203|You are not allowed to access this section.|||1||
+1193088940|1193088940|66.249.85.87|You are not allowed to access this section.|||1||
+1193089051|1193089051|66.249.85.87|You are not allowed to access this section.|||1||
+1193089065|1193089065|66.249.85.87|You are not allowed to access this section.|||1||
+1193089776|1193089776|121.246.234.203|The e-mail address (sundeep.techie@gmail.com) is being used by a registered member already! If you feel this is a mistake, please go to the login page and use the password reminder.|register2|||sundeep.techie|
+1193089801|1193089801|123.236.175.76|() You should fill in a username.|register2||||
+1193095657|1193095657|87.118.106.4|(vwcenter) The username you tried to register already exists.|register2|||vwcenter|
+1193254897|1193254897|83.31.224.74|(dooddemewmets) The username you tried to register already exists.|register2|||dooddemewmets|

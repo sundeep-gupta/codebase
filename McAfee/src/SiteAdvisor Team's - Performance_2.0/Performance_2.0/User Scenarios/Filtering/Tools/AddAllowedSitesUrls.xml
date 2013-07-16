@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigTest Apply="True">
+
+	<RemoveAll Desc="RemoveAll Allowed_sites" Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection"/>
+
+	<AddItem Desc="Add Allowed_sites" Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection">
+
+	<Item value="www.yahoo.com"/>
+	<Item value="www.mcafee.com"/>
+
+	</AddItem>
+
+	<!-- DisplayAll Category="MCPS_CONFIG_ALLOWED_SITES"/ -->
+
+	<Display Category="MCPS_CONFIG_ALLOWED_SITES" Type="IMcCollection"/>
+
+
+</ConfigTest>

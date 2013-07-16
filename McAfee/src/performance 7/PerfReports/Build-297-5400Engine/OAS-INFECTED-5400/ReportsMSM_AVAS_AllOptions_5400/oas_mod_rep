@@ -1,0 +1,4 @@
+Test Run with McAfee Security Console Installed 
+----OAS-THROUGHPUT-TEST----  ----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+
+MIXED  Time taken in seconds for this scan      2151      2113      1966      2017      1991      2037     2036   2055.66666666667

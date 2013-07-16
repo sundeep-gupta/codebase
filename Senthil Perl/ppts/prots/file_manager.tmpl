@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>ProTS File Manager - <TMPL_VAR NAME="DIR"></title><head>
+  </head>
+  <body bgcolor="#29085a" text="white">
+  <h2><font face="Arial, Helvetica">ProTS File Manager - <font color="#ffc842"><TMPL_VAR NAME="DIR"></font></font></h2>
+    <form action="index.cgi" method="post">
+  <input type="hidden" name="PID" value="<TMPL_VAR NAME="PID">">
+  <input type="submit" name="checkNow" value="Back to Project">
+  </form>
+
+  <table border=1 cellpadding=0 bordercolor="#ffc842" bgcolor="white" text="#29085a" cellspacing=0 width="600">
+  <tr bgcolor="#ffc842" align="center">
+<td width="50%"><font face="Arial, Helvetica"><b>File Name - click on file to download</b></font></td>
+<td width="10%"><font face="Arial, Helvetica"><b>Size</b></font></td>
+<td width="25%"><font face="Arial, Helvetica"><b>Last Modified</b></font></td>
+<td width="15%"><font face="Arial, Helvetica"><b>Delete?</b></font></td></tr>
+  <TMPL_LOOP NAME="FILE_LOOP">
+     <tr>
+         <td><a href="docs/<TMPL_VAR NAME="DIR">/<TMPL_VAR NAME="NAMEURL">"><TMPL_VAR NAME="NAME"></a></td>
+         <td align="center"><small><font color="#29085a"><TMPL_VAR NAME="SIZE"></font></td>
+         <td align="center"><small><font color="#29085a"><TMPL_VAR NAME="MODIFIED"></font></td>
+         <td align ="center" valign="middle"><small>
+            <form action="delete_file.cgi" method="post">
+             <input type="hidden" name="filename" value="<TMPL_VAR NAME="NAME">">
+             <input type="hidden" name="dir" value="<TMPL_VAR NAME="DIR">">
+             <input type="hidden" name="PID" value="<TMPL_VAR NAME="PID">">
+             <input type="submit" value="Delete">
+         </form>
+         </td>
+     </tr> 
+   </TMPL_LOOP>
+  </table>
+<br>
+  <form action="index.cgi" method="post">
+  <input type="hidden" name="PID" value="<TMPL_VAR NAME="PID">">
+  <input type="submit" name="checkNow" value="Back to Project">
+  </form> 
+  </body>
+</html>

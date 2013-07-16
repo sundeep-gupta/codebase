@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" configfailurepolicy="skip" verbose="1" name="Failed suite [PageObjectKanawha]" skipfailedinvocationcounts="false" parallel="false" annotations="JDK" data-provider-thread-count="10">
+  <test verbose="1" name="com.ironmountain.kanawha.tests.branding.BrandingInheritanceTest(failed)" junit="false" parallel="false" annotations="JDK">
+    <classes>
+      <class name="com.ironmountain.kanawha.tests.branding.BrandingInheritanceTest">
+        <methods>
+          <include name="startTest"/>
+          <include name="brandingInheritance"/>
+          <include name="stopTest"/>
+          <include name="stopSuite"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

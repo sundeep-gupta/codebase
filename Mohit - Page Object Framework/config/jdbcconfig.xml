@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbcconfig>
+
+<!-- Properties required to connect to the database -->
+<!-- If only one Database Server need for the product then we can make use of this property -->
+
+	<DBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</DBDriver>
+	<!-- DBServerType represents the Database Server in use, Values should be taken from(MSSQL, Oracle, SQLLite, MySQL...) -->
+	<DBServerType>MSSQL</DBServerType>
+	<DBServerUrl>jdbc:sqlserver://conqasvrin01.calpurnia.com</DBServerUrl>
+	<DBPort>1433</DBPort>
+	<DBUsername>sa</DBUsername>
+	<DBPassword>sa</DBPassword>
+	
+<!-- If we have multiple database occurences for the same product (mirrored/clusterd) we need to specify the server type -->
+<!-- Check the utils.jdbc package or database connectivity architecture doc from docs folder -->
+	
+	<PrimaryServerDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</PrimaryServerDBDriver>
+	<PrimaryServerType>MSSQL</PrimaryServerType>
+	<PrimaryServerDBServerUrl>jdbc:sqlserver://vconqadcin.calpurnia.com</PrimaryServerDBServerUrl>
+	<PrimaryServerDBPort>1433</PrimaryServerDBPort>
+	<PrimaryServerDBUsername>sa</PrimaryServerDBUsername>
+	<PrimaryServerDBPassword>sa</PrimaryServerDBPassword>
+	
+	<SecondaryServerDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</SecondaryServerDBDriver>
+	<SecondaryServerType>MSSQL</SecondaryServerType>
+	<SecondaryServerDBServerUrl>jdbc:sqlserver://conqamdcin.calpurnia.com</SecondaryServerDBServerUrl>
+	<SecondaryServerDBPort>1433</SecondaryServerDBPort>
+	<SecondaryServerDBUsername>sa</SecondaryServerDBUsername>
+	<SecondaryServerDBPassword>sa</SecondaryServerDBPassword>		
+		
+</jdbcconfig>

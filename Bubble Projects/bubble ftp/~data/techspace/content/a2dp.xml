@@ -1,0 +1,52 @@
+    <article>
+        <title>Enabling A2DP on Windows Mobile 5 Phones</title>
+        <author><a href="mailto:abhi4u82@gmail.com">--Aby</a></author>
+        <section>
+            
+            <p>
+            If you own a pair of Bluetooth headphones and would like to play music from Windows Media Player on your phone wirelessly you will need to know a thing or two about the Advanced Audio Distribution Profile (A2DP). This basically allows your phone to send audio over Bluetooth at a normal frequency, letting you listen to your old Led Zeppelin collection in good quality. Unfortunately some Windows Mobile 5 devices do not have A2DP built in. It is available in the AKU2+ updates for Windows Mobile 5, but sometimes carriers like to disable such features. I own an Imate Jamin with Airtel service and found that after upgrading to the new ROM, I was still left without A2DP support. Fear not, there is a simple installation that will enable A2DP for any Windows Mobile 5 device with Bluetooth. Just install the patch provided and after a restart you should be able to pair your Bluetooth stereo headphones and listen away in wireless bliss.
+	                </p> 
+
+ <table>
+  <tr>
+    <td>
+   <p align="center">
+          
+  <img src="http://www.bubble.co.in/images/1.jpg" align="center" > </img>
+ 
+    </p>            
+  </td>
+ </tr>
+</table>
+	<p align="center">
+	Take note, that when you pair your headphones, be sure to check Wireless Stereo. This is the new capability that is added with A2DP.
+	</p>
+ <p align="center">
+
+    <img src="http://www.bubble.co.in/images/2.jpg"> </img>
+
+</p>
+
+<p align="center">
+Notice the music note icon in the title bar indicating that A2DP is enabled. This will only come on if a wireless stereo device has been paired.
+ </p>
+
+<p>
+
+
+Note: There seems to be lot of confusion regarding Bluetooth and headsets. A2DP will not work on headsets as they are mono devices. A2DP will only work on a pair of stereo headphones like Sony Ericsson DS970, Motorola HT820, etc. Headphones are dual speaker - think about the headphones you use when you are listening to music.
+
+
+</p>
+
+<p>
+
+Download:
+  <a href="http://www.bubble.co.in/downloads/a2dp_113.cab">A2DP Patch</a> 
+
+
+</p>
+
+ </section>
+                
+    </article>

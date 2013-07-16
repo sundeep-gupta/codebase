@@ -1,0 +1,116 @@
+<suite>
+	<test name="historySummaryTestBigAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="historySummarySize">5</param>
+			<param name="accountNumber">101009406</param>
+		</input>
+	</test>
+	
+	<test name="historyNotificationsTestBigAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101009406</param>
+		</input>
+	</test>
+	
+	<test name="historyFileListTestBigAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101009406</param>
+		</input>
+	</test>
+	
+	<test name="historySummaryTestMACAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="historySummarySize">5</param>
+			<param name="accountNumber">101012772</param>
+		</input>
+	</test>
+	
+	<test name="historyNotificationsTestMACAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101012772</param>
+		</input>
+	</test>
+	
+	<test name="historyFileListTestMACAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101012772</param>
+		</input>
+	</test>
+	
+	<test name="historySummaryTestEmptyAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="historySummarySize">5</param>
+			<param name="accountNumber">101009703</param>
+		</input>
+	</test>
+	
+	<test name="historyNotificationsTestEmptyAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101009703</param>
+		</input>
+	</test>
+	
+	<test name="historyFileListTestEmptyAcc">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="accountNumber">101009703</param>
+		</input>
+	</test>
+	
+	<test name="historySummaryTestOneDay">
+		<input>
+			<param name="userName">history@test.com</param>
+			<param name="password">1connected</param>
+			<param name="historySummarySize">0</param>
+		</input>
+	</test>
+	
+	<test name="historyNotificationsTestOneDay">
+		<input>
+			<param name="userName">history@test.com</param>
+			<param name="password">1connected</param>
+		</input>
+	</test>
+	
+	<test name="historyFileListTestOneDay">
+		<input>
+			<param name="userName">history@test.com</param>
+			<param name="password">1connected</param>
+		</input>
+	</test>
+	
+	<test name="historySummaryTestAllDates">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="historySummarySize">0</param>
+			<param name="accountNumber">101004951</param>
+		</input>
+	</test>
+	
+	<test name="historySummaryTestTenDates">
+		<input>
+			<param name="userName">multipleaccuser@test.com</param>
+			<param name="password">2_Connected</param>
+			<param name="historySummarySize">10</param>
+			<param name="accountNumber">101004951</param>
+		</input>
+	</test>
+</suite>

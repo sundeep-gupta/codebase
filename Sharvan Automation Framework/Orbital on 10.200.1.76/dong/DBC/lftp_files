@@ -1,0 +1,78 @@
+#!/tools/bin/perl
+#This script gets a list of file in /dbc1 using LFTP
+#All the files are being downloaded simultaneously
+#--------------------------
+
+use lib '/tools/lib/perl5/site_perl/5.8.4';
+use lib '/tools/tests/regression';
+use Test::More  qw(no_plan); 
+use Time::localtime;  
+use Carp ;
+use Getopt::Std ;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_rpc;
+
+
+my $testcase="Dbc_lftp";
+my $file_dir = '/dbc1/';        #default directory to be copied
+my $log_dir = '/var/tmp/';
+my $user = "dbc1";
+my $passwd = "dbc1";
+my $session = 1;
+
+
+#Defaults
+my $file_list ;  
+#my $softboost= 0;		#set to HB
+my $send_mail = 0;              #default is not sending email
+
+#Require 1 inputs:
+# -s Iperf Server
+#------------------------
+
+getopt ("s") ;
+
+if (  ! $opt_s)  {
+  print "Usage: $testcase -s <Server>   \n" ;
+  exit 1 ;
+  }
+
+my $server = $opt_s; chomp ($server);
+
+
+#get the file list
+$file_list = `ssh $server "ls $file_dir"`;
+my @file_list = split (/\s+/, $file_list);
+#print "THESE FILES WILL BE FTP_GET @file_list \n";
+
+#First Pass through DBC ..
+foreach $file (@file_list)    #the value is specified in Mbps
+ {  
+   is (get_lftp ($server, $file, $session), 1, "FIRST-PASS OF FILE $file FROM SERVER $server ") ;
+  }
+
+    
+#Second Pass through DBC ...
+#.... Still need a test script that can simulate a real user environment -> fill the memory with
+#.... random data before the second pass
+foreach $file (@file_list)    #the value is specified in Mbps
+ {  
+   is (get_lftp ($server, $file, $session), 1, "SECOND-PASS OF FILE $file FROM SERVER $server ") ;
+  }
+
+
+
+#********************************************************  
+# needs 2 inputs: server and the file
+#-------------------------------------------------------
+sub get_lftp
+{
+    my $server = shift ;
+    my $file = shift;
+    my $session=shift;
+    my $cmd = `lftp $user\:$passwd\@$server -e 'pget -n $session $file -o \/dev\/null\; bye'`;
+    print  "LFTP-GET File $file From Server $server \n";
+    print  "\nCOMPLETE: $cmd \n";
+    print  "****************************************************\n\n";
+}

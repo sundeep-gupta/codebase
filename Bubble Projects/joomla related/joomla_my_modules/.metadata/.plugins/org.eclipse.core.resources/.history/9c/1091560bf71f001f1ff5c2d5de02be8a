@@ -1,0 +1,232 @@
+/**
+ * Copyright (C) 2010 TopCoder Inc., All Rights Reserved
+ */
+package com.topcoder.kestrel;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.io.File;
+/**
+ * 
+ *
+ * @author TCSDEVELOPER
+ * @version 1.0
+ * 
+ */
+public class CopyrightStatementParser {
+	private int numberOfLines;
+	private String[] searchPhrases;
+	private String[] preImportantPhrases;
+	private String[] postImportantPhrases;
+	private String copyrightSingle;
+	private String copyrightDouble;
+	private String[] preChange;
+	private String[] postChange;
+	private boolean requireChange;
+	
+	public CopyrightStatementParser(int numberOfLines, String[] searchPhrases, String copyrightSingle,
+		                            String copyrightDouble, String[] preImportantPhrases, 
+		                            String[] postImportantPhrases) {
+        this.numberOfLines = numberOfLines;
+        this.searchPhrases = searchPhrases;
+        this.copyrightSingle = copyrightSingle;
+        this.copyrightDouble = copyrightDouble;
+        this.preImportantPhrases = preImportantPhrases;
+        this.postImportantPhrases = postImportantPhrases;
+	}
+    public String[] getPreChange() {
+    	return preChange;
+    }
+    public String[] getPostChange() {
+        return postChange;
+    }
+    public boolean isRequiredChange() {
+        return requireChange;
+    }
+	public void parse(BufferedReader reader, String fileName) throws IOException {
+        /* reset preChange, postChange, and requireChange */
+        boolean packageFound = false;
+        this.requireChange = false;
+        List preChangeList = new ArrayList();
+        List postChangeList = new ArrayList();
+        int i = 0;
+        while ( packageFound == false && i < numberOfLines ) {
+            String line = reader.readLine();
+            i++;
+            /* reached end of file */
+            if(line == null) {
+            	break;
+            }
+
+            
+            /* TODO: ignore tailing space characters ? */
+            if( line.startsWith("package")) {
+                packageFound = true;
+                if(this.isValidHeader(preChangeList)) {
+                    // Write every line into
+                	Collections.copy(preChangeList, postChangeList);
+                } else {
+                	this.requireChange = true;
+                    postChangeList = this.getDefaultHeader(fileName);
+                }
+                postChangeList.add(line);
+            } else {
+                /* Store every line in buffer */
+                preChangeList.add(line);	
+            }
+	    }
+        /* TODO : special case of package not found*/
+        
+        /* Parsed rest N-i lines */
+        boolean commentBlock = false;
+        List commentBlockLines = new ArrayList();
+        for( i < this.numberOfLines; i++ ) {
+            String line = reader.readLine();
+            if( line == null) {
+            	break;
+            }
+            preChangeList.add(line);
+            if(commentBlock) {
+                if(line.startsWith("*/")) {
+                	commentBlock = false;
+                	/* If invalid comment then do not write */
+                	if(this.isValidComment(commentBlockLines)) {
+                	    postChangeList.addAll(commentBlockLines);
+                	} else {
+                		this.requireChange = true;
+                	}
+                }
+            } else {
+                if(line.startsWith("/*")) {
+                    commentBlock = true;
+                    commentBlockLines = new ArrayList();
+                    commentBlockLines.add(line);
+                } else {
+                	postChangeList.add(line);
+                }
+            }
+        }
+        /* spl case : N completed but inside comment */
+        if(commentBlock && i == this.numberOfLines) {
+            if(this.isValidComment(commentBlockLines())) {
+                postChangeList.addAll(commentBlockLines);
+            } else {
+            	this.requireChange = true;
+            	postChangeList.add("/*");
+            }
+        }
+	}
+	
+	private boolean isValidComment(List commentList) {
+		ListIterator iterator = commentList.listIterator();
+		while(iterator.hasNext()) {
+			String line = (String) iterator.next();
+			/* Check if searchPhrases are matched */
+			for(int i = 0; i < this.searchPhrases.length; i++) {
+				if(line.matches(searchPhrases[i])) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+    private boolean isValidHeader(List headerList) {
+
+		ListIterator iterator = commentList.listIterator();
+		int index = 0;
+		boolean copyrightFound = false;
+		iteration:
+		while(iterator.hasNext()) {
+			String line = (String) iterator.next();
+			/* Skip parsing beginning of the comment  and end of the comment*/
+			if(line.startsWith("/*") || line.startsWith("*/")) {
+				continue;
+			}
+			if(copyrightFound == false ) {
+				/* Blank comment lines are valid */
+				if(line.matches("^\\s*\\*?\\s*$")) {
+					if(this.preImportantPhrases[index].equals("")) {
+						index++;
+					}
+					continue;
+				} else if( line.contains(this.preImportantPhrases[index])) {
+					index++;
+				} else {
+					/* Check if copyright */
+					for(int i = 0; i < this.searchPhrases.length; i++) {
+						if(line.matches(searchPhrases[i])) {
+							copyrightFound = true;
+							index = 0; // for postImportant
+							continue iteration;
+						}
+					}
+					/* no prephrase and no copyright then invalid */
+					return false;
+				}
+			} else { // We are in postImportantPhrases 
+				if(line.matches("^\\s*\\*?\\s*$")) {
+					if(this.preImportantPhrases[index].equals("")) {
+						index++;
+					}
+					continue;
+				} else if( line.contains(this.preImportantPhrases[index])) {
+					index++;
+				} else {
+					/* no postphrase match then invalid */
+					return false;
+				}
+			}
+		}
+		return true;
+    }
+    
+    
+    private List getDefaultHeader(String fileName) throws IOException{
+        List defaultHeader = new ArrayList();
+        defaultHeader.add("/*");
+        /* preImportant Header */
+        for(int i = 0; i < this.preImportantPhrases.length; i++) {
+            defaultHeader.add(" * " + this.preImportantPhrases[i]);
+        }
+        /* Copyright statement
+         *    a) find OS
+         *    b) get creation and modification years
+         *    c) decide on the type of copyright statement. 
+         */
+        long lastModified = new java.io.File(fileName).lastModified();
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis( new File(fileName).lastModified());
+        int modifiedYear = cal.get(Calendar.YEAR);
+        int createdYear = 0;
+        String os = System.getProperty("OS");
+        if(os.equals("windows")) {
+        	Runtime runtime = Runtime.getRuntime();
+        	String[] commands2 = {"cmd.exe","/c","dir "+ fileName };
+        	Process process = runtime.exec(commands2);
+        	BufferedReader cmdReader = new BufferedReader ( new InputStreamReader(process.getInputStream() ));
+        	String out;
+        	Pattern pattern = Pattern.compile("\\d\\d/\\d\\d/\\d\\d\\d\\d");
+        	while ((out = cmdReader.readLine()) != null) {
+        		
+        	    if(out.matches("\\d\\d/\\d\\d/\\d\\d\\d\\d")) {
+        	        // TODO : Get created year parsed.
+        	    	createdYear = 2008; 
+        	    }
+        	}
+        }
+        
+        if(modifiedYear != createdYear) {
+        	defaultHeader.add(" * " + this.copyrightDouble.replaceFirst("{0}", ""+createdYear).replaceFirst("{1}", ""+modifiedYear));
+        } else {
+        	defaultHeader.add(" * " + this.copyrightSingle.replaceFirst("{0}", ""+createdYear));
+        }
+        
+        /* write postImportant Header */
+        for(int i = 0; i < this.postImportantPhrases.length; i++) {
+            defaultHeader.add(" * " + this.postImportantPhrases[i]);
+        }
+        defaultHeader.add("*/")	;
+    }
+}

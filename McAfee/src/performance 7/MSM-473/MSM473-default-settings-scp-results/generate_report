@@ -1,0 +1,55 @@
+#!/usr/bin/perl -w
+
+use lib '/Volumes/Data/ssm_perf/Includes';
+use strict;
+use Spreadsheet::WriteExcel;
+
+print "Generating the Report ... \n";
+my $rep = "Perf_report.xls";
+$rep = "MSC_" . $rep if (-e "/usr/local/McAfee/");
+$rep = "VSMAC_" . $rep if (-e "/usr/local/vscanx");
+my $token;
+my $file;
+my $del;
+$rep = "/Volumes/Data/ssm_perf/Reports/" . "$rep";
+my $wb = Spreadsheet::WriteExcel->new("$rep");
+my @files = @ARGV[1..$#ARGV];
+foreach $file (@files){
+open (TXTFILE, "$file") or die;
+my $excel = $wb->addworksheet();
+my $row = 0;
+my $col = 0;
+
+while (<TXTFILE>) {
+chomp;
+if ($ARGV[0] =~ /\|/) {
+    $del="\\|";
+} else {
+    $del = $ARGV[0];
+}
+
+my @Fld = split(/$del/, $_);
+$col = 0;
+foreach $token (@Fld) {
+my @temp;
+if ($file =~ /mem/i) {
+    if ($token =~ /VM/ || $token =~ /Load Avg/ || $token =~ /PhysMem/ || $token =~ /MEMORY USAGE DETAILS/ || $token =~ /END/) {
+        $excel->write($row,$col,$token);
+        next;
+    }
+    @temp = split(/\ +/,$token);
+    } else {
+        @temp = split(/\  +/,$token);
+    }
+    my $tmp = scalar(@temp);
+    foreach my $a (@temp) {
+        $excel->write($row, $col, $a);
+        $col++;
+    }
+}
+    $row++;
+}
+}
+
+##########################################################
+

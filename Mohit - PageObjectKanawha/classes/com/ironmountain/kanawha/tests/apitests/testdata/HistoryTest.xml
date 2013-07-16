@@ -1,0 +1,14 @@
+<test name="HistoryTest">
+	<output>
+		<param name="Type1">Backup</param>
+		<param name="Type2">Retrieve</param>
+		<param name="Type3">Registration</param>
+		<param name="Type4">AccountRecovery</param>
+		<param name="Status1">Canceled</param>
+		<param name="Status2">Completed_with_warnings</param>
+		<param name="Status3">Incomplete</param>
+		<param name="Status4">Completed</param>
+		<param name="Status5">Sync_cancelled</param>
+		<param name="Status6">Completed_with_errors</param>
+		</output>
+</test>

@@ -1,0 +1,20 @@
+October 10, 2006-18:05:00: calling malloc_stats()
+Arena 0:
+system bytes     =  941428736
+in use bytes     =   16154416
+Total (incl. mmap):
+system bytes     =  941428736
+in use bytes     =   16154416
+max mmap regions =          1
+max mmap bytes   =    4198400
+> 
+October 10, 2006-18:05:06: calling malloc_stats()
+Arena 0:
+system bytes     =  941428736
+in use bytes     =   16154752
+Total (incl. mmap):
+system bytes     =  941428736
+in use bytes     =   16154752
+max mmap regions =          1
+max mmap bytes   =    4198400
+> 

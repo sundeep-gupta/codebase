@@ -1,0 +1,55 @@
+#!/usr/bin/perl -w
+ 
+use FindBin;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_constants;
+use orbital_rpc;
+use Getopt::Std; 
+#
+# Initialization code
+#
+my $orb = "10.200.38.63" ;
+getopt("o");
+if ($opt_o) {$orb=$opt_o; chomp($orb)}
+my $url = "http://$orb:2050/RPC2";
+my $Rpc = Orbital::Rpc->new("http://$orb:2050/RPC2");
+sleep 3;
+print "Test started.\n";
+
+  my $i;my $j;
+   $i = XMLRPC::Lite->proxy($url)
+           ->call('Get', {Class => "PARAMETER", Attribute => "SC.Definitions"})
+           ->result;
+#   print Dumper($i);
+#    $j = ${$i}{'SC.Definitions'}{'XML'}->[0];
+#    print Dumper($j);
+ my $k = 0;
+ while ($j = ${$i}{'SC.Definitions'}{'XML'}[$k]) 
+ {  # print Dumper (${$i}{'SC.Definitions'}{'XML'}[$k]);
+    if (${$j}{'ClassName'} eq "UnclassifiedTCP") {
+    print "THIS IS THE RECORD: \n"; 
+    print Dumper (${$i}{'SC.Definitions'}{'XML'}[$k]);
+    print "THIS IS THE VALUE OF COMP:", ${$j}{'Policy'}{'Compression'}, "\n";
+
+#Now set the service class configuration
+    my %p1 = ('ClassName' => 'UnclassifiedTCP',
+                 'Policy' =>    {'Compression' => '0',
+				 'CIFT' => '0',
+				 'FlowControl' => '1'},
+                 'ClassID' =>     '1',
+                 );
+#  my @foo;
+#   $foo[$k] = \%p1;                                                                                                             
+   %p2 = {'XML'[$k]=> \%pl};
+#   print "P2  ", Dumper(%p2), "\n";
+   my %p3;
+    %p3 = ("SC.Definitions"=>\%p2);
+   print "P3  ", Dumper(%p3), "\n";
+   my $temp = XMLRPC::Lite->proxy($url)
+              ->call('Set', {Class => "PARAMETER", Attribute => \%p3, Value => $$foo[$k]}, )
+              ->result;
+   print Dumper($temp);
+     }
+   $k++;
+ }   

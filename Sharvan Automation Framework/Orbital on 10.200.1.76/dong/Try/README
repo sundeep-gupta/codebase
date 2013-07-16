@@ -1,0 +1,12 @@
+scripts for SB & potentially SB+Compression:
+
+perf_01.pl (SB basic)
+perf_03.pl (multiple sessions)
+perf_04.pl (multiple sessions & various BW settings of Delay Router)
+
+**Note that due to the endpoint resource, 300 sessions test may fail. Try to call the iperf_c.sh instead of iperf.
+
+----------------
+Scripts for HB only.
+perf_05.pl (multiple sessions per BW)
+

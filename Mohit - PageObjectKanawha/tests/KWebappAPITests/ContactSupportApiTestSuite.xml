@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ContactSupportApiSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+<test name="Contact Support Simple Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContactSupportTest"/>
+			<methods>
+				<include name="supportInfoGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Contact Support Empty Html Tags Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContactSupportTest"/>
+			<methods>
+				<include name="supportInfoEmptyHtmlTagsOnlyGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Contact Support Plain Text Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContactSupportTest"/>
+			<methods>
+				<include name="supportInfoPlainTextGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Contact Support URL Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContactSupportTest"/>
+			<methods>
+				<include name="supportInfoURLGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Contact Support Default Value Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ContactSupportTest"/>
+			<methods>
+				<include name="supportInfoDefaultValuesGetTest" />
+			</methods>
+		</classes>
+</test>
+</suite>

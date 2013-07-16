@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Run Test" basedir="." default="runTestBuild">
+
+<!-- Loading the xml file as properties -->
+	
+<xmlproperty file="${basedir}/config/frameworkconfig.xml"/>
+<xmlproperty file="${basedir}/config/testconfig.xml"/>
+	
+<tstamp>
+		<format property="buildstarttime" pattern="dd-MMMM-yyyy hh:mm:ss aa" unit="millisecond"/>
+</tstamp>
+
+<property name="framework.externallib"	value="${frameworkconfig.frameworkdir}/lib"/>
+<property name="pageobjectconnected.dest" value="${basedir}/classes"/>
+<property name="pageobjectconnected.src" value="${basedir}/src"/>
+
+	<path id="webtestpath">
+	  	<fileset dir="${frameworkconfig.frameworkdir}/lib">
+	  		<include name="*.jar"/>
+	  	</fileset>
+	  	<pathelement location="${basedir}/config"/>
+	  	<pathelement location="${basedir}/classes"/>
+	  	<pathelement location="${frameworkconfig.frameworkdir}/lib"/>
+	</path>
+
+	 <!-- Set Connected Classpath -->
+	<target name="setClassPathConnected" unless="pageobjectconnected.classpath">
+	        <path id="classpath_jars">
+				 <fileset dir="${framework.externallib}" includes="**/*.jar" />
+			 </path>	      
+	<pathconvert pathsep=":" property="pageobjectconnected.classpath" refid="classpath_jars"  />
+	</target>            
+
+	  <!-- Set Framework Classpath -->
+	 <target name="setClassPathFramework" unless="framework.classpath">
+	         <path id="classpath_jars">
+	               <fileset dir="${framework.externallib}" includes="*.jar" />
+	         </path>
+	         <pathconvert pathsep=":" property="framework.classpath" refid="classpath_jars" />
+	 </target>
+
+	
+	  <!-- Clean Task -->
+	  <target name="clean" description="Deleting all the Output directories">
+			<delete dir="classes"/>
+			<!--<delete dir="${frameworkconfig.testreportdir}"/>-->
+			<delete dir="test-output"/>
+			<delete dir="testng"/>
+			<delete dir="${frameworkconfig.downloadsdir}"/>
+			<delete file="${basedir}/config/build-properties.properties"/>
+			<delete file="${basedir}/result.txt"/>	
+	   </target>
+
+	  <!-- compile Framework -->
+	  <target name="compile-framework">
+	       <ant dir="${frameworkconfig.frameworkdir}" target="compile" />
+	  	   <jar basedir="${frameworkconfig.frameworkdir}/classes" destfile="${frameworkconfig.frameworkdir}/lib/pageobjectframework.jar" />
+	   </target>
+
+	   <!-- compile pageobjectconnected -->
+	   <target name="compile" depends="setClassPathFramework, compile-framework, setClassPathConnected">
+	        <delete includeemptydirs="true" quiet="true">
+	             <fileset dir="${pageobjectconnected.dest}" includes="**/*" />
+	         </delete>
+	   		<mkdir dir="${pageobjectconnected.dest}"/>
+	   		<mkdir dir="${basedir}/dist"/>
+	         <echo message="making directory..." />
+	          <echo message="classpath: ${pageobjectconnected.classpath}" />
+	         <echo message="compiling..." />
+	         <javac debug="true" destdir="${pageobjectconnected.dest}" srcdir="${pageobjectconnected.src}"  classpath="${framework.classpath}">
+	         </javac>
+	         <jar basedir="${pageobjectconnected.dest}" destfile="${basedir}/dist/pageobjectconnected.jar" />
+	</target>
+	
+	<!-- Starting the Selenium RC Server -->
+	<target name="startSeleniumServer" depends="stopSeleniumServer" description="Start Selenium Server">
+		<echo message="Starting the Selenium RC Server...wait for a moment.." />
+		<echo message="Will stopping the Selenium Server and re-start if already running!!!" />
+		<java jar="${framework.externallib}/selenium-server.jar" fork="true" spawn="true">
+			<arg line="-multiWindow -port ${frameworkconfig.seleniumserverport}"/>
+		</java>
+		<echo message="Selenium Server started..." />
+	</target>
+
+	<!-- Start Selenium Server with a Custom FF Profile -->
+	<target name="startSeleniumServerwithFFProfile" depends="stopSeleniumServer" description="Start Selenium Server with a Custom FF Profile">
+		<echo message="Starting the Selenium RC Server...wait for a moment.." />
+		<echo message="Will stopping the Selenium Server and re-start if already running!!!" />
+		<echo message="Arg line is...-multiWindow -port ${frameworkconfig.seleniumserverport} -firefoxProfileTemplate ${frameworkconfig.firefoxprofilepath}" />
+		<java jar="${framework.externallib}/selenium-server.jar" fork="true" spawn="true">
+			<arg line="-multiWindow -port ${frameworkconfig.seleniumserverport} -firefoxProfileTemplate ${frameworkconfig.firefoxprofilepath}"/>
+		</java>
+		<echo message="Selenium Server started..." />
+	</target>
+
+	<!-- Stop Selenium Server-->
+	<target name="stopSeleniumServer" description="Stop Selenium Server">
+		<echo message="Stopping the Selenium Server!!!" />
+		<get taskname="selenium-shutdown"
+			src="http://localhost:${frameworkconfig.seleniumserverport}/selenium-server/driver/?cmd=shutDownSeleniumServer"
+			dest="result.txt" ignoreerrors="true" />
+		<echo taskname="selenium-shutdown" message="DGF Errors during shutdown are expected" />
+	</target>
+	
+	<taskdef name="testng"
+	      classname="com.beust.testng.TestNGAntTask"
+	      classpathref="webtestpath"/>
+	
+
+	<!-- Run Tests -->
+	<target name="test" description="Run Tests(No dependent taks!!!)">
+		<mkdir dir="${frameworkconfig.downloadsdir}"/>
+		<testng classpathref="webtestpath" 
+			outputdir="${frameworkconfig.testreportdir}"
+			parallel="false"
+			threadcount="1"
+			useDefaultListeners="false"
+			listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">		
+			<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="${frameworkconfig.testsuitename}"/>
+			<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+			</testng>
+	</target>
+
+	<!-- Default target -->
+	<target name="runTestBuild"  depends ="clean,compile,startSeleniumServer,test,stopSeleniumServer" 
+		description="Use this to Run the Selenium Tests">
+	</target> 
+
+	<!-- Create Zip Report -->
+	<target name="zipReport" >
+	    <zip destfile="${frameworkconfig.testreportdir}/TestReport.zip" >
+		    <!-- zipfileset includes all subdirs as well -->
+		    <zipfileset dir="${frameworkconfig.testreportdir}" includes="*.html" excludes="*.xml" />
+	    	<zipfileset dir="${frameworkconfig.testreportdir}" includes="*/*.html" excludes="*.xml" />
+	    </zip>
+	</target> 	
+	
+	<!-- Sending the Test Report to Targeted Audience
+	<target name ="sendTestReport" description="Sending the Test Report to Targeted Audience" depends="zipReport" >
+		<tstamp>
+				<format property="buildendtime" pattern="dd-MMMM-yyyy hh:mm:ss aa" unit="second"/>
+		</tstamp>
+		<echo message="Mailing the Test Report to ${frameworkconfig.reportemailrecepients}" />
+		<mail mailhost="${frameworkconfig.emailserver}" mailport="${frameworkconfig.emailserverport}" subject="The ${frameworkconfig.buildname} completed on ${buildendtime}" 
+			tolist="${frameworkconfig.reportemailrecepients}" >
+	  		<from address="${frameworkconfig.reportemailsender}"/>
+	  		<replyto address="reportemailreplyto"/>
+	  		<message>The ${frameworkconfig.buildname} execution was started on ${buildstarttime}. 
+	The ${frameworkconfig.buildname} execution is completed on ${buildendtime}.  			
+	Please refer the reports attached. The file emailable-report.html is a consolidated report. In case if you need to see the reports
+	in detail for each test, Please refer Reports.zip and go to the individual report files from different test suite folders..
+	  		</message>
+			<attachments> 
+			   <fileset dir="${frameworkconfig.testreportdir}"> 
+			      <include name="/TestReport.*"/> 
+			   	  <include name="/emailable-report.*"/> 
+			    </fileset> 
+			</attachments> 	
+		</mail>
+	</target>
+	 -->
+
+	<!-- Run Account Management Acceptance Tests -->
+	<target name="amwsAcceptanceTest" depends ="clean,compile,startSeleniumServer"
+	description="AMWS Acceptance TestSuite">
+			<mkdir dir="${frameworkconfig.downloadsdir}"/>
+			<testng classpathref="webtestpath" 
+				outputdir="${frameworkconfig.testreportdir}"
+				parallel="false"
+				threadcount="1"
+				useDefaultListeners="false"
+				listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/AccountSummary.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/RegistrationAndDownload.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/MyRoam.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/ContactSupportSuite.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/ReinstallAgent.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/2.EditProfileTestSuite.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/7.OrderCdOrDvdTestSuite.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/8.ViewHistorySuite.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="misc/testng/suites/AgentCleanUpSuite.xml"/>
+				<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+				</testng>
+		<antcall target="stopSeleniumServer"></antcall>
+		</target>
+	
+	<!-- Run Account Management Acceptance Tests on FireFox-->
+		<target name="amwsAcceptanceTest_FF" depends ="clean,compile,startSeleniumServerwithFFProfile"
+		description="AMWS Acceptance TestSuite">
+				<mkdir dir="${frameworkconfig.downloadsdir}"/>
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/AccountSummary.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/RegistrationAndDownload.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/MyRoam.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/ContactSupportSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/ReinstallAgent.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/2.EditProfileTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/7.OrderCdOrDvdTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/mat/testng/suites/8.ViewHistorySuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="misc/testng/suites/AgentCleanUpSuite.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+					</testng>
+			<antcall target="stopSeleniumServer"></antcall>
+			</target>
+	
+	<!-- Run Support Center Branding  Tests -->
+		<target name="scBrandingTest" depends ="clean,compile,startSeleniumServer"
+		description="Support Center Branding  TestSuite">
+				<mkdir dir="${frameworkconfig.downloadsdir}"/>
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="sc/testng/suites/SupportCenterBranding.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Support Center Branding Test Report"/>
+					</testng>
+			<antcall target="stopSeleniumServer"></antcall>
+			<antcall target="sendTestReport"></antcall>
+			</target>
+	
+	<!-- Run Account Management MyRoam Regression Tests Tests IE -->
+	<target name="MyRoamRegressionTest_IE" depends ="clean,compile,startSeleniumServer"
+	description="MyRoam Regression Windows TestSuite">
+			<mkdir dir="${frameworkconfig.downloadsdir}"/>
+			<testng classpathref="webtestpath" 
+				outputdir="${frameworkconfig.testreportdir}"
+				parallel="false"
+				threadcount="1"
+				useDefaultListeners="false"
+				listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/regression/myroam/myroamregressionsuite.xml"/>
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="misc/testng/suites/AgentCleanUpSuite.xml"/>
+				<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+				</testng>
+		<antcall target="stopSeleniumServer"></antcall>
+		<antcall target="sendTestReport"></antcall>
+		</target>	
+	
+	<!-- Run Account Management MyRoam Regression Tests FF-->	
+	<target name="MyRoamRegressionTest_FF" depends ="clean,compile,startSeleniumServerwithFFProfile"
+	description="MyRoam Regression Windows TestSuite">
+			<mkdir dir="${frameworkconfig.downloadsdir}"/>
+			<testng classpathref="webtestpath" 
+				outputdir="${frameworkconfig.testreportdir}"
+				parallel="false"
+				threadcount="1"
+				useDefaultListeners="false"
+				listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+				<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="amws/regression/myroam/myroamregressionsuite.xml"/>
+				<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+				</testng>
+		<antcall target="stopSeleniumServer"></antcall>
+		<antcall target="sendTestReport"></antcall>
+		</target>
+	
+	<!-- Run Support Center Profile and WebSite Settings Tests -->
+		<target name="SCProfileAndWebSiteSettingsTests" depends ="clean,compile,startSeleniumServer"
+		description="SC Profile And WebSite Settings TestSuite">
+				<mkdir dir="${frameworkconfig.downloadsdir}"/>
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="sc/testng/suites/SupportCenterProfileAndWebSiteSettings.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Connected Automation Test Report"/>
+					</testng>
+			<antcall target="stopSeleniumServer"></antcall>
+			<antcall target="sendTestReport"></antcall>
+			</target>	
+
+</project>

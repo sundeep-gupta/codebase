@@ -1,0 +1,70 @@
+<?php
+?>
+
+<html>
+<head>
+
+<link rel="stylesheet" href="modern-grid.css">
+
+
+</head>
+<body onload="ajaxFunction()">
+
+
+
+
+  <div class="example">
+  
+  <div class="row">
+      <div class="four2 columns">
+      
+      
+      <p class="title">tTrack</p> 
+      
+      </div>
+	   
+      <div class="eight2 columns">
+      
+    <p class="titletext">Simple and Efficient way to manage your tasks. Classify them based on their <b><i>Impact</i></b> & associated <b><i>Risk</i></b> </p>
+      
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="three2 columns"> 
+	  
+	  <form action="data.php" method="post">
+	  <input class="loginbutton" type="image" src="images/goog-login-button.png" name="image" >
+</form>
+	  
+	  </div>
+      <div class="nine2 columns">
+      
+      
+      <p class="desc"> Authenticate with Google. No forms to fill :)</p>      
+      
+      
+      </div>
+    </div>
+    
+    <div class="row">
+    
+    <div class="twelve columns">
+    
+    
+       <p class="cright">&copy; 2013, Razikh, iStackSoftware.com</p>    
+    
+    
+    </div>    
+    
+    
+    
+    </div>
+  
+  
+  
+  
+  
+  </div>
+  
+  

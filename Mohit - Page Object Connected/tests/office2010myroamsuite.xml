@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Office2010 Files Retrieval Using MtRoam Test Suite" verbose="2" >
+<listeners>  
+    <listener class-name="com.imd.connected.webuitest.utils.testng.ExecutionInterceptor" /> 
+ </listeners>  
+	<test name="Office2010 Files Tests">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.office2010.DownloadOffice2010FilesAsWindowsExecutableFileTest"/>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.office2010.DownloadOffice2010FilesAsZipFileTest"/>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.office2010.DownloadOffice2010PstFileTest"/>			
+		</classes>	
+		<parameter name="email" value="test@abc.com"/>
+		<parameter name="password" value="1connected"/>
+	</test>
+</suite>		 

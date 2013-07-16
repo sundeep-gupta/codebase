@@ -1,0 +1,12 @@
+create or replace trigger cstrgrpid_incr
+before insert on customergroup
+for each row 
+declare 
+	temp customergroup.customergroupid%type;
+begin
+	select max(customergroupid) into temp from customergroup;
+	if temp is null then temp:=1;
+	else temp:=temp+1;
+	end if;
+	:new.customergroupid:=temp;
+end;

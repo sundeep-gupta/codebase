@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbcconfig>
+
+<!-- Properties required to connect to the database -->
+
+	<DBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</DBDriver>
+	<!-- DBServerType represents the Database Server in use, Values should be taken from(MSSQL, Oracle, SQLLite, MySQL...) -->
+	<DBServerType>MSSQL</DBServerType>
+	<DBServerUrl>jdbc:sqlserver://cbauto1.qa.englab.local</DBServerUrl>
+	<DBPort>1433</DBPort>
+	<DBUsername>sqluser</DBUsername>
+	<DBPassword>1connected</DBPassword>
+	
+
+<!-- Properties required to connect to the database which is Mirrored/Clustered -->
+<!-- If the DB is Standalone fill the Primary details of Both Registry and Directory(Same information as there is only one DB Server)-->
+<!-- If the DB is Mirrored fill the Primary, Secondary details of Both Registry and Directory( Only one pair) -->
+<!-- If the DB is Clustered fill the Primary, Secondary details,  of Both Registry and Directory(2 pair) -->
+	
+	<PrimaryRegistryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</PrimaryRegistryDBDriver>
+	<PrimaryRegistryType>MSSQL</PrimaryRegistryType>
+	<PrimaryRegistryDBUrl>jdbc:sqlserver://cbauto1.qa.englab.local</PrimaryRegistryDBUrl>
+	<PrimaryRegistryDBPort>1433</PrimaryRegistryDBPort>
+	<PrimaryRegistryDBUsername>sqluser</PrimaryRegistryDBUsername>
+	<PrimaryRegistryDBPassword>1connected</PrimaryRegistryDBPassword>
+
+	<SecondaryRegistryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</SecondaryRegistryDBDriver>
+	<SecondaryRegistryType>MSSQL</SecondaryRegistryType>
+	<SecondaryRegistryDBUrl>jdbc:sqlserver://cbauto2.qa.englab.local</SecondaryRegistryDBUrl>
+	<SecondaryRegistryDBPort>1433</SecondaryRegistryDBPort>
+	<SecondaryRegistryDBUsername>sqluser</SecondaryRegistryDBUsername>
+	<SecondaryRegistryDBPassword>1connected</SecondaryRegistryDBPassword>
+
+	<PrimaryDirectoryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</PrimaryDirectoryDBDriver>
+	<PrimaryDirectoryType>MSSQL</PrimaryDirectoryType>
+	<PrimaryDirectoryDBUrl>jdbc:sqlserver://cbauto1.qa.englab.local</PrimaryDirectoryDBUrl>
+	<PrimaryDirectoryDBPort>1433</PrimaryDirectoryDBPort>
+	<PrimaryDirectoryDBUsername>sqluser</PrimaryDirectoryDBUsername>
+	<PrimaryDirectoryDBPassword>1connected</PrimaryDirectoryDBPassword>
+
+	<SecondaryDirectoryDBDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</SecondaryDirectoryDBDriver>
+	<SecondaryDirectoryType>MSSQL</SecondaryDirectoryType>
+	<SecondaryDirectoryDBUrl>jdbc:sqlserver://cbauto2.qa.englab.local</SecondaryDirectoryDBUrl>
+	<SecondaryDirectoryDBPort>1433</SecondaryDirectoryDBPort>
+	<SecondaryDirectoryDBUsername>sqluser</SecondaryDirectoryDBUsername>
+	<SecondaryDirectoryDBPassword>1connected</SecondaryDirectoryDBPassword>
+		
+</jdbcconfig>

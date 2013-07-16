@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2008 McAfee Inc. All rights reserved -->
+<FMConfiguration> 
+    <FMName>FirewallTestTool</FMName>
+    <FMDescription>Firewall QA Test Tool</FMDescription>   
+    <FMID>202</FMID>   
+    <FMTYPE>management</FMTYPE>   
+    <FMVersion>1.0</FMVersion>
+	<FMPControlledStartup>false</FMPControlledStartup>
+	<FMPControlledHC>false</FMPControlledHC>
+    <ActivityListAvailable>false</ActivityListAvailable>	
+    <StartCommand>DoesnotExist</StartCommand>
+    <StopCommand>DoesnotExist</StopCommand>
+    <MaxStartTime>20</MaxStartTime>  
+    <Language>0409</Language>
+    <BuildNumber>452</BuildNumber>
+    <InstalledPath>/usr/local/McAfee/FW/TestTool</InstalledPath>
+    <UnInstallScript>DoesnotExist</UnInstallScript>
+    <LicensePath>DoesnotExist</LicensePath>
+    <LicenseType>eval</LicenseType>
+    <CustomLogPath>/tmp/FWTT.log</CustomLogPath>
+    <CustomLogEnable>false</CustomLogEnable>
+    <SyslogEnable>true</SyslogEnable>
+    <DblogEnable>true</DblogEnable>
+    <EpologEnable>true</EpologEnable>
+    <LogLevel>none</LogLevel>
+    <XMLEventsAndDbValid>true</XMLEventsAndDbValid>
+    <HostName>MacOSX</HostName>
+    <User>root</User>
+</FMConfiguration>
+

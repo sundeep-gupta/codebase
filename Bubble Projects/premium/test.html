@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function testJS() {
+
+var form = document.test;
+var d = document.getElementById("tdiv");
+
+var i = d.innerHTML.indexOf("i Sun");
+if(i == -1) {
+    d.innerHTML += "i Sun";
+}
+return false;
+}
+</script>
+</head>
+<body>
+<form name="test" action="http://www.google.com" onClick="return testJS()">
+<input id="i1" type="password" name="t1"/><div id="tdiv"></div>
+<input type="submit" value="submit"/>
+</form>

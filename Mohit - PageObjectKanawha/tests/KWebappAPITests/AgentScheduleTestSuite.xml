@@ -1,0 +1,252 @@
+	<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AgentScheduleTestSuiteApi.xml" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+//Test caseID: 
+<test name="Default Schedule Options">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="defaultScheduleOptions" />
+			</methods>		
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="saveManualBackupOption">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="saveManualBackupOption" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="saveAutomaticBackupOption">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="saveAutomaticBackupOption" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="retrieveSavedManualBackupOptionOnPageReload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="retrieveSavedManualBackupOptionOnPageReload" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="retrieveSavedAutomaticBackupOptionOnPageReload">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="retrieveSavedAutomaticBackupOptionOnPageReload" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="retrieveSavedManualBackupOptionOnRelogin">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="retrieveSavedManualBackupOptionOnRelogin" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="retrieveSavedAutomaticBackupOptionOnRelogin">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="retrieveSavedAutomaticBackupOptionOnRelogin" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="disableBackupScheduleADay">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="disableBackupScheduleADay" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="enableBackupScheduleADay">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="enableBackupScheduleADay" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="disableBackupScheduleAllDays">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="disableBackupScheduleAllDays" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="enableBackupScheduleAllDays">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="enableBackupScheduleAllDays" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="disableSelectedBackupSchedule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="disableSelectedBackupSchedule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="enableSelectedBackupSchedule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="enableSelectedBackupSchedule" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="disableSelectedBackupScheduleAllDays">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="disableSelectedBackupScheduleAllDays" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="enableSelectedBackupScheduleAllDays">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="enableSelectedBackupScheduleAllDays" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="validateDisableSelectedBackupScheduleOnRelogin">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="validateDisableSelectedBackupScheduleOnRelogin" />
+			</methods>
+		</classes>
+</test>
+
+//Test caseID: 
+<test name="validateEnableSelectedBackupScheduleOnRelogin">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="validateEnableSelectedBackupScheduleOnRelogin" />
+			</methods>
+		</classes>
+</test>
+<test name="startTimeGreaterThan24Hrs">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="startTimeGreaterThan24Hrs" />
+			</methods>
+		</classes>
+</test>
+<test name="endTimeGreaterThan24Hrs">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="endTimeGreaterThan24Hrs" />
+			</methods>
+		</classes>
+</test>
+<test name="daysOfWeekGreaterThan7">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="daysOfWeekGreaterThan7" />
+			</methods>
+		</classes>
+</test>
+<test name="startTimeGreaterThanEndTime">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="startTimeGreaterThanEndTime" />
+			</methods>
+		</classes>
+</test>
+<test name="negativeStartTimeValue">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="negativeStartTimeValue" />
+			</methods>
+		</classes>
+</test>
+<test name="negativeEndTimeValue">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="negativeEndTimeValue" />
+			</methods>
+		</classes>
+</test>
+<test name="negativeDaysOfWeek">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="negativeDaysOfWeek" />
+			</methods>
+		</classes>
+</test>
+<test name="manualBackupSetSchedule">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="manualBackupSetSchedule" />
+			</methods>
+		</classes>
+</test>
+<test name="automaticBackupNotEditable">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AgentScheduleTest"/>
+			<methods>
+				<include name="automaticBackupNotEditable" />
+			</methods>
+		</classes>
+</test>
+
+</suite>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>themza_j15_06</name>
+	<version>1.0.0</version>
+	<creationDate>2008-07-27</creationDate>
+	<author>Themza Team</author>
+	<authorEmail>templates@themza.com</authorEmail>
+	<authorUrl>http://www.themza.com</authorUrl>
+	<copyright>ThemZa 2008</copyright>
+	<license>ThemZa TOS</license>
+	<description>Joomla Vortex</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>params.ini</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		
+		<filename>css/index.html</filename>
+		<filename>css/template.css</filename>
+		<filename>css/black.css</filename>
+		<filename>css/blue.css</filename>
+		<filename>css/broun.css</filename>
+		<filename>css/green.css</filename>
+		<filename>css/red.css</filename>
+		
+		<filename>html/index.html</filename>
+		<filename>html/modules.php</filename>
+		<filename>html/pagination.php</filename>
+		
+		<filename>images/index.html</filename>
+		<filename>images/bg_menu.png</filename>
+		<filename>images/contentheading_line.png</filename>
+		<filename>images/f_area_h3.png</filename>
+		<filename>images/menu_col.gif</filename>
+		<filename>images/rub_bottom.png</filename>
+		
+		<filename>images/black/banner.jpg</filename>
+		<filename>images/black/bg_f_area.png</filename>
+		<filename>images/black/bg_h3.png</filename>
+		<filename>images/black/bg_logo.png</filename>
+		<filename>images/black/bg_main.png</filename>
+		<filename>images/black/bg_read_more.png</filename>
+		<filename>images/black/bottom.png</filename>
+		<filename>images/black/bottom_f_area.png</filename>
+		<filename>images/black/logo.png</filename>
+		<filename>images/black/menu_arrow.png</filename>
+		<filename>images/black/search_ico.png</filename>
+		<filename>images/black/top.png</filename>
+		<filename>images/black/top_f_area.png</filename>
+		
+		<filename>images/blue/banner.jpg</filename>
+		<filename>images/blue/bg_f_area.png</filename>
+		<filename>images/blue/bg_h3.png</filename>
+		<filename>images/blue/bg_logo.png</filename>
+		<filename>images/blue/bg_main.png</filename>
+		<filename>images/blue/bg_read_more.png</filename>
+		<filename>images/blue/bottom.png</filename>
+		<filename>images/blue/bottom_f_area.png</filename>
+		<filename>images/blue/logo.png</filename>
+		<filename>images/blue/menu_arrow.png</filename>
+		<filename>images/blue/search_ico.png</filename>
+		<filename>images/blue/top.png</filename>
+		<filename>images/blue/top_f_area.png</filename>
+		
+		<filename>images/broun/banner.jpg</filename>
+		<filename>images/broun/bg_f_area.png</filename>
+		<filename>images/broun/bg_h3.png</filename>
+		<filename>images/broun/bg_logo.png</filename>
+		<filename>images/broun/bg_main.png</filename>
+		<filename>images/broun/bg_read_more.png</filename>
+		<filename>images/broun/bottom.png</filename>
+		<filename>images/broun/bottom_f_area.png</filename>
+		<filename>images/broun/logo.png</filename>
+		<filename>images/broun/menu_arrow.png</filename>
+		<filename>images/broun/search_ico.png</filename>
+		<filename>images/broun/top.png</filename>
+		<filename>images/broun/top_f_area.png</filename>
+		
+		<filename>images/green/banner.jpg</filename>
+		<filename>images/green/bg_f_area.png</filename>
+		<filename>images/green/bg_h3.png</filename>
+		<filename>images/green/bg_logo.png</filename>
+		<filename>images/green/bg_main.png</filename>
+		<filename>images/green/bg_read_more.png</filename>
+		<filename>images/green/bottom.png</filename>
+		<filename>images/green/bottom_f_area.png</filename>
+		<filename>images/green/logo.png</filename>
+		<filename>images/green/menu_arrow.png</filename>
+		<filename>images/green/search_ico.png</filename>
+		<filename>images/green/top.png</filename>
+		<filename>images/green/top_f_area.png</filename>
+		
+		<filename>images/red/banner.jpg</filename>
+		<filename>images/red/bg_f_area.png</filename>
+		<filename>images/red/bg_h3.png</filename>
+		<filename>images/red/bg_logo.png</filename>
+		<filename>images/red/bg_main.png</filename>
+		<filename>images/red/bg_read_more.png</filename>
+		<filename>images/red/bottom.png</filename>
+		<filename>images/red/bottom_f_area.png</filename>
+		<filename>images/red/logo.png</filename>
+		<filename>images/red/menu_arrow.png</filename>
+		<filename>images/red/search_ico.png</filename>
+		<filename>images/red/top.png</filename>
+		<filename>images/red/top_f_area.png</filename>
+	</files>
+	<positions>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>top</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>debug</position>
+		<position>syndicate</position>
+	</positions>
+	<params>
+		<param name="colorVariation" type="list" default="red" label="Color Variation" description="Color variation to use">
+			<option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="broun">Broun</option>
+			<option value="black">Black</option>
+		</param>
+	</params>
+</install>

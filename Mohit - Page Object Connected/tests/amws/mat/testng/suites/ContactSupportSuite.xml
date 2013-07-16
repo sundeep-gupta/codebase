@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Contact Support Test Suite" verbose="2" >
+
+<test name="Support center Custom Configuration Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.prereqs.SCCustomCommunityConfigTest"/>
+			<methods>
+				<include name="testCreateCommunity" />
+			</methods>
+		</classes>
+		<parameter name="ConfigName" value="DefaultAutoConfig"/>
+		<parameter name="ConfigDesc" value="Default Description"/>
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="ProfileName" value="CustomAutoProfile"/>
+		<parameter name="Description" value="Automation Description"/>
+		<parameter name="VersionName" value="CustomAutoVersion"/>
+		<parameter name="AgentSettingsName" value="Custom Auto Agent Settings"/>
+		<parameter name="AgentRuleSettingsName" value="EmptyRuleSet"/>
+		<parameter name="AgentVersion" value="English 8.5"/>
+</test>
+
+		<test name="Contact Support Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.contactsupport.ContactSupportTest"/>
+			<methods>
+				<include name="testContactSupport" />
+			</methods>
+		</classes>
+		<parameter name="contactEmailText" value="Email: support@automation.com"/>
+		<parameter name="contactPhoneText" value="Phone: 100-200-3000"/>
+		<parameter name="verificationTexts" value="You can contact Support using one of the following methods, Technical Support representatives are available to help you Monday,through Friday, 9:00 AM to 8:00 PM"/>
+		<parameter name="FirstName" value="ContactSupport"/>
+		<parameter name="LastName" value="User"/>
+		
+		</test>
+</suite>		 

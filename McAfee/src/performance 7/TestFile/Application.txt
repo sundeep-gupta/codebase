@@ -1,0 +1,16 @@
+/Applications/iPhoto.app/
+/Applications/iMovie.app/
+/Applications/iWeb.app/
+/Applications/iChat.app/
+/Applications/iDVD.app/
+/Applications/iSync.app/
+/Applications/iTunes.app/
+/Applications/Mail.app/
+/Applications/Photo Booth.app/
+/Applications/TextEdit.app/
+/Applications/Time Machine.app/
+/Applications/Safari.app/
+/Applications/Calculator.app/
+/Applications/Font Book.app/
+/Applications/Front Row.app/
+

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Kanawha Webapp Test Controller" thread-count="1" verbose="2" annotations="JDK">
+	<test name="Build_Connected_Accounts_for_Kanawha_Webapp_Tests">
+		<classes>
+			<class name="com.ironmountain.kanawha.accountbuilder.KanawhaWebappTestController">
+				<methods>
+					<parameter name="testPropertiesFile" value="config/KanawhaWebappTest.properties" />
+					<parameter name="testControlPropertiesFile" value="config/KanawhaWebappTestControl.properties" />
+					<include name="buildAccounts" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

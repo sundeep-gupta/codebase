@@ -1,0 +1,15 @@
+/**
+ * Copyright (C) 2010 TopCoder Inc., All Rights Reserved
+ */
+package com.topcoder.kestrel;
+
+/**
+ * 
+ *
+ * @author TCSDEVELOPER
+ * @version 1.0
+ * 
+ */
+public class CopyrightStatementUpdaterException extends Exception {
+
+}

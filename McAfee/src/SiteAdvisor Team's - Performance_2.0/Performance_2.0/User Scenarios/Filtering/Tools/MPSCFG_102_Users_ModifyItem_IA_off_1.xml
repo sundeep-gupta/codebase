@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigTest Apply="True">
+  <Display Category="MCPS_CONFIG_USERS" Type="IMcConfigCollection">
+    <Setting Property="MCPS_USER_NAME" Type="String" />
+    <Setting Property="MCPS_USER_CLASS" Type="Integer" />
+    <Setting Desc="308" Property="MCPS_USER_IMG_ANALYSIS" Type="Boolean" />
+  </Display>
+  <ModifyItem Category="MCPS_CONFIG_USERS" Type="IMcConfigCollection">
+    <Setting Property="MCPS_USER_NAME" Type="String" Value="1">
+      <Setting Property="MCPS_USER_IMG_ANALYSIS" Type="Boolean" Value="False" />
+    </Setting>
+  </ModifyItem>
+</ConfigTest>

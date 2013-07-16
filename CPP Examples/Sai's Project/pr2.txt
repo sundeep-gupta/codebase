@@ -1,0 +1,89 @@
+
+
+1) create a population of size 100 x 4 X 2 with random double values in the range 0 and 1
+                    Here 100 is the size of the population
+                          4  is the dimension size
+                          2  is the number of clusters.
+
+2) lets say the firt chromosome is i which is pointing to 0th chromosome in the population.
+
+3) randomly select 3 chrmosomes from the remaining i-1 chromosomes.
+
+4) name them as a , b and c   (i != a != b != c)
+
+           Here a, b and c have the same number of clusters as 'i'   i.e 2
+
+5) do some math operation on the 3 chromosomes. 
+          say a + f(b-c)      where f=0..75
+
+6) lets say the resultant chromosome as result
+
+     Here the result also has 2 clusters i.e. same as the size of 'i'.
+
+7) In total 2 clusters there are totally 8 points. 
+
+7) For each value of j (i.e. for totally 8 points generate 8 times) now randomly generate a number between 0 and 1 and compare it with the crossover value i.e. 0.8
+
+8) if the randomly generated number is less than 0.8 then the child's chromosome individual is selected else the ith chromosomes individual is selected.
+
+9) Finally a new chromosome is created from the ith chromosome and the result chromosome and say it as temp chromosome.
+
+10) Now we have ith chromosome and the temp chromosome with 2 clusters in each say c1 and c2 .
+         (here temp chromosome is the one after crossover)
+
+11) HERE comes the FITNESS function into picture.
+
+12) There are totally 150 data points in the text file which is 4 in dimension i.e (x1, x2, x3, x4)
+
+13) Pick a point randomly from the text file and find the distance between that point to the cluster c1 and cluster c2.
+          (Here the distance is calculated same as in the co-oridnate geometry)
+
+                sqrt[ (x1-x2) ^ 2 + (y1 - y2) ^ 2 ]
+
+14) The point is assigned to that cluster from which it has minimum distance.
+
+15) That point is stored in an array. (lets for e.g if point is close to c1 then the point is stored in c1 array or else
+                         it is stored in c2 array)
+
+
+16) In the same fashion allocate all the remaining 149 data points to both the clusters c1 and c2.
+
+17) At the end we have 2 clusters c1 and c2 with 
+
+        c1 having datapoints as 1, 4, 11, 23..............
+
+        c2 having datapoints as 2, 3, 7 , 9,..............
+
+18) Determine centroid of c1 and centroid of c2.
+
+  centroid is calculated as (x1 + x2 + x3.....)/ number of points.
+                                    (y1 + y2 + y3.....)/ number of points.
+                                    (z1 + z2 + z3.....)/ number of points.
+                                    (w1 + w2 + w3.....)/ number of points.
+ 
+             lets say the centroid is (x, y, z, w)
+       
+19) Determine cluster scatter i.e. distance between centroid c1 and its points
+ 
+                ( same as co-ordinate geometry distance calculation)
+        also repeat cluster scatter for c2.
+
+
+19) Now determine inter cluster distance i.e distance between c1 and c2 centroids.
+               
+20) Now we have c1 scatter and c2 scatter and distance between them.
+
+             (c1 scatter + c2 scatter)   / distance between c1 and c2.
+
+21) Divide the result by number of clusters which is the FITNESS.
+
+22) Repeat the same for other chromosome also and calculate the fitness.
+
+23) compare the two fitness values.Whichever value has less fitness take that chromosome and copy into a new population and ignore the other chromosome.
+
+24) now increment the value of i and repeat steps 3 thru 22 till the new population reaches a size of 100 x 4 X 2.
+
+25) find the minimum fitness of the total population and compare that with the stopping condition.
+
+26) if that is reached jus stop and print the number of generations to reach the required result.
+

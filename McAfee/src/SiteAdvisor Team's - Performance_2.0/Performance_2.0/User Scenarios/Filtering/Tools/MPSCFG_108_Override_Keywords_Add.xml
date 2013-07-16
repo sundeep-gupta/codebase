@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigTest Apply="True">
+	<RemoveAll Desc="RemoveAll Override_Keywords" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS" Type="IMcConfigCollection" />
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="YoungChild keyword" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="2" Type="Integer"/>
+	</AddItem>
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="Child keyword" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="3" Type="Integer"/>
+	</AddItem>
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="YoungTeen keyword" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="4" Type="Integer"/>
+	</AddItem>
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="OldTeen keyword" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="5" Type="Integer"/>
+	</AddItem>
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="Adult keyword" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="5" Type="Integer"/>
+	</AddItem>
+	
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="Adults only" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="1" Type="Integer"/>
+	</AddItem>
+
+	<AddItem Desc="Add Override_Keywords" Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Value="horse_racing" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Value="1" Type="Integer"/>
+	</AddItem>
+
+	<Display Type="IMcConfigCollection" Category="MCPS_CONFIG_OVERRIDE_KEYWORDS">
+		<Setting Property="MCPS_KEYWORD_WORD" Type="String"/>
+		<Setting Property="MCPS_KEYWORD_AGE" Type="Integer"/>
+	</Display>
+
+</ConfigTest>

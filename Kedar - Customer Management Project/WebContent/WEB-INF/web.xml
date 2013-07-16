@@ -1,0 +1,186 @@
+<web-app>
+   	
+	<servlet>
+		<servlet-name>jsp1</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp1.jsp</jsp-file>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>jsp2</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp2.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp3</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp3.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp4</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp4.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp5</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp5.jsp</jsp-file>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>jsp6</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp6.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp7</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp7.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp8</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp8.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp9</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp9.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp10</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp10.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp11</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp11.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp12</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp12.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp13</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp13.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp14</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp14.jsp</jsp-file>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jsp15</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp15.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp16</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp16.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp17</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp17.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp18</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp18.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp19</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp19.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>jsp20</servlet-name>
+		<jsp-file>/WEB-INF/classes/jsp20.jsp</jsp-file>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>jsp1</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp2</servlet-name>
+		<url-pattern>/jsp2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp3</servlet-name>
+		<url-pattern>/jsp3</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp4</servlet-name>
+		<url-pattern>/jsp4</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp5</servlet-name>
+		<url-pattern>/editcg1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp6</servlet-name>
+		<url-pattern>/jsp6</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp7</servlet-name>
+		<url-pattern>/editcg2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp8</servlet-name>
+		<url-pattern>/jsp8</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp9</servlet-name>
+		<url-pattern>/editcg3</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp10</servlet-name>
+		<url-pattern>/editcg4</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp11</servlet-name>
+		<url-pattern>/jsp11</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp12</servlet-name>
+		<url-pattern>/jsp12</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp13</servlet-name>
+		<url-pattern>/jsp13</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp14</servlet-name>
+		<url-pattern>/jsp14</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp15</servlet-name>
+		<url-pattern>/jsp15</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp16</servlet-name>
+		<url-pattern>/jsp16</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp17</servlet-name>
+		<url-pattern>/jsp17</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp18</servlet-name>
+		<url-pattern>/jsp18</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp19</servlet-name>
+		<url-pattern>/jsp19</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jsp20</servlet-name>
+		<url-pattern>/jsp20</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

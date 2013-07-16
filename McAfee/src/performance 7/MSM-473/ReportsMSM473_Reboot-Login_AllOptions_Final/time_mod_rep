@@ -1,0 +1,4 @@
+Test Run with McAfee Security Console Installed 
+----TIME-DETAILS----  Run-1  Run-2  Run-3    Average-Time
+LOGIN TIME       6        6        5      5.66666666666667
+REBOOT TIME      86       102       90      92.6666666666667

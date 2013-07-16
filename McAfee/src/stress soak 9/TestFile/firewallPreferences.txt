@@ -1,0 +1,2 @@
+Rule1,Deny,IGMP,Outbound,en1,Any,Any,80,80
+Rule2,Allow,IGMP,Outbound,en1,Me,Any,80,80

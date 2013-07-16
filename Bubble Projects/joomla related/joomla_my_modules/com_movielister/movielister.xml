@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>Movie Lister</name>
+	<creationDate>2009-05-16</creationDate>
+	<author>Sundeep Gupta</author>
+	<authorEmail>sundeep.techie@gmail.com</authorEmail>
+	<authorUrl>https://www.crea2ive.com</authorUrl>
+	<copyright>Copyright Crea2ive Software LLC, All rights reserved 2009.</copyright>
+	<version>0.0.2</version>
+	<description>
+        This component allows anonymous and user posting in a very simple forum environment while
+        allowing functionality to be easily extended using third party extensions.
+    </description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files>
+		<filename>index.html</filename>
+		<filename>movielister.php</filename>
+		<filename>controller.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/list.php</filename>
+		<filename>views/index.html</filename>
+		<filename>views/list/index.html</filename>
+		<filename>views/list/view.html.php</filename>
+		<filename>views/list/tmpl/index.html</filename>
+		<filename>views/list/tmpl/default.php</filename>
+	</files>
+
+	<administration>
+<menu>Movie Lister</menu>
+	    <submenu>
+		<menu view="cinema">Cinemas</menu>
+		<menu view="movie">Movies</menu>
+		<menu view="play">Play</menu>
+	    </submenu>
+
+		<files folder="admin">
+	    <filename>controllers/cinema.php</filename>
+	    <filename>controllers/play.php</filename>
+	    <filename>controllers/movie.php</filename>
+	    <filename>models/index.html</filename>
+	    <filename>models/cinema.php</filename>
+	    <filename>models/movie.php</filename>
+	    <filename>models/play.php</filename>
+	    <filename>views/index.html</filename>
+	    <filename>views/cinema/index.html</filename>
+          <filename>views/cinema/view.html.php</filename>
+          <filename>views/cinema/tmpl/index.html</filename>
+          <filename>views/cinema/tmpl/default.php</filename>
+
+	    <filename>views/movie/index.html</filename>
+          <filename>views/movie/view.html.php</filename>
+          <filename>views/movie/tmpl/index.html</filename>
+          <filename>views/movie/tmpl/default.php</filename>
+
+	    <filename>views/play/index.html</filename>
+          <filename>views/play/view.html.php</filename>
+          <filename>views/play/tmpl/index.html</filename>
+          <filename>views/play/tmpl/default.php</filename>
+
+	    <filename>install.mysql.utf8.sql</filename>
+	    <filename>uninstall.mysql.utf8.sql</filename>
+	    <filename>admin.movielister.php</filename>	    
+
+		</files>
+	</administration>
+    <params/>
+</install>

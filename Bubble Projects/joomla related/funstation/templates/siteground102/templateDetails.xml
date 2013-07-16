@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="template" version="1.0.0">
+  <name>siteground102</name>
+  <creationDate>10/2008</creationDate>
+  <author>SiteGround.com</author>
+  <copyright>SG TOS</copyright>
+  <authorEmail>templates@siteground.com</authorEmail>
+  <authorUrl>www.siteground.com</authorUrl>
+  <version>1.0</version>
+  <description>
+This Joomla Template is designed by SiteGround.com and can be used free of charge. The template is suitable for personal and business Joomla sites. It can be used with many popular modules and components for Joomla. At www.siteground.com you can find more great looking free Joomla templates.
+  </description>
+	<files>
+		<filename>index.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templates.php</filename>
+		<filename>menu.php</filename>
+	</files>
+	<images>
+		<filename>images/arrow.jpg</filename>
+		<filename>images/banner_01.jpg</filename>
+		<filename>images/banner_02.jpg</filename>
+		<filename>images/bg.jpg</filename>
+		<filename>images/bg1.jpg</filename>
+		<filename>images/bg2.jpg</filename>
+		<filename>images/but_l.jpg</filename>
+		<filename>images/but_r.jpg</filename>
+		<filename>images/content_bottom.jpg</filename>
+		<filename>images/content_middle.jpg</filename>
+		<filename>images/content_top.jpg</filename>
+		<filename>images/emailButton.png</filename>
+		<filename>images/h3.jpg</filename>
+		<filename>images/header.jpg</filename>
+		<filename>images/header_1.jpg</filename>
+		<filename>images/header_2.jpg</filename>
+		<filename>images/header_3.jpg</filename>
+		<filename>images/indent1.png</filename>
+		<filename>images/l_r_bottom.jpg</filename>
+		<filename>images/l_r_top1.jpg</filename>
+		<filename>images/li.jpg</filename>
+		<filename>images/pdf_button.png</filename>
+		<filename>images/printButton.png</filename>		
+		<filename>images/search.jpg</filename>
+		<filename>images/search_bg.jpg</filename>
+		<filename>images/search_button.jpg</filename>
+		<filename>images/top_menu1.jpg</filename>
+		</images>
+	<css>
+		<filename>css/template_css.css</filename>
+		<filename>css/ie6.css</filename>
+	</css>
+</mosinstall>

@@ -1,0 +1,46 @@
+    <section>
+        <name>Contact Bubble</name>
+        <p>
+            For publishing articles, request for trainings, information about
+            projects, Classifieds, advertaising or any other queries contact
+            us at, info@bubble.co.in
+        </p>
+        <p>
+            For any other information or queries write to us at query@bubble.co.in
+        </p>
+        <form method='POST' action='/contact.php'>
+          <table align = 'center' width = '90%' cellpadding='3'>
+                <tr>
+                    <td align='right'>
+                        Your Email Address
+                    </td>
+                    <td>
+                        <input type='text' size='50' name='from' value=''></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td align='right'>
+                        Subject
+                    </td>
+                    <td>
+                        <input type='text' size='50' name='subject' value=''></input>
+                    </td>
+                </tr><tr>
+                    <td align='right' valign='top'>
+                        Your Message
+                    </td>
+                    <td>
+                        <textarea cols='50' rows='10' name='message' value=''  ></textarea>
+                    </td>
+                </tr>
+                     <tr><td></td><td></td></tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td align='center'>
+                        <input type='submit' value='submit'></input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>

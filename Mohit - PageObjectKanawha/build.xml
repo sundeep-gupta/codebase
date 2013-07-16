@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Run Test" basedir="." default="runTestBuild">
+
+<!-- Loading the xml file as properties -->
+	
+<xmlproperty file="${basedir}/config/frameworkconfig.xml"/>
+<xmlproperty file="${basedir}/config/testconfig.xml"/>
+	
+<tstamp>
+		<format property="buildstarttime" pattern="dd-MMMM-yyyy hh:mm:ss aa" unit="millisecond"/>
+</tstamp>
+
+<property name="framework.externallib"	value="${frameworkconfig.frameworkdir}/lib"/>
+<property name="pageobjectkanawha.dest" value="${basedir}/classes"/>
+<property name="pageobjectkanawha.src" value="${basedir}/src"/>
+
+	<path id="webtestpath">
+	  	<fileset dir="${frameworkconfig.frameworkdir}/lib">
+	  		<include name="*.jar"/>
+	  	</fileset>
+	  	<pathelement location="${basedir}/config"/>
+	  	<pathelement location="${basedir}/classes"/>
+	  	<pathelement location="${frameworkconfig.frameworkdir}/lib"/>
+	</path>
+
+	 <!-- Set kanawha Classpath -->
+	<target name="setClassPathkanawha" unless="pageobjectkanawha.classpath">
+	        <path id="classpath_jars">
+				 <fileset dir="${framework.externallib}" includes="**/*.jar" />
+			 </path>	      
+	<pathconvert pathsep=":" property="pageobjectkanawha.classpath" refid="classpath_jars"  />
+	</target>            
+
+	  <!-- Set Framework Classpath -->
+	 <target name="setClassPathFramework" unless="framework.classpath">
+	         <path id="classpath_jars">
+	               <fileset dir="${framework.externallib}" includes="*.jar" />
+	         </path>
+	         <pathconvert pathsep=":" property="framework.classpath" refid="classpath_jars" />
+	 </target>
+
+	
+	  <!-- Clean Task -->
+	  <target name="clean" description="Deleting all the Output directories">
+			<delete dir="classes"/>
+			<!--<delete dir="${frameworkconfig.testreportdir}"/>-->
+			<delete dir="test-output"/>
+			<delete dir="testng"/>
+			<delete dir="${frameworkconfig.downloadsdir}"/>
+			<delete file="${basedir}/config/build-properties.properties"/>
+			<delete file="${basedir}/result.txt"/>	
+	   </target>
+
+	  <!-- compile Framework -->
+	  <target name="compile-framework">
+	       <ant dir="${frameworkconfig.frameworkdir}" target="compile" />
+	  	   <jar basedir="${frameworkconfig.frameworkdir}/classes" destfile="${frameworkconfig.frameworkdir}/lib/pageobjectframework.jar" />
+	   </target>
+
+	   <!-- compile pageobjectkanawha -->
+	   <target name="compile" depends="setClassPathFramework, compile-framework, setClassPathkanawha">
+	        <delete includeemptydirs="true" quiet="true">
+	             <fileset dir="${pageobjectkanawha.dest}" includes="**/*" />
+	         </delete>
+	   		<mkdir dir="${pageobjectkanawha.dest}"/>
+	   		<mkdir dir="${basedir}/dist"/>
+	         <echo message="making directory..." />
+	          <echo message="classpath: ${pageobjectkanawha.classpath}" />
+	         <echo message="compiling..." />
+	         <javac debug="true" destdir="${pageobjectkanawha.dest}" srcdir="${pageobjectkanawha.src}"  classpath="${framework.classpath}">
+	         </javac>
+	         <jar basedir="${pageobjectkanawha.dest}" destfile="${basedir}/dist/pageobjectkanawha.jar" />
+	</target>
+	
+	<taskdef name="testng"
+	      classname="com.beust.testng.TestNGAntTask"
+	      classpathref="webtestpath"/>
+	
+
+	<!-- Run Tests -->
+	<target name="test" description="Run Tests(No dependent tasks!!!)">
+		<mkdir dir="${frameworkconfig.downloadsdir}"/>
+		<testng classpathref="webtestpath" 
+			outputdir="${frameworkconfig.testreportdir}"
+			parallel="false"
+			threadcount="1"
+			useDefaultListeners="false"
+			listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">		
+			<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="${frameworkconfig.testsuitename}"/>
+			<sysproperty key="org.uncommons.reportng.title" value="kanawha Automation Test Report"/>
+			</testng>
+	</target>
+
+	<!-- Default target -->
+	<target name="runTestBuild"  depends ="clean,compile" 
+		description="Use this to Run the Selenium Tests">
+	</target> 
+
+	<!-- Create Zip Report -->
+	<target name="zipReport" >
+	    <zip destfile="${frameworkconfig.testreportdir}/TestReport.zip" >
+		    <!-- zipfileset includes all subdirs as well -->
+		    <zipfileset dir="${frameworkconfig.testreportdir}" includes="*.html" excludes="*.xml" />
+	    	<zipfileset dir="${frameworkconfig.testreportdir}" includes="*/*.html" excludes="*.xml" />
+	    </zip>
+	</target> 	
+	
+	<!-- Sending the Test Report to Targeted Audience
+	<target name ="sendTestReport" description="Sending the Test Report to Targeted Audience" depends="zipReport" >
+		<tstamp>
+				<format property="buildendtime" pattern="dd-MMMM-yyyy hh:mm:ss aa" unit="second"/>
+		</tstamp>
+		<echo message="Mailing the Test Report to ${frameworkconfig.reportemailrecepients}" />
+		<mail mailhost="${frameworkconfig.emailserver}" mailport="${frameworkconfig.emailserverport}" subject="The ${frameworkconfig.buildname} completed on ${buildendtime}" 
+			tolist="${frameworkconfig.reportemailrecepients}" >
+	  		<from address="${frameworkconfig.reportemailsender}"/>
+	  		<replyto address="reportemailreplyto"/>
+	  		<message>The ${frameworkconfig.buildname} execution was started on ${buildstarttime}. 
+	The ${frameworkconfig.buildname} execution is completed on ${buildendtime}.  			
+	Please refer the reports attached. The file emailable-report.html is a consolidated report. In case if you need to see the reports
+	in detail for each test, Please refer Reports.zip and go to the individual report files from different test suite folders..
+	  		</message>
+			<attachments> 
+			   <fileset dir="${frameworkconfig.testreportdir}"> 
+			      <include name="/TestReport.*"/> 
+			   	  <include name="/emailable-report.*"/> 
+			    </fileset> 
+			</attachments> 	
+		</mail>
+	</target>
+	 -->
+	
+	<!-- Run Kanawha Webapp UI tests on FireFox-->
+		<target name="kanawhawebappuitestsuite" depends ="clean,compile"
+		description="Kanawha Webapp UI TestSuite">
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappUITests/KanawhaWebappUITestSuite.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Kanawha Webapp UI Automation Test Report"/>
+				</testng>
+		</target>	
+	<!-- Run Kanawha Webapp API test suites-->
+		<target name="kanawhawebappapitestsuite" depends ="clean,compile"
+		description="Kanawha Webapp API TestSuite">
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/LoginAuthTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/SearchTestsSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/ChangeLogonInfoTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/GetBrandingInfoApiTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/AgentSettingsApiTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/AgentScheduleTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/AccountMessagesApiTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/KanawhaMgtAPITestsSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/UserRulesTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/MultipleAccountTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/EditProfileTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/ContactSupportApiTestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/AccountHistoryAPITestSuite.xml"/>
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/RetrievalSetTestSuite.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Kanawha Webapp API Test Suites Run Report"/>
+				</testng>
+		</target>
+	<!-- Run Kanawha Webapp UI tests on IE-->
+		<target name="temp" depends ="clean,compile"
+		description="Kanawha Webapp UI TestSuite">
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappUITests/TempTestSuite.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Kanawha Webapp UI Automation Test Report"/>
+				</testng>
+		</target>
+	
+	<!-- Run Kanawha Webapp API test suites-->
+		<target name="brandingapitestsuite" depends ="clean,compile"
+		description="Kanawha Webapp API TestSuite">
+				<testng classpathref="webtestpath" 
+					outputdir="${frameworkconfig.testreportdir}"
+					parallel="false"
+					threadcount="1"
+					useDefaultListeners="false"
+					listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+					<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/GetBrandingInfoApiTestSuite.xml"/>
+					<sysproperty key="org.uncommons.reportng.title" value="Kanawha Webapp Branding API Test Suite Run Report"/>
+				</testng>
+		</target>
+	
+	<!-- Run Kanawha Webapp History API test suites-->
+			<target name="historyapisuite" depends ="clean,compile"
+			description="Kanawha Webapp History API TestSuite">
+					<testng classpathref="webtestpath" 
+						outputdir="${frameworkconfig.testreportdir}"
+						parallel="false"
+						threadcount="1"
+						useDefaultListeners="false"
+						listeners="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter,org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
+						<xmlfileset dir="${basedir}/${frameworkconfig.testsuitedir}" includes="KWebappAPITests/AccountHistoryAPITestSuite.xml"/>
+						<sysproperty key="org.uncommons.reportng.title" value="Kanawha Webapp History API Test Suite Run Report"/>
+					</testng>
+			</target>
+</project>

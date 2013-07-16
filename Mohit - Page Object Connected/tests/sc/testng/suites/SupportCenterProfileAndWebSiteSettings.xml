@@ -1,0 +1,94 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Support Center Profile And WebSite Settings Test Suite" verbose="2" >
+<HPQC Path="CONNECTED BACKUP\8.x\Agent"/>	
+<listeners>  
+    <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.ExecutionInterceptor" />
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners> 
+
+
+<parameter name="TechnicianId" value="admin"/>
+<parameter name="Password" value="1Connected"/>
+<parameter name="ProfileName" value="PWS Test Set A"/>
+
+<test name="Default Profile And Website Settings Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.DefaultProfileAndWebsiteSettingsTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+</test>
+
+<test name="General Properties Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.GeneralPropertiesTest"/>
+			<methods>
+				<include name="testGeneralPropertiesPage" />
+			</methods>
+			<parameter name="CustomLogonURL" value="http://localhost/ssws"/>
+		</classes>
+</test>
+
+<test name="Address Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.AddressFieldsTest"/>
+			<methods>
+				<include name="testAddressFields" />
+			</methods>
+			<parameter name="AddressStatus" value="label=Editable"/>
+			<parameter name="Country" value="label=United States"/>
+			<parameter name="AddressLine1" value="120 Turnpike Rd"/>
+			<parameter name="AddressLine2" value="test"/>
+			<parameter name="AddressLine3" value="test"/>
+			<parameter name="AddressLine3" value="test"/>
+			<parameter name="City" value="Southborough"/>
+			<parameter name="State" value="label=Massachusetts"/>
+			<parameter name="PostalCode" value="12345"/>
+			<parameter name="url" value="abcd.com"/>
+			<parameter name="CountryVerifyText" value="United States"/>
+			<parameter name="StateVerifyText" value="Massachusetts"/>
+		</classes>
+</test> 
+
+<test name="Optional Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.OptionalFieldsTest"/>
+			<methods>
+				<include name="testOptionalFields" />
+			</methods>
+			<parameter name="CompDefValue" value="Iron Mountain"/>
+			<parameter name="DepartDefValue" value="Digital"/>
+			<parameter name="LocDefValue" value="Sobo"/>
+			<parameter name="MailStopDefValue" value="32"/>
+			<parameter name="CostCenterDefValue" value="1234"/>
+			<parameter name="EmplDefValue" value="567890"/>
+			<parameter name="PhoneNumDefValue" value="508-808-1234"/>
+			<parameter name="ExtnDefValue" value="1234"/>
+			<parameter name="CustomLabel" value="Customer Field"/>
+			<parameter name="DefValue" value="Desktop"/>
+		</classes>
+</test>  
+
+<test name="Options Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.OptionsTest"/>
+			<methods>
+				<include name="testOptionalFields" />
+			</methods>
+			</classes>
+</test>
+
+<test name="Usage Of Profile And WebSite Settings Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.ProfileAndWebSiteSettings.UsageOfProfileAndWebSiteSettings"/>
+			<methods>
+				<include name="testUsage" />
+			</methods>
+			<parameter name="PCProfileName" value="PC PWS Test Set"/>
+			<parameter name="MacProfileName" value="MAC PWS Test Set"/>
+			</classes>
+</test> 			
+</suite>

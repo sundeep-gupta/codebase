@@ -1,0 +1,73 @@
+/* CSS style - Core Design Web Gallery plugin for Joomla! 1.5 - caption */
+
+/* Gallery container */
+#webgallery .webgallery_caption {
+}
+
+/* Gallery cleaner */
+#webgallery hr.webgallery_clr {
+	clear:both;
+   height:1px;
+   margin: -1px 0 0 0;
+	padding:0;
+   border:none;
+   visibility: hidden;
+}
+
+/* Thumbnails set */
+#webgallery .webgallery_caption ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Thumbnail container */
+#webgallery .webgallery_caption ul li {
+	margin: 8px;
+	padding: 0;
+	float: left;
+	position: relative;
+	background: none;
+}
+
+/* Thumbnail image */
+#webgallery .webgallery_caption ul li img {
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: 4px;
+}
+
+#webgallery .webgallery_caption ul li:hover img {
+	border: 1px solid #c25b08;
+}
+
+/* Thumbnail image hover */
+#webgallery .webgallery_caption ul li img:hover {
+	/* No styles */
+}
+
+/* Thumbnail link arround */
+#webgallery .webgallery_caption ul li a {
+	text-decoration: none;
+}
+
+/* Thumbnail caption */
+#webgallery .webgallery_caption ul li a span {
+	background: #fff url(../images/caption_bg.png) repeat-y;
+	color: #000;
+	font-style: italic;
+	font-size: 90%;
+	padding: 2px 8px;
+	display: block;
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+	border: 1px solid #999;
+	border-left-color: #888;
+}
+
+/* Thumbnail hover caption */
+#webgallery .webgallery_caption ul li a:hover span {
+	background: #ffdb01 url(../images/caption_bg_hover.png) repeat-y;
+	border-color: #c25b08;
+}

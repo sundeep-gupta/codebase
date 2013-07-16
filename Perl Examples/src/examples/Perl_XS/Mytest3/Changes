@@ -1,0 +1,6 @@
+Revision history for Perl extension Mytest3.
+
+0.01  Wed Feb  6 21:19:42 2008
+	- original version; created by h2xs 1.23 with options
+		-A -n Mytest3
+

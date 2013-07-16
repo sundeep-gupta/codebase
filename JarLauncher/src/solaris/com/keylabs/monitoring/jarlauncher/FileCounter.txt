@@ -1,0 +1,2 @@
+Node Name=NodeName=console TimeStamp=Thursday, June 9, 2005 4:38:18 PM MDT Files=1 Bytes=0 endMark
+Node Name=NodeName=console TimeStamp=Thursday, June 9, 2005 4:38:38 PM MDT Files=2 Bytes=0 endMark

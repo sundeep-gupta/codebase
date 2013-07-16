@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+
+<Testcase>
+	<FileName>Appprot_BVT_2.py</FileName>
+	<TestcaseID>32483</TestcaseID>
+	<LaunchProgram>python</LaunchProgram>
+	<Depends>Appprot_Application_Types_14</Depends>	
+</Testcase>

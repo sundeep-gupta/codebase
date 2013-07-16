@@ -1,0 +1,65 @@
+#!/usr/bin/perl
+use DBD::mysql;
+use perlchartdir;
+use Date::Manip;
+
+$dsn = "DBI:mysql:database=Help_desk;host=localhost";
+$dbh = DBI->connect($dsn,"root",tst123 );
+
+my $sth = $dbh->prepare("SELECT CURDATE()");
+if (!$sth) {die "Error:" . $dbh->errstr . "\n";}
+if (!$sth->execute) {die "Error:" . $sth->errstr . "\n";}
+while ( $date = $sth->fetchrow_array)
+{
+        $curr_date = $date;
+        chomp($curr_date);
+         print "Curr_date : $curr_date\n";
+}
+
+@curr = split(/-/,$curr_date);
+$start_dte = ParseDate(\@curr);
+$start_day = UnixDate($start_dte,"%a %d");
+chomp($start_day); print "$start_day \n";
+
+if ( $start_day eq "Mon" )
+{
+
+my $sth = $dbh->prepare("SELECT DATE_SUB('$curr_date',INTERVAL 1 DAY)");
+if (!$sth) {die "Error:" . $dbh->errstr . "\n";}
+if (!$sth->execute) {die "Error:" . $sth->errstr . "\n";}
+while ( $date = $sth->fetchrow_array)
+{
+        $end_date = $date;
+        chomp($end_date);
+         print "End_date : $end_date\n";
+}
+my $sth = $dbh->prepare("SELECT DATE_SUB('$curr_date',INTERVAL 7 DAY)");
+if (!$sth) {die "Error:" . $dbh->errstr . "\n";}
+if (!$sth->execute) {die "Error:" . $sth->errstr . "\n";}
+while ( $date = $sth->fetchrow_array)
+{
+        $start_date = $date;
+        chomp($start_date);
+         print "Star_date : $start_date\n";
+}
+my $sth = $dbh->prepare("UPDATE Date SET Start_Date='$start_date' , End_Date='$end_date' ");
+if (!$sth) {die "Error:" . $dbh->errstr . "\n";}
+if (!$sth->execute) {die "Error:" . $sth->errstr . "\n";}
+
+}
+else
+{
+
+my $sth = $dbh->prepare("SELECT * FROM Date");
+if (!$sth) {die "Error:" . $dbh->errstr . "\n";}
+if (!$sth->execute) {die "Error:" . $sth->errstr . "\n";}
+while ( ($start,$end) = $sth->fetchrow_array)
+{
+        $start_date = $start;
+	$end_date = $end;
+        chomp($start_date); chomp($end_date);
+         print "Start_date : $start_date \t End_date : $end_date\n";
+}
+
+}
+

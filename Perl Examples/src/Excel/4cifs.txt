@@ -1,0 +1,18 @@
+The current time is:  6:25:38.42
+Enter the new time: The current time is:  6:32:15.34
+Enter the new time: " 1Mb Write completed " 
+The current time is:  6:32:15.34
+Enter the new time: The current time is:  6:33:59.32
+Enter the new time: " 100Kb Write completed " 
+The current time is:  6:33:59.34
+Enter the new time: The current time is:  6:36:08.76
+Enter the new time: " 10Kb Write completed " 
+The current time is:  6:36:08.76
+Enter the new time: The current time is:  6:43:34.28
+Enter the new time: "1 Mb Read completed " 
+The current time is:  6:43:34.29
+Enter the new time: The current time is:  6:44:36.78
+Enter the new time: "100Kb Read completed " 
+The current time is:  6:44:36.78
+Enter the new time: The current time is:  6:45:49.96
+Enter the new time: "10kb Read completed " 

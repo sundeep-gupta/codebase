@@ -1,0 +1,1 @@
+mysql -u root -ppassword < xyz.bat

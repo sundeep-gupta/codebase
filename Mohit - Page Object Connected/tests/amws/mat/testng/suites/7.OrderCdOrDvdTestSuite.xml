@@ -1,0 +1,67 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Order Media Suite" verbose="2" >
+ 
+    <test name="OrderMediaPageNavigationsTest">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.ordermedia.OrderMediaPageNavigationsTest"/>
+			<methods>
+				<include name="testPageNavigations" />
+			</methods>
+		</classes>
+		<parameter name="optionIndex" value="1"/>
+		<parameter name="TechId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="ConfigName" value="DefaultAutoConfig"/>
+		
+		
+	</test>	
+ 
+    <test name="AvailableBackupDatesTest">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.ordermedia.OrderMediaAvilableBackupDatesTest"/>
+			<methods>
+				<include name="testAvilableBackupDates" />
+			</methods>
+		</classes>
+		<parameter name="backupDateSeparator" value="'"/>
+	</test>	
+	<test name="SubmitOrderWithDefaultShippingLabelTest">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.ordermedia.OrderMediaSubmitOrderWithDefaultShippingLabelTest"/>
+			<methods>
+				<include name="testSubmitOrderWithDefaultShippingLabel" />
+			</methods>
+		</classes>
+		<parameter name="backupDateOptionIndex" value="1"/>
+		<parameter name="mediaPassword" value="1connected"/>
+		<parameter name="defaultAddress" value="Automation Tester"/>			
+		<parameter name="orderConfirmationVerificationTexts" value ="Number of DVDs:,Print this receipt for your records,If you need to cancel this order"/>		
+	</test>	
+	
+	<test name="SubmitOrderWithNewShippingLabelTest">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.ordermedia.OrderMediaSubmitOrderWithNewShippingLabelTest"/>
+			<methods>
+				<include name="testSubmitOrderWithNewShippingLabel" />
+			</methods>
+		</classes>
+		<parameter name="backupDateOptionIndex" value="1"/>
+		<parameter name="mediaPassword" value="1connected"/>
+		<parameter name="newAddress" value="Jinesh M.D,12th Cross Bangalore"/>	
+	</test>	
+	
+	<test name="OrderMedia Contact Support For Cancel Order Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.ordermedia.OrderMediaContactSupportForCancelOrderTest"/>
+			<methods>
+				<include name="testContactSupportLinkForCancelOrder" />
+			</methods>
+		</classes>
+		<parameter name="backupDateOptionIndex" value="1"/>
+		<parameter name="verificationTexts" value ="You can contact Support using one of the following methods, Email: support@automation.com,Phone: 100-200-3000, Technical Support representatives are available to help you Monday,9:00 AM to 8:00 PM"></parameter>
+		
+	</test>		
+</suite>
+
+

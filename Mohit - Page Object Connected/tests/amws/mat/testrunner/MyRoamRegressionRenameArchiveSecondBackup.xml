@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+    <Actions> 
+        <Action Name ="GenerateFile5">
+            <Class>FileCreateAction</Class>
+            <Destination>File5</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>80</SizeSpread>
+        </Action> 
+        <Action Name ="GenerateFile6">
+            <Class>FileCreateAction</Class>
+            <Destination>File6</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>80</SizeSpread>
+        </Action> 
+         <Action Name ="GenerateFile7">
+            <Class>FileCreateAction</Class>
+            <Destination>File7</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>80</SizeSpread>
+        </Action> 
+        <Action Name ="GenerateFile8">
+            <Class>FileCreateAction</Class>
+            <Destination>File8</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>80</SizeSpread>
+        </Action> 
+        <Action Name ="GenerateFile9">
+            <Class>FileCreateAction</Class>
+            <Destination>File9</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>80</SizeSpread>
+        </Action> 
+        
+        <Action>
+			<Name>CopyFile5ToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FileActions.FileCopyAction</Class>
+			<Source>File5</Source>
+			<Destination>DestFile5</Destination>
+		</Action>
+		<Action>
+			<Name>CopyFile6ToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FileActions.FileCopyAction</Class>
+			<Source>File6</Source>
+			<Destination>DestFile6</Destination>
+		</Action>
+		<Action>
+			<Name>CopyFile7ToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FileActions.FileCopyAction</Class>
+			<Source>File7</Source>
+			<Destination>DestFile7</Destination>
+		</Action>
+		<Action>
+			<Name>CopyFile8ToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FileActions.FileCopyAction</Class>
+			<Source>File8</Source>
+			<Destination>DestFile8</Destination>
+		</Action>
+		<Action>
+			<Name>CopyFile9ToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FileActions.FileCopyAction</Class>
+			<Source>File9</Source>
+			<Destination>DestFile9</Destination>
+		</Action>
+        <Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>BackupFolder</Destination>
+		</Action>
+    </Actions>
+    
+    <ActionObjects>
+        <ActionObject Name="File5"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[c:\ArchiveRename\5-DataFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="File6"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[c:\ArchiveRename\6-DataFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="File7"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[c:\ArchiveRename\7-DataFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="File8"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[c:\ArchiveRename\8-DataFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="File9"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[c:\ArchiveRename\9-DataFile.txt]]></Path>
+        </ActionObject>
+       
+         <ActionObject Name="DestFile5"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename\5-DataFile.txt]]></Path>
+        </ActionObject>
+         <ActionObject Name="DestFile6"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename\6-DataFile.txt]]></Path>
+        </ActionObject>
+         <ActionObject Name="DestFile7"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename\7-DataFile.txt]]></Path>
+        </ActionObject>
+         <ActionObject Name="DestFile8"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename\8-DataFile.txt]]></Path>
+        </ActionObject>
+         <ActionObject Name="DestFile9"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename\9-DataFile.txt]]></Path>
+        </ActionObject>
+
+        <ActionObject Name="BackupFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.SimpleFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveRename]]></Path>
+        </ActionObject>
+                
+    </ActionObjects>
+</Runner>

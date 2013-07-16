@@ -1,0 +1,60 @@
+#mainMenu {
+  background-color: #fff;
+/*  border: 1px solid #CCC; */
+  color: #000;
+  width: 150px;
+}
+
+#menuList {
+  margin: 0px;
+  padding: 10px 0px 10px 15px;
+}
+
+li.menubar {
+    /*  url() is relative to the css file */
+  background: url(plus.gif) no-repeat 0em 0.3em;
+  font-size: 10px;
+  line-height: 1.5em;
+  list-style: none outside;
+}
+
+.menu, .submenu {
+  display: none;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.menu li, .submenu li {
+	/*  url() is relative to the css file */
+  background: url(square.gif) no-repeat 0em 0.3em;
+  list-style: none outside;
+}
+
+a.actuator {
+  background-color: transparent;
+  color: #000;
+  font-size: 10px;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+a.actuator:hover {
+  text-decoration: underline;
+}
+
+.menu li a, .submenu li a {
+  background-color: transparent;
+  color: #000;
+  font-size: 10px;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.menu li a:hover, submenu li a:hover {
+/*  border-bottom: 1px dashed #000; */
+  text-decoration: underline;
+}
+
+span.key {
+  text-decoration: underline;
+}

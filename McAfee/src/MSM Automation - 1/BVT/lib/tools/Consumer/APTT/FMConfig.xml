@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010 McAfee Inc. All rights reserved -->
+<FMConfiguration> 
+    <FMName>AppProtection</FMName>
+    <FMDescription>Application Protection</FMDescription>   
+    <FMID>3</FMID>
+    <PRODID>APROTMAC1000</PRODID>
+    <FMTYPE>service</FMTYPE>   
+    <FMVersion>1.0.0</FMVersion>
+    <ServicePack> </ServicePack>
+    <Hotfixes> </Hotfixes>
+    <FMPControlledStartup>true</FMPControlledStartup>
+    <FMPControlledHC>true</FMPControlledHC>
+    <ActivityListAvailable>false</ActivityListAvailable>	
+    <StartCommand>/usr/local/McAfee/AppProtection/bin/AppProtControl start</StartCommand> 
+    <StatusCommand>/usr/local/McAfee/AppProtection/bin/AppProtControl status</StatusCommand> 
+    <StopCommand>/usr/local/McAfee/AppProtection/bin/AppProtControl stop</StopCommand>  
+    <MaxStartTime>120</MaxStartTime>  
+    <Language>0409</Language>
+    <BuildNumber>136</BuildNumber>
+    <InstalledPath>/usr/local/McAfee/AppProtection</InstalledPath>
+    <UpdateType>product</UpdateType>
+    <CheckUpdate> </CheckUpdate>
+    <UnInstallScript>/usr/local/McAfee/AppProtection/bin/UninstallAppProt.sh</UnInstallScript>
+    <MerToolPath>/usr/local/McAfee/AppProtection/bin/AppProtMertool.sh</MerToolPath>
+    <LicensePath>/Library/Preferences/.com.mcafee.appprotection.license</LicensePath>
+    <LicenseType>beta</LicenseType>
+    <CustomLogPath>/usr/local/McAfee/AppProt/var/custom.log</CustomLogPath>
+    <CustomLogEnable>false</CustomLogEnable>
+    <SyslogEnable>true</SyslogEnable>
+    <DblogEnable>true</DblogEnable>
+    <EpologEnable>true</EpologEnable>
+    <LogLevel>information</LogLevel>
+    <XMLEventsAndDbValid>true</XMLEventsAndDbValid>
+    <HostName>MacOSX</HostName>
+    <User>root</User>
+</FMConfiguration>

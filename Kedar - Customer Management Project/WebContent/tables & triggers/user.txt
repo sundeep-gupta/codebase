@@ -1,0 +1,10 @@
+drop table kuser;
+
+create table kuser(userid number(20) constraint puser primary key,
+employeeid varchar2(15) not null,
+username varchar2(30) not null,
+password varchar2(16) not null,
+status varchar2(10) not null,
+plantid number(20) constraint fuserplant references plant(plantid) not null,
+divisionid number(20) constraint fuserdiv references division(divisionid) not null,
+entrydate date not null);

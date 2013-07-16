@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+system("echo \"STOPPING-SCAN-NOW\n\" >> ./logs/mem_cpu_usage.log");
+system("/Volumes/DATA/stress_soak/soak_stress/get_mem_usage-v6.pl &");
+
+system("echo \"STOPPING-SCAN-NOW\n\" >> ./logs/page_faults.log");
+system("echo \"STOPPING-SCAN-NOW\n\" >> ./logs/port_details.log");
+system("/Volumes/DATA/stress_soak/soak_stress/get_info.pl &");
+
+system("echo \"STOPPING-SCAN-NOW\n\" >> ./logs/freedisk.log");
+system("/Volumes/DATA/stress_soak/soak_stress/diskinfo.sh &");
+
+system("echo \"STOPPING-SCAN-NOW\n\" >> ./logs/Application-Usage.log");
+system("/Volumes/DATA/stress_soak/soak_stress/appusage.pl &");
+
+

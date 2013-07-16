@@ -1,0 +1,25 @@
+========== Description Part Begin ==========
+Description = 
+LastUpdateTime = 38838.917222222
+PreviewPath = 
+ProgID = PageletServer.DynamicMenu
+Title = FP38838.9172222222
+Version = 4.00
+========== Description Part End ==========
+========== Parameter Part Begin ==========
+CrossFrame = 0;0;0;0;;1;
+MenuBody0 = 6;1;1;2;0;0;0;0;0;0;0 ~#000000;0;0;90;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;26316 ~#CC6600;0;;3
+MenuBody1 = 1;1;1;2;0;0;0;0;0;0;0 ~#000000;0;0;90;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;26316 ~#CC6600;0;;3
+MenuBody2 = 1;1;1;2;0;0;0;0;0;0;0 ~#000000;0;0;90;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;26316 ~#CC6600;0;;3
+MenuItem0_0 = 0;0;;;0;1;16777215 ~#FFFFFF;1;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\3.jpg;;160;100;0
+MenuItem0_1 = 0;1;;;0;N a v i g a t i o n ;0;0;1;;;_self;;1;16443080 ~#C8E6FA;16443080 ~#C8E6FA;0;0;;;3;3;1;0;0;0;13408563 ~#3399CC;13408563;13408563;13408563;0 ~#000000;0;0;0;;;21;10;0;;;0;0;0;;;8;8;0;Arial;Arial;9;9;0;0;0 ~#000000;0 ~#000000;1;1;0;0;0;0;0;0;0;0;0;0
+MenuItem0_2 = 2;2;;;0;Home;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\37-06_an.gif;21;10;0;;;0;0;0;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;7;7;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem0_3 = 3;2;;;0;Picture;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\37-06_an.gif;21;10;0;;;0;0;0;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;7;7;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem0_4 = 0;1;;;0;Download;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\37-06_an.gif;21;10;0;;;0;0;0;;;8;8;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem0_5 = 0;1;;;0;About us;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\37-06_an.gif;21;10;0;;;0;0;0;;;8;8;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem1_0 = 0;1;;;0;Menu Item 1;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;;-1;-1;0;;;-1;-1;0;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;7;7;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+MenuItem2_0 = 0;1;;;0;Menu Item 1;0;0;1;;;_self;;1;26316 ~#CC6600;6728447 ~#FFAA66;0;0;;;3;3;1;1;1;1;6724044 ~#CC9966;6724044;6724044;6724044;11589631 ~#FFD7B0;11589631;11589631;11589631;;;-1;-1;0;;;-1;-1;0;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;d:\\PROGRA~1\\SOURCE~1\\SOTHIN~1\\Resource\\arrow_r.gif;7;7;0;Arial;Arial;9;9;0;0;16777215 ~#FFFFFF;0 ~#000000;0;0;0;0;0;0;0;0;0;0;0;0
+Scrolling0 = 0;16252927 ~#FFFFF7;1;14073525 ~#B5BED6;1;;;3;3;0;1;1;16252927 ~#FFFFF7;16252927;16252927;16252927;1;0 ~#000000;0;0;0;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_disabled.gif;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\left_enabled.gif;9;7;0;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_disabled.gif;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\right_enabled.gif;9;7;0
+Scrolling1 = 0;16252927 ~#FFFFF7;1;14073525 ~#B5BED6;1;;;3;3;0;1;1;16252927 ~#FFFFF7;16252927;16252927;16252927;1;0 ~#000000;0;0;0;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_disabled.gif;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\up_enabled.gif;7;9;0;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_disabled.gif;D:\\Program Files\\SourceTec\\Sothink DHTMLMenu\\Resource\\down_enabled.gif;7;9;0
+TopMenuBody = 2;430;yfatchr;0;1;1;0;0;0;0;1000;250;0;;1;0;0;;1;0;100;0;;67108896;
+========== Parameter Part End ==========

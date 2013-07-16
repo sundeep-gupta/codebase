@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2008  McAfee, Inc. All rights reserved. -->
+<FMConfiguration> 
+    <FMName>FWTestTool</FMName>
+    <FMDescription>Firewall test tool for QA</FMDescription>   
+    <FMID>201</FMID>   
+    <PRODID>FWTESTTOOLMAC1000</PRODID>
+    <FMTYPE>management</FMTYPE>   
+    <FMVersion>1.0.0</FMVersion>
+	<FMPControlledStartup>false</FMPControlledStartup>
+	<FMPControlledHC>false</FMPControlledHC>
+        <ActivityListAvailable>false</ActivityListAvailable>	
+    <StartCommand>/usr/local/vscanx/var/notimplemented.sh</StartCommand> 
+    <StopCommand>/usr/local/vscanx/var/notimplemented.sh</StopCommand>  
+    <StatusCommand>/usr/local/McAfee/FWService/var/UninstallFW.sh</StatusCommand>
+    <UnInstallScript>/usr/local/McAfee/FWService/var/UninstallFW.sh</UnInstallScript>
+    <MaxStartTime>120</MaxStartTime>  
+    <Language>0409</Language>
+    <BuildNumber>008</BuildNumber>
+    <InstalledPath></InstalledPath>
+    <LicensePath> </LicensePath>
+    <LicenseType>none</LicenseType>
+    <CustomLogPath>/tmp/QATT.log</CustomLogPath>
+    <CustomLogEnable>true</CustomLogEnable>
+    <SyslogEnable>true</SyslogEnable>
+    <DblogEnable>true</DblogEnable>
+    <EpologEnable>true</EpologEnable>
+    <XMLEventsAndDbValid>true</XMLEventsAndDbValid>
+    <LogLevel>debug</LogLevel>
+    <HostName>MacOSX</HostName>
+    <User>root</User>
+</FMConfiguration>
+

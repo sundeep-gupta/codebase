@@ -1,0 +1,294 @@
+<suite>
+<test name="messLongTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</param>
+		<param name="messageState">1</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messFiftyDateTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is message #</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+
+<test name="unicodeTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">ƱщҊҖ these are unicode characters</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="noMessageTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		</input>
+		<output>
+		<param name="responselength">0</param>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="topMessageTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is the top most message</param>
+		<param name="messageStateRead">1</param>
+		<param name="messageStateUnread">0</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="multiTechTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="Technician1">tech1</param>
+		<param name="Technician2">tech2</param>
+		<param name="message">HI this is a message from technician</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="groupMessageTest">
+	<input>
+		<param name="userName1">autouser1@api.com</param>
+		<param name="userName">onholdacc@test.com</param>
+		<param name="password1">1Connected</param>
+		<param name="userName2">autouser2@api.com</param>
+		<param name="password2">1Connected</param>
+		<param name="message">HI this is a group message</param>
+		<param name="Technician">admin</param>
+		<param name="messageState">1</param>
+		<param name="messageState2">0</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messExpireTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="message">Hi this is an expired message</param>
+		</input>
+		<output>
+		<param name="responseLength">0</param>
+		</output>
+</test>
+<test name="accountHoldTest">
+	<input>
+		<param name="userName">onholdacc@test.com</param>
+		<param name="password">2_Connected</param>
+		</input>
+		<output>
+		<param name="message">on hold</param>
+		<param name="messageType">1</param>
+		</output>
+</test>
+<test name="messUnreadDeleteTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is an unread message is going to be deleted</param>
+		<param name="messageStateUnread">0</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messReadDeleteTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is an Read message is going to be deleted</param>
+		<param name="messageStateRead">1</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messDeleteReadTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a delted message which is changed to read</param>
+		<param name="messageStateRead">1</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messDeleteUnreadTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a delted message which is changed to unread</param>
+		<param name="messageStateUnread">0</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messDeleteReadOnlyTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a deleted read only message</param>
+		<param name="messageStateRead">1</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messDeleteUnreadOnlyTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a deleted Unread only message</param>
+		<param name="messageStateUnread">0</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messWrongMessStateTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a message for wrong message state test </param>
+		<param name="messageState">5</param>
+		<param name="result">Invalid body parameters.</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messWrongMessIdTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is a message for wrong message id test </param>
+		<param name="messageState">1</param>
+		<param name="result">false</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messGroupDeleteTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This is message </param>
+		<param name="message1">This is message 1</param>
+		<param name="message2">This is message 2</param>
+		<param name="message3">This is message 3</param>
+		<param name="message4">This is message 4</param>
+		<param name="message5">This is message 5</param>
+		<param name="messageStateDelete">2</param>
+		<param name="result">true</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messIdEmptyValueTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This message is a null message</param>
+		<param name="result">1007</param>
+		<param name="messageStateRead">1</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messStateNullValueTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This message is a null message</param>
+		<param name="result">false</param>
+		<param name="messageStateUnread">0</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="messIdNullValueTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">This message is a null message</param>
+		<param name="statusCode">1007</param>
+		<param name="messageStateRead">1</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+<test name="noAccountNumberTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="statusCode">1000</param>
+		</input>
+</test>
+<test name="urlMessagesTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message">http://google.com</param>
+		</input>
+		<output>
+		<param name="messageType">0</param>
+		</output>
+</test>
+</suite>

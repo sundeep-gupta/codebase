@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <table>
+    <tr>
+	<td>
+            <title><a href='/display_article.php?articleid=automateftp.xml'>Automating FTP through bash shell</a></title>
+            <p>
+            Ok. So you are curious to know how to script FTP. Same was the case with me when I was supposed to execute 100's of FTP sessions though shell as part of performance test!! 
+                Automating FTP is helpful in other scenarios as well like scheduled downloads, scheduled Directory/Tree syncing. 
+                Ok. Now what/which is bash shell?? Bash shell is the default shell prompt which you get on Linux Operating System.
+                On Solaris, type bash at default prompt to get into bash shell
+	    <br/><a href='/display_article.php?articleid=automateftp.xml'>Read Full Article...</a>
+            </p>
+        </td>
+    </tr>
+    <tr>
+	<td>
+            <title>How to bypass the SSH Password</title>
+            <author>Razikh</author>
+            <date>10 Jul 2006</date>
+	    <p>
+		As we know that the authentication in case of SSH happens by key
+		pair exchange, we'll start by generating <b>Private</b> 
+		&amp;<b> Public</b> key pair.
+	    </p>
+	    <p>
+		Private Key will remain with the <b>host</b> (local host from
+		which we want to connect) &amp; Public key will be placed in <b>
+		remote host</b> (to which we want to connect without password)
+	    <br/><a href='/display_article.php?articleid=ssh.xml'>Read Full Article...</a>
+	    </p>
+	</td>
+    </tr>
+    </table>
+</article>

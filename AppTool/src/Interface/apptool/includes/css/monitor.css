@@ -1,0 +1,36 @@
+/* Monitor Form */
+
+#monitorForm {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Metric Table */
+
+#metricTable th.header {
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #CCCCCC;
+    background-color: #1873c8;
+    color: #FFFFFF;
+}
+#metricTable td.label {
+    font-weight: bold;
+    font-size: 11px;
+    text-align: left;
+    border: 1px solid #CCCCCC;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 145px;
+}
+#metricTable td.field {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 35px;
+}

@@ -1,0 +1,44 @@
+# Index created by AutoSplit for /home/httpd/vhosts/bubble.co.in/httpdocs/abmasterd/anyboard_mod9/pAa.pm
+#    (file acts as timestamp)
+package pAa;
+sub new 
+;
+sub Version  ;
+sub Alive 
+;
+sub State 
+;
+sub nIa 
+;
+sub Debug 
+;
+sub Port 
+;
+sub Host 
+;
+sub Socket  ;
+sub nHa 
+;
+sub Pass 
+;
+sub Count 
+;
+sub Size 
+;
+sub EOL  ;
+sub Close 
+;
+sub Connect 
+;
+sub nAa 
+;
+sub Headers 
+;
+sub oKa ;
+sub oMa  ;
+sub List  ;
+sub mHa ;
+sub Last  ;
+sub nRa  ;
+sub pGa  ;
+1;

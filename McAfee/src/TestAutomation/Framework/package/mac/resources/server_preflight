@@ -1,0 +1,26 @@
+#!/bin/bash
+# Copyright (C) 2010 McAfee, Inc. All Rights Reserved.
+if [ "`uname -m`" = "i386" ]
+then
+    OS_MAJOR_VER=`sw_vers | grep "ProductVersion" | awk '{print $2}' | awk -F'.' '{print $1}'`
+    OS_MINOR_VER=`sw_vers | grep "ProductVersion" | awk '{print $2}' | awk -F'.' '{print $2}'`
+    if [ $OS_MINOR_VER -ne 5 ]
+    then
+        echo "Test Automation Framework is not supported on $OS_MAJOR_VER.$OS_MINOR_VER"
+        exit -1
+    fi   
+    if [ ! -f /root/TAF_INSTALL_PROPERTIES ]
+    then
+        echo "TAF Install proerties file not found"
+        exit -1
+    fi
+    . /root/TAF_INSTALL_PROPERTIES
+    if [ -z $SVN_USERNAME -o -z $SVN_PASSWORD -o -z $SMTP_SERVER_IP_ADDRESS ]
+    then
+        echo "TAF Install properties file did not provide all properties"
+        exit -1
+    fi
+else
+    echo "Only i386 is supported"
+    exit -1
+fi

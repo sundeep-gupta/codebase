@@ -1,0 +1,52 @@
+<suite>
+<test name="supportInfoGetTest">
+	<input>
+	<param name="userName">contactsupport@api.com</param>
+	<param name="password">1Connected</param>
+	<param name="webSiteSettings">35</param>
+	<param name="agentConfigurationID">27</param>
+	</input>
+</test>
+
+<test name="supportInfoHtmlTagsOnlyGetTest">
+	<input>
+	<param name="userName">contactsupport@api.com</param>
+	<param name="password">1Connected</param>
+	<param name="webSiteSettings">37</param>
+	<param name="agentConfigurationID">27</param>
+	</input>
+	<output>
+	<param name="jsonResponse"><![CDATA[&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;]]></param>
+	</output>
+</test>
+	
+<test name="supportInfoPlainTextGetTest">
+	<input>
+	<param name="userName">contactsupport@api.com</param>
+	<param name="password">1Connected</param>
+	<param name="webSiteSettings">39</param>
+	<param name="agentConfigurationID">27</param>
+	</input>
+	<output>
+	<param name="jsonResponse">Plain Text</param>
+	</output>
+</test>
+
+<test name="supportInfoURLGetTest">
+	<input>
+	<param name="userName">contactsupport@api.com</param>
+	<param name="password">1Connected</param>
+	<param name="webSiteSettings">41</param>
+	<param name="agentConfigurationID">27</param>
+	</input>
+</test>
+
+<test name="supportInfoDefaultValuesGetTest">
+	<input>
+	<param name="userName">contactsupport@api.com</param>
+	<param name="password">1Connected</param>
+	<param name="webSiteSettings">3</param>
+	<param name="agentConfigurationID">27</param>
+	</input>
+</test>
+</suite>

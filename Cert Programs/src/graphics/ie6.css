@@ -1,0 +1,33 @@
+html {
+  overflow:hidden; 
+}
+
+body {
+  height:100%;
+/*  width: 100%; */
+  overflow:auto; 
+}
+
+div#middle {
+   /* top right bottom left */
+  padding: 65px 0 0 0;
+  overflow: auto;
+  height: expression(document.body.clientHeight - 65);
+  width: expression(document.body.clientWidth);
+  margin-top: -65px;
+}
+
+div#top {
+	position:float;
+	left: 0;
+	top: 0;
+	z-index:1;
+	height: 65px;
+	width: expression(document.body.clientWidth - 16);
+}
+
+div#right {
+	height: 100%;
+	text-align: left;
+    border-width: 0 0 0 0px;	
+}

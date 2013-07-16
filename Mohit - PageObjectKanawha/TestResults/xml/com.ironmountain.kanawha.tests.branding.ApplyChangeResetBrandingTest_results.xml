@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ironmountain.kanawha.tests.branding.ApplyChangeResetBrandingTest"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="154.405">
+  <properties />
+      <testcase name="applyChangeResetBranding" time="154.405">
+            <failure type="java.lang.AssertionError"
+                  message="Element Not Found"
+              >
+<![CDATA[java.lang.AssertionError: Element Not Found
+  org.testng.Assert.fail(Assert.java:87)
+  com.ironmountain.pageobject.pageobjectrunner.framework.webdriverselenium.WebDriverPage.switchToFrame(Unknown Source)
+  com.ironmountain.kanawha.tests.branding.BrandingUtils.applyBranding(BrandingUtils.java:72)
+  com.ironmountain.kanawha.tests.branding.ApplyChangeResetBrandingTest.applyChangeResetBranding(ApplyChangeResetBrandingTest.java:62)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:546)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+  org.testng.TestRunner.runWorkers(TestRunner.java:909)
+  org.testng.TestRunner.privateRun(TestRunner.java:618)
+  org.testng.TestRunner.run(TestRunner.java:499)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:332)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:327)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:299)
+  org.testng.SuiteRunner.run(SuiteRunner.java:204)
+  org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:915)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:879)
+  org.testng.TestNG.run(TestNG.java:787)
+  org.testng.TestNG.privateMain(TestNG.java:952)
+  org.testng.TestNG.main(TestNG.java:925)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+<SSWSImgNameBat>SiteHeaderBatman.png</SSWSImgNameBat>
+<ParentAgentProdImgName>AgentApplicationBatman.png</ParentAgentProdImgName>
+<ChildCommunityID2>1119</ChildCommunityID2>
+<SplashImgName>4.agentsplash.png</SplashImgName>
+<ChildCommunityID3>1121</ChildCommunityID3>
+<CommunityID>245</CommunityID>
+<ChildCommunityID4>1123</ChildCommunityID4>
+<HeaderImgName>2.SCheader.gif</HeaderImgName>
+<CustomCommunityID>1115</CustomCommunityID>
+<Password>1connected</Password>
+<ChildCommunityID>1117</ChildCommunityID>
+<SSWSImgName>SiteImageHeaderSpiderMan.png</SSWSImgName>
+<SubCommunityID>249</SubCommunityID>
+<ParentInstaller82ImgName>8.22installerBatman.jpg</ParentInstaller82ImgName>
+<LoginImgNameBat>1_SC_login_stylization.gif</LoginImgNameBat>
+<PWSCommunityID>53</PWSCommunityID>
+<ProfileName>PWS Test Set A</ProfileName>
+<AgentProdImgName>AgentApplicationSpiderMan.png</AgentProdImgName>
+<MyRoamRegressionTestRegistrationUrl>http://SUSSC01.englab.qa/ssws/faces/welcome.jsp?r=31F3641E92CD6687FF982356B2345DDD</MyRoamRegressionTestRegistrationUrl>
+<SubInstaller82ImgName>8.22installerBatman.jpg</SubInstaller82ImgName>
+<ParentInstaller84ImgName>8.4INstallerBatman.jpg</ParentInstaller84ImgName>
+<MacImageNameBat>AgentApplicationBatman.png</MacImageNameBat>
+<TotalAmountOfDataRestored>0 B</TotalAmountOfDataRestored>
+<RegistrationURL>http://CBAuto2.qa.englab.local/ssws/faces/welcome.jsp?r=7D6260D9776A6D9AD3324F1D447B9F34</RegistrationURL>
+<Installer84ImgName>8.4InstallerSpiderMan.jpg</Installer84ImgName>
+<SubAgentProdImgName>AgentApplicationBatman.png</SubAgentProdImgName>
+<LoginImg>SC_login_stylization.gif</LoginImg>
+<CommunityName>Auto501683</CommunityName>
+<MaxBackupSize>30 GB</MaxBackupSize>
+<PrereqCustomCommunityID>109</PrereqCustomCommunityID>
+<SubSplashImgName>SplashscreenBatman.png</SubSplashImgName>
+<SubInstaller84ImgName>8.4INstallerBatman.jpg</SubInstaller84ImgName>
+<NumberOfFilesRetrieved>0</NumberOfFilesRetrieved>
+<LoginImgName>SC_Login_SpiderMan.gif</LoginImgName>
+<Installer82ImgName>8.22_InstallerSpiderMan.jpg</Installer82ImgName>
+<LDAPRegistrationURL>http://suspndr08.englab.qa/ssws/faces/welcome.jsp?r=89281C8A0116905DA8FCA40EF1EC91F4</LDAPRegistrationURL>
+<LastMyRoamRetrievalDateCompleted>no retrievals logged</LastMyRoamRetrievalDateCompleted>
+<CustomRegistrationUrl>http://suspndr08.englab.qa/ssws/faces/welcome.jsp?r=BB0AD0D18791FDD5E93639CF9BCA9E56</CustomRegistrationUrl>
+<ParentSplashImgName>SplashscreenBatman.png</ParentSplashImgName>
+<MacImageName>Spider_Man.png</MacImageName>
+<PWSSubCommunity>55</PWSSubCommunity>
+<MyRoamRegressionTestsCommunityId>5</MyRoamRegressionTestsCommunityId>
+</testdata>

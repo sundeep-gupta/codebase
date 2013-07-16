@@ -1,0 +1,279 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Account Management MyRoam Test Suite" verbose="2" >
+	<listeners>  
+        <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.ExecutionInterceptor" /> 
+        <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.reporting.IRMReporter" /> 
+    </listeners> 
+    
+<!-- Suite Level Parameters most of the cases we will be using the same use for MyRoam Regression Tests so we define the user here -->
+	<parameter name="myroamcommunity" value="MyRoamRegressionCommunity"/>
+	<parameter name="emailid" value="myroamauto@im.com"/>
+	<parameter name="password" value="1connected"/>
+	<parameter name="technicianid" value="Admin"/>
+	<parameter name="technicianPassword" value="1connected"/>	
+
+	<parameter name="originalDataLocation" value="C:\testdata\MyRoamRegressionData"/>
+	<parameter name="versionedDataLocation" value="C:\testdata\MyRoamRegressionDataVersioned"/>
+	<parameter name="backedupDrive" value="C:\"/>
+	<parameter name="backedupFolder" value="MyRoamRegressionData"/>
+	<parameter name="commonTestData" value="CommonTestData"/>
+	<parameter name="subFolders" value="CommonTestData,SubFolder01,SubFolder02"/>
+	<parameter name="filesInBackedupFolder" value="TestReport.html,SampleAutoItScript.exe,AutoItDocumentation.chm"/>
+	<parameter name="backedupFoldersAndFilesList" value="Emo Test PST File For Regression.pst,My Text File.log,Picture File.jpg,SubFolder01,SubFolder02,Text File Of 1KB.txt,Word Document MyRoamRegression.docx,Xml File Sample For Backup.xml"/>
+	<parameter name="commonTestDataFiles" value="Emo Test PST File For Regression.pst,My Text File.log,Picture File.jpg,SymLinkFile.txt,Text File Of 1KB.txt,Word Document MyRoamRegression.docx,Xml File Sample For Backup.xml"/>
+	<parameter name="commonTestDataFilesRetrieveList" value="My Text File.log,Picture File.jpg,SymLinkFile.txt,Text File Of 1KB.txt,Word Document MyRoamRegression.docx,Xml File Sample For Backup.xml"/>
+	<parameter name="mirroredSetup" value="true"/>
+	<parameter name="versionName" value="English 8.5"/>	 
+		
+<!-- These are not actual tests, setups for the MyRoam Regression Tests -->  
+
+    <test name="Create the configurations in Support Center">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SetupsInSupportCenterForMyRoamTests"/>
+		</classes>
+    </test>
+    <test name="Register the account and backup Data">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SetupAccountForMyRoamTests"/>
+		</classes>
+    </test>
+    
+ <!-- Actual MyRoam Regression Tests starts here-->  
+
+   <test name="Access MyRoam When backup is Running Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.AccessMyRoamDuringBackupTest"/>  
+		</classes>
+    </test>   
+    <test name="Open MyRoam In Two Browsers Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.AccessMyRoamInTwoBrowsersTest"/>
+			<parameter name="" value="SubFolder01"/>    
+		</classes>
+    </test>    
+    <test name="Canceled Account Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.CancelledAccountTest"/>  
+			<parameter name="community" value="MyRoamRegressionCommunity"/>	
+		</classes>
+    </test> 
+     <test name="Cancel retrieve in MyRoam Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.CancelRetriveTest"/>    
+			<parameter name="fileSelectedVerificationText" value="6 files selected, 1.44 MB"/>
+			<parameter name="downloadTimeVerificationText" value="3 minutes, 35 seconds"/>			   
+		</classes>
+    </test> 
+    <test name="My Roam Default Menu Items Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.DefaultMenuItemsTest"/>
+		</classes>
+    </test>
+    <test name="Default Sort By Name">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.DefaultSortByNameTest"/>
+		    <parameter name="ascendingOrderList" value="Emo Test PST File For Regression.pst,My Text File.log,Picture File.jpg,SymLinkFile.txt,Text File Of 1KB.txt,Word Document MyRoamRegression.docx,Xml File Sample For Backup.xml"/>
+		</classes>
+    </test>
+    <test name="Retrieve DeltaFiles using my Roam">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.DeltaFilesRetriveUsingMyRoamTest"/>  
+		</classes>
+    </test>     
+    <test name="Download as WindowsExecutable Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.DownloadFilesAsWindowsExecutableTest"/>
+			<parameter name="testFiles" value="My Text File.log,Picture File.jpg,Text File Of 1KB.txt,Word Document MyRoamRegression.docx,Xml File Sample For Backup.xml"/>
+        </classes>
+    </test> 
+    <test name="EMO Files Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.EmoFilesInMyRoamTest"/>
+			<parameter name="pstFileName" value="Emo Test PST File For Regression.pst"/>
+		</classes>
+    </test> 
+    <test name="ExpandBackup Files">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.ExpandBackedUpFilesTreeStructureTest"/>
+		</classes>
+    </test> 
+    <test name="File Selection And UseLogout Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.FileSelectionAndUserLogoutTest"/>    
+		</classes>
+    </test> 
+    <test name="File Selection On LeftPane Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.FileSelectionOnLeftPaneTest"/>    
+		</classes>
+    </test> 
+    <test name="Files Selected Greater Than2GB Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.FilesSelectedGreaterThan2GBTest"/>  
+			<parameter name="twoGBFolder" value="2GB Data Folder"/>			
+			<parameter name="excludeFile" value="1File to Exclude.exe"/> 
+			<parameter name="actualFilesForDownload" value="BigWord Document.docx,Hudson.war,Java6 Setup.exe,SampleFile.jar,Directory LDF File.ldf,Directory MDF File.mdf,4c0340c6.arc,4c0341b7.arc,4c0342a3.arc,4c0342f9.arc,4c03414c.arc,4c034253.arc"/>
+		</classes>
+    </test>  
+    <test name="Find Buttons Behavior By Changing Text Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.FindButtonsBehaviorByChangingTextTest"/>  
+			<parameter name="searchText" value="Text File"/>			
+			<parameter name="searchFile" value="My Text File.log"/>  
+			<parameter name="searchFileFolder" value="CommonTestData"/>
+
+		</classes>
+    </test>  
+    <test name="Find File Messages Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.FindResultMessagesTest"/>  
+			<parameter name="backedupFile" value="My Text File.log"/>      
+			<parameter name="lookinFolder" value="C:\MyRoamRegressionData\CommonTestData\"/>    
+		</classes>
+    </test> 
+    <test name="MyRoam Logout Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.LogoffFromMyRoamPageTest"/>    
+		</classes>
+    </test> 
+    <test name="MyRoam Retrieve After Archive Delete From Primary Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.MyRoamRetrieveAfterArchiveDeleteFromPrimaryTest"/>
+		</classes>
+    </test> 
+        <test name="MyRoam Retrieve After Archive Corruption From Primary Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrievalAfterArchiveCorruptionFromPrimaryTest"/>
+		</classes>
+    </test> 
+    <test name="MyRoam Retrieve After Archive Corruption Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrievalAfterArchiveCorruptionTest"/>
+		</classes>
+    </test> 
+    <test name="Retrieval Of Expired Files Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrievalOfExpiredFilesTest"/>  
+		</classes>
+    </test> 
+    <test name="MyRoam DataOnly Backup Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.MyRoamRetrieveDataOnlyBackupTest"/>
+		</classes>
+    </test> 
+    <test name="Rename of Archive File Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RenameArchiveAndTryTolRetriveTest"/>  
+		</classes>
+    </test>  
+    <test name="Retrieval Of Expired Files Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrievalOfExpiredFilesTest"/>  
+		</classes>
+    </test>   
+    <test name="Retrive After Deleting Poolindex Row Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrieveAfterDeletingPoolIndexRowTest"/>  
+		</classes>
+    </test>  
+    <test name="Retrieve Different File Types After Compaction Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrieveDifferentFileTypesAfterCompactionTest"/>  
+		</classes>
+    </test>      
+    <test name="Retrieve Files Of 1KB Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrieveFilesOf1KBTest"/>  
+			<parameter name="oneKBFile" value="Text File Of 1KB.txt"/>	
+		</classes>
+    </test>      
+    <test name="Retrieve LongFile Name FromMyRoam Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrieveFilesWithLongNameTest"/>    
+			<parameter name="filePath" value="SubFolder01"/>
+			<parameter name="longFile" value="LongFileNameTestFile ForMy Roam Regression Automation- Data Protection and Recovery Services, Tape Vaulting, Online Backup, Disaster Recovery - Iron Mountain.html"/>
+		</classes>
+    </test>     
+    <test name="Retrieve Long FolderPath FromMyRoam Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.RetrieveFilesWithLongPathTest"/>    
+			<parameter name="searchFolder" value="Long Folder Name03"/>
+			<parameter name="longFolderPath" value="SubFolder02\SubFolder02.01\LongPathFolderName_01\Long Folder Name02\Long Folder Name03"/>
+			<parameter name="longFolder" value="LongPathFolderName To Test MyRoam Regression Automation HPQC-Test ID 6032"/>
+			<parameter name="fileInLongFolder" value="PDF Document in Long Path.pdf"/>  
+		</classes>
+    </test> 
+    <test name="Select Drive From RightPane Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SelectDrivesFromRightSidePaneTest"/>           
+		</classes>
+    </test>    
+    <test name="SelectFolder SortBy Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SelectFolderSortByFunctionalityTest"/>
+		</classes>
+    </test>    
+    <test name="Sort By DateModified Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SortByDateModifiedTest"/>
+			<parameter name="ascendingOrderListByModifiedDate" value="Emo Test PST File For Regression.pst,Xml File Sample For Backup.xml,Word Document MyRoamRegression.docx,Text File Of 1KB.txt,SymLinkFile.txt,Picture File.jpg,My Text File.log"/>
+		</classes>
+    </test>   
+    <test name="Sort By Size Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SortBySizeTest"/>
+			<parameter name="ascendingOrderListBySize" value="Emo Test PST File For Regression.pst,Picture File.jpg,Word Document MyRoamRegression.docx,My Text File.log,SymLinkFile.txt,Xml File Sample For Backup.xml,Text File Of 1KB.txt"/>
+		</classes>
+    </test>
+    <test name="Sort By Type Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SortByTypeTest"/>
+			<parameter name="ascendingOrderListByType" value="Xml File Sample For Backup.xml,Text File Of 1KB.txt,SymLinkFile.txt,Emo Test PST File For Regression.pst,My Text File.log,Picture File.jpg,Word Document MyRoamRegression.docx"/>
+		</classes>
+    </test>
+    <test name="Support Link From MyRoam Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SupportLinkOnMyRoamPageTest"/>       
+		</classes>
+    </test>    
+    <test name="Symlink File Retrieval Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.SymlinkFilesRetrievalFromMyRoamTest"/>  
+			<parameter name="symLinkFolder" value="SymLinkFolder"/>
+			<parameter name="symLinkFile" value="SymLinkFile.txt"/>  
+		</classes>
+    </test>   
+    <test name="Tooltip Messages Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.ToolTipMessageTest"/>    
+		</classes>
+    </test>     
+    <test name="WildCards In Name Contains Field Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.WildCardsInNameContainsFieldTest"/>  
+			<parameter name="allSearchText" value="Text File"/>			
+			<parameter name="searchFile1" value="My Text File.log"/>  
+			<parameter name="searchFile2" value="Text File Of 1KB.txt"/>
+			<parameter name="singleSearchText" value="y Text File.log"/>  
+			<parameter name="singleFile" value="My Text File.log"/>
+		</classes>
+    </test>     
+    <test name="MyRoam Retrieval of All Version Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.MyRoamRetrievalofAllVersionTest"/>  
+		</classes>
+    </test>     
+    <test name="MyRoam Retrieval As Of BackupDates Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.MyRoamRetrievalAsOfBackupDatesTest"/>  
+		</classes>
+    </test>       
+    <test name="MyRoam Retrieval Of Most Recent Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.regression.myroam.MyRoamRetrievalOfMostRecentVersionTest"/>  
+		</classes>
+    </test>              
+</suite>
+
+

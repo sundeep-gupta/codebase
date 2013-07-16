@@ -1,0 +1,2 @@
+Main-Class: ImportToDB
+Class-Path: ..\JSTAF.jar ImportToDB.class ..\tools.jar

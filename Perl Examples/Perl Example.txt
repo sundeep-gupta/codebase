@@ -1,0 +1,39 @@
+Connect to DB and execute a SQL statement
+
+ 
+
+v      Good example to work with excel sheet.
+
+v      What does print statement return (1 on success)
+
+v      Example on regular expressions.
+
+v      CGI example (Hello World)
+
+v      Sending Mail using Mail::Sendmail
+
+v      Send a simple mail (without Attachment) using MIME::Lite
+
+v      Script for basic authentication using HTTP::Request (Script fails).
+
+v      Script to indicate that qw works as quote strings.
+
+v      Tor.pl – some script on pipe and process – not understanding…
+
+v      Good LINE BY LINE Debugging example of FTP –Get.
+
+v      SSHTest.pl to login into other machine (Linux) using Net::SSH::Perl – Script fails…
+
+v      XML::Twig Example
+
+v      XML-Parse.pl to get the value of specified node.
+
+v      Script to generate xml file using XML::Generator module.
+
+v      POP3.zip for script to get mail using POP3 module…
+
+v      Net::POP3 script to read mail from POP3 Server. (Don't know if it works or not)
+
+ 
+
+ 

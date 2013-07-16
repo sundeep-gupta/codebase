@@ -1,0 +1,17 @@
+Step 1 :
+
+Read Word document so that you can have an idea.
+
+Step 2:
+
+Read Pages of PDF mentioned in word file.
+
+Step 3:
+
+Look at sample game connect 4 in directory C4 that uses a min max search to implement another game.
+
+Step 4:
+Implement the game in C pr C++ that computer plays intelligently enough to give hard time to 
+human player.
+
+Thanx. 

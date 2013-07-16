@@ -1,0 +1,15 @@
+
+FILE NAME 		DEPENDENT FILES			DESCRIPTION
+--------------------------------------------------------------------
+vssScript1			NIL		A simple example to demonstrate the GUI capabilities of AutoIT
+
+CreateIP			NIL		Adds Local IP Address.
+						Requires that the TCP/IP Settings window is opened.
+
+Sleep 				NIL 		Sleeps for the specified number of milliseconds (cmd line arg) 							or if value not specified, then for 1 second.
+
+WordOpenClose			a doc file	Opens the Microsoft Word file specified as argument (without 						extension) and closes the same.
+
+ShutDown					 Shut Your system.
+
+NoDrives			NIL 			After execution You can't see your drives in your Explorer window.

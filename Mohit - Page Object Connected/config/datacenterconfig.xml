@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datacenterconfig>	
+<!-- DataCenter Related Properties -->
+
+<!-- Set this property if the data center configuration is mirrored (yes/no)-->
+
+
+     <DataCenterMirrored>no</DataCenterMirrored>
+     <DataCenterClustered>yes</DataCenterClustered>
+     <CustomerFolderLocation>C:\\Customers</CustomerFolderLocation>
+ 
+<!-- If the data center is Standalone enter the Primary details -->
+<!-- If the data center is Mirrored enter the primary, secondary details (only 1 pair) -->
+<!-- If the data center is Clustered enter the primary, secondary details (2 pair) -->
+	
+
+    <PrimaryDataCenterRegistryMachineName>DC21-C1M1P.ironsides.englab.local</PrimaryDataCenterRegistryMachineName>
+    <SecondaryDataCenterRegistryMachineName>DC21-C1M1S.ironsides.englab.local</SecondaryDataCenterRegistryMachineName>
+    <PrimaryDataCenterDirectoryMachineName>DC21-C1M2P.ironsides.englab.local</PrimaryDataCenterDirectoryMachineName>
+    <SecondaryDataCenterDirectoryMachineName>DC21-C1M2S.ironsides.englab.local</SecondaryDataCenterDirectoryMachineName>			
+
+		
+</datacenterconfig>

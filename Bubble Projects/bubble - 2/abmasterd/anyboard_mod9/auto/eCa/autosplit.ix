@@ -1,0 +1,24 @@
+# Index created by AutoSplit for /home/httpd/vhosts/bubble.co.in/httpdocs/abmasterd/anyboard_mod9/eCa.pm
+#    (file acts as timestamp)
+package eCa;
+sub new  ;
+sub eKa  ;
+sub eBa  ;
+sub eIa  ;
+sub dOa  ;
+sub eFa  ;
+sub query  ;
+sub eOa  ;
+sub DEBUG  (@);
+sub eJa  ;
+sub ePa  ;
+sub dCa  ;
+sub dUa  ;
+sub dBa  ;
+sub dLa  ;
+sub dVa  ;
+sub dRa  ;
+sub pUa  ;
+sub dWa  ;
+sub dGa  ;
+1;

@@ -1,0 +1,1323 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.6 Version (build 170) Copyright (c) 2006 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.6 Version (build 170) Copyright (c) 2006 McAfee, Inc. All rights reserved.</string>
+
+
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      CPU Type: PowerPC G4  (3.3)
+      CPU Speed: 1.25 GHz
+      Memory: 512 MB
+      Serial Number: YM406MMCPC1
+          Serial Number: 
+          Serial Number: 3JV8PHC4
+      IPv4 Addresses: 172.16.222.167
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.4.10 (8R218)
+      Kernel Version: Darwin 8.10.0
+      Boot Volume: tiger-en
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------13
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------16
+Microsoft Excel------7
+Microsoft Word------9
+Microsoft Entourage------4
+Address Book------4
+Automator------14
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------1
+Image Capture------2
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------3
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----132
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------1
+Microsoft Word------5
+Microsoft Entourage------4
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------6
+iSync------7
+iTunes------6
+Firefox------7
+TOTAL TIME-----110
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------13
+Acrobat Distiller 6.0.1------9
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------2
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------4
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------3
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------3
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------2
+iCal------4
+iChat------4
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----128
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------8
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------3
+Microsoft Entourage------1
+Address Book------2
+Automator------8
+Calculator------1
+Chess------3
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------2
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------3
+iPhoto------4
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----105
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------15
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------6
+Microsoft Word------5
+Microsoft Entourage------4
+Address Book------3
+Automator------12
+Calculator------2
+Chess------3
+DVD Player------3
+Dictionary------3
+Font Book------2
+Image Capture------2
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------3
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------6
+iTunes------4
+Firefox------5
+TOTAL TIME-----131
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------5
+Microsoft Word------5
+Microsoft Entourage------0
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------2
+iPhoto------5
+iSync------5
+iTunes------5
+Firefox------6
+TOTAL TIME-----108
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------13
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------3
+DVD Player------2
+Dictionary------3
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------2
+iPhoto------6
+iSync------4
+iTunes------4
+Firefox------6
+TOTAL TIME-----128
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------7
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------1
+Image Capture------2
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----108
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------8
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------3
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------5
+TOTAL TIME-----128
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------7
+Microsoft Word------4
+Microsoft Entourage------4
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------1
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------7
+TOTAL TIME-----107
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------13
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------10
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----125
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------8
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------4
+Microsoft Entourage------4
+Address Book------2
+Automator------7
+Calculator------1
+Chess------1
+DVD Player------3
+Dictionary------1
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------4
+iTunes------5
+Firefox------7
+TOTAL TIME-----104
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------8
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------1
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----129
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------5
+iSync------4
+iTunes------4
+Firefox------7
+TOTAL TIME-----105
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------18
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------8
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------3
+Automator------14
+Calculator------1
+Chess------3
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------2
+Safari------3
+Sherlock------1
+Stickies------2
+System Preferences------1
+TextEdit------2
+iCal------4
+iChat------4
+iPhoto------4
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----132
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------4
+Microsoft Entourage------4
+Address Book------2
+Automator------8
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------3
+Safari------1
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------3
+iChat------2
+iPhoto------4
+iSync------4
+iTunes------4
+Firefox------7
+TOTAL TIME-----105
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------17
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------8
+Microsoft Word------5
+Microsoft Entourage------4
+Address Book------3
+Automator------13
+Calculator------1
+Chess------2
+DVD Player------4
+Dictionary------2
+Font Book------1
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------2
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----131
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------6
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------5
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------4
+iTunes------6
+Firefox------7
+TOTAL TIME-----107
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------7
+Microsoft Word------4
+Microsoft Entourage------6
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----129
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------3
+Microsoft Entourage------4
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------1
+Image Capture------2
+Internet Connect------1
+Mail------3
+Preview------0
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------7
+TOTAL TIME-----106
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------1
+Chess------2
+DVD Player------2
+Dictionary------3
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----128
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------8
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------3
+Microsoft Entourage------5
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------1
+Image Capture------2
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------3
+iChat------2
+iPhoto------4
+iSync------3
+iTunes------5
+Firefox------6
+TOTAL TIME-----105
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------6
+Microsoft Word------6
+Microsoft Entourage------4
+Address Book------2
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------1
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------3
+TextEdit------1
+iCal------4
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----125
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------5
+Microsoft Entourage------4
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------5
+iSync------4
+iTunes------4
+Firefox------7
+TOTAL TIME-----108
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------8
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------4
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----131
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------6
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----108
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------3
+Automator------14
+Calculator------1
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----127
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------4
+Microsoft Entourage------4
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------1
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------3
+iChat------3
+iPhoto------4
+iSync------4
+iTunes------5
+Firefox------7
+TOTAL TIME-----105
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------6
+Microsoft Entourage------7
+Address Book------3
+Automator------12
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------2
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------3
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----130
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (READ)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------5
+Microsoft Word------5
+Microsoft Entourage------4
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------4
+iTunes------5
+Firefox------6
+TOTAL TIME-----106
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------17
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------3
+Automator------11
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------3
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------3
+iPhoto------6
+iSync------4
+iTunes------5
+Firefox------5
+TOTAL TIME-----129
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------5
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------1
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------5
+iSync------4
+iTunes------5
+Firefox------7
+TOTAL TIME-----107
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------18
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------8
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------2
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----130
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------4
+Microsoft Entourage------4
+Address Book------2
+Automator------8
+Calculator------1
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------0
+QuickTime Player------3
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----106
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------20
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------8
+Microsoft Word------4
+Microsoft Entourage------123
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------4
+Dictionary------3
+Font Book------2
+Image Capture------1
+Internet Connect------3
+Mail------2
+Preview------1
+QuickTime Player------4
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------6
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------5
+Firefox------6
+TOTAL TIME-----257
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------8
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------6
+Microsoft Word------4
+Microsoft Entourage------123
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------2
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------3
+Sherlock------1
+Stickies------2
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------3
+TOTAL TIME-----227
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------13
+Acrobat Distiller 6.0.1------10
+Acrobat 6.0.1 Professional------15
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------13
+Calculator------2
+Chess------2
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------4
+TOTAL TIME-----126
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------11
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------2
+Sherlock------1
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------2
+iPhoto------4
+iSync------5
+iTunes------4
+Firefox------7
+TOTAL TIME-----107
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------14
+Acrobat Distiller 6.0.1------11
+Acrobat 6.0.1 Professional------14
+Microsoft Excel------7
+Microsoft Word------5
+Microsoft Entourage------5
+Address Book------3
+Automator------14
+Calculator------1
+Chess------3
+DVD Player------3
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------3
+Preview------1
+QuickTime Player------3
+Safari------2
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------5
+iChat------3
+iPhoto------5
+iSync------5
+iTunes------4
+Firefox------6
+TOTAL TIME-----130
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (WRITE)~~~~~~~~~~~~~~
+Adobe Photoshop CS------12
+Acrobat Distiller 6.0.1------7
+Acrobat 6.0.1 Professional------13
+Microsoft Excel------6
+Microsoft Word------4
+Microsoft Entourage------5
+Address Book------2
+Automator------7
+Calculator------2
+Chess------2
+DVD Player------2
+Dictionary------2
+Font Book------2
+Image Capture------1
+Internet Connect------2
+Mail------2
+Preview------1
+QuickTime Player------2
+Safari------1
+Sherlock------2
+Stickies------1
+System Preferences------2
+TextEdit------1
+iCal------4
+iChat------3
+iPhoto------4
+iSync------4
+iTunes------4
+Firefox------6
+TOTAL TIME-----106
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~

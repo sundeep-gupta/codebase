@@ -1,0 +1,7 @@
+----APPLICATIONS-USAGE-TEST----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+APPLE MAIL                    		 4                  		 1                  		 3                  		 1   3.5   1
+MICROSOFT ENTOURAGE           		 7         		 2         		 6         		 2   6.5   2
+MICROSOFT WORD                		 13              		 14              		 17              		 17   15   15.5
+MICROSOFT POWERPOINT          		 13        		 12        		 18        		 15   15.5   13.5
+MICROSOFT EXCEL               		 9             		 9             		 8             		 8   8.5   8.5
+APPLICATION-USAGE-TOTALTIME   		46  		38  		52  		43    49   40.5

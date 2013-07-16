@@ -1,0 +1,90 @@
+/* non layout style stuff */
+  /* this entry fixes the three pixel problem described on
+   http://www.positioniseverything.net/explorer/threepxtest.html */
+  * html p {
+   height: 1%;
+   margin-left: 0;
+  }
+
+  p {
+   padding-top: 0px;
+   margin-top: 0px;
+  }
+  
+  p.rotext {
+    background: #ffffff;
+    width: 320px;
+    margin-bottom: 0px;
+    border: 1px solid #333333;
+  }
+  
+  p.rotextnone {
+    background: #ffffff;
+    color: #ff1111;
+    width: 320px;
+    margin-bottom: 0px;
+    border: 1px solid #333333;
+  }
+
+  table.list {
+    width: 95%;
+    /*border: 1px solid #333333; */
+    /*border-width: 1px 1px 1px 1px; */
+	border-collapse: collapse;
+	empty-cells: show;
+  }
+
+  tr.list {
+	background: #f9f9f9;
+	/*border: 1px solid #333333;
+	border: 1px solid #ffffff;*/
+  }
+  tr.list:hover {
+    background: #E4E7DD;
+	/* background: #E4E7DD;*/
+  }
+
+  tr.listhf {
+    background: #CCCCCC;
+  }
+  
+  tr.listnh {
+	background: #EEEEEE;
+	border: 1px solid #333333;
+  }
+
+  td.list {
+    /*border: 1px solid #ffffff;*/
+  }
+
+  td.listnone {
+    border: 1px solid #ffffff;
+	color: #ff1111;
+	text-align: center;
+  }
+
+  img.cimglink,input.cimglink {
+  	vertical-align: middle;
+	cursor: pointer;
+	cursor: hand;
+	border: 1px solid #333333;
+  }
+  
+div.greybox {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+}
+
+p.none {
+	color: #ff1111;
+	text-align: center;
+	margin:0px;
+	padding: 0px;
+}
+
+a:link		{ color: #0000FF; text-decoration: underline; }
+a:hover		{ color: #0000FF; text-decoration: underline; }
+a:visited	{ color: #0000FF; text-decoration: underline; }

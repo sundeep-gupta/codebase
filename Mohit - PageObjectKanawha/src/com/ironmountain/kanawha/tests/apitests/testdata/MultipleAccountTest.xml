@@ -1,0 +1,66 @@
+<suite>
+<test name="MultipleAccCancelledTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="cancelledAccNumber">101008812</param>
+	</input>
+</test>
+
+<test name="MultipleAccOnHoldTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="onHoldAccNumber">101005050</param>
+	</input>
+</test>
+
+<test name="MultipleAccountsforActiveAccwobackupTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="accNumber">101008614</param>
+	</input>
+</test>
+
+<test name="MultipleAccountsforCompletedStatusTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="accNumber">101004951</param>
+		<param name="networkDeviceName">BECKXP32AGE</param>
+		<param name="deviceType">PC</param>	
+		<param name="LastSuccessfulBackupDate">7\/7\/2011 5:47:08 AM</param>
+		<param name="DataUsageMBLimit">1048576</param>
+		<param name="AgentVersion">8.6</param>
+	</input>
+</test>
+
+<test name="ChangeUserNameforMultipleAccountsTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="newEmailID">Multipletestemail@test.com</param>
+	</input>
+</test>
+
+<test name="MultipleAccountsDataUsageLimitSettingTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="accNumber">101009703</param>
+		<param name="DataUsageMBLimit">1048576</param>
+	</input>
+</test>
+
+<test name="MultipleAccountsDataUsageTest">
+	<input>
+		<param name="userName">multipleaccuser@test.com</param>
+		<param name="password">2_Connected</param>
+		<param name="accNumber">101009010</param>
+		<param name="DataUsageInBytes">208</param>
+	</input>
+</test>
+
+
+</suite>

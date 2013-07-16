@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="config/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="config"/>
+	<classpathentry exported="true" kind="lib" path="lib/activation.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-dbcp-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-pool-1.5.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/junit-4.8.1.jar" sourcepath="C:/Documents and Settings/jdevasia/.m2/repository/junit/junit/4.8.1/junit-4.8.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mail.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mailapi.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/selenium-java-client-driver.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/smtp.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sqljdbc4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/testng-5.11-jdk15.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/TestRunner.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/Commonlib.jar"/>
+	<classpathentry kind="lib" path="lib/jna.jar"/>
+	<classpathentry kind="lib" path="lib/json-20080701.jar"/>
+	<classpathentry kind="lib" path="lib/pageobjectframework.jar"/>
+	<classpathentry kind="lib" path="lib/qualityiq-common-1.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/reportng-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/xstream-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-2.0a5.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.0.jar"/>
+	<classpathentry kind="lib" path="lib/gson-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/sswswsdl.jar"/>
+	<classpathentry kind="lib" path="lib/adminApi.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

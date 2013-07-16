@@ -1,0 +1,9 @@
+1. To set Networking properties on your System  run policytool (JAVA_HOME\bin\policytool.exe).
+	i. Press Button "Add policy Entry".
+	ii. In "policy Entry" window press Button "Add Permissions".
+	iii. In "permissions" window change In first Combo box change "permission" to "all permissions".
+	iv. click "ok" in "permissions" window.
+	v. and click "done"in "policy Entry" window.
+	vi. Select the file menu and choose "save as" and save  ".java.policy" in C:\Documents and Settings\administrator.
+
+

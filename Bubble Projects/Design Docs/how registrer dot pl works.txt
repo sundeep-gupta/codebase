@@ -1,0 +1,50 @@
+1. change the menu images
+2. Mouse Icon change for help
+3. Disable the register button when logged in.
+4. 
+
+
+Looking at Register page
+------------------------
+Lets get the flow:
+
+-> YaBB.pl gets the parameter action as 'register'
+-> Load Register.pl and call Register 
+    ->read the $FORM values into variables
+    -> open $langdir, which is the root directory where all language translations are stored
+    -> Each directory represent a language .  use dir name as item in dropdown box
+    -> validation-code method is run if $regcheck is enabled.
+    -> I must be guest to register... else I get fatal error.
+    -> Then prepare the html for the registration form. where we look for configuration info
+	> $regcheck  for reason which I don't know
+	> $RegAgree  for agreement
+	> $emailpassword to either send password to email or not?
+	> $allow_hide_email if hiding of email is allowed or not
+	>
+What happens after register button is clicked
+----------------------------------------------
+YaBB gets action as register2, which means we load Register.pl and get into register2 method
+Here is the flow... as analyzed
+
+-> fatal error if registration is disabled and we come till here... or if he is not a guest
+-> redirect to home if user disagree on agreement
+-> Make sure banned users, ips, mails, are not getting registered... if yes then fatal error
+-> Validations include
+    -> against existing users/emails
+    -> against $regcheck variable
+    -> against reserved words... banned user/ words
+-> put default user info... IM, time date, display name... these are all configurable later
+-> do something if $preregister ... donno what
+-> if not preregister then comes ur actual flow.. of sending mail if you want password via mail
+    or displaying a login form. The uid and password are stored hidden in the form so just login will
+    make sure that u get registered completely.
+
+->      
+
+
+
+Other things to look at
+------------------------
+What makes user inactive
+how does inactive user get active
+

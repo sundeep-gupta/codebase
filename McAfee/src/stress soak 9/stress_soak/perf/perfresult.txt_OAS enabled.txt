@@ -1,0 +1,68 @@
+---------Creating System Profile for reference-----------
+NWA seems to be installed on the system
+	<string>VirusScan 8.6 Version (build 201) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.6 Version (build 201) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      CPU Type: PowerPC G4  (3.3)
+      CPU Speed: 1.25 GHz
+      Memory: 512 MB
+      Serial Number: YM406MMCPC1
+          Serial Number: 
+          Serial Number: 3JV8PHC4
+      IPv4 Addresses: 172.16.222.98
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.4.10 (8R218)
+      Kernel Version: Darwin 8.10.0
+      Boot Volume: tiger-en
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------27
+TOTAL TIME-----27
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------26
+TOTAL TIME-----26
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------2
+TOTAL TIME-----2
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------25
+TOTAL TIME-----25
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------2
+TOTAL TIME-----2
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------26
+TOTAL TIME-----26
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------2
+TOTAL TIME-----2
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------22
+TOTAL TIME-----22
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~

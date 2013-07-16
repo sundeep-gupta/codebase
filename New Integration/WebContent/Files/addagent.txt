@@ -1,0 +1,12 @@
+create procedure addAgent(in agentId varchar,in hostName varchar,in cityId int)
+begin
+insert into agents(agentid,hostname,cityid) values(agentId,hostName,cityId);
+end
+
+
+
+create procedure updateAgent(in agentId varchar,in hostname varchar(30))
+begin 
+update agents set hostname=hostname where agentid=agentId;
+end
+-

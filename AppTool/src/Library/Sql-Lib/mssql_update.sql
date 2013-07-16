@@ -1,0 +1,1 @@
+UPDATE adodb_results SET Build = 'AppTool version 1.0' WHERE Result = 'pass'

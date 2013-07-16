@@ -1,0 +1,3 @@
+select max(id) from EMP A where 5=( select count(id) From EMP  B where B.ID>=A.ID)
+
+-

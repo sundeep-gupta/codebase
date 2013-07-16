@@ -1,0 +1,15 @@
+drop table customer;
+
+create table customer(customerid number(20) constraint pcstmr primary key,
+customername varchar2(50) not null,
+shortname varchar2(10),
+terms varchar2(20),
+collectiontypeid varchar2(8) not null,
+creditstatus char(1) not null,
+creditstatusdetail varchar2(200),
+creditlimit number(20,2) not null,
+latelimit number(11),
+customergroupid number(20) constraint fcstrgrp references customergroup(customergroupid) not null,
+description varchar2(200),
+createdby number(20) constraint fcstruser references kuser(userid) not null,
+creationdate date not null);

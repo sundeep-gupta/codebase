@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="View History Page Test Suite" verbose="2" >
+
+		<test name="Backup History Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.viewhistory.BackupAccountHistoryTest"/>
+			<methods>
+				<include name="testBackupHistory" />
+			</methods>
+		</classes>
+		<parameter name="accountActivationDate" value="Mon, 3/22/10, 3:11 PM"/>
+		<parameter name="servicePlanStorageLimit" value="30 GB"/>
+		<parameter name="lastBackupDateCompleted" value="Tue, 3/23/10, 11:36 AM"/>
+		</test>
+		
+		<test name="Usage History Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.viewhistory.UsageHistoryTest"/>
+			<methods>
+				<include name="testUsageHistory" />
+			</methods>
+		</classes>
+		<parameter name="totalBackupsLast30Days" value="4"/>
+		<parameter name="totalNumberOfFilesProtected" value="5"/>
+		<parameter name="totalStorageSize" value="104.96 MB"/>
+		</test>
+		
+		<test name="MyRoam Retrieval History Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.viewhistory.MyRoamRetrievalHistoryTest"/>
+			<methods>
+				<include name="testMyRoamRetrievalHistory" />
+			</methods>
+		</classes>
+		<parameter name="lastMyRoamRetrievalDateCompleted" value="no retrievals logged"/>
+		<parameter name="numberOfFilesRetrieved" value="0"/>
+		<parameter name="totalAmountOfDataRestored" value="0 B"/>
+		</test>
+		
+		<test name="Last CD or DVD Order History Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.viewhistory.LastCDsAndDVDsOrderHistoryTest"/>
+			<methods>
+				<include name="testLastCDsAndDVDsOrderHistory" />
+			</methods>	
+		</classes>	
+		<parameter name="lastCDsAndDVDsOrderBackupSetsize" value="104.96 MB"/>
+		<parameter name="numberOfMediaShipped" value="1 DVDs"/>
+		</test>
+		
+</suite>		 

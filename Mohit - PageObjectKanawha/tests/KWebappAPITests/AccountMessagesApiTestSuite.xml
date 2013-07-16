@@ -1,0 +1,194 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AccountMessagesApiSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+<test name="Long Messages Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageLongTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Messages Display Limit Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageDisplayLimitTest" />
+			</methods>
+		</classes>
+</test>
+<test name="No Messages Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="noMessageTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Top Message Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="topMessageTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Multiple Technician Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="multipleTechnicianTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Group Message Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="groupMessageTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Message Expiration Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageExpireTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Account onHold Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="accountOnHoldTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Delete Unread Messages and Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageUnreadDeleteTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Delete Read Messages and Get Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageReadDeleteTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Deleted Messages Change To Read Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageDeleteReadTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Deleted Messages Change To UnRead Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageDeleteUnreadTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Delete Read Messages Only Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageDeleteReadOnlyTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Delete Unread Messages Only Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageDeleteUnreadOnlyTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Wrong Message State Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageWrongMessageStateTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Wrong Message Id Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageWrongMessageIdTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Delete Group Messages Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageGroupDeleteTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Message Id Empty Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageIdEmptyValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Message State Null Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageStateNullValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Message Id Null Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageIdNullValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Account Number Zero Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="noAccountNumberTest" />
+			</methods>
+		</classes>
+</test>
+<test name="URL as Message Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="urlMessagesTest" />
+			</methods>
+		</classes>
+</test>
+
+<test name="HTML Tags as Message Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.AccountMessagesTest"/>
+			<methods>
+				<include name="messageHTMLTagTest" />
+			</methods>
+		</classes>
+</test>
+</suite>

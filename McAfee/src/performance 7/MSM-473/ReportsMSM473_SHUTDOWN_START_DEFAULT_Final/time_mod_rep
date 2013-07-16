@@ -1,0 +1,4 @@
+Test Run with McAfee Security Console Installed 
+----TIME-DETAILS----  Run-1  Run-2  Run-3    Average-Time
+SHUTDOWN TIME       46        57        61        61        66        64      59.1666666666667
+START TIME      50       34       33       36       35       33      36.8333333333333

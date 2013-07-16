@@ -1,0 +1,7 @@
+drop table division;
+
+create table division(divisionid number(20) constraint pdivision primary key,
+divisionname varchar2(50) not null,
+status varchar2(10) not null,
+comments varchar2(200),
+entrydate date not null);

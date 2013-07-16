@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009  McAfee, Inc. All rights reserved. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>DYLD_LIBRARY_PATH</key>
+		<string>/usr/local/TAF/lib:/usr/local/TAF/STAF/lib/</string>
+	</dict>
+	<key>InitGroups</key>
+	<false/>
+	<key>Label</key>
+	<string>com.mcafee.taf.harnessserver</string>
+	<key>OnDemand</key>
+	<false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/TAF/bin/harnessServer</string>
+		<string>/usr/local/TAF/config/ServerConfig.xml</string>
+	</array>
+</dict>
+</plist>

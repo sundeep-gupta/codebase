@@ -1,0 +1,39 @@
+/**
+ * Copyright (C) 2010 TopCoder Inc., All Rights Reserved
+ */
+package com.topcoder.kestrel;
+
+import java.io.BufferedReader;
+/**
+ * 
+ *
+ * @author TCSDEVELOPER
+ * @version 1.0
+ * 
+ */
+public class CopyrightStatementParser {
+	private int numberOfLines;
+	private String[] searchPhrases;
+	private String[] preImportantPhrases;
+	private String[] postImportantPhrases;
+	private String copyrightSingle;
+	private String copyrightDouble;
+	
+	public CopyrightStatementParser(int numberOfLines, String[] searchPhrases, String copyrightSingle,
+		                            String copyrightDouble, String[] preImportantPhrases, 
+		                            String[] postImportantPhrases) {
+        this.numberOfLines = numberOfLines;
+        this.searchPhrases = searchPhrases;
+        this.copyrightSingle = copyrightSingle;
+        this.copyrightDouble = copyrightDouble;
+        this.preImportantPhrases = preImportantPhrases;
+        this.postImportantPhrases = postImportantPhrases;
+	}
+	
+	
+	public void parse(BufferedReader reader) {
+		
+	}
+
+
+}

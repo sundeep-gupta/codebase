@@ -1,0 +1,50 @@
+1192819352|1192819352|127.0.0.1|For security, you cannot use your username as your password.|register2|||razsun|
+1192819704|1192819704|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192819802|1192819802|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192819820|1192819820|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192819939|1192819939|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192819959|1192819959|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820034|1192820034|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820088|1192820087|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820117|1192820117|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820193|1192820193|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820257|1192820257|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820301|1192820301|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820355|1192820355|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820404|1192820404|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820420|1192820420|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820448|1192820448|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820462|1192820462|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820477|1192820476|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820496|1192820496|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820527|1192820527|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192820542|1192820541|127.0.0.1|(razsun) The username you tried to register already exists.|register2|||razsun|
+1192867191|1192867191|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192867205|1192867205|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192867253|1192867253|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192867258|1192867258|127.0.0.1|You are not allowed to access this section.|||test|razsun|
+1192867327|1192867327|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192872462|1192872462|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192872515|1192872515|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192872526|1192872525|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192872547|1192872547|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192873288|1192873288|127.0.0.1|You are not allowed to access this section.|||general|razsun|
+1192880968|1192880967|127.0.0.1|300 An Error Has Occurred!: Unable to open staff.txt|||staff|razsun|
+1192883049|1192883049|127.0.0.1|Untrapped Error:<br />Undefined subroutine &main::Ml called at D:/bubbleweb/cgi-bin/forum/YaBB.pl line 162.|ml|||razsun|
+1192883105|1192883105|127.0.0.1|Untrapped Error:<br />Undefined subroutine &main::Ml called at D:/bubbleweb/cgi-bin/forum/YaBB.pl line 162.|ml|||razsun|
+1192885024|1192885023|127.0.0.1|Untrapped Error:<br />Undefined subroutine &main::buildPages called at ./sources/Memberlist.pl line 257.Compilation failed in require at D:/bubbleweb/cgi-bin/forum/YaBB.pl line 161.|ml|||razsun|
+1192888783|1192888783|127.0.0.1|You must specify a search string!|search2|||razsun|
+1192892035|1192892035|127.0.0.1|You are just allowed to send Personal Messages if you've reached a post count of 1!|imsend|||razsun|
+1192901167|1192901166|127.0.0.1|Can't open directory (./~forum/avatars)!<br />Please inform the administrator of this forum that the $facesdir setting must be fixed immediately.No such file or directory|profile|||razsun|
+1192901204|1192901203|127.0.0.1|Your Current Password is incorrect|profileCheck2|||razsun|razsun
+1192901210|1192901209|127.0.0.1|Can't open directory (./~forum/avatars)!<br />Please inform the administrator of this forum that the $facesdir setting must be fixed immediately.No such file or directory|profile|||razsun|
+1192901316|1192901316|127.0.0.1|Can't open directory (./~forum/avatars)!<br />Please inform the administrator of this forum that the $facesdir setting must be fixed immediately.No such file or directory|profile|||razsun|
+1192901397|1192901397|127.0.0.1|Can't open directory (../../~forum/avatars)!<br />Please inform the administrator of this forum that the $facesdir setting must be fixed immediately.No such file or directory|profile|||razsun|
+1192905177|1192905177|127.0.0.1|Your Current Password is incorrect|profileCheck2|||razsun|
+1192938283|1192938282|127.0.0.1|Profile Session timed out. <a href="http://localhost/cgi-bin/forum/YaBB.pl?action=profileCheck;username=razsun">Please Re-Authenticate</a>|profile|||razsun|
+1192939176|1192939175|127.0.0.1|Profile Session timed out. <a href="http://localhost/cgi-bin/forum/YaBB.pl?action=profileCheck;username=razsun">Please Re-Authenticate</a>|profile|||razsun|
+1192939514|1192939514|127.0.0.1|Profile Session timed out. <a href="http://localhost/cgi-bin/forum/YaBB.pl?action=profileCheck;username=razsun">Please Re-Authenticate</a>|profile|||razsun|
+1192939876|1192939876|127.0.0.1|Profile Session timed out. <a href="http://localhost/cgi-bin/forum/YaBB.pl?action=profileCheck;username=razsun">Please Re-Authenticate</a>|profile|||razsun|
+1192942435|1192942435|127.0.0.1|Profile Session timed out. <a href="http://localhost/cgi-bin/forum/YaBB.pl?action=profileCheck;username=razsun">Please Re-Authenticate</a>|profile|||razsun|
+1192945113|1192945113|127.0.0.1|Only spaces and line feeds is not considered a useful contribution! |post2|1131465600|general|razsun|
+1192946353|1192946353|127.0.0.1|Untrapped Error:<br />Missing right curly or square bracket at ./sources/Post.pl line 2009, at end of linesyntax error at ./sources/Post.pl line 2009, at EOFCompilation failed in require at D:/bubbleweb/cgi-bin/forum/YaBB.pl line 161.|post|1131465600|general|razsun|

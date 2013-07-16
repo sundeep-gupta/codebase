@@ -1,0 +1,8 @@
+\Process(%ProcessName%)\% Processor Time
+\Process(%ProcessName%)\Handle Count
+\Process(%ProcessName%)\IO Read Bytes/sec
+\Process(%ProcessName%)\IO write Bytes/sec
+\Process(%ProcessName%)\Page File Bytes
+\Process(%ProcessName%)\Private Bytes
+\Process(%ProcessName%)\Virtual Bytes
+\Process(%ProcessName%)\Working Set

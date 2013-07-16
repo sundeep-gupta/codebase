@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+    <Actions>
+    	<Action>
+			<Name>DeleteTestFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderDeleteAction</Class>
+			<Destination>BaseFolder</Destination>
+		</Action>       
+    	<Action>
+			<Name>CreateFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCreateAction</Class>
+			<Destination>BackupRootFolder</Destination>
+		</Action>
+        <Action Name ="GenerateBaseFile">
+            <Class>FileCreateAction</Class>
+            <Destination>BaseFile</Destination>
+            <FileType>Text</FileType>
+            <Size>125</Size>
+            <SizeSpread>250</SizeSpread>
+            <ExcecutionMethod>sequential</ExcecutionMethod> 
+        </Action> 
+ 		<Action>
+			<Name>CopyDataToBackupFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCopyAction</Class>
+			<Source>BaseFolder</Source>
+			<Destination>BackupFolder</Destination>
+		</Action>
+		<Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>BackupFolder</Destination>
+		</Action>
+    </Actions>
+    
+    <ActionObjects>
+        <ActionObject Name="BaseFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[c:\ArchiveCorruptionPrimaryFolder\ArchiveCorruptionPrimaryTestDataFile.txt]]></Path>
+        </ActionObject>
+        <ActionObject Name="BaseFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[c:\ArchiveCorruptionPrimaryFolder]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupRootFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData]]></Path>
+        </ActionObject>
+        <ActionObject Name="BackupFolder"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveCorruptionPrimaryFolder]]></Path>
+        </ActionObject>
+            <ActionObject Name="BackupFile"> 
+            <Class>com.ironmountain.digital.qa.automation.TestRunner.ActionObjects.VariablePathFileObject</Class>
+            <Path><![CDATA[C:\MyRoamRegressionData\ArchiveCorruptionPrimaryFolder\ArchiveCorruptionPrimaryTestDataFile.txt]]></Path>
+        </ActionObject>     
+          
+    </ActionObjects>
+</Runner>

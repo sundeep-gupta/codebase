@@ -1,0 +1,25 @@
+Python modules to interface with OrbitalData accelerator User Interface (UI).
+Require python version 2.3.4 or later.
+
+Content
+  ui_ctrl.py, main program
+  ui_http.py, ui http operations
+  ui_html.py, ui html parsing
+  httpown.py, http library customization (primarily, logging)
+  common.py, general purpose classes
+  lic_pars, example of accelerator license parameters
+
+Usage examples
+
+  - List options
+
+    python ui_ctrl.py -?
+
+  - load up patch orbital-1.4.6-0.complete.i686.bin to 
+    to an OrbitalData accelerator with control address 10.200.1.2
+
+    python ui_ctrl.py -U orbital-1.4.6-0.complete.i686.bin 10.200.1.2
+
+  - create license for the accelerator above
+
+    python ui_ctrl.py -I lic_pars 10.200.1.2

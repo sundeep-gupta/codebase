@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Reinstall Agent Test Suite" verbose="2" >
+
+		<parameter name="FirstName" value="Reinstall"/>
+		<parameter name="LastName" value="User"/>
+		
+<HPQC Path="CONNECTED BACKUP\8.x\Agent"/>	
+
+		<test name="ReInstall Agent Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.amws.mat.testng.java.reinstallagent.ReinstallAgentTest"/>
+			<methods>
+				<include name="testReInstallAgent" />
+			</methods>
+		</classes>
+
+		</test>
+</suite>		 

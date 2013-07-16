@@ -1,0 +1,48 @@
+/*
+# <- ID
+. <- Class
+
+*/
+
+
+
+div.greyboxheader {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	width: 95%;
+}
+
+div.greybox {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+	border-top: 0 solid #FFFFFF;
+	border-bottom: 0 solid #FFFFFF;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	align: left;
+	width: 90%;
+}
+
+div.greyboxfooter {
+    padding: 1em;
+    border: 1px solid #2f6fab;
+    color: Black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+	width: 95%;
+}
+
+
+div.whitebox {
+    padding: 5px;
+    border: 1px dashed #2f6fab;
+    color: Black;
+    background-color: #FFFFFF;
+    line-height: 1em; 
+	align: left;
+	width: 97%;
+}

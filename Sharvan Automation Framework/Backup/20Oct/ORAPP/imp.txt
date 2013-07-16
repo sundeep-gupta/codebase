@@ -1,0 +1,33 @@
+$CompressionStats = OrbitalGet("SYSTEM",
+      array("CompressConnectionCount",
+            "CompressionClearTextBytes",
+            "CompressionCipherTextBytes",
+            "DecompressionClearTextBytes",
+            "DecompressionCipherTextBytes",
+            "TimeSincePerfCounterReset"
+         ));
+
+   $UncompressedSent = $CompressionStats["CompressionClearTextBytes"]["Total"];
+   $CompressedSent   = $CompressionStats["CompressionCipherTextBytes"]["Total"];
+
+   $UncompressedRecv = $CompressionStats["DecompressionClearTextBytes"]["Total"];
+   $CompressedRecv   = $CompressionStats["DecompressionCipherTextBytes"]["Total"];
+
+   $TimeSincePerfCounterReset = (int)$CompressionStats["TimeSincePerfCounterReset"];
+
+   /* TEST DATA
+        $UncompressedSent = 500 * 10000;
+        $CompressedSent = 400 * 10000;
+        $UncompressedRecv = 4900 * 10000;
+        $CompressedRecv   = 850 * 10000;
+   */
+
+   $SendCompRatio    = FormatRatio($UncompressedSent,   $CompressedSent);
+   $RecvCompRatio    = FormatRatio($UncompressedRecv, $CompressedRecv);
+
+   $SlowSendRate        = GetParameter("SlowSendRate");
+   if (($CompressedSent + $CompressedRecv) != 0) {
+      $EffectiveThroughput = (($UncompressedSent + $UncompressedRecv) / ($CompressedSent + $CompressedRecv)) * $SlowSendRate;
+   }else{
+      $EffectiveThroughput = "N/A";
+   }

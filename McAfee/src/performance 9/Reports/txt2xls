@@ -1,0 +1,60 @@
+#!/usr/bin/perl -w
+use lib '/Volumes/DATA/msmc_perf';
+use Includes::Virex;
+use strict;
+
+my $root_path = '/Volumes/DATA/msmc_perf';
+$ENV{ROOT_PATH} = $root_path;
+
+
+use Spreadsheet::WriteExcel;
+
+
+if($#ARGV ne 1)
+{
+print "\n Usage: txt2xls \n Example: txt2xls \"|\" *.psv\n\n";
+}
+
+my $token;
+my $file;
+my $del;
+my $wb;
+my @files = @ARGV[1..$#ARGV];
+print "FILES = @files \n";
+foreach $file (@files){
+open (TXTFILE, "$file") or die;
+my $wb = Spreadsheet::WriteExcel->new("$file.xls");
+my $excel = $wb->addworksheet();
+my $row = 0;
+my $col = 0;
+
+while (<TXTFILE>) {
+chomp;
+print "ARGV = $ARGV[0] \n";
+if ($ARGV[0] =~ /\|/)
+{
+print "In if loop\n";
+$del="\\|";
+}
+else
+{
+print "In else loop\n";
+$del = $ARGV[0];
+}
+
+my @Fld = split(/$del/, $_);
+$col = 0;
+foreach $token (@Fld) {
+print "in foreach token = $token \n";
+my @temp = split(/\  +/,$token);
+my $tmp = scalar(@temp);
+foreach my $a (@temp) {
+print "row = $row, col = $col \n";
+$excel->write($row, $col, $a);
+$col++;
+}
+}
+$row++;
+}
+}
+##########################################################

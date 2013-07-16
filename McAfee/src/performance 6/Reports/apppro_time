@@ -1,0 +1,18 @@
+
+file - /Volumes/DATA/ssm_perf/file1
+
+real	0m0.005s
+user	0m0.001s
+sys	0m0.002s
+
+file - /Volumes/DATA/ssm_perf/file2
+
+real	0m0.005s
+user	0m0.001s
+sys	0m0.002s
+
+file - /Volumes/DATA/ssm_perf/file3
+
+real	0m0.005s
+user	0m0.001s
+sys	0m0.002s

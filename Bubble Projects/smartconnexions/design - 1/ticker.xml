@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xmlticker>
+<pause>3000</pause>
+<message>Welcome to Dynamic Drive</message>
+<message url="http://www.dynamicdrive.com">Link to Dynamic Drive</message>
+<message url="http://www.javascriptkit.com" target="_blank">Check out JavaScriptKit.com</message>
+<message>This is a sample text message</message>
+<message>This is another sample text message</message>
+</xmlticker>

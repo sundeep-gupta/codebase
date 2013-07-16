@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testresults product="Connected BackUp" version="Potomac build  12.0.0.0201-v8.4.2"><QCmachine>TEMP_HPQC_MACHINE</QCmachine><sandbox>c:\test</sandbox><test><testpath>Connected BackUp\Potomac build  12.0.0.0201-v8.4.2\Kanawha Webapp UI Test Suite</testpath><testset>Kanawha_Webapp_UI_Test_Suite</testset><testname>Apply_Change_And_Reset_Branding_Test</testname><runname>Apply_Change_And_Reset_Branding_Test_24_6_11_5_50_PM</runname><status>PASSED</status><starttime>2011-06-24:17:45:46.000</starttime><stoptime>2011-06-24:17:50:44.000</stoptime><resultdetail>
+	TestNG parameters:
+	autouser1@ui.com
+	1Connected
+	sprint15
+	C:\workspace\PageObjectKanawha\resources\SiteImageHeaderSpiderMan.png
+	Spider Man
+	C:\workspace\PageObjectKanawha\resources\SiteHeaderBatMan.png
+	Bat Man
+</resultdetail><host>msompura-lt</host><platform>Windows 7</platform><osversion>6.1</osversion><testcycle>First-Pass</testcycle><configuration>32Bit-Cluster-Fresh</configuration><browser>IE7</browser></test><test><testpath>Connected BackUp\Potomac build  12.0.0.0201-v8.4.2\Kanawha Webapp UI Test Suite</testpath><testset>Kanawha_Webapp_UI_Test_Suite</testset><testname>Apply_And_Verify_Branding_Test</testname><runname>Apply_And_Verify_Branding_Test_24_6_11_5_50_PM</runname><status>FAILED</status><starttime>2011-06-24:17:43:45.000</starttime><stoptime>2011-06-24:17:45:45.000</stoptime><resultdetail>
+	TestNG parameters:
+	autouser1@ui.com
+	1Connected
+	sprint15
+	C:\workspace\PageObjectKanawha\resources\SiteImageHeaderSpiderMan.png
+	Spider Man
+</resultdetail><host>msompura-lt</host><platform>Windows 7</platform><osversion>6.1</osversion><testcycle>First-Pass</testcycle><configuration>32Bit-Cluster-Fresh</configuration><browser>IE7</browser></test><test><testpath>Connected BackUp\Potomac build  12.0.0.0201-v8.4.2\Kanawha Webapp UI Test Suite</testpath><testset>Kanawha_Webapp_UI_Test_Suite</testset><testname>Verify_Default_Branding_Test</testname><runname>Verify_Default_Branding_Test_24_6_11_5_50_PM</runname><status>PASSED</status><starttime>2011-06-24:17:42:34.000</starttime><stoptime>2011-06-24:17:43:45.000</stoptime><resultdetail>
+	TestNG parameters:
+	autouser1@ui.com
+	1Connected
+	sprint15
+</resultdetail><host>msompura-lt</host><platform>Windows 7</platform><osversion>6.1</osversion><testcycle>First-Pass</testcycle><configuration>32Bit-Cluster-Fresh</configuration><browser>IE7</browser></test></testresults>

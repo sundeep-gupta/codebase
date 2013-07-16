@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testcase>
+<host_address>172.16.11.216 </host_address>
+<username>orbital.user1</username>
+<password>abc123</password>
+<from>orbital.user1@mybug.applabs.net</from>
+<to>orbital.user1@mybug.applabs.net</to>
+<subject>A message with 2 parts</subject>
+<message>This is Test mail for DBC2</message>
+<attach>DBC7.zip</attach>
+</testcase>

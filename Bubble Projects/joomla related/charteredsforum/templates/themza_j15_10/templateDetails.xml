@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>themza_j15_10</name>
+	<version>1.0.2</version>
+	<creationDate>2008-10-07</creationDate>
+	<author>Themza Team</author>
+	<authorEmail>templates@themza.com</authorEmail>
+	<authorUrl>http://www.themza.com</authorUrl>
+	<copyright>ThemZa 2008</copyright>
+	<license>ThemZa TOS</license>
+	<description>Rise of Technology</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>params.ini</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+				
+		<filename>css/index.html</filename>
+		<filename>css/template.css</filename>
+		<filename>css/blueorange.css</filename>
+		<filename>css/greenorange.css</filename>
+		<filename>css/turquoiseblue.css</filename>
+		<filename>css/christmas.css</filename>
+		
+		<filename>html/index.html</filename>
+		<filename>html/modules.php</filename>
+		<filename>html/pagination.php</filename>
+		
+		<filename>images/banner1.jpg</filename>
+		<filename>images/banner2.jpg</filename>
+		<filename>images/banner3.jpg</filename>
+		<filename>images/banner4.jpg</filename>
+		<filename>images/contentheading_line.png</filename>
+		<filename>images/footer_bg.png</filename>
+		<filename>images/index.html</filename>
+		<filename>images/logo1.gif</filename>
+		<filename>images/logo2.gif</filename>
+		<filename>images/logo3.gif</filename>
+		<filename>images/logo4.gif</filename>
+		<filename>images/logo5.gif</filename>
+		<filename>images/logo6.gif</filename>
+		<filename>images/menu_col.gif</filename>
+		<filename>images/middle_bg.png</filename>
+		<filename>images/rub_bottom.png</filename>
+		<filename>images/rub_footer_bottom.png</filename>
+		<filename>images/search_bg.png</filename>
+		
+		<filename>images/blueorange/banner_bg.png</filename>
+		<filename>images/blueorange/bg_left_h3.png</filename>
+		<filename>images/blueorange/bg_logo.png</filename>
+		<filename>images/blueorange/bg_menu.png</filename>
+		<filename>images/blueorange/bg_read_more.png</filename>
+		<filename>images/blueorange/bg_right_h3.png</filename>
+		<filename>images/blueorange/f_area_h3.png</filename>
+		<filename>images/blueorange/menu_arrow.png</filename>
+		<filename>images/blueorange/menu_hover.png</filename>
+		<filename>images/blueorange/middle_bg.png</filename>
+		<filename>images/blueorange/search_bg.png</filename>
+		
+		<filename>images/greenorange/banner_bg.png</filename>
+		<filename>images/greenorange/bg_left_h3.png</filename>
+		<filename>images/greenorange/bg_logo.png</filename>
+		<filename>images/greenorange/bg_maincolumn.png</filename>
+		<filename>images/greenorange/bg_menu.png</filename>
+		<filename>images/greenorange/bg_read_more.png</filename>
+		<filename>images/greenorange/bg_right_h3.png</filename>
+		<filename>images/greenorange/f_area_h3.png</filename>
+		<filename>images/greenorange/menu_arrow.gif</filename>
+		<filename>images/greenorange/menu_hover.png</filename>
+		<filename>images/greenorange/middle_bg.png</filename>
+		<filename>images/greenorange/rub_bottom.png</filename>
+		<filename>images/greenorange/rub_footer_bottom.png</filename>
+		<filename>images/greenorange/search_bg.png</filename>
+		
+		<filename>images/turquoiseblue/banner_bg.png</filename>
+		<filename>images/turquoiseblue/bg_left_h3.png</filename>
+		<filename>images/turquoiseblue/bg_logo.png</filename>
+		<filename>images/turquoiseblue/bg_menu.png</filename>
+		<filename>images/turquoiseblue/bg_read_more.png</filename>
+		<filename>images/turquoiseblue/bg_right_h3.png</filename>
+		<filename>images/turquoiseblue/f_area_h3.png</filename>
+		<filename>images/turquoiseblue/menu_arrow.png</filename>
+		<filename>images/turquoiseblue/menu_hover.png</filename>
+		<filename>images/turquoiseblue/middle_bg.png</filename>
+		<filename>images/turquoiseblue/search_bg.png</filename>
+		
+		<filename>images/christmas/bg_page.png</filename>
+		<filename>images/christmas/banner_bg.png</filename>
+		<filename>images/christmas/bg_left_h3.png</filename>
+		<filename>images/christmas/bg_logo.png</filename>
+		<filename>images/christmas/bg_menu.png</filename>
+		<filename>images/christmas/bg_read_more.png</filename>
+		<filename>images/christmas/bg_right_h3.png</filename>
+		<filename>images/christmas/f_area_h3.png</filename>
+		<filename>images/christmas/menu_arrow.png</filename>
+		<filename>images/christmas/menu_hover.png</filename>
+		<filename>images/christmas/middle_bg.png</filename>
+		<filename>images/christmas/search_bg.png</filename>
+	</files>
+	<positions>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>debug</position>
+		<position>syndicate</position>
+	</positions>
+	<params>
+		<param name="pageAlignment" type="radio" default="center" label="Page Alignment" description="Page Alignment">
+			<option value="left">left</option>
+			<option value="center">center</option>
+			<option value="right">right</option>
+		</param>
+		<param type="spacer" />
+		<param name="themeVariation" type="list" default="blueorange" label="Theme Variation" description="Your favourite theme">
+			<option value="blueorange">Blue / Orange</option>
+			<option value="greenorange">Green / Orange</option>
+			<option value="turquoiseblue">Turquoise Blue</option>
+			<option value="christmas">Christmas</option>
+		</param>
+		<param type="spacer" />
+		<param name="hideBannerArea" type="radio" default="0" label="Hide Banner Area" description="Hide the banner section under the menu.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="bannerVariation" type="list" default="2" label="Banner Variation" description="Banner to use">
+			<option value="1">Banner 1</option>
+			<option value="2">Banner 2</option>
+			<option value="3">Banner 3</option>
+			<option value="4">Christmas</option>
+		</param>
+		<param type="spacer" />
+		<param name="hideLogo" type="radio" default="0" label="Hide Logo" description="Hide the logo.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="logoVariation" type="list" default="3" label="Logo Variation" description="Logo to use">
+			<option value="1">Logo 1</option>
+			<option value="2">Logo 2</option>
+			<option value="3">Logo 3</option>
+			<option value="4">Logo 4</option>
+			<option value="5">Logo 5</option>
+			<option value="6">Christmas</option>
+		</param>
+		<param name="logoFont" type="list" default="trebuchet" label="Logo Font" description="Logo font family to use">
+			<option value="tahoma">Tahoma</option>
+			<option value="verdana">Verdana</option>
+			<option value="trebuchet">Trebuchet MS</option>
+			<option value="times">Times New Roman</option>
+			<option value="arial">Arial</option>
+			<option value="helvetica">Helvetica</option>
+			<option value="georgia">Georgia</option>
+			<option value="geneva">Geneva</option>
+		</param>
+		<param type="spacer" />
+		<param name="dateDisplay" type="radio" default="1" label="Date Display" description="Display the date in the top right corner of the template.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

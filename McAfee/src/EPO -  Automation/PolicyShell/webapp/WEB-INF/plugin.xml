@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- resource -->
+	<bean id="policyshell.resource"
+		class="com.mcafee.orion.core.spring.SpringResource">
+		<constructor-arg index="0" value="PolicyShellMessages" />
+	</bean>
+
+	<bean id="policyshell.plugin"
+		class="com.mcafee.orion.core.plugin.DefaultPlugin">
+		<property name="name" value="policyshell" />
+        <property name="displayKey" value="PolicyShell.module.name"/>
+        <property name="resource" ref="policyshell.resource" />
+		<property name="requires">
+			<list>
+				<value>core</value>
+				<value>PolicyMgmt</value>
+                <value>EPOCore</value>
+			</list>
+		</property>
+	</bean>
+</beans>

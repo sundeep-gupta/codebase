@@ -1,0 +1,75 @@
+<data version="1.5.3113.1">
+  <WebInfo>
+    <Folder>D:\Bubble\galleries\</Folder>
+    <Theme>6</Theme>
+    <GenAdvOpt>0</GenAdvOpt>
+    <AlbumNameSeed>3</AlbumNameSeed>
+    <ThemeFolder>D:\Bubble\webgallery_themes\Theme032-SizzlingShoot\Theme032-SizzlingShoot</ThemeFolder>
+    <ThemeName>Sizzling shoot - #032</ThemeName>
+    <WebName>Bubble Gallery</WebName>
+    <LastUploaded>125911386000000000</LastUploaded>
+    <ShowMenuBar>False</ShowMenuBar>
+  </WebInfo>
+  <album>
+    <info>
+      <albumpage>Album3</albumpage>
+      <albumimagepath>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\All_Set.jpg</albumimagepath>
+      <albumimage>All_Set.jpg</albumimage>
+      <albumimagenoext>All_Set</albumimagenoext>
+      <albumdescr>Sunset @ Chamundi Hills &amp; Tank Bund</albumdescr>
+      <albumchanged>True</albumchanged>
+    </info>
+    <group>
+      <picture>
+        <name>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\All_Set.jpg</name>
+        <shortname>All_Set.jpg</shortname>
+        <shortnamenoext>All_Set</shortnamenoext>
+        <descr>All_Set.jpg</descr>
+        <rotate>0</rotate>
+        <crop>0</crop>
+        <source>True</source>
+        <changed>True</changed>
+      </picture>
+      <picture>
+        <name>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\Almost_There.jpg</name>
+        <shortname>Almost_There.jpg</shortname>
+        <shortnamenoext>Almost_There</shortnamenoext>
+        <descr>Almost_There.jpg</descr>
+        <rotate>0</rotate>
+        <crop>0</crop>
+        <source>True</source>
+        <changed>True</changed>
+      </picture>
+      <picture>
+        <name>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\Gone....jpg</name>
+        <shortname>Gone....jpg</shortname>
+        <shortnamenoext>Gone...</shortnamenoext>
+        <descr>Gone....jpg</descr>
+        <rotate>0</rotate>
+        <crop>0</crop>
+        <source>True</source>
+        <changed>True</changed>
+      </picture>
+      <picture>
+        <name>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\Spreading_the_Color.jpg</name>
+        <shortname>Spreading_the_Color.jpg</shortname>
+        <shortnamenoext>Spreading_the_Color</shortnamenoext>
+        <descr>Spreading_the_Color.jpg</descr>
+        <rotate>0</rotate>
+        <crop>0</crop>
+        <source>True</source>
+        <changed>True</changed>
+      </picture>
+      <picture>
+        <name>D:\raz\Pics\20th April-Mysore\smallones\bubble-pics\sunset@tankbund.jpg</name>
+        <shortname>sunset_tankbund.jpg</shortname>
+        <shortnamenoext>sunset_tankbund</shortnamenoext>
+        <descr>sunset@tankbund.jpg</descr>
+        <rotate>0</rotate>
+        <crop>0</crop>
+        <source>True</source>
+        <changed>True</changed>
+      </picture>
+    </group>
+  </album>
+</data>

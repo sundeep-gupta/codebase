@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <title>Product Scenarios</title>
+  <HTA:APPLICATION
+		ID=""
+		APPLICATIONNAME="LVTSetup"
+		SCROLL="auto"
+		SYSMENU="yes"
+		MAXIMIZEBUTTON="no"
+		CAPTION="yes"
+		ICON="explorer.exe"
+		SINGLEINSTANCE="yes"
+		WINDOWSTATE=""
+		innerBorder="yes"
+		navigable="yes"
+		scrollFlat="yes"
+		contextMenu="yes"
+		selection="yes">
+</HTA:APPLICATION>
+<link rel="stylesheet" type="text/css" href="./Resources/styles/style.css" />
+<script src="./Resources/scripts/ProductScenarios.vbs" type="text/vbscript">
+</script>
+</head>
+
+<body onload="LoadConfig"  onfocus="GetInstallDir">
+<form id="form_productscenario" name="form_productscenario">
+<table width="100%">
+<tr><td id="McAfeeLogo"></td></tr>
+<tr>
+	<td class="NavBar">
+		<ul id="navTop">
+			<li><a href="Performance Test Suite.hta" class="Link1">Home</a></li>
+			<li><a href="User Scenarios.hta" class="Link1">User Scenarios</a></li>
+			<li><a target="_blank" href="../Product Scenarios/ProductScenariosConfig.ini" class="Link1">View Config</a></li>
+			<li><a href="Help.html" class="Link1">Help</a></li>
+		</ul>
+	</td>
+</tr>
+</table>
+	<table width="40%">
+	<tr>
+		<td>Number of Iterations 
+		<select name="cmb_iterations" size="1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="20">20</option>
+		</select>
+		</td>
+		<td>Sleep Time</td>
+		<td>
+			<select name="cmb_sleeptime" size="1">
+			<option value="1">1</option>
+			<option value="3" selected>3</option>
+			<option value="5">5</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="12">12</option>
+			<option value="15">15</option>
+			<option value="18">18</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			</select>
+			<font>&nbsp;Mins</font>
+		</td>
+	</tr>
+	</table>
+    <br>
+
+    
+    <fieldset>
+      <legend><strong>Updates</strong></legend><br>
+      <input type="checkbox" name="chk_runupdates" value="1">Run Updates&nbsp;&nbsp;
+		<input type="checkbox" name="chk_updates_init" value="ON"> Check Updates 
+		Initialization time<br>
+      <br>
+
+      <table width="100%" border="0">
+        <tbody>
+          <tr align="center">
+            <td>MSK<input type="checkbox" value="1" name="chk_mskfilter_updates"> Filter Updates&nbsp;&nbsp;&nbsp;<input type="checkbox" value="2" name="chk_mskproduct_updates"> Product Updates</td>
+
+            <td><input type="checkbox" name="chk_msc_updates"> MSC</td>
+
+            <td><input type="checkbox" name="chk_mps_updates"> MPS</td>
+
+            <td><input type="checkbox" name="chk_mbk_updates"> MBK</td>
+
+            <td><input type="checkbox" name="chk_mqc_updates"> MQC</td>
+
+            <td><input type="checkbox" name="chk_mhn_updates"> MHN</td>
+
+            <td><input type="checkbox" name="chk_nmc_updates"> NMC</td>
+          </tr>
+
+          <tr align="center">
+            <td>VSO&nbsp;<input type="checkbox" value="1" name="chk_vsodat_updates"> DAT Updates&nbsp;&nbsp;&nbsp;<input type="checkbox" value="2" name="chk_vsoproduct_updates"> Product Updates</td>
+
+            <td><input type="checkbox" name="chk_mpf_updates"> MPF</td>
+          </tr>
+        </tbody>
+      </table><br>
+    </fieldset>
+    <fieldset>
+      <legend><strong>EmailScan</strong></legend><br>
+      <input type="checkbox" name="chk_runemailscan">Run EmailScan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="chk_deletemails" value="ON" checked> Delete 
+		Mails on server before sending&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="radio_sendemails" value="0"  onclick="vbscript:form_productscenario.chk_deletemails.checked=false"> Don't Send Emails <input type="radio" value="1" checked name="radio_sendemails"  onclick="vbscript:form_productscenario.chk_deletemails.checked=true"> 
+		Send first time only&nbsp; <input type="radio" name="radio_sendemails" value="2"  onclick="vbscript:form_productscenario.chk_deletemails.checked=true"> 
+		Send every 
+		time<br>
+
+      <table cellspacing="1" cellpadding="1" width="100%">
+        <tbody align="center">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" name="chk_cleanemails"> <font color="#0000CC">Clean Emails</font></td>
+          </tr>
+
+          <tr>
+            <td>POP3 Server</td>
+
+            <td><input value="172.16.217.11" name="txt_cleanpopserver"></td>
+
+            <td>User Name</td>
+
+            <td><input size="30" value="Clean" name="txt_cleanusername"></td>
+
+            <td>To Email ID</td>
+
+            <td><input size="30" name="txt_cleantoemailid" value="Clean@Qaconsumer.com"></td>
+
+            <td>Password</td>
+
+            <td><input type="password" size="10" name="txt_cleanpassword" value="a"></td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" name="chk_spamemails"> <font color="#0000CC">Spam Emails</font></td>
+          </tr>
+
+          <tr>
+            <td>POP3 Server</td>
+
+            <td><input value="172.16.217.11" name="txt_spampopserver"></td>
+
+            <td>User Name</td>
+
+            <td><input size="30" value="Spam" name="txt_spamusername"></td>
+
+            <td>To Email ID</td>
+
+            <td><input size="30" name="txt_spamtoemailid" value="Spam@Qaconsumer.com"></td>
+
+            <td>Password</td>
+
+            <td><input type="password" size="10" name="txt_spampassword" value="a"></td>
+          </tr>
+        </tbody>
+      </table><br>
+    </fieldset>
+
+     <fieldset>
+      <legend><strong>McShell</strong> <strong>Launch</strong></legend><br>
+
+      <table width="60%">
+        <tbody>
+          <tr>
+            <td><input type="checkbox" name="chk_runmcshell">Launch Mchsell</td>
+            <td>McShell Path <input type="text" size="40" name="file_mcshellpath" readonly></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset><br>
+
+    <table>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="chk_runsystemscan"> System Scan</td>
+          <td><input type="checkbox" name="chk_runinrcmtlupdates">Incremental Updates</td>
+		  <td><input type="checkbox" name="chk_runrightclickscan">Right-Click Scan</td>
+		  <td><input type="checkbox" name="chk_runscheduledscan">Scheduled Scan</td>
+		  <td><input type="checkbox" name="chk_runodsartemis">ODS (Artemis ON)</td>
+        </tr>
+     </tbody>
+    </table><br>
+    <br>
+    <input onclick="SaveConfig" type="button" value="Save !!!" name="btn_save">
+  </form>
+</body>
+</html>

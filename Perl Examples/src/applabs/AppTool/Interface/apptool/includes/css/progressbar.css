@@ -1,0 +1,38 @@
+/* Progress Bar */
+
+.mailbar {
+	background-image: url(../images/progressbar-bg.gif);
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 704px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.baritems {
+	padding-top: 10px;
+	padding-left: 7px;
+	text-align: left;
+    margin: 0;
+}
+.statusbox {
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 50%;
+	width: 514px;
+	margin-left: -257px;
+	height: 90px;
+}
+.percentbox {
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 50%;
+	width: 514px;
+	margin-left: -257px;
+	height: 90px;
+	font-family: "Trebuchet MS", Arial, Helvetica;
+	font-size: 24px;
+	font-weight: bold;
+	color: #999999;
+	text-align: center;
+}
+

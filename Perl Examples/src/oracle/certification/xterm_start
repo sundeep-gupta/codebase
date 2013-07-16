@@ -1,0 +1,18 @@
+#!/bin/sh
+xterm -sb -sl 10000 -title staxi20-1 &
+xterm -sb -sl 10000 -title staxi20-2 &
+xterm -sb -sl 10000 -title staxi20-3 &
+xterm -sb -sl 10000 -title staxi20-4 &
+xterm -sb -sl 10000 -title staxi20-5 &
+xterm -sb -sl 10000 -title staxi20-6 &
+xterm -sb -sl 10000 -title staxi20-7 &
+xterm -sb -sl 10000 -title staxi20-8 &
+xterm -sb -sl 10000 -title staxi20-9 &
+xterm -sb -sl 10000 -title staxi20-10 &
+xterm -sb -sl 10000 -title staxi20-11 &
+xterm -sb -sl 10000 -title staxi20-12 &
+xterm -sb -sl 10000 -title staxi20-13 &
+xterm -sb -sl 10000 -title staxi20-14 &
+xterm -sb -sl 10000 -title staxi20-15 &
+xterm -sb -sl 10000 -title staxi20-16 &
+

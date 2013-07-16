@@ -1,0 +1,108 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LoginTestsSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="test Single Account User Login">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testSingleAccountUserLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Invalid User Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testInvalidUserLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Invalid Pass Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testInvalidPassLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Special Char User Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testSpecialCharUserLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Alphanumeric Password Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testAlphanumericPasswordLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Password Case Sensitivity">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testPasswordCaseSensitivity" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test Multiple User Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testMultipleUserLogin" />
+			</methods>
+		</classes>		
+</test>
+<test name="test Cancelled Acc Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testCancelledAccLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="test OnHold Acc Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testOnHoldAccLogin" />
+			</methods>
+		</classes>		
+</test>
+
+<!--test name="test GetDevices After Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testGetDevicesAfterLogin" />
+			</methods>
+		</classes>		
+</test-->
+
+<test name="test Search After Login">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.loginAuthTest"/>
+			<methods>
+				<include name="testSearchAfterLogin" />
+			</methods>
+		</classes>		
+</test>
+
+</suite>

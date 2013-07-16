@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009  McAfee, Inc. All rights reserved. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/bin:/sbin:/usr/bin:/usr/local/TAF/STAF/bin:/usr/local/bin:/usr/sbin</string>
+		<key>DYLD_LIBRARY_PATH</key>
+		<string>/usr/local/TAF/lib:/usr/local/TAF/STAF/lib/</string>
+		<key>CLASSPATH</key>
+		<string>/usr/local/TAF/STAF/lib/JSTAF.jar:/usr/local/TAF/STAF/samples/demo/STAFDemo.jar</string>
+		<key>STAFCODEPAGE</key>
+		<string>ascii-7</string>
+		<key>STAFCONVDIR</key>
+		<string>/usr/local/TAF/STAF/codepage</string>
+		<key>STAF_INSTANCE_NAME</key>
+		<string>STAF</string>
+	</dict>
+	<key>InitGroups</key>
+	<false/>
+	<key>Label</key>
+	<string>com.mcafee.taf.staf</string>
+	<key>OnDemand</key>
+	<false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/TAF/STAF/bin/STAFProc</string>
+	</array>
+</dict>
+</plist>

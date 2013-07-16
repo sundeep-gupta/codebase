@@ -1,0 +1,17 @@
+<suite>
+
+<test name="MANAGEMENT_API_AMWS_URI_REFERENCE">
+	<input>
+	
+	    /* Format To Be Followed  [  API Name : URI Template ]  */
+	    
+	    /* URI_TEMPLATE_GET_AGENT_SCHEDULE
+		<param name="GetAgentPrefSchedule">"/ManagementAPI/ManagementService.svc/accounts/"+accountNumber+"/agentpreferences/AgentPrefSchedule"</param>
+		
+		/* URI_TEMPLATE_SET_AGENT_SCHEDULE */
+		<param name="SetAgentPrefSchedule">"/ManagementAPI/ManagementService.svc/accounts/"+accountNumber+"/agentpreferences/AgentPrefSchedule"</param>
+		
+	</input>			
+</test>
+
+</suite>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PageObjectFramework" basedir="." default="runFrameworkBuild">
+
+<!-- Loading the xml file as properties -->
+
+<xmlproperty file="${basedir}/config/frameworkconfig.xml"/>
+<xmlproperty file="${basedir}/config/testconfig.xml"/>
+
+
+<property name="classes.dir" value="${basedir}/classes"/>
+<property name="jar.dir"     value="${basedir}/jar"/>
+
+
+<tstamp>
+	<format property="buildstarttime" pattern="dd-MMMM-yyyy hh:mm:ss aa" unit="millisecond"/>
+</tstamp>
+
+
+<path id="webtestpath">
+	<fileset dir="${basedir}/lib">
+		<include name="**/*.jar"/>
+	</fileset>
+	<pathelement location="${basedir}/config"/>
+	<pathelement location="${basedir}/classes"/>
+	<pathelement location="${basedir}/lib"/>
+</path>
+
+<target name="clean" description="Deleting all the Output directories">
+	<delete dir="classes"/>
+	<delete dir="${frameworkconfig.testreportdir}"/>
+	<delete dir="test-output"/>
+	<delete dir="testng"/>
+	<delete dir="${frameworkconfig.downloadsdir}"/>
+	<delete file="${basedir}/config/build-properties.properties"/>
+	<delete file="${basedir}/result.txt"/>	
+</target>
+
+<target name="compile" description="Compiling the tests">
+	<delete dir="classes"/>
+	<mkdir dir="classes"/>
+	<javac srcdir="src" destdir="classes" classpathref="webtestpath">
+  		<compilerarg value="-Xlint:unchecked"/> 	
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+	</javac>
+</target>
+
+<target name="jar" depends="compile">
+    <mkdir dir="${jar.dir}"/>
+    <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+		<manifest>
+	      <!-- Who is building this jar? -->
+	      <attribute name="Built-By" value="${user.name}"/>
+		</manifest>
+    </jar>
+</target>
+
+
+<target name="createjar" depends="jar">
+    <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+</target>
+
+<target name="runFrameworkBuild"  depends ="clean,compile,createjar" 
+	description="Use this to build the latest pageobject framework jar">
+</target> 
+
+
+</project>

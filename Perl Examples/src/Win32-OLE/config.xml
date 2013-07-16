@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<initialization_variables>
+<orbitals>
+<machine>
+  <name>ODC1</name>
+  <ip_address>216.119.192.21</ip_address>
+  <os>CentOS</os>
+  <password>superorbital13</password>
+  <settings>
+    <CIFS.AcceleratedIPs>[]</CIFS.AcceleratedIPs>
+    <CIFS.DirectoryPullEnabled>1</CIFS.DirectoryPullEnabled>
+    <CIFS.DirectoryPushEnabled>1</CIFS.DirectoryPushEnabled>
+    <CIFS.MetaDataCachingEnabled>1</CIFS.MetaDataCachingEnabled>
+    <CIFS.OnlyAccelIPs>0</CIFS.OnlyAccelIPs>
+    <CIFS.Passthrough>0</CIFS.Passthrough>
+    <CIFS.PreFetchMetaDataEnabled>1</CIFS.PreFetchMetaDataEnabled>
+    <CIFS.ReadAheadEnabled>1</CIFS.ReadAheadEnabled>
+    <CIFS.TraceLevel>3</CIFS.TraceLevel>
+    <CIFS.WBforceAlways>0</CIFS.WBforceAlways>
+    <CIFS.WriteBehindEnabled>1</CIFS.WriteBehindEnabled>
+    <Compression.EnableCompression>1</Compression.EnableCompression>
+    <Passthrough>0</Passthrough>
+    <SlowSendRate>20000000</SlowSendRate>
+    <Trace>1</Trace>
+    <Trace.Packets>0</Trace.Packets>
+    <UsePolicySettings>0</UsePolicySettings>
+  </settings>
+  <user>root</user>
+</machine>
+<machine>
+  <name>ODS1</name>
+  <ip_address>216.119.192.132</ip_address>
+  <os>CentOS</os>
+  <password>superorbital13</password>
+  <settings>
+    <CIFS.AcceleratedIPs>[]</CIFS.AcceleratedIPs>
+    <CIFS.DirectoryPullEnabled>1</CIFS.DirectoryPullEnabled>
+    <CIFS.DirectoryPushEnabled>1</CIFS.DirectoryPushEnabled>
+    <CIFS.MetaDataCachingEnabled>1</CIFS.MetaDataCachingEnabled>
+    <CIFS.OnlyAccelIPs>0</CIFS.OnlyAccelIPs>
+    <CIFS.Passthrough>0</CIFS.Passthrough>
+    <CIFS.PreFetchMetaDataEnabled>1</CIFS.PreFetchMetaDataEnabled>
+    <CIFS.ReadAheadEnabled>1</CIFS.ReadAheadEnabled>
+    <CIFS.TraceLevel>3</CIFS.TraceLevel>
+    <CIFS.WBforceAlways>0</CIFS.WBforceAlways>
+    <CIFS.WriteBehindEnabled>1</CIFS.WriteBehindEnabled>
+    <Compression.EnableCompression>0</Compression.EnableCompression>
+    <Passthrough>0</Passthrough>
+    <SlowSendRate>20000000</SlowSendRate>
+    <Trace>1</Trace>
+    <Trace.Packets>0</Trace.Packets>
+    <UsePolicySettings>0</UsePolicySettings>
+  </settings>
+  <user>root</user>
+</machine>
+</orbitals>
+<wansim>
+  <name>WANSim</name>
+  <ip_address>216.119.192.126</ip_address>
+  <settings>
+    <bandwidth>45</bandwidth>
+    <delay>25</delay>
+    <plr>0.01</plr>
+  </settings>
+</wansim>
+<test_case>
+	<ip_address>10.201.201.97</ip_address>
+	<release>2.2.0.7</release>
+	<header>SM3.0</header>
+</test_case>
+</initialization_variables>

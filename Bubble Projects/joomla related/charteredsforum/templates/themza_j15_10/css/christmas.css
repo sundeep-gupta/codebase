@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*** red ***/
+#page_bg {
+	background: #3A3A3A url(../images/christmas/bg_page.png) top left repeat-x;
+}
+a:link, a:visited {
+	color: #BD4036;
+	text-decoration:underline;
+}
+
+a:hover {
+	color: #BD4036;
+}
+
+a.logo:link,a.logo:hover, a.logo:visited{
+	color: #BD4036;
+}
+
+div#logo_bg{
+	background: #FFFFFF;
+}
+
+div#banner_bg{
+	background: #57B08D url(../images/christmas/banner_bg.png) top  repeat-x;
+}
+
+#user3{
+	background: #E6E6E0 url(../images/christmas/bg_menu.png) top  repeat-x;
+	border-left: 1px solid #A5A5A5;
+	border-right: 1px solid #A5A5A5;
+}
+div#user4 div.search{
+	width:262px;
+	height:53px;
+	text-align:left;
+	padding-top: 9px;
+	background: url(../images/christmas/search_bg.png) top right no-repeat;
+}
+#pillmenu li a, #pillmenu li a:hover, #active_menu-nav {
+	color: #FFFFFF;
+}
+#pillmenu li a:hover, #active_menu-nav {
+	color: #000000;
+}
+
+#leftcolumn h3, #leftcolumn div h3{
+	background:  url(../images/christmas/bg_left_h3.png) top left no-repeat;
+	text-align:left;
+	padding-left:10px;
+}
+#rightcolumn h3, #rightcolumn div h3{
+	background:  url(../images/christmas/bg_right_h3.png) top left no-repeat;
+	text-align:left;
+	padding-left:10px;
+}
+
+#leftcolumn div.moduletable_menu, #leftcolumn div.moduletable, #leftcolumn div.moduletable_text,
+#rightcolumn div.moduletable_menu, #rightcolumn div.moduletable, #rightcolumn div.moduletable_text{
+	background: url(../images/rub_bottom.png) left bottom no-repeat;
+	
+}
+#f_area div.moduletable_menu, #f_area div.moduletable, #f_area div.moduletable_text{
+	background: url(../images/rub_footer_bottom.png) left bottom no-repeat;
+	
+}
+div#middle_bg{
+	background: url(../images/christmas/middle_bg.png) left repeat-y;
+}
+#f_area h3{
+	background:  url(../images/christmas/f_area_h3.png) top left no-repeat;
+	text-align:left;
+	padding-left:10px;
+}
+
+a.readon, a.readon:hover, a.readon:visited{
+	display:block;
+	background:  url(../images/christmas/bg_read_more.png) top left no-repeat;
+	height:23px;
+	width:109px;
+	color:#FFFFFF;
+	text-decoration:underline;
+	font-weight:bold;
+	line-height:23px;
+	margin:10px 0px 0px 0px;
+	text-align:center;
+}
+
+ul.menu li{
+	list-style:none;
+	background:url(../images/christmas/menu_arrow.png) top left no-repeat;
+}
+ul.mostread li{
+	list-style:none;
+	background:url(../images/christmas/menu_arrow.png) top left no-repeat;
+}
+ul.latestnews li{
+	list-style:none;
+	background:url(../images/christmas/menu_arrow.png) top left no-repeat;
+}
+.moduletable ul li {
+	list-style:none;
+	background:url(../images/christmas/menu_arrow.png) top left no-repeat;
+}
+div.componentheading{
+	color:#397688;
+}
+#date {
+	color:#000000;
+}
+#banner_bg table.contentpaneopen td{
+	color: #666666;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:11px;
+}

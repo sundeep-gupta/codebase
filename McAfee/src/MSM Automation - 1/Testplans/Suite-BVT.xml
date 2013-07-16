@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009  McAfee, Inc. All rights reserved. -->
+<Testplan>	
+	<PlanID>32537</PlanID>
+	<RequiredDirectory>BVT</RequiredDirectory>
+	<Testcase>Install</Testcase>
+	<Testcase>CommonServices</Testcase>
+	<Testcase>MenuletService</Testcase>
+	<Testcase>OtherServices</Testcase>
+	<Testcase>ConsoleAppLaunch</Testcase>
+	<Testcase>OASInstallCheck</Testcase>
+	<Testcase>OASExclusion</Testcase>
+	<Testcase>OASQuarantine</Testcase>
+	<Testcase>ODSInstallCheck</Testcase>
+	<Testcase>ODSExclusion</Testcase>
+	<Testcase>ODSQuarantine</Testcase>
+	<Testcase>AppProtDefaultPref</Testcase>
+	<Testcase>AppProtDenyAccess</Testcase>
+	<Testcase>AppProtExclusion</Testcase>
+	<Testcase>AppProtNoNetworkAccess</Testcase>
+	<Testcase>FWDefaultPref</Testcase>
+	<Testcase>FWDenyAccess</Testcase>
+	<Testcase>FWAllowAccess</Testcase>
+	<Testcase>FWTrustedList</Testcase>
+	<Testcase>Update</Testcase>
+	<Testcase>Uninstall</Testcase>
+</Testplan>

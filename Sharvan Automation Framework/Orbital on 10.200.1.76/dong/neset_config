@@ -1,0 +1,13 @@
+#!/tools/bin/perl
+my $dr ='10.200.199.154';
+config_TC ($dr, 200, 0,0);
+
+sub config_TC
+{
+  print "ARGV IS @_ \n";
+  my $bw = "$_[1]"."e6";
+  print  "Configure TC DR: $_[0]\n";
+  my $set_dr = "ssh $_[0] \"\/tools\/tests\/test_common\/neset.sh \-bw $bw \-rtt $_[2] \-loss $_[3] \" ";
+  $set_dr = `$set_dr`;
+}
+

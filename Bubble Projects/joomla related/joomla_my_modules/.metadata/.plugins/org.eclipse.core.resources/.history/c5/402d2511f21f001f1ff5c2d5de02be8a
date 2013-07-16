@@ -1,0 +1,127 @@
+/**
+ * Copyright (C) 2010 TopCoder Inc., All Rights Reserved
+ */
+package com.topcoder.kestrel;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.io.File;
+/**
+ * 
+ *
+ * @author TCSDEVELOPER
+ * @version 1.0
+ * 
+ */
+public class CopyrightStatementParser {
+	private int numberOfLines;
+	private String[] searchPhrases;
+	private String[] preImportantPhrases;
+	private String[] postImportantPhrases;
+	private String copyrightSingle;
+	private String copyrightDouble;
+	private String[] preChange;
+	private String[] postChange;
+	private boolean requireChange;
+	
+	public CopyrightStatementParser(int numberOfLines, String[] searchPhrases, String copyrightSingle,
+		                            String copyrightDouble, String[] preImportantPhrases, 
+		                            String[] postImportantPhrases) {
+        this.numberOfLines = numberOfLines;
+        this.searchPhrases = searchPhrases;
+        this.copyrightSingle = copyrightSingle;
+        this.copyrightDouble = copyrightDouble;
+        this.preImportantPhrases = preImportantPhrases;
+        this.postImportantPhrases = postImportantPhrases;
+	}
+    public String[] getPreChange() {
+    	return preChange;
+    }
+    public String[] getPostChange() {
+        return postChange;
+    }
+    public boolean isRequiredChange() {
+        return requireChange;
+    }
+	public void parse(BufferedReader reader, String fileName) throws IOException {
+        /* reset preChange, postChange, and requireChange */
+        boolean packageFound = false;
+        this.requireChange = false;
+        List preChangeList = new ArrayList();
+        List postChangeList = new ArrayList();
+        int i = 0;
+        while ( packageFound == false && i < numberOfLines ) {
+            String line = reader.readLine();
+            /* reached end of file */
+            if(line == null) {
+            	break;
+            }
+            /* Store every line in buffer */
+            preChangeList.add(line);
+            
+            /* TODO: ignore tailing space characters ? */
+            if( line.beginsWith("package")) {
+                packageFound = true;
+                if(this.isValidHeader(preChangeList)) {
+                    // Write every line into
+                	Collections.copy(preChangeList, postChangeList);
+                } else {
+                    postChangeList = this.getDefaultHeader(fileName);
+                }
+            }
+            
+	    }
+	}
+    private boolean isValidHeader(List preChangeList) {
+        boolean valid = true;
+        
+        return valid;
+    }
+    private List getDefaultHeader(String fileName) {
+        List defaultHeader = new ArrayList();
+        defaultHeader.add("/*");
+        /* preImportant Header */
+        for(int i = 0; i < this.preImportantPhrases.length; i++) {
+            defaultHeader.add(" * " + this.preImportantPhrases[i]);
+        }
+        /* Copyright statement
+         *    a) find OS
+         *    b) get creation and modification years
+         *    c) decide on the type of copyright statement. 
+         */
+        long lastModified = new java.io.File(fileName).lastModified();
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis( new File(fileName).lastModified());
+        int modifiedYear = cal.get(Calendar.YEAR);
+        int createdYear = 0;
+        String os = System.getProperty("OS");
+        if(os.equals("windows")) {
+        	Runtime runtime = Runtime.getRuntime();
+        	String[] commands2 = {"cmd.exe","/c","dir "+ fileName };
+        	Process process = runtime.exec(commands2);
+        	BufferedReader cmdReader = new BufferedReader ( new InputStreamReader(process.getInputStream() ));
+        	String out;
+        	Pattern pattern = Pattern.compile("\\d\\d/\\d\\d/\\d\\d\\d\\d");
+        	while (out = cmdReader.readLine() != null) {
+        		
+        	    if(out.matches("\\d\\d/\\d\\d/\\d\\d\\d\\d")) {
+        	        // TODO : Get created year parsed.
+        	    	createdYear = 2008; 
+        	    }
+        	}
+        }
+        
+        if(modifiedYear != createdYear) {
+        	defaultHeader.add(" * " + this.copyrightDouble.replaceFirst("{0}", ""+createdYear).replaceFirst("{1}", modifiedYear));
+        } else {
+        	defaultHeader.add(" * " + this.copyrightSingle.replaceFirst("{0}", ""+createdYear));
+        }
+        
+        /* write postImportant Header */
+        for(int i = 0; i < this.postImportantPhrases.length; i++) {
+            defaultHeader.add(" * " + this.postImportantPhrases[i]);
+        }
+        defaultHeader.add("*/")	
+    }
+}

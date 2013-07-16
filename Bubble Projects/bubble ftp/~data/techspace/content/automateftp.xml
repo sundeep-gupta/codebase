@@ -1,0 +1,150 @@
+    <article>
+        <title>Automating FTP through bash shell</title>
+        <author><a href="mailto:razikh@gmail.com">--Razikh</a></author>
+        <section>
+            
+            <p>
+            Ok. So you are curious to know how to script FTP. Same was the case with me when I was supposed to execute 100's of FTP sessions through shell as part of performance test!! 
+	    Automating FTP is helpful in other scenarios as well like scheduled downloads, scheduled Directory/Tree syncing. </p>
+	     <p>Now what/which is bash shell?? Bash shell is the default shell prompt which you get on Linux Operating System.
+	    On Solaris, type bash at default prompt to get into bash shell 
+	                </p> 
+<p>
+          
+Lets get on with the code... 
+<pre>
+#------------------------------Automate_FTP.sh-------------------------------
+##################################################################
+# Automating FTP through bash shell
+
+host="xxx.yyy.zzz.ccc"
+user="User_ABC"
+pass="password_for_the_user_ABC"
+file="somefile_to_get_from_the_server"
+file2="somefile_to_be_transferred_onto_the_server"
+
+ftp -v -n $host &lt;&lt; EOF
+user $user $pass
+binary
+hash
+get $file
+put $file2
+bye 
+EOF
+
+#------------------------------------------------------------------------------
+</pre>
+          
+            </p>
+            
+	<p>
+	As you could see above, we have defined variables for hostname, user, pass &amp;
+	files to be transferred. Next we initialize ftp client with defined variable values.
+	Binary is to enable binary file transfer mode. Hash is to display hashes (My favorite pass time :))
+	while transferring files. Both of these are optional parameters.
+	Then we have used get &amp; put calls for transferring files.<br>
+	Now execute the above script Automate_FTP.sh as,</br>
+  <br>#sh  Automate_FTP.sh </br>
+  If you are at the bash shell prompt &amp; typed above script properly
+	(Dont copy &amp; paste, sometimes you might end up having white spaces ;)
+	which might effect execution )the the script should get executed properly. 
+	</p>
+ <p>Ok. This will solve the problem if we are always transferring same files. 
+What if the file to be transferred is different every time?<br>
+Thank God I could think of this limitation!!! </br><br>This can be accomplished in two ways,</br><br>
+	A - Open and Edit this script for filenames every time (My way of doing it :) :) :)) </br>
+	<br>B - Pass file names as arguments at command line. This makes sense isnt it? Lets try this,</br>
+</p>
+<p>
+
+<pre>
+#------------------------------Automate_FTP_version2.sh-------------------
+##################################################################
+# Automating FTP through bash shell
+
+host="xxx.yyy.zzz.ccc"
+user="User_ABC"
+pass="password_for_the_user_ABC"
+
+
+ftp -v -n $host &lt;&lt; EOF
+user $user $pass
+binary
+hash
+get $1
+put $2
+bye 
+EOF
+
+#-------------------------------------------------------------------------
+ </pre>
+ 
+ </p>
+
+<p>
+The difference is, now the get and put system calls, will take filenames passed as arguments while execution. So how will you execute this file?<br>
+
+	#sh Automate_FTP_version2.sh  somefile_to_get_from_the_server  somefile_to_be_transferred_onto_the_server </br>
+
+<br>
+Where, </br> 
+<br>somefile_to_get_from_the_server is the First Argument that is, $1 </br>
+<br>somefile_to_be_transferred_onto_the_server is the Second Argument that is, $2!!! </br>
+
+<br>Note: Similarly filenames can also be fetched by another file as well. Use redirectional operator. Also, say that you have number of files to be transferred, then you can use array to send across all the files or you might want to put a loop to cycle the inputs. Let me know if you need any help in these operations.</br>
+
+<br>This was simple. Now why not make the script much interactive for the users who just want to use ftp script without knowing shell/Linux terminology,</br>
+</p>
+<p>
+
+<pre>
+#------------------------------Automate_FTP_version3.sh------------------
+##################################################################
+# Automating FTP through bash shell
+
+host="xxx.yyy.zzz.ccc"
+user="User_ABC"
+pass="password_for_the_user_ABC"
+
+echo "Type in the file name to be fetched"
+read file
+echo "Type in the file name to be transferred"
+read file2
+
+ftp -v -n $host &lt;&lt; EOF
+user $user $pass
+binary
+hash
+get $file
+put $file2
+bye 
+EOF
+
+#------------------------------------------------------------------------
+
+</pre>
+
+</p>
+
+<p>Above, we have used read command to read values (file names) typed in by the user. 
+
+	<br>Let’s execute this,
+
+	#sh Automate_FTP_version3.sh </br>
+
+	 Once executed, it will prompt user to type in file to be fetched/transferred.  On similar lines, we can interactively get values for hostname, user name and password. <br></br>
+
+<br>Wasn't this Simple? (Not for me of course :))</br> 
+
+In our next article, we'll look into directory/tree syncing.
+
+<br>Let me know if you face any issues while executing this script or if you find this article useful or your feedback to improvise further. </br>
+
+<br>Thank You for reading this article. Hope this was useful!!!</br>
+
+
+</p>
+
+ </section>
+                
+    </article>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Runner>
+	<Actions>
+	   <Action>
+			<Name>CreateFolder</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.FolderActions.FolderCreateAction</Class>
+			<Destination>GenericMyRoamTestDataDestination</Destination>
+		</Action>
+		<Action>
+			<Name>RunBackupNow</Name>
+			<Class>com.ironmountain.digital.qa.automation.TestRunner.actions.RunBackupAction</Class>
+			<WaitForComplete>yes</WaitForComplete>
+			<Destination>GenericMyRoamTestDataDestination</Destination>
+		</Action>
+	</Actions> 
+	<ActionObjects> 
+		<ActionObject> 
+			<Name>GenericMyRoamTestDataDestination</Name>
+			<Class>SimpleFileObject</Class> 
+			<Path>C:/MyRoamRegressionData</Path>
+		</ActionObject> 			
+	</ActionObjects> 
+</Runner>

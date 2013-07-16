@@ -1,0 +1,48 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.6 Version (build 191) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.6 Version (build 191) Copyright (c) 2007 McAfee, Inc. All rights reserved.</string>
+
+
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      CPU Type: PowerPC G4  (3.3)
+      CPU Speed: 1.25 GHz
+      Memory: 512 MB
+      Serial Number: YM406MMCPC1
+          Serial Number: 
+          Serial Number: 3JV8PHC4
+      IPv4 Addresses: 172.16.222.98
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.4.10 (8R218)
+      Kernel Version: Darwin 8.10.0
+      Boot Volume: tiger-en
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 11:54:59 IST 2007
+Tue Sep 18 12:38:49 IST 2007
+Time taken in seconds for this scan : 2629 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 12:40:15 IST 2007
+Tue Sep 18 13:24:59 IST 2007
+Time taken in seconds for this scan : 2684 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 13:26:28 IST 2007
+Tue Sep 18 14:11:12 IST 2007
+Time taken in seconds for this scan : 2684 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 14:12:43 IST 2007
+Tue Sep 18 14:57:31 IST 2007
+Time taken in seconds for this scan : 2688 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Sep 18 14:59:03 IST 2007
+Tue Sep 18 15:43:47 IST 2007
+Time taken in seconds for this scan : 2684 seconds
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~

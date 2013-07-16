@@ -1,0 +1,79 @@
+/* Smartconnexions CSS. Developed by Razikh, Crea2ive.com Team */
+
+body {
+
+
+  margin:0;
+
+  background-image: url(images/whitblur.jpg);
+}
+
+#frame {
+
+width:900px;
+text-align:left;
+}
+
+#topbarmenu {
+  width: 900px;
+  float:left;
+  background-image: url(images/topmenubar.png);
+}
+
+#titlebar {
+ width:900px;
+ height:70px;
+  background: url(images/title900.png);
+  float:left;
+}
+
+#mainmenu {
+  width: 900px;
+  background-image: url(images/mainmenubar.png);
+  float: left;
+}
+
+a{
+  color:red;
+}
+
+
+#pictureslide {
+  width:900px;
+  height:120px;
+  background-color: #CCCCCC;
+  float: left;
+}
+
+#main {
+width:900px;
+float:left;
+
+}
+
+#content {
+margin: 0px,500px,500px,500px;
+ float: left;
+ width: 635px;
+ height: 360px;
+overflow: auto;
+
+ font: 13px Bodani MT;
+  text-align: justify;
+
+}
+#rightbar {
+margin: 130px,0px,0px,130px;
+  float:left;
+  width:200px;
+  height: 430px;;
+  background-color: #FFFF99;
+}
+
+#footer {
+width:900px;
+height:20px;
+background-color: #CCCC99;
+float:left;
+}
+

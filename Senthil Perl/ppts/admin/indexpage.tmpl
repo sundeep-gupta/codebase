@@ -1,0 +1,163 @@
+<HTML>
+  <HEAD><TITLE>PPTS Admin Pages</TITLE>
+  <style type=text/css>
+  .pstyle {
+        font-family: verdana, arial, helvetica;
+        font-size: 10pt;
+        margin-left: 6px;
+        margin-right: 6px;
+  }
+  </style>
+  <script language="javascript">
+    function go_submit( form )
+    {
+       form.submit() ;
+    }
+  </script>
+
+
+   </HEAD>
+  <BODY BGCOLOR="#ffc842" TEXT="#29085a">
+<h2><font face="verdana, arial, helvetica">PPTS :: ProTS - Admin Tools</font></h2>
+
+<table bordercolor="#29085a" width="800" cellpadding=5 cellspacing=0 border=1>
+
+<!-- CLIENTS -->
+
+<tr valign="top" bgcolor="#CFCFCF">
+<td>
+<FONT class="pstyle"><b>1. <a href="addClients.html">INSERT New Client</a></b></FONT>
+</td>
+<td>
+<FORM ACTION="modifyClients.cgi" METHOD="POST" NAME="modifyClient">
+<FONT class="pstyle"><b>2. <a href=javascript:go_submit(document.modifyClient)>MODIFY Client</a></b></font>
+<br>  <SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Client --</OPTION> 
+  <TMPL_LOOP NAME=CLIENTS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td><td>
+<FORM ACTION="deleteClients.cgi" METHOD="POST" NAME="deleteClient">
+<FONT class="pstyle"><b>3. <a href=javascript:go_submit(document.deleteClient)>DELETE Client</a></b></font>
+  <br><SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Client --</OPTION>
+  <TMPL_LOOP NAME=CLIENTS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td></tr>
+
+
+<!-- PROJECTS -->
+
+
+<tr valign="top">
+<td>
+<FONT class="pstyle"><b>4. <a href="addProjects.cgi">INSERT New Project</a></b></FONT></small>
+</td>
+
+<td>
+<FORM ACTION="modifyProjects.cgi" METHOD="POST" NAME="modifyProject">
+<FONT class="pstyle"><b>5. <a href=javascript:go_submit(document.modifyProject)>MODIFY Project</a></b></font>
+  <br><SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Project --</OPTION>
+  <TMPL_LOOP NAME=PROJECTS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td><td>
+<FORM ACTION="deleteProjects.cgi" METHOD="POST" NAME="deleteProject">
+<FONT class="pstyle"><b>6. <a href=javascript:go_submit(document.deleteProject)>DELETE Project</a></b></font>
+ <br> <SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Project --</OPTION>
+  <TMPL_LOOP NAME=PROJECTS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td></tr>
+
+
+<!-- WORK CODE -->
+
+
+
+<tr valign="top" BGCOLOR="#CFCFCF">
+<td>
+<FONT class="pstyle"><b>7. <a href="addWID.html">INSERT Work Code</a></b></F
+ONT>
+</td>
+<td>
+<FORM ACTION="modifyWID.cgi" METHOD="POST" NAME="modifyCode">
+<FONT class="pstyle"><b>8. <a href=javascript:go_submit(document.modifyCode)>
+MODIFY Work Code</a></b></font>
+  <br><SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Work Code --</OPTION>
+  <TMPL_LOOP NAME=CODE_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td><td>
+<FORM ACTION="deleteWID.cgi" METHOD="POST" NAME="deleteCode">
+<FONT class="pstyle"><b>9. <a href=javascript:go_submit(document.deleteCode)>
+DELETE Work Code</a></b></font>
+ <br> <SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Work Code --</OPTION>
+  <TMPL_LOOP NAME=CODE_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td></tr>
+
+<!-- PERSON -->
+
+<tr valign="top">
+<td>
+<FONT class="pstyle"><b>10. <a href="addWorkers.html">INSERT New Person</a></b> <br><small>New Employee (PPTS) or Contact Person (ProTS)</small></FONT>
+
+</td>
+
+<td>
+<FORM ACTION="modifyWorkers.cgi" METHOD="POST" NAME="modifyWorker">
+<FONT class="pstyle"><b>11. <a href=javascript:go_submit(document.modifyWorker)>MODIFY Person</a></b></font>
+ <br> <SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Person --</OPTION>
+  <TMPL_LOOP NAME=WORKERS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td><td>
+<FORM ACTION="deleteWorkers.cgi" METHOD="POST" NAME="deleteWorker">
+<FONT class="pstyle"><b>12. <a href=javascript:go_submit(document.deleteWorker)>DELETE Person</a></b></font>
+ <br> <SELECT NAME="id" SIZE="1">
+  <OPTION>-- Select Person --</OPTION>
+  <TMPL_LOOP NAME=WORKERS_LOOP>
+    <OPTION VALUE="<TMPL_VAR NAME=ID>"><TMPL_VAR NAME="NAME"></OPTION>
+  </TMPL_LOOP>
+  </SELECT>
+</FORM>
+</td></tr>
+
+<!-- FIX TIME -->
+
+<tr valign="top" bgcolor="#CFCFCF">
+<td colspan=3>
+
+<font class="pstyle"><b>13. <a href="fixTime.cgi">FIX YOUR TIME</a></b></font>
+</td>
+</tr>
+</table>
+<br>
+
+
+<form><input type="button" value="To The Board" onClick="window.open('../index.cgi','_top')"></form>
+
+</BODY>
+</HTML>

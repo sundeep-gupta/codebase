@@ -1,0 +1,20 @@
+#!/bin/sh
+if [ $# -ne 2 ]; then
+   echo "usage $0 <IPERF Server> <#sess>"
+   exit 1
+fi
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/1 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/2 &
+/tools/tests/dong/iperfc_file.sh  $1 $2 9999 /tools/files/ordered_files/3 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/4 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/5 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/6 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/7 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/8 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/9 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/10 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/11 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/12 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/13 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/14 &
+/tools/tests/dong/iperfc_file.sh $1 $2 9999 /tools/files/ordered_files/15 &

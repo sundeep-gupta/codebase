@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+
+<Testcase>
+	<FileName>Appprot_Network_Rules_62.py</FileName>
+	<TestcaseID>16644</TestcaseID>
+	<LaunchProgram>python</LaunchProgram>
+	<Depends>Install</Depends>
+</Testcase>

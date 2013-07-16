@@ -1,0 +1,9 @@
+#!/bin/sh
+#Dong 3/25/05
+#This script is used for reliability test.
+if [ $# -ne 1 ]; then
+   echo "usage $0 <port> "
+   exit 1
+fi
+sudo sh -c "ulimit -s 256 && ulimit -n 8192 && ulimit -a && /usr/local/bin/iperf -s -p $1"
+

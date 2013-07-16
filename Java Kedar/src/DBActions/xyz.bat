@@ -1,0 +1,2 @@
+use birt;
+load data infile "C:\\Documents and Settings\\050330\\Desktop\\new\\out\\Copy (2) of Modified http2-result.csv" into table reporting1 fields terminated by ',' optionally enclosed by '"' escaped by '\\' lines starting by 'failureMessage' terminated by ']';

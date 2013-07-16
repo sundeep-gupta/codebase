@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title>Setting up Proxy to share internet across 2 or more machines...</title>
+    <author></author>
+    <section>
+        <p>
+        Setting up proxy enables you to share Internet connection across number of computers. Let’s see in what all situations in which proxy comes handy,
+        </p>
+
+        <p>
+    
+  Case1: Where Internet connection is connected to one PC and you want to share internet to other computers<br>
+  Case2: For some security reasons you want all traffic to be routed through one system.</br>
+  Case3: During implementation of Proxy Firewalls<br>
+        </br>
+        </p>
+
+        <p>
+  Here in this article we’ll address case 1 <br> 
+  Let’s consider internet sharing between two systems. (Applicable to Windows Systems only)</br>
+  Hardware requirements would be, <br>
+ 
+	. Both the systems must have NIC card/network card</br> 
+	. Cross LAN cable to connect these systems <br>
+  </br>
+  </p>
+  <p>
+   Internet Connection Setup: Where net is connected to PC1 through a Modem (USB/RS232/ or even though Ethernet Modem/router to another NIC card)
+   </p>
+   <p>
+  Connect PC1 and PC2 with a cross cable (LAN cross cable. You can get this from any computer service/peripheral vendor) through NIC card port. (RJ45 port)
+    </p>
+     
+     <p>
+     Assign an IP address to the NIC card of PC1. Say 192.168.1.1 with default subnet mask (255.255.255.0). No need to set any gateway or DNS
+     </p>
+     
+     <p>
+     Assign an IP address of the same network as of PC1 to PC2. Say 192.168.1.2 with default subnet mask (255.255.255.0). Gateway address would be IP of PC1, in our case 192.168.1.1. Set DNS as IP of PC1, that’s 192.168.1.1.
+     </p>
+     
+     <p>
+     Try to ping PC1 from PC2 (ping 192.168.1.1 on command prompt) and vice versa (ping 192.168.1.2 on command prompt of PC1). You must be able to ping (must get replies not request timed out messages) unless firewall is configured on systems to block incoming traffic. If firewall is configured in PC1, make sure that you enable traffic on configured HTTP port (The one which you will configure in the proxy software in below section)
+     </p>
+
+     <p>     
+     Now on PC1, install proxy software/utility. One of my favorite proxy software is Analogx proxy, a free and very small proxy utility. <b><a href="http://www.bubble.co.in/utils/analogxproxy.exe">Click here to download</a></b>
+     </p>
+     
+     <p>
+     Once the proxy is installed, configure the HTTP port of the proxy, through which traffic would be routed to the other system. In case of Analogx proxy, the default port is 6588. Just start the analogx service (invoking it from Programs menu), which will display an icon in the Windows tray.
+      </p>
+      
+      <p>
+     <pre>
+On PC2, open Internet Options window (Control Panel ->Internet Options)
+Go to Connection Tab
+Click on LAN Settings
+In proxy server settings, 
+Select “Use proxy server for your LAN” check box. Enter IP address of 
+the PC1 in “Address:” text box. In our case its 192.168.1.1.
+Enter HTTP port which you have configured in proxy server in “Port” text box.
+In the case of analogx proxy, its 6588.
+Save settings (Click OK button) and come out of LAN settings 
+and Internet Options. 
+     </pre>
+   </p>
+   <p>
+   Connect internet connection in PC1. Check net connectivity in PC1.
+Now try browsing from PC2. You must be able to browse if the proxy is running in PC1, able to ping to PC1 and if the settings are proper in LAN settings of the Internet Options. Get back to us if you are finding difficulty
+</p>
+
+  <p>
+  Lets consider internet sharing between more than two systems. (Applicable to Windows Systems only) – Lets assume as 3 systems. 
+Some basic requirements would be,<br> </br>
+
+  </p>
+<p>
+  Both the systems must have NIC card/network card<br>
+	Straight LAN cable to connect these systems </br>
+	A switch to provide connectivity across the systems.<br>
+</br>
+   </p>
+
+<p>
+Internet Connection Setup: Net is connected to PC1 through a Modem (USB/RS232/even through Ethernet modem on another NIC of PC1)
+</p>
+
+<p>
+Configurations:<br>
+Connect all the systems to the switch. Assign IP addresses of the same network to all the PCs. In our case PC1, PC2 and PC3.</br> 
+</p>
+
+<p>
+<pre>
+IP Assignments would be,
+
+PC1:  (on NIC 2, if you connect to internet through NIC1)
+IP Address: 192.168.1.1 
+Subnet Mask: 255.255.255.0
+Gateway: none
+DNS: none
+
+PC2: 
+IP Address: 192.168.1.2
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+DNS: 192.168.1.1 (no need of filling up secondary DNS)
+
+PC3:
+IP Address: 192.168.1.3
+Subnet Mask: 255.255.255.0
+Gateway: 192.168.1.1
+DNS: 192.168.1.1 (no need of filling up secondary DNS)
+
+</pre>
+</p>
+
+<p>
+Check connectivity across the systems by pinging IP addresses. If firewall is configured on PC1, make sure that you enable traffic on configured HTTP port (The one which you will configure in the proxy software in below section)
+</p>
+<p>
+Now on PC1, install proxy software/utility. One of my favorite proxy software is Analogx proxy, a free and very small proxy utility. <b><a href="http://www.bubble.co.in/utils/analogxproxy.exe">Click here to download</a></b> 
+</p>
+<p>
+  Once the proxy is installed, configure the HTTP port of the proxy, through which traffic would be routed to the other system. In case of Analogx proxy, the default port is 6588. Just start the analogx service (invoking it from Programs menu), which will display an icon in the Windows system tray. 
+</p>      
+ <p>  
+ <pre>  
+On PC2 and PC3,Open Internet Options window(Control Panel->Internet Options)
+Go to Connection Tab
+Click on LAN Settings
+In proxy server settings, 
+Select “Use proxy server for your LAN” check box. Enter IP address 
+of the PC1 in “Address:” text box. In our case its 192.168.1.1.
+Enter HTTP port in “Port” text box which you have configured in proxy server.
+In the case of analogx proxy, its 6588.
+Save settings (Click OK button) and come out of LAN settings and 
+Internet Options. 
+</pre>   
+</p>      
+
+<p>
+Connect internet connection in PC1. Check net connectivity in PC1.
+Now try browsing from PC2 and PC3. You must be able to browse if the proxy is running in PC1, able to ping to PC1 and if the settings are proper in LAN settings of the Internet Options. Get back to us if you are finding difficulty…
+</p>
+
+<p>
+  In Next article we’ll look at proxy setup in Linux machines…
+</p>      
+        <p><b>--Razikh</b><br/>
+	</p>
+    </section>
+</article>

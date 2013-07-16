@@ -1,0 +1,364 @@
+#!/tools/bin/perl
+
+=head NAME
+FtpPerformance
+
+
+=head1 DESCRIPTION
+Verify compression performance of a Linux.tar file on a 1.5 Mbps link
+on the first and second pass
+This test in initially for HB/Comp, but can be extended to BS/Comp
+This test does not use FTP application per se, but rather use iperf to 
+simulate a similar result.
+ 
+=head2 Test Category
+Performance
+
+=head1 ENVIRONMENT
+* 2 Orbs with softboost configured with at least 50Mbps license.
+
+=head1 Authors
+Dong Duong 
+6/23/05
+=cut 
+
+use lib '/tools/lib/perl5/site_perl/5.8.4';
+use lib '/tools/tests/regression';
+use Test::More  qw(no_plan); 
+use Time::localtime;  
+use Carp ;
+use Getopt::Std ;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_rpc;
+
+
+my $testcase="FtpPerformance";
+my $duration = 120;
+my $file = '/tools/files/linux.tar';
+my $firstpass_ratio = 2.7;	#this is the criteria for the 1st pass - IT"S DATA SENSITIVE.
+my $secondpass_ratio = 5;
+
+#Require @least 2 inputs: the tested ORB and the IPERF Server.
+getopt ("d,r,o,s,m,b") ;
+
+if (  ! $opt_s || ! $opt_o) {
+  print "Usage: $testcase -d <dr> -r <remOrb> -o <locOrb> -s <Iperf Server> -m <1/0> -b <HB=0 SH=1>  \n" ;
+  exit 1 ;
+}
+
+my $send_mail = 0;                #default is not sending email
+if ($opt_m) { $send_mail = $opt_m; chomp ($send_mail) };
+
+my @bw_list = (0.5, 1.5, 15, 45);  
+my @sess_list = (1);                 #This list is proposed by Daniel 
+
+my $host = $opt_s; chomp ($host );
+my $locOrb = $opt_o; chomp ($locOrb);       #setup the Orb for XMLRPC
+my $locOrb_url = "http://$locOrb:2050/RPC2";
+my $locOrb_rpc = Orbital::Rpc->new($locOrb_url);
+my $version = $locOrb_rpc->get_system_variable("Version");
+
+my $remOrb = $opt_r; chomp ($remOrb);       #setup the Orb for XMLRPC
+my $remOrb_url = "http://$remOrb:2050/RPC2";
+my $remOrb_rpc = Orbital::Rpc->new($remOrb_url);
+my $maxbw_bps = 50000000;          #the remOrb must have this value before testing.
+
+my $dr = "20.20.20.1";           #default Delay Router 
+if ($opt_d) { $dr = $opt_d; chomp ($dr) }
+my $dr_dest='0.0.0.0';
+my $maxdr_bw = 100000;
+
+my $boost= 0;		#set to HB
+if ($opt_b) {$boost=$opt_b; chomp($boost)}  #SB=1 & HB=0
+
+my $expected_rate;
+my $sleep_time = $duration + 10; 
+
+my $tm=localtime;
+$tm = sprintf("%02d%02d%04d", $tm->mday,($tm->mon)+1, $tm->year+1900);
+
+#Find the tested Orb's version
+@version = split(/\s+/, $version);
+my $i =0;
+my $release="";                         #The short form 
+while ($version[$i]) {
+  if ($version[$i++] eq "Release" ){     #$i now at the version number
+     $release = "$version[$i++]"."-";        #$i now pointing at "Build"
+     my $subver =  int ($version[++$i]) ;
+     $release = "$release"."$subver"; 
+     }
+  }
+printf "THE TESTED VERSION: %8s \n", $release;     
+
+#create the individual log file
+my $log_file = "\/logs\/regression_results\/"."$testcase"."_$tm".".log";
+print "this is the log file: $log_file \n";
+open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+
+#The stat file retains all the performance test results. New Results are appended to the file.
+my $stat_file = "\/logs\/regression_results\/"."$testcase"."_stats".".log"; #contains perf results of all individual test.
+if (-e $stat_file) {
+   open (STAT,  ">> $stat_file") || die "Could not open the file $stat_file \n";
+   } else {                       #file is not there
+       open (STAT,  "> $stat_file") || die "Could not open the file $stat_file \n";
+       #Create the file header
+#       print STAT '-' x150;
+       printf STAT "\n%15s%15s\n%15s%15s\n",'Date', $tm, 'Release',$release;
+       print STAT '-' x150;
+       printf STAT "\n%17s%17s%17s%17s%17s%17s%17s%17s%14s\n",'0.5Mbps[1stRun]','0.5Mbps[2ndRun]','1.5Mbps[1stRun]','1.5Mbps[2ndRun]','15Mbps[1stRun]','15Mbps[2ndRun]','45Mbps[1stRun]','45Mbps[2ndRun]', 'BW-MANAGEMENT';
+       print STAT '-' x150, "\n";
+       #   printf PERF "\n%8s%9s%15s%15s%15s%15s%15s%15s%15s%15s\n",'Date','Release','1sess','1sess','100sess','300sess','1sess','10sess','100sess','300sess','1sess','10sess','100sess','300sess';
+       }
+
+
+
+# Make sure the locOrbs have  compression turned ON.
+print LOG "\nThe Current Compression Status of the locOrb: ", $locOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+print LOG "Turn ON Compression for the locOrb... ", $locOrb_rpc->set_parameter('Compression.EnableCompression', '1'), "\n";
+print LOG "\nThe Tested Compression Setting for the locOrb: ", $locOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+
+#The same thing on the remOrb
+print LOG "\nThe Current Compression Status of the remOrb: ", $remOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+print LOG "Turn ON Compression for the remOrb... ", $remOrb_rpc->set_parameter('Compression.EnableCompression', '1'), "\n";
+print LOG "\nThe Tested Compression Setting for the remOrb: ", $remOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+
+#Configure BW on the Orb & DR global
+#if SB, both Orb will be set to 50Mbps and the DR will control the tested BW
+#if HB, the remOrb & DR will be set to 50Mbps, and the sending Orb (locOrb) will control the tested BS 
+if ($boost)   {        #if it's SB then configure the DR once before testing
+   print LOG "\nSet locOrb To SoftBoost: ", $locOrb_rpc->set_parameter('UI.Softboost', $boost);
+   print LOG "\nSet remOrb To SoftBoost: ", $remOrb_rpc->set_parameter('UI.Softboost', $boost);
+   print LOG "\nThe locOrb BW-Management is now... ", $locOrb_rpc->get_parameter('UI.Softboost');
+   print LOG "\nThe remOrb BW-Management is now... ", $remOrb_rpc->get_parameter('UI.Softboost',"\n");
+   } else {         #these two should have the upper limit (50Mbps). The locOrb will dictate the sending rate
+        config_CNISTNET ($dr, $dr_dest, $maxdr_bw, '100', '0.0');
+        print LOG "Set remOrb SendRate To: ", $remOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+        }
+
+foreach $bw (@bw_list) {
+   my $expected_run1 = ($bw * $firstpass_ratio);
+   my $expected_run2 = ($bw * $secondpass_ratio);
+   if ($expected_run2 > 200) { $expected_run2 = 200}   #cap it,regardless of the available BW
+   my $dr_bw = ($bw *1000);
+  
+   if ($boost)   {            #if SB then configure the DR for the tested BW
+      config_CNISTNET ($dr, $dr_dest, $dr_bw, '100', '0.0');
+      } else {
+          my $bw_bps = $bw * 1000000;        #bit/sec required for Orb send-rate setting
+          print LOG "Set SendRate...\n", $locOrb_rpc->set_parameter('SlowSendRate', $bw_bps);
+
+          if ($bw_bps == $locOrb_rpc->get_parameter('SlowSendRate')) {
+             print LOG "The SendRate was sucessfully set: $bw_bps \n";
+             } else {
+                 print LOG "The SendRate is not properly set to $bw_bps \n";
+                 print LOG "The current SendRate is: ", $locOrb_rpc->get_parameter('SlowSendRate'), "\n";
+                 exit;
+                 }
+          } 
+        
+   foreach $sess (@sess_list) {
+         print "Reset Compression History... ", $locOrb_rpc->send_command('CompressionHistory reset'), "\n";
+         $expected_rate = $expected_run1;
+         is (run_perf ($host, $bw, $duration, $file), 1, "First pass of $sess session over $bw Mbps") ;
+         sleep 3;
+         $expected_rate = $expected_run2;
+         is (run_perf ($host, $bw, $duration, $file), 1, "Second pass of $sess session over $bw Mbps") ;
+         print LOG "------------------------------------\n\n";
+         }
+  }
+    
+#Windup the statistic line for the log & Reset DUT to the previous conditions
+if ($boost) {
+   printf STAT "%14s\n\n", SOFTBOOST;
+   config_CNISTNET ($dr, $dr_dest, $maxdr_bw, '100', '0.0');
+   print LOG "\nReSet locOrb To HardBoost: ", $locOrb_rpc->set_parameter('UI.Softboost', '0');
+   print LOG "\nReSet remOrb To HardBoost: ", $remOrb_rpc->set_parameter('UI.Softboost', '0');
+   } else {
+       printf STAT "%14s\n\n", HARDBOOST;
+       }
+print LOG "ReSet locOrb SendRate To: ", $locOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+print LOG "ReSet remOrb SendRate To: ", $remOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+
+
+#Test Completed. Send the result out.
+if ($send_mail) {
+#   print `mail \-s \"Compression Performance For Release  $release\" engineering\@orbitaldata.com \< $stat_file`;
+    print `mail \-s \"Compression Performance For Release $release\" dong\@orbitaldata.com \< $stat_file`;
+   }
+
+
+#********************************************************  
+sub run_perf
+{
+    my $host = shift ;
+    my $bw = shift;
+    my $duration = shift ;
+    my $file = shift;
+    my $pass="FAIL";
+    my $flow = "/usr/local/bin/iperf -c $host -t $duration -F $file";
+    print LOG "Invoke: $flow \n";
+    my $result = `$flow | tail -1`;
+    sleep 5;
+
+#Verify the results ..
+   my @rate = split(/\s+/, $result);
+   my $unit = pop(@rate);
+   my $number = pop(@rate);
+   print LOG "Performance Test of $sess over $bw\n";
+   print LOG "The expected rate: $expected_rate Mbits/sec\n";
+   print LOG "The actual rate  : $number $unit \n";
+   if ( ($number >= $expected_rate) && ($unit eq "Mbits/sec" )) {
+      print LOG "Throughput is in the expected range - PASS! \n";
+      $pass = PASS;
+      printf STAT "%12.2f\/PASS", $number;
+      return 1;
+      } elsif ($unit eq "Mbits/sec") {
+           print LOG "Throughput is NOT in the expected range - FAIL! \n";
+           printf STAT "%12.2f\/FAIL", ($number);
+           return  0 ;
+           } else {
+                print LOG "Throughput is NOT in the expected range - FAIL! \n";
+                printf STAT "%12.2f\/FAIL", ($number/1000);
+                return  0 ;
+                }  #end of if (test result verification)
+}
+
+
+#*************************************************************************
+#This sub is for multiple sessions 
+sub run_perfs
+{
+    my $host = shift ;
+    my $bw = shift;
+    my $duration = shift ;
+    my $sess = shift;
+    my $pass = FAIL;
+    my $flow1_log= "\/logs\/regression_results\/"."$testcase"."_temp.log";
+#Try this.. "iperf_c.sh <host> <sessions> <duration>
+    my $flow1 = "/tools/tests/regression/iperf_c.sh $host $sess $duration > $flow1_log &";
+    
+    print LOG "Invoke: $flow1 \n";
+    my $flow1_result = `$flow1`;
+
+#Wait for the test to complete ...
+   print LOG "SLEEP $sleep_time \n";
+   sleep $sleep_time;
+
+#Verify the results ..
+   print LOG  `cat $flow1_log`;
+   $flow1_result = `cat $flow1_log | grep SUM`;
+   my $i = 1;
+   while (! $flow1_result && ($i < 10)) {    #wait an extra (max) 450 sec before failing
+     print LOG "The Result is not ready...Sleep 50 Sec \n";
+     sleep 50;
+     $flow1_result = `cat $flow1_log | grep SUM`;
+     $i++;
+   }                       #wait until the test is completed
+      
+   kill_iperf();
+   sleep 10;
+   my @flow1_rate = split(/\s+/, $flow1_result);
+#   print "this is the logged result \n @flow1_rate \n";
+   my $counter=0;
+   if ($flow1_rate[0] eq "") {$counter++}
+   my $flow1_slot = 5 + $counter;
+ 
+   print LOG "Performance Test of $sess over $bw\n";
+   print LOG "The expected flow1 rate: $expected_rate Mbits/sec\n";
+   print LOG "The actual flow1 rate  : $flow1_rate[$flow1_slot] $flow1_rate[$flow1_slot+1]\n";
+   if ( ($flow1_rate[$flow1_slot] >= $expected_rate) && ($flow1_rate[$flow1_slot + 1] eq "Mbits/sec" )) {
+      print LOG "Throughput is in the expected range - PASS! \n";
+      my $pass = PASS;
+      printf STAT "%9.2f",$flow1_rate[$flow1_slot];
+      return 1;
+      } elsif ($flow1_rate[$flow1_slot + 1] eq "Mbits/sec") {
+          print LOG "Throughput is NOT in the expected range - FAIL! \n";
+          printf STAT "%9.2f",$flow1_rate[$flow1_slot];
+          return  0 ;
+          } else {
+              print LOG "Throughput is NOT in the expected range - FAIL! \n";
+              printf STAT "%9.2f", ($flow1_rate[$flow1_slot]/1000);
+              return  0 ;
+              }
+}
+ 
+#*************************************************************************
+sub kill_iperf
+{
+ my $string = `ps -e | grep iperf | tail -1 `;
+ print LOG "This Iperf process is running $string \n";
+ my @field = split(/\s+/,$string);
+ my $counter=0;
+ if ($field[0] eq "") {$counter++}
+ if (( $string =~ /iperf/)) {
+  if (`kill $field[$counter]`) {
+           print LOG  "The Iperf deamon ID:$field[$counter] was not killed \n";
+                 } else {
+           print LOG "The Iperf deamon ID:$field[$counter] was killed \n";
+                 }
+        }else {
+        print LOG "Iperf service was not running\n";
+        }
+} #end of kill_iperf
+
+#*************************************************************************
+sub kill_all_iperf
+{
+   my $find_pid ="ps -e | grep iperf ";
+   @iperf_pid = `$find_pid`;
+   print LOG "Active IPERF PID: @iperf_pid \n";
+   my $i=0;
+   while ($iperf_pid[$i])
+   {
+     print LOG "Iperf Process: $iperf_pid[$i] \n";
+     if ($iperf_pid[$i] =~ /iperf/){
+     my @field = split(/\s+/, $iperf_pid[$i]);
+     my $counter = 0;
+     if ($field[0] eq "") {$counter++}  #skip the 1st member if blank
+     if (`kill $field[$counter]`) {
+           print LOG "The Iperf deamon ID:$field[$counter] was not killed \n\n";
+                 } else {
+           print LOG "The Iperf deamon ID:$field[$counter] was killed \n\n";
+                 }
+        }else {
+        print LOG "Iperf service was not running\n";
+        }
+                                                                                                                              
+     $i++;
+     sleep 2;
+   } #end while
+} #end of kill_all_iperf
+
+#*************************************************************************
+sub config_CNISTNET
+#Need 4 inputs: <DR IP> <REM-NETWORK> <BW> <RTT> <LOSS>
+{
+  print LOG "Configure CNISTNET DR: $_[0]\n";
+  my $set_dr = "ssh $_[0] \"\/root\/set_bw.sh $_[1] $_[2] $_[3] $_[4]\" ";
+#  print "\nTESTING..Show DR config \n", $set_dr;
+  $set_dr = `$set_dr`;
+  print LOG "Below is the CNISTNET DR configuration: \n $set_dr \n";
+}
+                                                                                                                                                                     
+                                                                                                                                                                     
+#************************************************************************
+# This is for the Meshed Testbed DR
+# /tools/test/test_common/neset.sh  -bw 100e6 -rtt 100 -loss 1
+#Need 3 inputs: <DR IP> <BW> <RTT> <LOSS>
+#------------------------------------------------------------------------
+sub config_TC
+{
+  my $bw = "$_[1]"."e6";
+  print LOG "Configure TC DR: $_[0]\n";
+  my $set_dr = "ssh $_[0] \"\/tools\/tests\/test_common\/neset.sh \-bw $bw \-rtt $_[2] \-loss $_[3] \" ";
+  $set_dr = `$set_dr`;
+}
+
+
+=head1 COPYRIGHT
+Copyright (c) 2005, Author(s). All rights reserved.
+This module is the property of Orbital Data Corporation.
+It may not be used or modified by anyone without express permission
+of Orbital Data Corporation.
+=cut

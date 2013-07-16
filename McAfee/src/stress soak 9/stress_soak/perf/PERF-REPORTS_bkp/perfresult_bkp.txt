@@ -1,0 +1,172 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+Scan engine v5.1.00 for MacOSX.
+
+Virus data file v4992 created Mar 26 2007
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      Memory: 512 MB
+      Serial Number: YM406MMDPC1
+          Serial Number: 
+          Serial Number: 3JV8SGXV
+      IPv4 Addresses: 172.16.222.116
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A343)
+      Kernel Version: Darwin 9.0.0d6
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Tue Mar 27 19:02:06 BTT 2007
+
+Mar 27 20:57:55 users-power-mac-g4-2 VirusScan[517]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Tue Mar 27 21:08:56 BTT 2007
+
+Mar 28 00:39:53 users-power-mac-g4-2 VirusScan[505]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noapplemail~~~~~~~~~~~~~~
+Wed Mar 28 00:46:12 BTT 2007
+
+Mar 28 02:20:17 users-power-mac-g4-2 VirusScan[509]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noarchive~~~~~~~~~~~~~~
+Wed Mar 28 02:29:40 BTT 2007
+
+Mar 28 03:22:54 users-power-mac-g4-2 VirusScan[511]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Wed Mar 28 03:32:55 BTT 2007
+
+Mar 28 04:21:25 users-power-mac-g4-2 VirusScan[507]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Wed Mar 28 04:32:21 BTT 2007
+
+Mar 28 05:22:47 users-power-mac-g4-2 VirusScan[524]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+Scan engine v5.1.00 for MacOSX.
+
+Virus data file v4992 created Mar 26 2007
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      Memory: 512 MB
+      Serial Number: YM406MMDPC1
+          Serial Number: 
+          Serial Number: 3JV8SGXV
+      IPv4 Addresses: 172.16.222.116
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A343)
+      Kernel Version: Darwin 9.0.0d6
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Wed Mar 28 14:27:44 BTT 2007
+
+Mar 28 15:57:48 users-power-mac-g4-2 VirusScan[485]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Wed Mar 28 16:07:49 BTT 2007
+
+Mar 28 19:30:08 users-power-mac-g4-2 VirusScan[481]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noapplemail~~~~~~~~~~~~~~
+Wed Mar 28 19:37:28 BTT 2007
+
+Mar 28 21:05:27 users-power-mac-g4-2 VirusScan[486]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noarchive~~~~~~~~~~~~~~
+Wed Mar 28 21:17:30 BTT 2007
+
+Mar 28 22:07:19 users-power-mac-g4-2 VirusScan[483]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Wed Mar 28 22:17:27 BTT 2007
+
+Mar 28 23:06:30 users-power-mac-g4-2 VirusScan[482]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Wed Mar 28 23:17:22 BTT 2007
+
+Mar 29 00:06:24 users-power-mac-g4-2 VirusScan[482]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.5.1 Version (build 294) Copyright (c) 2006 - 2007 McAfee, Inc. All rights reserved.</string>
+
+Scan engine v5.1.00 for MacOSX.
+
+Virus data file v4994 created Mar 28 2007
+
+      Machine Name: Power Mac G4
+      Machine Model: PowerMac3,6
+      Memory: 512 MB
+      Serial Number: YM406MMDPC1
+          Serial Number: 
+          Serial Number: 3JV8SGXV
+      IPv4 Addresses: 172.16.222.116
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.5 (9A343)
+      Kernel Version: Darwin 9.0.0d6
+      Boot Volume: Leopard
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~ODS-clean~~~~~~~~~~~~~~
+Thu Mar 29 19:27:52 BTT 2007
+
+Mar 29 21:09:06 users-power-mac-g4-2 VirusScan[480]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ODS-mixed~~~~~~~~~~~~~~
+Thu Mar 29 21:17:59 BTT 2007
+
+Mar 30 00:23:50 users-power-mac-g4-2 VirusScan[482]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noapplemail~~~~~~~~~~~~~~
+Fri Mar 30 00:30:28 BTT 2007
+
+Mar 30 01:58:19 users-power-mac-g4-2 VirusScan[483]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-noarchive~~~~~~~~~~~~~~
+Fri Mar 30 02:10:01 BTT 2007
+
+Mar 30 02:59:38 users-power-mac-g4-2 VirusScan[480]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Fri Mar 30 03:09:21 BTT 2007
+
+Mar 30 03:56:33 users-power-mac-g4-2 VirusScan[482]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~ods-alldisabled~~~~~~~~~~~~~~
+Fri Mar 30 04:05:21 BTT 2007
+
+Mar 30 04:52:38 users-power-mac-g4-2 VirusScan[481]: User:'System Administrator' - scan stopped.
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test (NONE)~~~~~~~~~~~~~~
+Safari------31
+Mail------31
+iTunes------30
+Adobe Photoshop CS------31
+Acrobat Distiller 6.0------31
+Acrobat 6.0 Professional------31
+iChat------31
+Microsoft Excel------0
+Microsoft Word------1
+iPhoto------0
+TOTAL TIME-----217
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~

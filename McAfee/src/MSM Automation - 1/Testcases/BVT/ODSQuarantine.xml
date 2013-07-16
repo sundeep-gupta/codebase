@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+
+<Testcase>
+	<FileName>ODSQuarantine.pl</FileName>
+	<TestcaseID>32510</TestcaseID>
+	<LaunchProgram>perl</LaunchProgram>
+	<Depends>ODSInstallCheck</Depends>
+</Testcase>

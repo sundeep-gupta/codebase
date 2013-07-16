@@ -1,0 +1,23 @@
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| status    | tinyint(2)   | NO   | MUL |         |                |
+| bedrooms  | tinyint(3)   | NO   |     | 1       |                |
+| garden    | tinyint(2)   | NO   |     | 0       |                |
+| terrace   | tinyint(2)   | NO   |     | 0       |                |
+| balcony   | tinyint(2)   | NO   |     | 0       |                |
+| amenities | varchar(30)  | YES  |     | NULL    |                |
+| furnished | tinyint(2)   | NO   | MUL |         |                |
++-----------+--------------+------+-----+---------+----------------+
+
+
+
++---------------+-------------+------+-----+---------+----------------+
+| height        | int(3)      | NO   |     |         |                |
+| frontage      | int(5)      | NO   |     |         |                |
+| mezzanine     | int(5)      | NO   |     |         |                |
+| elec_capacity | int(8)      | NO   |     |         |                |
+| fire_safety   | tinyint(1)  | NO   |     | 0       |                |
+| internet      | tinyint(2)  | NO   | MUL | 1       |                |
+| gen_capacity  | varchar(20) | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+

@@ -1,0 +1,15 @@
+<?xml version="1.5" encoding="iso-8859-1"?>
+<install version="1.5" type="plugin" group="content">
+	<name>googleAds</name>
+	<author>kksou</author>
+	<creationDate>May 2008</creationDate>
+	<copyright>(C) kksou.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@kksou.com</authorEmail>
+	<authorUrl>www.kksou.com/php-gtk2/</authorUrl>
+	<version>1.52</version>
+	<description>This plugin allows you to display Google Ads right inside your content pages. All you need is to copy and paste your AdSense unit code in your content item, and enclose them with the tags {googleAds} ... {/googleAds}.</description>
+	<files>
+		<filename plugin="googleads">googleads.php</filename>
+	</files>
+</install>

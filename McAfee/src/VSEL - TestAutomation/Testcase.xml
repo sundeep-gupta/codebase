@@ -1,0 +1,29 @@
+<testcases>
+<testcase id="1234" desc="This is sample tc desc" depends="1111">
+    <init>
+         <verify method='commonAntiMalwareFns.isProductInstalled' return='true'/>
+         <action method='commonAntiMalwareFns.resetToDefaults'/>
+         <verify method='commonAntiMalwareFns.isOASEnabled' match='true' action='123' else='234'/>
+         <action method='commonFns.createFile' type='eicar' file-name='abc/def.txt'/>
+         <action method='AntiMalware.installAntimalwareTestTool'/>
+         <action method='AntiMalware.OAS'>
+             <param pos='1' value='true'/>
+         </action>
+    </init>
+    <steps>
+        <action method='commonFns.readFile'>
+            <param name='file_name' value='abc/def.txt'/>
+        </action>
+    </steps>
+    <validate>
+        <verify method='AntiMalware.isFileQuarantined' return='true'>
+            <param name='file_name' value='abc/def.txt'/>
+        </verify>
+    </validate>
+    <cleanup>
+        <action method='commonFns.cleanLogs'/>
+        <action method='resetToDefaults'/>
+        <action method='commonFns.copyLogs'/>
+    </cleanup>
+</testcase>
+</testcases>

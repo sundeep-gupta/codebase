@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Properties which are common across the TestFramework -->
+
+<frameworkconfig>
+
+	<!-- Properties for the build script -->
+
+	<frameworkdir>..\PageObjectFramework</frameworkdir>
+
+	
+    <!-- Properties for the framework -->
+
+	<seleniumserverhost>localhost</seleniumserverhost>
+	<seleniumserverport>4444</seleniumserverport>
+	
+	<!-- Maximum execution time for a Test in minutes -->
+	<maxexecutiontime>45</maxexecutiontime>	
+	
+	<!-- Time in milliseconds to wait for a page to load  -->
+	<pageloaddelay>1200000</pageloaddelay>	
+	
+	<!-- Time in seconds where we need to check for an element present or not. -->
+	<waitseconds>10</waitseconds>		
+	
+	<!-- This property is never used -->
+	<buildpropertyfile>build-properties.properties</buildpropertyfile>
+	
+	<!-- For custom Firefox profile, never used -->
+	<firefoxprofilepath>C:\PageObjectProfile</firefoxprofilepath>
+	
+	<!-- Name of the test build -->
+	<buildname>Kanawha Webapp Automation Tests</buildname>
+	
+	<!-- Test Execution Properties -->
+	
+	<!-- Set the testgroups property if we want to run usign group, now we are not doing it!!! -->
+	<testgroups>editprofile</testgroups>
+	
+	<!-- Location where the test suites are placed, will be tests until we place the tests in to a new location -->
+	<testsuitedir>tests</testsuitedir>
+	
+	<!-- Set it if we want to run a specific test suite, leaving this *.xml will run all the suites -->
+	<testsuitename>*.xml</testsuitename>
+	
+	<!-- Location where the reports will be saved -->
+	<testreportdir>TestResults</testreportdir>
+	
+	<!-- Properties to configure the Rest Report emailing -->
+	
+	<emailserver>indiaexch11.calpurnia.com</emailserver>
+	<emailserverport>25</emailserverport>
+	<reportemailsender>mohit.sompura@ironmountain.com</reportemailsender>
+	<reportemailreplyto>mohit.sompura@ironmountain.com</reportemailreplyto>
+	<reportemailrecepients>mohit.sompura@ironmountain.com</reportemailrecepients>
+	
+	<!-- Directory name for downloading -->
+	
+	<downloadsdir>Downloads</downloadsdir>
+
+      <!-- Default build task for commandline execution-->
+
+      <defaultanttask>runTestBuild</defaultanttask>
+	
+</frameworkconfig>

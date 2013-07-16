@@ -1,0 +1,5 @@
+----TIME-DETAILS----  Run-1  Run-2  Run-3    Average-Time
+LOGIN TIME       4        4        6      4.66666666666667
+REBOOT TIME      73       73       74      73.3333333333333
+SHUTDOWN TIME       48        48        47      47.6666666666667
+START TIME      28       26       25      26.3333333333333

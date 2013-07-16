@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+  <name>Content - Core Design Web Gallery plugin</name>
+  <author>Daniel Rataj</author>
+  <creationDate>August 15th, 2009</creationDate>
+  <copyright>(C) 2007 - 2009 GreatJoomla.com</copyright>
+  <license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+  <authorEmail>info@greatjoomla.com</authorEmail>
+  <authorUrl>www.greatjoomla.com</authorUrl>
+  <version>1.0.4 Free</version>
+  <description>DESC_CDWEBGALLERY</description>
+  <files>
+    <filename plugin="cdwebgallery">cdwebgallery.php</filename>
+    <filename>cdwebgallery/engine/fancybox/app/css/jquery.fancy.css</filename>
+    <filename>cdwebgallery/engine/fancybox/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_closebox.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_left.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_progress.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_right.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_e.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_n.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_ne.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_nw.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_s.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_se.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_sw.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_shadow_w.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_title_left.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_title_main.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/fancy_title_right.png</filename>
+    <filename>cdwebgallery/engine/fancybox/app/images/index.html</filename>
+    <filename>cdwebgallery/engine/fancybox/app/js/index.html</filename>
+    <filename>cdwebgallery/engine/fancybox/app/js/jquery.fancybox.js</filename>
+    <filename>cdwebgallery/engine/fancybox/app/index.html</filename>
+    <filename>cdwebgallery/engine/fancybox/class.php</filename>
+    <filename>cdwebgallery/engine/fancybox/index.html</filename>
+    <filename>cdwebgallery/engine/fancybox/params.ini</filename>
+    <filename>cdwebgallery/engine/greybox/app/AJS.js</filename>
+    <filename>cdwebgallery/engine/greybox/app/AJS_fx.js</filename>
+    <filename>cdwebgallery/engine/greybox/app/application.js.php</filename>
+    <filename>cdwebgallery/engine/greybox/app/g_close.gif</filename>
+    <filename>cdwebgallery/engine/greybox/app/gb_scripts.js</filename>
+    <filename>cdwebgallery/engine/greybox/app/gb_styles.css</filename>
+    <filename>cdwebgallery/engine/greybox/app/header_bg.gif</filename>
+    <filename>cdwebgallery/engine/greybox/app/index.html</filename>
+    <filename>cdwebgallery/engine/greybox/app/indicator.gif</filename>
+    <filename>cdwebgallery/engine/greybox/app/loader_frame.html</filename>
+    <filename>cdwebgallery/engine/greybox/app/next.gif</filename>
+    <filename>cdwebgallery/engine/greybox/app/prev.gif</filename>
+    <filename>cdwebgallery/engine/greybox/app/w_close.gif</filename>
+    <filename>cdwebgallery/engine/greybox/class.php</filename>
+    <filename>cdwebgallery/engine/greybox/index.html</filename>
+    <filename>cdwebgallery/engine/highslide/app/css/highslide.css</filename>
+    <filename>cdwebgallery/engine/highslide/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/highslide/app/images/controlbar-black-border.gif</filename>
+    <filename>cdwebgallery/engine/highslide/app/images/controlbar-white.gif</filename>
+    <filename>cdwebgallery/engine/highslide/app/images/index.html</filename>
+    <filename>cdwebgallery/engine/highslide/app/index.html</filename>
+    <filename>cdwebgallery/engine/highslide/class.php</filename>
+    <filename>cdwebgallery/engine/highslide/index.html</filename>
+    <filename>cdwebgallery/engine/highslide/params.ini</filename>
+    <filename>cdwebgallery/engine/lightbox/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/lightbox/app/css/lightbox.css</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/index.html</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/lightbox-blank.gif</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/lightbox-btn-close.gif</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/lightbox-btn-next.gif</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/lightbox-btn-prev.gif</filename>
+    <filename>cdwebgallery/engine/lightbox/app/images/lightbox-ico-loading.gif</filename>
+    <filename>cdwebgallery/engine/lightbox/app/js/index.html</filename>
+    <filename>cdwebgallery/engine/lightbox/app/index.html</filename>
+    <filename>cdwebgallery/engine/lightbox/class.php</filename>
+    <filename>cdwebgallery/engine/lightbox/index.html</filename>
+    <filename>cdwebgallery/engine/lightbox/app/js/jquery.lightbox.js</filename>
+    <filename>cdwebgallery/engine/popup/class.php</filename>
+    <filename>cdwebgallery/engine/popup/index.html</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/css/prettyPhoto.css</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_rounded/btnNext.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_rounded/btnPrevious.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_rounded/contentPattern.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_rounded/loader.gif</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_rounded/sprite.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_square/btnNext.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_square/btnPrevious.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_square/contentPattern.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_square/loader.gif</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/dark_square/sprite.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_rounded/btnNext.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_rounded/btnPrevious.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_rounded/loader.gif</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_rounded/sprite.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_square/btnNext.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_square/btnPrevious.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_square/loader.gif</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/images/light_square/sprite.png</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/js/index.html</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/js/jquery.prettyPhoto.js</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/app/index.html</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/class.php</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/index.html</filename>
+    <filename>cdwebgallery/engine/prettyPhoto/params.ini</filename>
+    <filename>cdwebgallery/engine/tooltip/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/tooltip/app/css/tooltip.css</filename>
+    <filename>cdwebgallery/engine/tooltip/app/js/jquery.tooltip.js</filename>
+    <filename>cdwebgallery/engine/tooltip/app/js/index.html</filename>
+    <filename>cdwebgallery/engine/tooltip/app/index.html</filename>
+    <filename>cdwebgallery/engine/tooltip/class.php</filename>
+    <filename>cdwebgallery/engine/tooltip/index.html</filename>
+    <filename>cdwebgallery/engine/uigallery/app/css/index.html</filename>
+    <filename>cdwebgallery/engine/uigallery/app/css/uigallery.css</filename>
+    <filename>cdwebgallery/engine/uigallery/app/js/index.html</filename>
+    <filename>cdwebgallery/engine/uigallery/app/js/jquery.uigallery.js</filename>
+    <filename>cdwebgallery/engine/uigallery/app/index.html</filename>
+    <filename>cdwebgallery/engine/uigallery/index.html</filename>
+    <filename>cdwebgallery/engine/uigallery/class.php</filename>
+    <filename>cdwebgallery/engine/uigallery/params.ini</filename>
+    <filename>cdwebgallery/engine/index.html</filename>
+    <filename>cdwebgallery/expression/cdwebgallery/class.php</filename>
+    <filename>cdwebgallery/expression/cdwebgallery/index.html</filename>
+    <filename>cdwebgallery/expression/index.html</filename>
+    <filename>cdwebgallery/images/index.html</filename>
+    <filename>cdwebgallery/images/magnify.png</filename>
+    <filename>cdwebgallery/integration/cdwebgallery/class.php</filename>
+    <filename>cdwebgallery/integration/cdwebgallery/index.html</filename>
+    <filename>cdwebgallery/integration/phocagallery/class.php</filename>
+    <filename>cdwebgallery/integration/phocagallery/index.html</filename>
+    <filename>cdwebgallery/integration/phocagallery/params.ini</filename>
+    <filename>cdwebgallery/integration/index.html</filename>
+    <filename>cdwebgallery/theme/caption/css/css.css</filename>
+    <filename>cdwebgallery/theme/caption/css/index.html</filename>
+    <filename>cdwebgallery/theme/caption/images/caption_bg.png</filename>
+    <filename>cdwebgallery/theme/caption/images/caption_bg_hover.png</filename>
+    <filename>cdwebgallery/theme/caption/images/index.html</filename>
+    <filename>cdwebgallery/theme/caption/class.php</filename>
+    <filename>cdwebgallery/theme/caption/index.html</filename>
+    <filename>cdwebgallery/theme/default/css/css.css</filename>
+    <filename>cdwebgallery/theme/default/css/index.html</filename>
+    <filename>cdwebgallery/theme/default/index.html</filename>
+    <filename>cdwebgallery/theme/default/class.php</filename>
+    <filename>cdwebgallery/theme/fade/css/css.css</filename>
+    <filename>cdwebgallery/theme/fade/css/index.html</filename>
+    <filename>cdwebgallery/theme/fade/js/index.html</filename>
+    <filename>cdwebgallery/theme/fade/js/jquery.fadeimage.js</filename>
+    <filename>cdwebgallery/theme/fade/class.php</filename>
+    <filename>cdwebgallery/theme/fade/params.ini</filename>
+    <filename>cdwebgallery/theme/fade/index.html</filename>
+    <filename>cdwebgallery/theme/paperclip/css/css.css</filename>
+    <filename>cdwebgallery/theme/paperclip/css/index.html</filename>
+    <filename>cdwebgallery/theme/paperclip/images/bg.png</filename>
+    <filename>cdwebgallery/theme/paperclip/images/bg_top.png</filename>
+    <filename>cdwebgallery/theme/paperclip/images/index.html</filename>
+    <filename>cdwebgallery/theme/paperclip/images/paperclip.png</filename>
+    <filename>cdwebgallery/theme/paperclip/class.php</filename>
+    <filename>cdwebgallery/theme/paperclip/index.html</filename>
+    <filename>cdwebgallery/theme/reflection/css/css.css</filename>
+    <filename>cdwebgallery/theme/reflection/css/index.html</filename>
+    <filename>cdwebgallery/theme/reflection/js/index.html</filename>
+    <filename>cdwebgallery/theme/reflection/js/jquery.reflection.js</filename>
+    <filename>cdwebgallery/theme/reflection/class.php</filename>
+    <filename>cdwebgallery/theme/reflection/params.ini</filename>
+    <filename>cdwebgallery/theme/reflection/index.html</filename>
+    <filename>cdwebgallery/theme/single/css/css.css</filename>
+    <filename>cdwebgallery/theme/single/css/index.html</filename>
+    <filename>cdwebgallery/theme/single/class.php</filename>
+    <filename>cdwebgallery/theme/single/index.html</filename>
+    <filename>cdwebgallery/theme/single/params.ini</filename>
+    <filename>cdwebgallery/theme/tape/css/css.css</filename>
+    <filename>cdwebgallery/theme/tape/css/index.html</filename>
+    <filename>cdwebgallery/theme/tape/images/index.html</filename>
+    <filename>cdwebgallery/theme/tape/images/tape.png</filename>
+    <filename>cdwebgallery/theme/tape/class.php</filename>
+    <filename>cdwebgallery/theme/tape/index.html</filename>
+    <filename>cdwebgallery/theme/ui/css/css.css</filename>
+    <filename>cdwebgallery/theme/ui/css/index.html</filename>
+    <filename>cdwebgallery/theme/ui/index.html</filename>
+    <filename>cdwebgallery/theme/ui/class.php</filename>
+    <filename>cdwebgallery/theme/ui/params.ini</filename>
+    <filename>cdwebgallery/theme/index.html</filename>
+    <filename>cdwebgallery/utils/php/index.html</filename>
+    <filename>cdwebgallery/utils/php/webgallery.class.php</filename>
+    <filename>cdwebgallery/utils/index.html</filename>
+    <filename>cdwebgallery/index.html</filename>
+    <filename>cdwebgallery/license-gpl.txt</filename>
+  </files>
+  <languages>
+  	<language tag="en-GB">en-GB.plg_content_cdwebgallery.ini</language>
+   </languages>
+  <params>
+  <param name="@spacer" type="spacer" default="= = = Default settings = = =" label="" description="" />
+  <param name="integration" type="folderlist" default="cdwebgallery" label="LABEL_INTEGRATION" description="DESC_INTEGRATION" directory="plugins/content/cdwebgallery/integration" filter="" exclude="" />
+  <param name="theme" type="folderlist" default="default" label="LABEL_THEME" description="DESC_THEME" directory="plugins/content/cdwebgallery/theme" filter="" exclude="" />
+   <param name="engine" type="folderlist" default="popup" label="LABEL_ENGINE" description="DESC_ENGINE" directory="plugins/content/cdwebgallery/engine" filter="" exclude="" />
+   <param name="@spacer" type="spacer" default="" label="" description="" />
+   <param name="display_gal_title" type="list" default="0" label="LABEL_DISPLAY_GALLERY_TITLE" description="DESC_DISPLAY_GALLERY_TITLE">
+    <option value="0">PARAM_DISPLAY_GALLERY_TITLE_NO</option>
+    <option value="1">PARAM_DISPLAY_GALLERY_TITLE_YES</option>
+	</param>
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+  <param name="display_alt" type="list" default="1" label="LABEL_DISPLAY_ALT" description="DESC_DISPLAY_ALT">
+		<option value="1">PARAM_DISPLAY_YES</option>
+    <option value="0">PARAM_DISPLAY_NO</option>
+	</param>
+   <param name="@spacer" type="spacer" default="= = = Resize settings = = =" label="" description="" />
+   <param name="thumb_output" type="list" default="JPG" label="LABEL_OUTPUT_FORMAT" description="DESC_OUTPUT_FORMAT">
+		<option value="JPG">PARAM_OUTPUT_FORMAT_JPG</option>
+		<option value="PNG">PARAM_OUTPUT_FORMAT_PNG</option>
+	</param>
+	<param name="thumb_height" type="text" default="100" label="LABEL_THUMB_HEIGHT" description="DESC_THUMB_HEIGHT"/>
+	<param name="thumb_width" type="text" default="100" label="LABEL_THUMB_WIDTH" description="DESC_THUMB_WIDTH"/>
+	<param name="@spacer" type="spacer" default="= = = JPEG settings = = =" label="" description="" />
+	<param name="jpg_quality" type="text" default="70" label="LABEL_JPEG_QUALITY" description="DESC_JPEG_QUALITY" />
+	<param name="@spacer" type="spacer" default="= = = Watermark settings = = =" label="" description="" />
+	<param name="watermark" type="list" default="yes" label="LABEL_USE_WATERMARK" description="DESC_USE_WATERMARK">
+		<option value="yes">PARAM_USE_WATERMARK_YES</option>
+		<option value="no">PARAM_USE_WATERMARK_NO</option>
+	</param>
+	<param name="watermark_image" type="text" default="magnify.png" label="LABEL_WATERMARK_IMAGE" description="DESC_WATERMARK_IMAGE" />
+	<param name="watermark_valign" type="list" default="BOTTOM" label="LABEL_VERTICAL_ALIGN" description="DESC_VERTICAL_ALIGN">
+		<option value="TOP">PARAM_VERTICAL_ALIGN_TOP</option>
+		<option value="CENTER">PARAM_VERTICAL_ALIGN_CENTER</option>
+		<option value="BOTTOM">PARAM_VERTICAL_ALIGN_BOTTOM</option>
+	</param>
+	<param name="watermark_halign" type="list" default="RIGHT" label="LABEL_HORIZONTAL_ALIGN" description="DESC_HORIZONTAL_ALIGN">
+		<option value="LEFT">PARAM_HORIZONTAL_ALIGN_LEFT</option>
+		<option value="CENTER">PARAM_HORIZONTAL_ALIGN_CENTER</option>
+		<option value="RIGHT">PARAM_HORIZONTAL_ALIGN_RIGHT</option>
+	</param>
+  </params>
+</install>

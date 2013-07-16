@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locators>
+<!-- There are few Strings which are common across the pages such Locators, Titles and Texts Can be placed here -->
+     <KaLoginPage.LoginBtn>//button[contains(text(), 'Login')]</KaLoginPage.LoginBtn>
+     <KaLoginPage.ResetBtn>//button[contains(text(), 'Reset')]</KaLoginPage.ResetBtn>
+     <KaLoginPage.UserName>loginUsername</KaLoginPage.UserName>
+     <KaLoginPage.Password>LoginPassword</KaLoginPage.Password>
+     <KaLoginPage.InvalidLoginDialogText>//*[@class='ext-mb-text']</KaLoginPage.InvalidLoginDialogText>
+     <KaLoginPage.OKBtn>//button[contains(text(), 'OK')]</KaLoginPage.OKBtn>
+     
+     <HomePage.HeaderClass>//*[@class='x-panel-body x-panel-body-noheader x-panel-body-noborder']</HomePage.HeaderClass>
+     <HomePage.MyRoamLink>Retrieve</HomePage.MyRoamLink>
+     <HomePage.MessagesPanelHeaderTextLoc>//div[@class='x-panel-body x-panel-body-noheader x-panel-body-noborder x-border-layout-ct']/div[@class=' x-panel x-border-panel']//span[@class='x-panel-header-text']</HomePage.MessagesPanelHeaderTextLoc>
+     <HomePage.MessagesPanelHeaderColumnsLoc>//div[@class='x-grid3-header-offset']</HomePage.MessagesPanelHeaderColumnsLoc>
+     <!-- HomePage.MessagesTable>//div[@class='x-grid3-body']</HomePage.MessagesTable-->
+     <HomePage.MessagesTable>//div[@id='adminMessagesGridPanel']/div[@class='x-panel-bwrap']/div[@class='x-panel-body x-panel-body-noheader x-panel-body-noborder']/div[@class='x-grid3']/div[@class='x-grid3-viewport']/div[2]/div[@class='x-grid3-body']</HomePage.MessagesTable>
+     <HomePage.TypeSortIcon>//tr[@class='x-grid3-hd-row']/td[1]</HomePage.TypeSortIcon>
+     <HomePage.DeviceSortIcon>//tr[@class='x-grid3-hd-row']/td[2]</HomePage.DeviceSortIcon>
+     <HomePage.DateSortIcon>//tr[@class='x-grid3-hd-row']/td[3]</HomePage.DateSortIcon>
+     <HomePage.MessageSortIcon>//tr[@class='x-grid3-hd-row']/td[4]</HomePage.MessageSortIcon>
+     <HomePage.FloatingSortMenu>//div[@id='adminMessagesGridPanel-hctx']</HomePage.FloatingSortMenu>
+     <HomePage.SettingsLink>Settings</HomePage.SettingsLink>
+     <HomePage.SettingsText>//div[text()='View and edit schedule and connection settings']</HomePage.SettingsText>
+     <HomePage.EmptyMessagesTableMessage>//div[text()='No Messages']</HomePage.EmptyMessagesTableMessage>
+     <HomePage.logoImage>logoimage</HomePage.logoImage>
+          
+     <MyRoamPage.DeviceDropDown>combo</MyRoamPage.DeviceDropDown>
+     <MyRoamPage.DeviceDropDownArrow>//img[@class='x-form-trigger x-form-arrow-trigger']</MyRoamPage.DeviceDropDownArrow>
+     <MyRoamPage.DateDropDown>datecombo</MyRoamPage.DateDropDown>
+     <MyRoamPage.DateDropDownArrow>//table/tbody/tr/td[3]/div/img[@class='x-form-trigger x-form-arrow-trigger']</MyRoamPage.DateDropDownArrow>
+     <MyRoamPage.SearchButton>searchButton</MyRoamPage.SearchButton>
+     <MyRoamPage.SearchBox>searchBox</MyRoamPage.SearchBox>
+     <MyRoamPage.ContentSearchBox>FileContentBox</MyRoamPage.ContentSearchBox>
+     <MyRoamPage.CloseSearchDisabled>//table[@id='iconSearch']//button[@style='background-image: url("images/framework/disabled-tabclose.png");']</MyRoamPage.CloseSearchDisabled>
+     <MyRoamPage.CloseSearchEnabled>//table[@id='iconSearch']//button[@style='background-image: url("images/framework/tabclose.png");']</MyRoamPage.CloseSearchEnabled>
+     <MyRoamPage.RootNode>//form/div[1]//div[@class='x-tree-root-node']/li/div</MyRoamPage.RootNode>
+     <MyRoamPage.SearchResultGrid>//div[@id='searchGridPanel']/div[@class='x-panel-bwrap']/div[@class='x-panel-body x-panel-body-noheader x-panel-body-noborder']/div[@class='x-grid3']/div[@class='x-grid3-viewport']/div[2]/div[@class='x-grid3-body']</MyRoamPage.SearchResultGrid>
+     <!-- MyRoamPage.SearchResultGrid>//div[@id='searchGridPanel']//div[@class='x-grid3-scroller']//div[@class='x-grid3-body']</MyRoamPage.SearchResultGrid-->
+     <MyRoamPage.AdvancedSearchIcon>iconExpand</MyRoamPage.AdvancedSearchIcon>
+     <MyRoamPage.ContentSearchLabel>//div[@id='AdvSearch']//label[text()='Containing Text:']</MyRoamPage.ContentSearchLabel>
+     <MyRoamPage.ContentSearchInputBox>FileContentBox</MyRoamPage.ContentSearchInputBox>
+     <MyRoamPage.IncludeSubFoldersCheckBox>CheckSubFdSel</MyRoamPage.IncludeSubFoldersCheckBox>
+     <MyRoamPage.CaseSensitiveCheckBox>MatchCaseCheck</MyRoamPage.CaseSensitiveCheckBox>
+     <MyRoamPage.ExcludeFolderNamesCheckBox>ExcludeFolders</MyRoamPage.ExcludeFolderNamesCheckBox>
+     <MyRoamPage.HomeLink>//a/span[text()='Home']</MyRoamPage.HomeLink>
+     
+     <SettingsPage.SettingsTabTitle>//div[@id='UserPreferences-panel']//span[@class='x-panel-header-text']</SettingsPage.SettingsTabTitle>
+     <SettingsPage.DialupSettingsTitle>//div[@class='dialup']</SettingsPage.DialupSettingsTitle>
+     <SettingsPage.TaskbarSettingsTitle>//div[@class='taskbar']</SettingsPage.TaskbarSettingsTitle>
+     <SettingsPage.BackupOverDialupOption>BackupOverDialup</SettingsPage.BackupOverDialupOption>
+     <SettingsPage.ManualBackupOverDialupOption>ManualBackupOverDialup</SettingsPage.ManualBackupOverDialupOption>
+     <SettingsPage.ShowTaskbarIconOption>ShowTaskbarIcon</SettingsPage.ShowTaskbarIconOption>
+     <SettingsPage.SaveButton>//div[@id='UserPreferences-panel']//td[@class='x-btn-mc']/em/button</SettingsPage.SaveButton>
+     <SettingsPage.StatusDialogMessage>//span[@class='ext-mb-text']</SettingsPage.StatusDialogMessage>
+     <SettingsPage.StatusDialogOKButton>//button[text()='OK']</SettingsPage.StatusDialogOKButton>
+     <SettingsPage.HomeLink>//span[text()='Home']</SettingsPage.HomeLink>
+</locators>

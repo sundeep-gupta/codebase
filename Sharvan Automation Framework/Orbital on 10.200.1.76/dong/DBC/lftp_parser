@@ -1,0 +1,63 @@
+#!/tools/bin/perl
+use lib '/tools/lib/perl5/site_perl/5.8.4';
+use lib '/tools/tests/regression';
+#use Test::More qw(no_plan); 
+use Time::localtime;
+use XMLRPC::Lite;
+use Getopt::Std;
+use Data::Dumper;
+use orbital_rpc;
+
+getopt ("f") ;
+if ( !$opt_f) {
+  print "\nUsage: $testcase.pl -f <file> \n\n";
+  exit 1;
+}
+my $file = $opt_f;
+my $stat_file = "/var/tmp/". "$testcase".".log";
+
+open (PARM,  "< $file") || die "Could not open the file $file \n";
+open (STAT,  "> $stat_file") || die "Faile to create file $stat_file \n";
+print "-"  x70, "\n"; 
+printf "%-30s%20s%20s\n", 'FILE NAMES', 'FIRST PASS', 'SECOND PASS';
+print "-"  x70, "\n"; 
+my @line; my $value;
+
+my $type;
+my $req_next = 0;
+while (<PARM>) {
+#   print $_;
+   if (! (/'*'/)) {           #skip comment lines
+      @line = split(/\s+/);
+      $type = shift(@line);
+     if ($type eq 'LFTP-GET') {
+         $result = shift(@line);	#The second item in the line
+         printf "%-30s",  $result;
+         $req_next = 1;
+         next;   
+         } 
+     if  (($type eq 'COMPLETE-1') && $req_next) {
+         $result = pop(@line);
+         if ($result) {
+            printf "%20s", $result;
+            } else {
+                 printf "%20s", '0.00M/s';
+                 }
+         $req_next = 1;
+         next;
+         }
+     if  (($type eq 'COMPLETE-2') && $req_next) {
+         $result = pop(@line);
+         if ($result) {
+            printf "%20s\n", $result;
+            } else {
+                 printf "%20s\n", '(0.00M/s)';
+                 }
+         $req_next = 0;
+         next;
+         } 
+     } #IF
+   }   #while PARM
+
+
+

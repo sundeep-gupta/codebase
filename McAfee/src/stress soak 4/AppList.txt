@@ -1,0 +1,19 @@
+Address Book
+Activity Monitor
+Console
+Disk Utility
+Network Utility
+Mail
+Safari
+Adium
+Firefox
+Google Earth
+iTunes
+NetNewsWire
+Remote Desktop Connection
+TinkerTool
+VNCViewer
+Microsoft Entourage
+Microsoft Excel
+Microsoft PowerPoint
+Microsoft Word

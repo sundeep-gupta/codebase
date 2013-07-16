@@ -1,0 +1,20 @@
+<!-- Working with colors>
+<HTML>
+<TITLE>
+	Changing document properties
+</TITLE>
+<HEAD>
+	<SCRIPT>
+		function changeColor(){
+			alert("In Function");
+			document.write((document.bgcolor));
+			if(document.bgcolor == "pink")
+				document.bgcolor = "green";
+		}
+	</SCRIPT>
+</HEAD>
+<BODY bgcolor = "pink">
+	<INPUT type = "BUTTON" value = "Change Color" onClick = "changeColor()">
+	
+</BODY>
+</HTML>

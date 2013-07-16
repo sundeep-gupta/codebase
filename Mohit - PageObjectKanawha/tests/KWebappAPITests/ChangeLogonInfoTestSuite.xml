@@ -1,0 +1,108 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ChangeLogonInfoTestSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+
+<test name="test Single Acc ChangePassword">
+		<classes> 
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testSingleAccChangePassword" />
+			</methods>
+		</classes>		
+</test>
+
+<!--test name="testChangePasswordAndRetrieve">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangePasswordAndRetrieve" />
+			</methods>
+		</classes>		
+</test-->
+
+<test name="testOnHoldAccChangePassword">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testOnHoldAccChangePassword" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="testMultiAccChangePassword">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testMultiAccChangePassword" />
+			</methods>
+		</classes>		
+</test>
+
+
+<test name="testChangePasswordOnCaseSensitivity">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangePasswordOnCaseSensitivity" />
+			</methods>
+		</classes>		
+</test>
+<test name="testChangePasswordWAlphaNumeric">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangePasswordWAlphaNumeric" />
+			</methods>
+		</classes>		
+</test>
+
+
+<test name="testChangePasswordWUsernameAsPassword">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangePasswordWUsernameAsPassword" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="testChangeUserName">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangeUserName" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="testInvalidEmailID1">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testInvalidEmailID1" />
+			</methods>
+		</classes>		
+</test>
+
+<test name="testChangeUserNametoAplhaNumericUserName">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testChangeUserNametoAplhaNumericUserName" />
+			</methods>
+		</classes>		
+</test>
+<test name="testInvalidEmailID2">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.ChangeLogonInfoTest"/>
+			<methods>
+				<include name="testInvalidEmailID2" />
+			</methods>
+		</classes>		
+</test>
+</suite>

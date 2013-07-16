@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>phunshuk</name>
+	<creationDate>2010-01-16</creationDate>
+	<author>Sundeep Gupta</author>
+	<authorEmail>sundeep.techie@gmail.com</authorEmail>
+	<authorUrl>http://www.crea2ive.com</authorUrl>
+	<copyright>Copyright Crea2ive Software, All rights reserved 2009.</copyright>
+	<version>0.0.1</version>
+	<description>
+        This component allows authenticated user to view his account balance with bubble phunshuk
+    </description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files>
+		<filename>index.html</filename>
+		<filename>phunshuk.php</filename>
+		<filename>controller.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/list.php</filename>
+		<filename>views/index.html</filename>
+		<filename>views/list/index.html</filename>
+		<filename>views/list/view.html.php</filename>
+		<filename>views/list/tmpl/index.html</filename>
+		<filename>views/list/tmpl/default.php</filename>
+	</files>
+
+	<administration>
+<menu>Phunshuk</menu>
+	    <submenu>
+		<menu view="food">Food</menu>
+		<menu view="user">User</menu>
+		<menu view="subscription">Subscription</menu>
+	    </submenu>
+
+		<files folder="admin">
+	    <filename>controllers/food.php</filename>
+	    <filename>controllers/user.php</filename>
+	    <filename>controllers/subscription.php</filename>
+	    <filename>models/index.html</filename>
+	    <filename>models/food.php</filename>
+	    <filename>models/user.php</filename>
+	    <filename>models/subscription.php</filename>
+	    <filename>views/index.html</filename>
+	    <filename>views/food/index.html</filename>
+          <filename>views/food/view.html.php</filename>
+          <filename>views/food/tmpl/index.html</filename>
+          <filename>views/food/tmpl/default.php</filename>
+
+	    <filename>views/user/index.html</filename>
+          <filename>views/user/view.html.php</filename>
+          <filename>views/user/tmpl/index.html</filename>
+          <filename>views/user/tmpl/default.php</filename>
+
+	    <filename>views/subscription/index.html</filename>
+          <filename>views/subscription/view.html.php</filename>
+          <filename>views/subscription/tmpl/index.html</filename>
+          <filename>views/subscription/tmpl/default.php</filename>
+
+	    <filename>install.mysql.utf8.sql</filename>
+	    <filename>uninstall.mysql.utf8.sql</filename>
+	    <filename>admin.phunshuk.php</filename>	    
+
+		</files>
+	</administration>
+    <params/>
+</install>
+

@@ -1,0 +1,2 @@
+Main-Class: ControllerActions
+Class-Path: ControllerActions.class JSTAF.jar

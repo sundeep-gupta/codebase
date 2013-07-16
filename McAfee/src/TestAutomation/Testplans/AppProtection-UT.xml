@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009  McAfee, Inc. All rights reserved. -->
+<Testplan>	
+	<PlanID>AppProtectionUT</PlanID>
+	<Testcase>testAppProtectionUTDemo</Testcase>
+</Testplan>

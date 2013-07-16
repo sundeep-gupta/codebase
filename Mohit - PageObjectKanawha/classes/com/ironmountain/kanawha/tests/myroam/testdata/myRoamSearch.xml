@@ -1,0 +1,50 @@
+<suite>
+<test name="search">
+	<input>
+		<param name="searchCriteria1">search</param>
+	</input>
+	<output>
+		<param name="searchCriteria1">searchtextfile2.txt|C:\kanawhaqa\MyRoamRegressionData\search\searchfolder1\|23 bytes|file</param>
+		<param name="searchCriteria1">searchTextFile2.txt|C:\kanawhaqa\MyRoamRegressionData\search\searchfolder1\|23 bytes|file</param>
+		<param name="searchCriteria1">SearchTextFile.txt|C:\kanawhaqa\MyRoamRegressionData\search\|24 bytes|file</param>
+		<param name="searchCriteria1">search|C:\kanawhaqa\MyRoamRegressionData\|0 bytes|folder</param>
+		<param name="searchCriteria1">SearchFolder2|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		<param name="searchCriteria1">searchfolder1|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+	</output>
+</test>
+<test name="advancedSearch">
+	<input>
+		<param name="searchCriteria1">search</param>
+		<param name="searchDataFolder">C:\kanawhaqa\MyRoamRegressionData\search</param>
+		<param name="caseSensitive">search</param>
+		<param name="excludeFolderNames">search</param>
+		<param name="noOptionsSelected">search</param>
+	</input>
+	<output>
+		<param name="searchCriteria1">searchtextfile2.txt|C:\kanawhaqa\MyRoamRegressionData\search\searchfolder1\|23 bytes|file</param>
+		<param name="searchCriteria1">searchTextFile2.txt|C:\kanawhaqa\MyRoamRegressionData\search\searchfolder1\|23 bytes|file</param>
+		<param name="searchCriteria1">SearchTextFile.txt|C:\kanawhaqa\MyRoamRegressionData\search\|24 bytes|file</param>
+		<param name="searchCriteria1">search|C:\kanawhaqa\MyRoamRegressionData\|0 bytes|folder</param>
+		<param name="searchCriteria1">SearchFolder2|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		<param name="searchCriteria1">searchfolder1|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		
+		<param name="caseSensitive">searchfolder1|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		
+		<param name="excludeFolderNames">SearchTextFile.txt|C:\kanawhaqa\MyRoamRegressionData\search\|24 bytes|file</param>
+		
+		<param name="noOptionsSelected">SearchTextFile.txt|C:\kanawhaqa\MyRoamRegressionData\search\|24 bytes|file</param>
+		<param name="noOptionsSelected">SearchFolder2|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		<param name="noOptionsSelected">searchfolder1|C:\kanawhaqa\MyRoamRegressionData\search\|0 bytes|folder</param>
+		
+	</output>
+</test>
+<test name="contentSearch">
+	<input>
+		<param name="searchCriteria1">Iron Mountain</param>
+		<param name="searchDataFolder">C:\kanawhaqa\MyRoamRegressionData\SubFolder01</param>
+	</input>
+	<output>
+		<param name="searchCriteria1">LongFileNameTestFile ForMy Roam Regression Automation- Data Protection and Recovery Services, Tape Vaulting, Online Backup, Disaster Recovery - Iron Mountain.htm|C:\kanawhaqa\MyRoamRegressionData\search\searchfolder1\|62.25 KB|file</param>
+	</output>
+</test>
+</suite>

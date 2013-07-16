@@ -1,0 +1,8 @@
+#leftcolumn .module_menu div div div h3, #leftcolumn .module div div div h3, #leftcolumn .module_text div div div h3 , #rightolumn .module_menu div div div h3, #rightcolumn .module div div div h3, #rightcolumn .module_text div div div h3{
+	line-height:32px;
+	margin:0 auto;
+	padding:4px 0 0 0;
+}
+.button {
+	padding:0 3px 2px 3px;
+}

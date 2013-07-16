@@ -1,0 +1,3 @@
+----OAS-THROUGHPUT-TEST----  ----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+
+CLEAN  Time taken in seconds for this scan      143      160      139      155      139      146     140.333333333333   153.666666666667

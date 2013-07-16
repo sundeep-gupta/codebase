@@ -1,0 +1,6 @@
+# Index created by AutoSplit for /home/httpd/vhosts/bubble.co.in/httpdocs/abmasterd/anyboard_mod9/fRaA.pm
+#    (file acts as timestamp)
+package fRaA;
+sub new  ;
+sub eTaA  ;
+1;

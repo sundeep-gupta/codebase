@@ -1,0 +1,22 @@
+<?php 
+$path = '/home/premiumb';
+if (! file_exists($path)) {
+    $path = '/srv/www';
+}
+
+define('LIB',$path.'/php-lib');
+define('VIEW',$path.'/Bubble/PremiumBrokers/view');
+define ('PB_LIB',$path);
+require("$path/Bubble/PremiumBrokers/SAS/sas.php"); ?>
+<html>
+<head>
+</head>
+<body>
+
+
+<h1> HI </h1>
+
+<a href="/home/premiumb/Backufiles/Footer.php">hi</a>
+
+</body>
+</html>

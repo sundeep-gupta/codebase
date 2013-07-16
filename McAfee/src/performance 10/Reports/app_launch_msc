@@ -1,0 +1,23 @@
+Test Run with McAfee Security Console Installed 
+----APPLICATIONS-LAUNCH-TEST----  REBOOT:1-Run-1  REBOOT:1-Run-2    Average-Time-Run-1   Average-Time-Run-2
+
+Address Book     		4     2   0
+Activity Monitor     		3     1.5   0
+Console     		2     1   0
+Disk Utility     		5     2.5   0
+Network Utility     		1     0.5   0
+Mail     		0     0   0
+Safari     		3     1.5   0
+Adium     		11     5.5   0
+Firefox     		2     1   0
+Google Earth     0   0
+iTunes     		31     15.5   0
+NetNewsWire     		10     5   0
+Remote Desktop Connection     		6     3   0
+TinkerTool     		6     3   0
+VNCViewer     		16     8   0
+Microsoft Entourage     		1     0.5   0
+Microsoft Excel     		17     8.5   0
+Microsoft PowerPoint     		26     13   0
+Microsoft Word     		12     6   0
+LAUNCH&CLOSE~TOTALTIME    	 156    78   0

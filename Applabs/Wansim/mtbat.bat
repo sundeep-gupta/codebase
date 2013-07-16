@@ -1,0 +1,1 @@
+mtrun wansim.pc6 /c "bw=%1,delay=%2,plr=%3"

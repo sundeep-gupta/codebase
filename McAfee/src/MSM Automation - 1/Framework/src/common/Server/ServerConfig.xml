@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2010  McAfee, Inc. All rights reserved. -->
+<HarnessServerConfig> 
+	<ServerPort>9000</ServerPort>
+	<TestLinkURL>http://172.16.193.15/testmigrate/lib/api/xmlrpc.php</TestLinkURL>
+	<LogLevel>5</LogLevel>
+	<ServerIP>__SERVER_IP__</ServerIP>
+	<SVNUsername>__SVN_USERNAME__</SVNUsername>
+	<SVNPassword>__SVN_PASSWORD__</SVNPassword>
+    <DevKey>123</DevKey>
+</HarnessServerConfig>
+

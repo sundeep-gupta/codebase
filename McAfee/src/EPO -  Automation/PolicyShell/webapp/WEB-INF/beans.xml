@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="aramid.mvc.action.cfg"
+		  class="com.mcafee.orion.core.spring.MVCActionConfig">
+		<property name="configuration" value="/WEB-INF/mvcactions.xml"/>
+	</bean>
+
+	<bean id="PolicyShell.tab.policyshell" class="com.mcafee.orion.core.ui.Tab">
+		<property name="sectionId" value="PolicyMgmt"/>
+		<property name="resource" ref="policyshell.resource"/>
+		<property name="id" value="PolicyShell"/>
+		<property name="order" value="9"/>
+		<!--<property name="default" value="false"/>-->
+		<property name="URL" value="/Display.do"/>
+		<property name="context" value="/PolicyShell"/>
+		<property name="text" value="PolicyShell.TabTitle"/>
+	</bean>
+
+	<bean id="policyshell.actions.Shell" class="com.mcafee.policyshell.Shell" singleton="false">
+		<property name="resource" ref="policyshell.resource" />
+	</bean>
+</beans>

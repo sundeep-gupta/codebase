@@ -1,0 +1,58 @@
+<!-- Checking Operators>
+<HTML>
+<TITLE>
+	Checking Operators
+</TITLE>
+<BODy>
+	<SCRIPT>
+		/* testing equals operator in if statement */
+		if(i=0)
+			document.write("zero in if is true");
+		else
+			document.write("<B>if(i=0)</B> statement evaluates to <B>false</B>");
+		
+		/* Testing negetive value in if */
+		if(i= -3)
+			document.write("<BR> <B>-ve</B> value in if is <B>true</B>");
+
+		
+		/* Using empty string values in if Statement */
+
+		if("")
+			document.write("<BR><B>(empty string)</B> evaluates to <B>true</B>");
+		else
+			document.write("<BR><B>(empty string)</B> evaluates to <B>false</B>");
+		
+		/* Checking whether JavaScript uses SHORT CIRCUIT EVALUATION */
+		
+		j = 20;
+		document.write("<BR><BR>Before if j = " + j );
+		if( false && ((j = 30) == 30))
+			;
+		document.write("After if j =  "+ j + " <B> JavaScript uses Short Circuit Evaluation</B>");
+		
+		/* checking the maximum limit of number in js*/
+
+		j = 2;
+		j = Math.pow(2,1023)
+	
+		document.write("<BR><BR>Maximum number that can be stored in JavaScript is <B>2^1024 - 1 (apporx)</B>");
+		
+
+		/* comparing number and string */
+		num = 6;
+		str = "6"
+		if( str == num)
+			document.write("<BR><BR><B> string == number</B> results in string Vs number comparision");
+		if(str === num)
+			;
+		else
+			document.write("<BR><B> string === number</B> results in string Vs string comparision");	
+		flt =  1.4;
+		document.write("<BR><BR> fltValue =  "+flt+". After flt<<4  fltValue = " +(flt<<4) +"<BR><B>Shift operations allowed in float. Integer part will be shifted.</B>");
+
+		document.write("<BR>~fltValue = "+(~flt) +"<B>Bitwise operator work on integer part of float variable<B>" );
+		</SCRIPT>
+</BODy>
+
+</HTML>

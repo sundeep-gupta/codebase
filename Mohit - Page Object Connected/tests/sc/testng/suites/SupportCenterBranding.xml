@@ -1,0 +1,144 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Support Center Branding Test Suite" verbose="2" parallel="none">
+<HPQC Path="CONNECTED BACKUP\8.x\Automated\Branding"/>
+
+<listeners>  
+    <listener class-name="com.ironmountain.pageobject.pageobjectrunner.utils.testng.ExecutionInterceptor" />
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>  
+
+		<parameter name="TechnicianId" value="admin"/>
+		<parameter name="Password" value="1connected"/>
+		<parameter name="shortProductName" value="shortName"/>
+		<parameter name="shortProd" value="shortProd"/>
+		<parameter name="longProductName" value="longName"/>
+		<parameter name="installationFolder" value="CanterburyInstallationFolder"/>
+		<parameter name="productName" value="Connected Canterbury"/>
+		<parameter name="prodName" value="Connected"/>
+		<parameter name="definstallationFolder" value="IronMountain\CanterburyInstallationFolder"/>
+		<parameter name="desktopProductName" value="CanterburyAgent"/>
+		<parameter name="programGroupLocation" value="CanterburyInstallationFolder"/>
+		<parameter name="siteName" value="MySite"/>
+		<parameter name="siteNam" value="siteNam"/>
+		<parameter name="NewPassword" value="2Connected@VTV"/>
+		<parameter name="DCName" value="CBAUTO2"/>
+		<parameter name="TechID" value="TechID9"/>
+		<parameter name="ChangedPwd" value="2Connected@IRM"/>
+		<parameter name="SSWSTechID" value="NewTech"/>
+
+<test name="Support center Apply Branding Page Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.ApplybrandingPageTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test>
+
+	<test name="Support center Inheritance Parent through SubCommunity Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.InheritanceParentthroughSubandChildTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test> 
+		
+	<test name="Support center Inheritance Sub Community through child Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.InheritanceSubthroughchildTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+
+	</test>
+
+	<test name="Support center Child Only Remove Poweredby Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.ChildOnlyRemovePoweredbyTest"/>
+			<methods>
+				<include name="testchildPoweredBy" />
+			</methods>
+		</classes>
+	</test>
+	
+	<test name="Support center No Inheritance 3 Different Nested Levels Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.NoInheritance3DifferentNestedLevelsTest"/>
+			<methods>
+				<include name="testMainCommunityBranding" />
+			</methods>
+		</classes>
+	</test> 
+
+	<test name="Support center Remove from 3 Different Nested Levels Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.Removefrom3DifferentNestedLevelsTest"/>
+			<methods>
+				<include name="testResetBranding" />
+			</methods>
+		</classes>
+	</test>  
+				
+	<test name="Support center SSWS and SC Images W/o PB IRM Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.SSWSandSCImagesWoPBIRMTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test> 
+		
+	<test name="Support center SSWS and SC Images With PB IRM Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.SSWSandSCImagesWPBIRMTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test> 
+	<test name="Support center Neg Image Size Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.SupportCenterNegImageSize"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test> 
+	<test name="Support center Neg Image Type Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.SupportCenterNegImageType"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Support center Neg Text Fields Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.SupportCenterNegTextFields"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Support center Unprivileged DC Technician Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.UnprivilegedDCTechnicianTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Branding Individual Components Test">
+		<classes>
+			<class name="com.ironmountain.pageobject.webobjects.connected.tests.supportcenter.testng.java.branding.BrandingIndividualComponentsTest"/>
+			<methods>
+				<include name="testAllFields" />
+			</methods>
+		</classes>
+	</test>
+
+</suite>		

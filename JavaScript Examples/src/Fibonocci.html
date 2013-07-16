@@ -1,0 +1,35 @@
+<HTML>
+<BODY>
+	<SCRIPT language = "JavaScript">
+		function generate(number){
+			f0=0
+			f1=1
+			document.write(f0);
+			while(f1<number){
+				document.write(", " + f1);
+				f2 = f1 + f0;
+				f0= f1;
+				f1=f2;
+			}
+			
+		}
+		function acceptNumber(){
+			do{
+				number = prompt("Enter the Maximum Number :","1");
+				if(number > "1"){
+					generate(number);
+					break;
+				}else{
+					cfrm = confirm("Invalid Number.\n Do You want to try again");
+					if(cfrm != true)
+						break;
+				}
+			}while(true)
+		}
+	</SCRIPT>
+	<FORM>
+	<INPUT type = "SUBMIT" value = "Fibonocci" onClick = "acceptNumber()">
+	</FORM>
+</BODY>
+
+</HTML>

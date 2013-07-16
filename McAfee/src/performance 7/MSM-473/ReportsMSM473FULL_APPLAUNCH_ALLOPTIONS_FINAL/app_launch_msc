@@ -1,0 +1,23 @@
+Test Run with McAfee Security Console Installed 
+----APPLICATIONS-LAUNCH-TEST----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+
+Address Book     		8     		1     		10     		0     		6     		1     8   0.666666666666667
+Activity Monitor     		2     		1     		3     		1     		2     		1     2.33333333333333   1
+Console     		4     		2     		5     		2     		4     		2     4.33333333333333   2
+Disk Utility     		7     		2     		5     		2     		6     		2     6   2
+Network Utility     		0     		0     		1     		1     		1     		0     0.666666666666667   0.333333333333333
+Mail     		6     		2     		4     		1     		4     		1     4.66666666666667   1.33333333333333
+Safari     		2     		0     		2     		0     		2     		1     2   0.333333333333333
+Adium     		8     		1     		8     		1     		8     		1     8   1
+Firefox     		20     		3     		29     		3     		30     		1     26.3333333333333   2.33333333333333
+Google Earth     		23     		3     		53     		5     		52     		4     42.6666666666667   4
+iTunes     		7     		4     		8     		4     		9     		3     8   3.66666666666667
+NetNewsWire     		3     		1     		2     		1     		2     		1     2.33333333333333   1
+Remote Desktop Connection     		3     		1     		3     		1     		3     		1     3   1
+TinkerTool     		3     		1     		4     		0     		3     		1     3.33333333333333   0.666666666666667
+VNCViewer     		10     		1     		9     		2     		8     		2     9   1.66666666666667
+Microsoft Entourage     		14     		4     		13     		3     		14     		3     13.6666666666667   3.33333333333333
+Microsoft Excel     		6     		2     		5     		3     		6     		3     5.66666666666667   2.66666666666667
+Microsoft PowerPoint     		10     		8     		11     		7     		11     		7     10.6666666666667   7.33333333333333
+Microsoft Word     		7     		50     		7     		5     		7     		5     7   20
+LAUNCH&CLOSE~TOTALTIME    	 143   	 87   	 182   	 42   	 178   	 40    167.666666666667   56.3333333333333

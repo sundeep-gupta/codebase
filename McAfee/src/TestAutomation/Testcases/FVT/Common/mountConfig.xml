@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2011  McAfee, Inc. All rights reserved. -->
+<SystemConfig> 
+    <afp>
+         <username> mac </username>
+         <password> Sat1n </password>
+         <ip> 172.16.193.248 </ip>
+         <folder> /mac/Documents </folder>
+    </afp>
+    <epo>
+        <ip>172.16.193.75</ip>
+        <username>admin</username>
+        <password>nai123</password>
+    </epo>
+</SystemConfig>
+

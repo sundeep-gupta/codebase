@@ -1,0 +1,113 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="EditProfileApiSuite" verbose="2" >
+
+<listeners>  
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+</listeners>
+<test name="Hidden Fields Default Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="hiddenFieldsDefaultValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Read Only Fields Default Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="readonlyFieldsDefaultValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Required Fields Default Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="requiredFieldsDefaultValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Editable Fields Default Value Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="editableFieldsDefaultValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Set And Get For Hidden Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="hiddenFieldsSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Set And Get For Read Only Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="readonlyFieldsSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Set And Get For Required Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="requiredFieldsSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Set And Get For Editable Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="editableFieldsSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Empty Inputs For Editable Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="editableFieldsEmptyValueSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Empty Inputs For Required Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="requiredFieldsEmptyValueSetandGetTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Null Inputs For Editable Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="editableFieldsNullValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Null Inputs For Required Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="requiredFieldsNullValueTest" />
+			</methods>
+		</classes>
+</test>
+<test name="Data Type Check For All Fields Test">
+		<classes>
+			<class name="com.ironmountain.kanawha.tests.apitests.EditProfileTest"/>
+			<methods>
+				<include name="allFieldsDataTypeCheck" />
+			</methods>
+		</classes>
+</test>
+</suite>

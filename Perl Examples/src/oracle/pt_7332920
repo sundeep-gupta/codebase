@@ -1,0 +1,47 @@
+#!/bin/sh
+
+ade createview -l ADETEST_3.2PL_LINUX_010000 pl_view
+ade useview pl_view <<VIEW_1
+ade begintrans pltxn1 
+ade mkelem -nc adetest/new.pl
+ade ciall
+ade beginmerge; ade mergetrans; ade endmerge
+VIEW_1
+
+ade createview -label ADETEST_MAIN_UNIX_030000 main_view
+ade useview main_view <<VIEW_2
+ade begintrans -branch parallel_dev pt_reopen
+ade aborttrans -force -purge -force_project
+ade begintrans -reopen pt_reopen
+ade savetrans
+ade beginmerge; ade mergetrans; ade endmerge -keep_open; ade aborttrans -force -purge
+$(make_label ('ADETEST_MAIN_UNIX_040000', $label_server))
+VIEW_2
+
+ade useview pl_view << VIEW_1
+$(make_label('ADETEST_3.2PL_LINUX_020000', $label_server))
+VIEW_1
+
+ade createview -l ADETEST_3.2PL_LINUX_020000 pltxn2
+ade useview pltxn2 <<VIEW_3
+ade begintrans pltxn2
+ade rm adetest/new.pl
+ade ciall
+ade beginmerge; ade mergetrans ; ade endmerge;
+VIEW_3
+
+
+ade useview view_main <<VIEW_2
+ade begintrans -reopen pt_reopen
+ade refreshview -latest
+ade savetrans
+ade aborttrans -force -purge
+VIEW_2
+
+function make_label() {
+    label_name=$1
+    label_server=$2
+    echo 'element * .../main/LATEST' > config.cs
+    ade label_product -l $label_name -config_spec_file config.cs -oracle_based
+    ade label_push -emd_file .labellog.emd -to $label_server
+}

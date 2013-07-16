@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ironmountain.kanawha.tests.branding.MoveAccountToBrandedCommunityTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="365.723">
+  <properties />
+  
+  
+      <testcase name="moveAccountToBrandedCommunity" time="365.723" />
+  
+</testsuite>

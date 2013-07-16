@@ -1,0 +1,332 @@
+#!/tools/bin/perl
+
+=head NAME
+Dbc_performance
+
+=head1 Authors
+Dong Duong 
+1/09/06
+This script is used to measure the performance of a DBC-Orb pair running
+DBC, MBC, or None.
+The default is DBC performance.
+
+1/13/06 (Dong)
+Make sure both Orbs have compressionhist reset
+=cut 
+
+use lib '/tools/lib/perl5/site_perl/5.8.4';
+use lib '/tools/tests/regression';
+use Test::More  qw(no_plan); 
+use Time::localtime;  
+use Carp ;
+use Getopt::Std ;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_rpc;
+
+
+my $testcase="Dbc_performance";
+my $file = '/dbc1/1GB-RANDOM-SCRIPT';
+my $log_dir = '/var/tmp/';
+
+my $maxbw_bps = 50000000;
+my $maxbw_Mbps = 50;
+
+my $maxLAN_Mbps = 500;
+my $firstpass_ratio = 0.9;	
+my $secondpass_ratio = 10;
+my $duration = 99999;        #Allow enough time to transfer the 1GB file.
+
+#Delay Router Config. Need to modify this section for the DBC testbed
+my $dr = "20.20.20.1";           #default Delay Router 
+my $cnistnet = 1;
+my $dr_dest='0.0.0.0';
+my $maxdr_bw = 100000;
+my $rtt = 100;
+my $loss = 0;
+
+#Defaults
+my @bw_list = ( 15, 45);  
+my @sess_list = (1);            
+my $softboost= 0;		#set to HB
+my $send_mail = 0;              #default is not sending email
+my $comp_method = "NONE";            #default is None
+
+#Require @least 3 inputs:
+# -o locOrb
+# -r remOrb
+# -s Iperf Server
+#Optional inputs
+# -b softboost <1>; default is HB
+# -m sendmail out <1>
+# -e experimental run <1>; do not sendmail nor write to the stat file
+# -c 0=None, 1 = MBC, 2 = DBC; default 0
+#------------------------
+
+getopt ("o,r,s,b,m,e,c") ;
+
+if (  ! $opt_s || ! $opt_o || !$opt_s) {
+  print "Usage: $testcase -r <remOrb> -o <locOrb> -s <Server>| -m <1> -b <1> -e <1> -c <1/2>  \n" ;
+  exit 1 ;
+}
+
+my $server = $opt_s; chomp ($server);
+
+my $locOrb = $opt_o; chomp ($locOrb);       #setup the Orb for XMLRPC
+my $locOrb_url = "http://$locOrb:2050/RPC2";
+my $locOrb_rpc = Orbital::Rpc->new($locOrb_url);
+
+my $remOrb = $opt_r; chomp ($remOrb);       #setup the Orb for XMLRPC
+my $remOrb_url = "http://$remOrb:2050/RPC2";
+my $remOrb_rpc = Orbital::Rpc->new($remOrb_url);
+
+
+if ($opt_b) {$softboost=$opt_b; chomp($softboost)}  #SB=1 & HB=0
+
+if ($opt_m) { $send_mail = $opt_m; chomp ($send_mail) };
+
+if ($opt_e) {
+   $experiment = 1;
+   $send_mail = 0;
+   }   #if opt(e) then this is an experimental run.
+
+if ($opt_c == 1)  {
+   $comp_method = "MBC";
+   } elsif ($opt_c == 2) {
+       $comp_method = "DBC"; 
+      }
+print "The Tested Compression Method is $comp_method \n"; 
+
+my $tm=localtime;
+$tm = sprintf("%02d%02d%04d", $tm->mday,($tm->mon)+1, $tm->year+1900);
+my $release =  &orb_version($locOrb_rpc);
+
+#create the individual log file
+my $log_file = "$log_dir"."$testcase"."_$release"."_$tm".".log";
+print "this is the log file: $log_file \n";
+open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+print LOG "\nOrbital $locOrb is running ...", &orb_version($locOrb_rpc), "\n";
+print LOG "\nOrbital $remOrb is running ...", &orb_version($remOrb_rpc), "\n";
+
+
+#The stat file retains all the performance test results. New Results are appended to the file.
+my $stat_file = "$log_dir"."$testcase"."_stats".".log"; #contains perf results of all individual test.
+if ($experiment) {      #send performance numbers to this file
+   $stat_file = "$log_dir"."$testcase"."_experiment".".log";
+   }
+
+if (-e $stat_file) {
+   open (STAT,  ">> $stat_file") || die "Could not open the file $stat_file \n";
+   print STAT "\n";
+   } else {                       #file is not there
+       open (STAT,  "> $stat_file") || die "Could not open the file $stat_file \n";
+       #Create the file header
+       print STAT '*' x30,"\n\n";
+       printf STAT "\n%-15s\n",'Delay Router:',"\n";
+       printf STAT "%5s%-7s%-6.2f\n",'     ', 'RTT:', $rtt,"\n";
+       printf STAT "%5s%-7s%-6.2f\n\n",'     ', 'LOSS:', $loss,"\n\n";
+       print STAT '*' x30,"\n\n";
+       print STAT '-' x150;
+       printf STAT "\n%10s%12s%17s%17s%17s%17s%18s\n",'Date','Release','15Mbps[1stRun]','15Mbps[2ndRun]','45Mbps[1stRun]','45Mbps[2ndRun]', 'CONFIGURATION';
+       print STAT '-' x150, "\n";
+       }
+
+#stamp the date & release to the log file
+printf STAT "\n%10s%12s", $tm, $release;
+
+#CONFIGURE THE TESTBED ...
+
+# Configure the Orbs according to compression method.
+# To simulate a real life network, only the remote Orb compression configuration is changed.
+# The locOrb (acts as data center) should have DBC enabled.
+
+print LOG "Turn ON MBC for the locOrb... ", $locOrb_rpc->set_parameter('Compression.EnableCompression', '1'), "\n";
+print LOG "Turn ON DBC for the locOrb... ", $locOrb_rpc->set_parameter('Dbc.Enable', '1'), "\n";
+
+print LOG "\nThe Tested MBC Setting for the locOrb: ", $locOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+print LOG "\nThe Tested DBC Setting for the locOrb: ", $locOrb_rpc->get_parameter('Dbc.Enable'),"\n";
+
+if ($comp_method eq "NONE") {
+   print LOG "The Tested Compression is NONE \n";
+   print LOG "Turn OFF MBC for the remOrb... ", $remOrb_rpc->set_parameter('Compression.EnableCompression', '0'), "\n";
+   print LOG "Turn OFF DBC for the remOrb... ", $remOrb_rpc->set_parameter('Dbc.Enable', '0'), "\n";
+   print LOG "\nThe Tested MBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+   print LOG "\nThe Tested DBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Dbc.Enable'),"\n";
+
+   } elsif ($comp_method eq "MBC") {
+       print LOG "Turn ON MBC for the remOrb... ", $remOrb_rpc->set_parameter('Compression.EnableCompression', '1'), "\n";
+       print LOG "Turn OFF DBC for the remOrb... ", $remOrb_rpc->set_parameter('Dbc.Enable', '0'), "\n";
+       print LOG "\nThe Tested MBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+       print LOG "\nThe Tested DBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Dbc.Enable'),"\n";
+       } elsif ($comp_method eq "DBC") {
+           print LOG "Turn ON MBC for the remOrb... ", $remOrb_rpc->set_parameter('Compression.EnableCompression', '1'), "\n";
+           print LOG "Turn ON DBC for the remOrb... ", $remOrb_rpc->set_parameter('Dbc.Enable', '1'), "\n";
+           print LOG "\nThe Tested MBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Compression.EnableCompression'),"\n";
+           print LOG "\nThe Tested DBC Setting for the remOrb: ", $remOrb_rpc->get_parameter('Dbc.Enable'),"\n";
+           }
+
+
+
+
+#Set both Orbs to the maximum rate (150Mbps)
+   print LOG "Set the locOrb SendRate To $maxbw_bps \n", $locOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+   print LOG "Set the locOrb RecvRate To $maxbw_bps \n", $locOrb_rpc->set_parameter('SlowRecvRate', $maxbw_bps);
+   print LOG "Set the remOrb SendRate To $maxbw_bps \n", $remOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+   print LOG "Set the remOrb RecvRate To $maxbw_bps \n", $remOrb_rpc->set_parameter('SlowRecvRate', $maxbw_bps);
+
+#Configure DR
+if ($cnistnet) {
+            config_CNISTNET ($dr, $dr_dest, $maxbw_Mbps, $rtt, $loss);
+           } else {
+                config_TC ($dr, $maxbw_Mbps, $rtt, $loss);
+                }
+
+#Configure Orb to either SB or HB
+       
+   print LOG "\nSet locOrb SoftBoost to $softboost: ", $locOrb_rpc->set_parameter('UI.Softboost', $softboost);
+   print LOG "\nSet remOrb SoftBoost to $softboost: ", $remOrb_rpc->set_parameter('UI.Softboost', $softboost);
+   print LOG "\nThe locOrb BW-Management is now... ", $locOrb_rpc->get_parameter('UI.Softboost');
+   print LOG "\nThe remOrb BW-Management is now... ", $remOrb_rpc->get_parameter('UI.Softboost'),"\n";
+
+foreach $bw (@bw_list) {   #the value is specified in Mbps
+   my $exp_run1 = ($bw * $firstpass_ratio);
+   my $exp_run2 = ($bw * $secondpass_ratio);
+   my $exp_rate = $bw;
+   if ($exp_run2 > $maxLAN_Mbps) { $exp_run2 = $maxLAN_Mbps}   #LAN limitation.
+  
+   if ($softboost)   {            #if SB then configure the DR for the tested BW
+      config_CNISTNET ($dr, $dr_dest, $bw, $rtt, $loss);
+      } else {
+          my $bw_bps = $bw * 1000000;        #bit/sec required for Orb send-rate setting
+          print LOG "Set SendRate...\n", $locOrb_rpc->set_parameter('SlowSendRate', $bw_bps);
+          } 
+        
+   foreach $sess (@sess_list) {
+         if (!($comp_method eq "NONE")) {
+            print "Reset Compression History Of The LocRob... ", $locOrb_rpc->send_command('CompressionHistory reset'), "\n";
+            print "Reset Compression History Of The RemOrb... ", $remOrb_rpc->send_command('CompressionHistory reset'), "\n";
+            }
+         $exp_rate = $exp_run1;
+         is (run_perf ($server, $bw, $duration, $file), 1, "First pass of $sess session over $bw Mbps") ;
+         sleep 10;
+         #
+         #Second Run ...
+         if ($comp_method eq "DBC") {
+             print "Reset Memory History... ", $locOrb_rpc->send_command('CompressionHistory memory'), "\n";
+            }
+         $exp_rate = $exp_run2;
+         is (run_perf ($server, $bw, $duration, $file), 1, "Second pass of $sess session over $bw Mbps") ;
+         print LOG "------------------------------------\n\n";
+         }
+  }
+    
+#Windup the statistic line for the log & Reset DUT to the previous conditions
+if ($softboost) {
+   printf STAT "%14s%7s\n\n", SOFTBOOST, $comp_method;
+   config_CNISTNET ($dr, $dr_dest, $maxdr_Mbps, '100', '0.0');
+   print LOG "\nReSet locOrb To HardBoost: ", $locOrb_rpc->set_parameter('UI.Softboost', '0');
+   print LOG "\nReSet remOrb To HardBoost: ", $remOrb_rpc->set_parameter('UI.Softboost', '0');
+   } else {
+       printf STAT "%14s%7s\n\n", HARDBOOST, $comp_method;
+       }
+
+print LOG "ReSet locOrb SendRate To: ", $locOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+print LOG "ReSet remOrb SendRate To: ", $remOrb_rpc->set_parameter('SlowSendRate', $maxbw_bps);
+
+
+#Test Completed. Send the result out.
+if ($send_mail) {
+#   print `mail \-s \"Compression Performance For Release  $release\" engineering\@orbitaldata.com \< $stat_file`;
+    print `mail \-s \"Compression Performance For Release $release\" dong\@orbitaldata.com \< $stat_file`;
+   }
+
+
+#********************************************************  
+sub run_perf
+{
+    my $server = shift ;
+    my $bw = shift;
+    my $duration = shift ;
+    my $file = shift;
+    my $pass="FAIL";
+    my $flow = "/usr/local/bin/iperf -c $server -t $duration -F $file";
+    print LOG "Invoke: $flow \n";
+    my $result = `$flow | tail -1`;
+    sleep 5;
+
+#Verify the results ..
+   my @rate = split(/\s+/, $result);
+   my $unit = pop(@rate);
+   my $number = pop(@rate);
+   print LOG "Performance Test of $sess over $bw\n";
+   print LOG "The expected rate: $exp_rate Mbits/sec\n";
+   print LOG "The actual rate  : $number $unit \n";
+   if ( ($number >= $exp_rate) && ($unit eq "Mbits/sec" )) {
+      print LOG "Throughput is in the expected range - PASS! \n";
+      $pass = PASS;
+      printf STAT "%12.2f\/PASS", $number;
+      return 1;
+      } elsif ($unit eq "Mbits/sec") {
+           print LOG "Throughput is NOT in the expected range - FAIL! \n";
+           printf STAT "%12.2f\/FAIL", ($number);
+           return  0 ;
+           } else {
+                print LOG "Throughput is NOT in the expected range - FAIL! \n";
+                printf STAT "%12.2f\/FAIL", ($number/1000);
+                return  0 ;
+                }  #end of if (test result verification)
+}
+
+
+#*************************************************************************
+sub config_CNISTNET
+#Need 4 inputs: <DR IP> <REM-NETWORK> <BW Mbps> <RTT> <LOSS>
+{
+  print LOG "Configure CNISTNET DR: $_[0]\n";
+  my $bw_Kbps = $_[2] * 1000;
+  my $set_dr = "ssh $_[0] \"\/root\/set_bw.sh $_[1] $bw_Kbps $_[3] $_[4]\" ";
+#  print "\nTESTING..Show DR config \n", $set_dr;
+  $set_dr = `$set_dr`;
+  print LOG "Below is the CNISTNET DR configuration: \n $set_dr \n";
+}
+                                                                                                                                                                     
+                                                                                                                                                                     
+#************************************************************************
+# This is for the Meshed Testbed DR
+# /tools/test/test_common/neset.sh  -bw 100e6 -rtt 100 -loss 1
+#Need 3 inputs: <DR IP> <BW> <RTT> <LOSS>
+#------------------------------------------------------------------------
+sub config_TC
+{
+  my $bw = "$_[1]"."e6";
+  print LOG "Configure TC DR: $_[0]\n";
+  my $set_dr = "ssh $_[0] \"\/tools\/tests\/test_common\/neset.sh \-bw $bw \-rtt $_[2] \-loss $_[3] \" ";
+  $set_dr = `$set_dr`;
+}
+#----------------------------------------------------
+# Find the running Orb version
+# input: $locOrb_rpc or $remOrb_rpc
+#----------------------------------------------------
+sub orb_version
+{
+    my $orb_rpc = shift;
+    my $ver = $orb_rpc->get_system_variable("Version");
+    my @ver = split(/\s+/, $ver);
+    my $i = 0; my $rel ="";
+    while ($ver[$i]) {
+       if ($ver[$i++] eq "Release") {
+          $rel = "$ver[$i++]"."-";
+          my $subver = int ($ver[++$i]);
+          $rel = "$rel"."$subver";
+        }
+    }
+    return $rel;
+}
+
+
+=head1 COPYRIGHT
+Copyright (c) 2005, Author(s). All rights reserved.
+This module is the property of Orbital Data Corporation.
+It may not be used or modified by anyone without express permission
+of Orbital Data Corporation.
+=cut

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+<ParentAgentProdImgName>AgentApplicationBatman.png</ParentAgentProdImgName>
+<SplashImgName>4.agentsplash.png</SplashImgName>
+<CommunityID>15</CommunityID>
+<HeaderImgName>2.SCheader.gif</HeaderImgName>
+<CustomCommunityID>11</CustomCommunityID>
+<ChildCommunityID>17</ChildCommunityID>
+<SSWSImgName>SiteImageHeaderSpiderMan.png</SSWSImgName>
+<SubCommunityID>19</SubCommunityID>
+<ParentInstaller82ImgName>8.22installerBatman.jpg</ParentInstaller82ImgName>
+<ProfileName>PWS Test Set A</ProfileName>
+<PWSCommunityID>53</PWSCommunityID>
+<AgentProdImgName>AgentApplicationSpiderMan.png</AgentProdImgName>
+<MyRoamRegressionTestRegistrationUrl>http://SUSSC01.englab.qa/ssws/faces/welcome.jsp?r=31F3641E92CD6687FF982356B2345DDD</MyRoamRegressionTestRegistrationUrl>
+<SubInstaller82ImgName>8.22installerBatman.jpg</SubInstaller82ImgName>
+<ParentInstaller84ImgName>8.4INstallerBatman.jpg</ParentInstaller84ImgName>
+<TotalAmountOfDataRestored>0 B</TotalAmountOfDataRestored>
+<RegistrationURL>http://VCONQADCIN.calpurnia.com/ssws/faces/welcome.jsp?r=B142965EFB2EF865308BFF88B514F144</RegistrationURL>
+<Installer84ImgName>8.4InstallerSpiderMan.jpg</Installer84ImgName>
+<SubAgentProdImgName>AgentApplicationBatman.png</SubAgentProdImgName>
+<MaxBackupSize>30 GB</MaxBackupSize>
+<SubSplashImgName>SplashscreenBatman.png</SubSplashImgName>
+<PrereqCustomCommunityID>25</PrereqCustomCommunityID>
+<SubInstaller84ImgName>8.4INstallerBatman.jpg</SubInstaller84ImgName>
+<NumberOfFilesRetrieved>0</NumberOfFilesRetrieved>
+<LoginImgName>SC_Login_SpiderMan.gif</LoginImgName>
+<Installer82ImgName>8.22_InstallerSpiderMan.jpg</Installer82ImgName>
+<LastMyRoamRetrievalDateCompleted>no retrievals logged</LastMyRoamRetrievalDateCompleted>
+<CustomRegistrationUrl>http://VCONQADCIN.calpurnia.com/ssws/faces/welcome.jsp?r=93F6CDD7EC70925C79D6857D1A340246</CustomRegistrationUrl>
+<ParentSplashImgName>SplashscreenBatman.png</ParentSplashImgName>
+<MacImageName>Spider_Man.png</MacImageName>
+<PWSSubCommunity>55</PWSSubCommunity>
+<MyRoamRegressionTestsCommunityId>5</MyRoamRegressionTestsCommunityId>
+</testdata>

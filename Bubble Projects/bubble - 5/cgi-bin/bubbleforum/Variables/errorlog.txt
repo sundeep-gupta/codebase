@@ -1,0 +1,50 @@
+1194814186|1194814186|219.211.156.120|You are not allowed to access this section.|post||3||
+1194814353|1194814353|200.41.80.48|You are not allowed to access this section.|post||3||
+1194828204|1194828204|210.51.51.24|You are not allowed to access this section.|post||3||
+1194828215|1194828215|200.31.42.3|You are not allowed to access this section.|post||3||
+1194848182|1194848182|221.194.46.91|You are not allowed to access this section.|post||3||
+1194848189|1194848189|221.194.46.91|You are not allowed to access this section.|post||3||
+1194848266|1194848266|221.194.46.91|You are not allowed to access this section.|post||3|sdssssssss|
+1194848339|1194848339|202.70.201.34|You are not allowed to access this section.|post||3|sdssssssss|
+1194848357|1194848357|202.70.201.34|You are not allowed to access this section.|post||3|sdssssssss|
+1194892906|1194892906|64.27.28.154|(MainDadyFirst) The username you tried to register already exists.|register2|||MainDadyFirst|
+1194906794|1194906794|123.236.173.249|You should fill in a username.|login2|||razikh|
+1194911003|1194911003|195.242.99.77|You are not allowed to access this section.|post||3||
+1194911038|1194911038|61.235.241.69|You are not allowed to access this section.|post||3||
+1194911105|1194911105|194.83.70.20|You are not allowed to access this section.|post||3|VirgoManifast|
+1194911121|1194911121|194.83.70.20|You are not allowed to access this section.|post||3|VirgoManifast|
+1194929070|1194929069|199.245.162.245|You are not allowed to access this section.|post||3||
+1194929085|1194929085|200.93.63.19|You are not allowed to access this section.|post||3||
+1194948363|1194948363|124.155.113.21|You are not allowed to access this section.|post||3||
+1194948369|1194948369|124.155.113.21|You are not allowed to access this section.|post||3||
+1194948460|1194948460|124.155.113.21|You are not allowed to access this section.|post||3|Borusovg|
+1194948484|1194948484|124.155.113.21|You are not allowed to access this section.|post||3|Borusovg|
+1194948526|1194948526|124.155.113.21|You are not allowed to access this section.|post||3|Borusovg|
+1194948576|1194948576|124.155.113.21|You are not allowed to access this section.|post||3|Borusovg|
+1194964054|1194964054|208.48.253.137|You are not allowed to access this section.|post||3||
+1194964063|1194964063|60.28.251.200|You are not allowed to access this section.|post||3||
+1194968160|1194968160|83.31.186.218|(dooddemewmets) The username you tried to register already exists.|register2|||dooddemewmets|
+1194978574|1194978574|80.56.109.212|You are not allowed to access this section.|post||3||
+1195010524|1195010524|85.18.115.6|You are not allowed to access this section.|post||3||
+1195010526|1195010526|85.18.115.6|You are not allowed to access this section.|post||3||
+1195021243|1195021243|89.77.81.13|(dooddemewmets) The username you tried to register already exists.|register2|||dooddemewmets|
+1195066380|1195066380|200.88.114.166|You are not allowed to access this section.|post||3||
+1195075045|1195075045|203.121.79.95|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195089693|1195089693|210.34.14.186|You are not allowed to access this section.|post||3||
+1195089707|1195089707|210.34.14.186|You are not allowed to access this section.|post||3||
+1195091562|1195091562|203.121.79.95|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195099285|1195099285|203.121.71.169|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195132784|1195132784|195.76.242.227|You are not allowed to access this section.|post||3||
+1195132800|1195132800|195.76.242.227|You are not allowed to access this section.|post||3||
+1195132932|1195132932|210.198.85.77|You are not allowed to access this section.|post||3||
+1195132945|1195132945|210.198.85.77|You are not allowed to access this section.|post||3||
+1195132981|1195132981|210.198.85.77|You are not allowed to access this section.|post||3|Citorerskuj|
+1195146755|1195146755|89.77.81.13|(dooddemewmets) The username you tried to register already exists.|register2|||dooddemewmets|
+1195159741|1195159741|203.121.79.95|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195179218|1195179218|222.86.132.20|You are not allowed to access this section.|post||3||
+1195179226|1195179226|222.86.132.20|You are not allowed to access this section.|post||3||
+1195179292|1195179292|222.86.132.20|You are not allowed to access this section.|post||3|Firmanrskuj|
+1195179308|1195179308|222.86.132.20|You are not allowed to access this section.|post||3|Firmanrskuj|
+1195180068|1195180068|203.121.71.169|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195219151|1195219151|203.121.79.95|104 An Error Has Occurred!: Unable to open 1194442659.txt||1194442659|||
+1195230797|1195230797|60.190.79.18|Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.|login2|||Beredeway|9QCrYSV369

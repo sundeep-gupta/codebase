@@ -1,0 +1,5 @@
+36 21 */1 * * launchctl start com.mcafee.virusscan.eupdate
+
+34 14 */1 * * launchctl start com.mcafee.virusscan.eupdate
+
+30 02 */1 * * launchctl start com.mcafee.virusscan.eupdate

@@ -1,0 +1,108 @@
+------------------------------------------------------------
+Client connecting to 30.30.20.76, TCP port 5001
+TCP window size: 16.0 KByte (default)
+------------------------------------------------------------
+[152] local 20.20.20.36 port 37623 connected with 30.30.20.76 port 5001
+[  5] local 20.20.20.36 port 37574 connected with 30.30.20.76 port 5001
+[  8] local 20.20.20.36 port 37575 connected with 30.30.20.76 port 5001
+[ 11] local 20.20.20.36 port 37576 connected with 30.30.20.76 port 5001
+[ 14] local 20.20.20.36 port 37577 connected with 30.30.20.76 port 5001
+[ 17] local 20.20.20.36 port 37578 connected with 30.30.20.76 port 5001
+[ 20] local 20.20.20.36 port 37579 connected with 30.30.20.76 port 5001
+[ 23] local 20.20.20.36 port 37580 connected with 30.30.20.76 port 5001
+[ 26] local 20.20.20.36 port 37581 connected with 30.30.20.76 port 5001
+[ 29] local 20.20.20.36 port 37582 connected with 30.30.20.76 port 5001
+[ 32] local 20.20.20.36 port 37583 connected with 30.30.20.76 port 5001
+[ 35] local 20.20.20.36 port 37584 connected with 30.30.20.76 port 5001
+[ 38] local 20.20.20.36 port 37585 connected with 30.30.20.76 port 5001
+[ 41] local 20.20.20.36 port 37586 connected with 30.30.20.76 port 5001
+[ 44] local 20.20.20.36 port 37587 connected with 30.30.20.76 port 5001
+[ 47] local 20.20.20.36 port 37588 connected with 30.30.20.76 port 5001
+[ 50] local 20.20.20.36 port 37589 connected with 30.30.20.76 port 5001
+[ 53] local 20.20.20.36 port 37590 connected with 30.30.20.76 port 5001
+[ 56] local 20.20.20.36 port 37591 connected with 30.30.20.76 port 5001
+[ 59] local 20.20.20.36 port 37592 connected with 30.30.20.76 port 5001
+[ 62] local 20.20.20.36 port 37593 connected with 30.30.20.76 port 5001
+[ 65] local 20.20.20.36 port 37594 connected with 30.30.20.76 port 5001
+[ 68] local 20.20.20.36 port 37595 connected with 30.30.20.76 port 5001
+[ 71] local 20.20.20.36 port 37596 connected with 30.30.20.76 port 5001
+[ 74] local 20.20.20.36 port 37597 connected with 30.30.20.76 port 5001
+[ 77] local 20.20.20.36 port 37598 connected with 30.30.20.76 port 5001
+[ 80] local 20.20.20.36 port 37599 connected with 30.30.20.76 port 5001
+[ 83] local 20.20.20.36 port 37600 connected with 30.30.20.76 port 5001
+[ 86] local 20.20.20.36 port 37601 connected with 30.30.20.76 port 5001
+[ 89] local 20.20.20.36 port 37602 connected with 30.30.20.76 port 5001
+[ 92] local 20.20.20.36 port 37603 connected with 30.30.20.76 port 5001
+[ 95] local 20.20.20.36 port 37604 connected with 30.30.20.76 port 5001
+[ 98] local 20.20.20.36 port 37605 connected with 30.30.20.76 port 5001
+[101] local 20.20.20.36 port 37606 connected with 30.30.20.76 port 5001
+[104] local 20.20.20.36 port 37607 connected with 30.30.20.76 port 5001
+[107] local 20.20.20.36 port 37608 connected with 30.30.20.76 port 5001
+[110] local 20.20.20.36 port 37609 connected with 30.30.20.76 port 5001
+[113] local 20.20.20.36 port 37610 connected with 30.30.20.76 port 5001
+[116] local 20.20.20.36 port 37611 connected with 30.30.20.76 port 5001
+[119] local 20.20.20.36 port 37612 connected with 30.30.20.76 port 5001
+[122] local 20.20.20.36 port 37613 connected with 30.30.20.76 port 5001
+[125] local 20.20.20.36 port 37614 connected with 30.30.20.76 port 5001
+[128] local 20.20.20.36 port 37615 connected with 30.30.20.76 port 5001
+[131] local 20.20.20.36 port 37616 connected with 30.30.20.76 port 5001
+[134] local 20.20.20.36 port 37617 connected with 30.30.20.76 port 5001
+[137] local 20.20.20.36 port 37618 connected with 30.30.20.76 port 5001
+[140] local 20.20.20.36 port 37619 connected with 30.30.20.76 port 5001
+[143] local 20.20.20.36 port 37620 connected with 30.30.20.76 port 5001
+[146] local 20.20.20.36 port 37621 connected with 30.30.20.76 port 5001
+[149] local 20.20.20.36 port 37622 connected with 30.30.20.76 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[ 53]  0.0-4212.2 sec  1.44 GBytes  2.94 Mbits/sec
+[125]  0.0-4212.2 sec  1.46 GBytes  2.99 Mbits/sec
+[ 89]  0.0-4212.2 sec  1.46 GBytes  2.98 Mbits/sec
+[ 29]  0.0-4212.2 sec  1.44 GBytes  2.94 Mbits/sec
+[ 32]  0.0-4212.2 sec  1.45 GBytes  2.97 Mbits/sec
+[ 68]  0.0-4212.2 sec  1.44 GBytes  2.94 Mbits/sec
+[113]  0.0-4212.2 sec  1.46 GBytes  2.97 Mbits/sec
+[152]  0.0-4212.2 sec  1.45 GBytes  2.97 Mbits/sec
+[ 38]  0.0-4212.2 sec  1.45 GBytes  2.96 Mbits/sec
+[ 47]  0.0-4212.2 sec  1.46 GBytes  2.98 Mbits/sec
+[ 74]  0.0-4212.2 sec  1.40 GBytes  2.86 Mbits/sec
+[137]  0.0-4212.2 sec  1.46 GBytes  2.97 Mbits/sec
+[ 11]  0.0-4212.2 sec  1.40 GBytes  2.86 Mbits/sec
+[116]  0.0-4212.2 sec  1.45 GBytes  2.96 Mbits/sec
+[ 80]  0.0-4212.2 sec  1.46 GBytes  2.97 Mbits/sec
+[ 62]  0.0-4212.2 sec  1.40 GBytes  2.86 Mbits/sec
+[ 35]  0.0-4212.2 sec  1.45 GBytes  2.97 Mbits/sec
+[ 98]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[ 44]  0.0-4212.3 sec  1.46 GBytes  2.98 Mbits/sec
+[140]  0.0-4212.3 sec  1.46 GBytes  2.98 Mbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 56]  0.0-4212.3 sec  1.39 GBytes  2.84 Mbits/sec
+[ 59]  0.0-4212.3 sec  1.39 GBytes  2.83 Mbits/sec
+[104]  0.0-4212.3 sec  1.43 GBytes  2.92 Mbits/sec
+[ 95]  0.0-4212.3 sec  1.46 GBytes  2.97 Mbits/sec
+[ 77]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[131]  0.0-4212.3 sec  1.46 GBytes  2.97 Mbits/sec
+[119]  0.0-4212.3 sec  1.45 GBytes  2.96 Mbits/sec
+[128]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[ 65]  0.0-4212.3 sec  1.43 GBytes  2.93 Mbits/sec
+[146]  0.0-4212.3 sec  1.46 GBytes  2.97 Mbits/sec
+[ 50]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[134]  0.0-4212.3 sec  1.43 GBytes  2.93 Mbits/sec
+[  5]  0.0-4212.3 sec  1.44 GBytes  2.93 Mbits/sec
+[110]  0.0-4212.3 sec  1.41 GBytes  2.87 Mbits/sec
+[122]  0.0-4212.3 sec  1.40 GBytes  2.85 Mbits/sec
+[ 23]  0.0-4212.3 sec  1.46 GBytes  2.97 Mbits/sec
+[143]  0.0-4212.3 sec  1.46 GBytes  2.98 Mbits/sec
+[149]  0.0-4212.3 sec  1.46 GBytes  2.98 Mbits/sec
+[ 71]  0.0-4212.3 sec  1.44 GBytes  2.94 Mbits/sec
+[ 86]  0.0-4212.3 sec  1.24 GBytes  2.53 Mbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[ 17]  0.0-4212.3 sec  1.25 GBytes  2.55 Mbits/sec
+[101]  0.0-4212.3 sec  1.44 GBytes  2.94 Mbits/sec
+[ 83]  0.0-4212.3 sec  1.40 GBytes  2.86 Mbits/sec
+[ 41]  0.0-4212.3 sec  1.40 GBytes  2.85 Mbits/sec
+[ 92]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[ 20]  0.0-4212.3 sec  1.40 GBytes  2.86 Mbits/sec
+[  8]  0.0-4212.3 sec  1.45 GBytes  2.96 Mbits/sec
+[ 14]  0.0-4212.3 sec  1.45 GBytes  2.95 Mbits/sec
+[ 26]  0.0-4212.3 sec  1.46 GBytes  2.98 Mbits/sec
+[107]  0.0-4212.3 sec  1.44 GBytes  2.93 Mbits/sec
+[SUM]  0.0-4212.3 sec   615 Gbits   146 Mbits/sec

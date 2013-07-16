@@ -1,0 +1,8 @@
+Test Run with McAfee Security Console Installed 
+----APPLICATIONS-USAGE-TEST----  REBOOT:1-Run-1  REBOOT:1-Run-2  REBOOT:2-Run-1  REBOOT:2-Run-2  REBOOT:3-Run-1  REBOOT:3-Run-2    Average-Time-Run-1   Average-Time-Run-2
+APPLE MAIL                    		 19                  		 2                  		 10                  		 2                  		 11                  		 1   13.3333333333333   1.66666666666667
+MICROSOFT ENTOURAGE           		 63         		 1         		 32         		 2         		 33         		 2   42.6666666666667   1.66666666666667
+MICROSOFT WORD                		 16              		 12              		 22              		 15              		 23              		 18   20.3333333333333   15
+MICROSOFT POWERPOINT          		 14        		 10        		 13        		 10        		 14        		 12   13.6666666666667   10.6666666666667
+MICROSOFT EXCEL               		 9             		 7             		 9             		 7             		 10             		 7   9.33333333333333   7
+APPLICATION-USAGE-TOTALTIME   		121  		32  		86  		36  		91  		40    99.3333333333333   36

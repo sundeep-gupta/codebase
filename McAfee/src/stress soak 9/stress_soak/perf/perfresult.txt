@@ -1,0 +1,50 @@
+---------Creating System Profile for reference-----------
+NWA doesn't seem to be installed on the system
+	<string>VirusScan 8.6.1 Version Copyright (c) 2008 McAfee, Inc. All rights reserved.</string>
+
+	<string>VirusScan 8.6.1 Version Copyright (c) 2008 McAfee, Inc. All rights reserved.</string>
+
+
+
+      Memory: 1 GB
+      Serial Number: YM61354CU35
+          Serial Number: 
+          Serial Number: NW84T6325TJ5
+      IPv4 Addresses: 172.16.222.81
+          Subnet Masks: 255.255.255.0
+      System Version: Mac OS X 10.4.11 (8S2167)
+      Kernel Version: Darwin 8.11.1
+      Boot Volume: Tiger
+      User Name: System Administrator (root)
+---------------------------------..-------------------------
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------4
+TOTAL TIME-----4
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------0
+TOTAL TIME-----0
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+ZQZXJVBVT
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+ZQZXJVBVT
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~
+ZQZXJVBVT
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~OAS-Applaunch Test 9 ALWAYS)~~~~~~~~~~~~~~
+Notes------1
+TOTAL TIME-----1
+~~~~~~~~~~~~~~~~..~~~~~~~~~~~~~~
+ZQZXJVBVT
+~~~~~~~~~~~~~~~~reboot~~~~~~~~~~~~~~

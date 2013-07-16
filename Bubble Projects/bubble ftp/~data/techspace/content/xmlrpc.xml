@@ -1,0 +1,123 @@
+<article>
+    <title>
+        Using XMLRPC for Testing
+    </title>
+    <author>
+        Sundeep
+    </author>
+        <section>
+            <name>Description</name>
+            <p>
+                Testing a product usually involves multiple machines, varying
+                in the architecture, OS, Versions. It is quite handy to have
+                a tool that can be used to initiate the test across thes machines
+                irrespective of their differences.
+                And the tool can also be used to collect the results from those
+                machines into a single machine, reducing the days of work to an
+                hour.
+                This article describes how to make it possible using XMLRPC.<br/>
+            </p>
+            <p>
+                I started it as an experiment towards testing of a product and
+                found very useful. It just took about a week's effort of mine to
+                start using it succesfully.
+            </p>
+            <p>
+                There are many tools which provide the functionality. But they
+                <b>COST</b> and provide many other features which might not be
+                necessary for your requirement.
+            </p>
+        </section>
+        <section>
+            <name>Requirements</name>
+            <p>
+                The requirements to create a small handy tool for yourself includes:
+                <ol>
+                    <li>
+                        One or more machines, with *NIX/ Windows OS 
+                    </li>
+                    <li>
+                        XMLRPC::Lite package installed
+                    </li>
+                    <li>
+                        And... a human resource... Of course with basic knowledge
+                        of how client-server technology works!!!
+                    </li>
+                </ol>
+            </p>
+            <p>
+                You have ingredients ready? If your head nods in yes... go ahead!!!
+                <section>
+                    <name>Create a simple XMLRPC Server</name>
+                    So what does the server does? Listens to a port &amp; handle the
+                    connection requests from client. Simple isn't it! Here is your server
+                    <pre>
+use XMLRPC::Transport::HTTP;
+use MyLibrary;
+my $daemon = XMLRPC::Transport::HTTP::Daemon->new ( LocalPort => 7050)
+           -> dispatch_to('MyLibrary');
+print "Contact to XMLRPC server at ", $daemon->url, "\n";
+$daemon->handle;
+                    </pre>
+                    <p>
+                        Copy the above snippet and save it as xmlrpc_server.pl
+                        <b>Don't run... it will fail.</b>
+                    </p>
+                </section>
+                <section>
+                <name>Library to handle remote calls</name>
+                You might be wondering what <b>MyLibrary</b> in above code is for? Well XMLRPC
+                is for Remote Procedure Calls using XML format. So where are those
+                so called procedures, to call remotely.
+                <p>
+                    They must be placed in one library and here is our simple library
+                    for remote calls.
+                </p>
+                <pre>
+    
+package MyLibrary;
+use File::Copy;
+sub copy {
+    my ($self, $src, $dst) = @_;
+    copy($src, $dst);
+    return "Your copy command is executed";
+}
+1;
+                </pre>
+                <p>
+                    Copy above code to MyLibrary.pm in same directory where server
+                    script is saved. And now run xmlrpc_server.pl
+                </p>
+                </section>
+                <section>
+                    <name>The Client program</name>
+                    Our XMLRPC server is running now, with a library of functions
+                    in <code>MyLibrary</code>
+                    <p>
+                        We need someone to call our server to use its services.
+                        Here is what your client program should look like:
+                    </p>
+                    <pre>
+use Data::Dumper;
+my $server_address = 'http://YourServerAddress:7050/';
+my $server_response= XMLRPC::Lite-> proxy($server_address)
+				 -> call('MyLibrary.copy',
+                                         "file1.txt",
+                                         "file2.txt")
+				 -> result;
+print Dumper($server_response);
+                    </pre>
+                    <p>
+                        Save above code as xmlrpc_client.pl and execute it. 
+                    </p>
+                </section>
+            </p>
+        </section>
+        <section>
+            <name>Frequently asked questions</name>
+            We will be updating them when they are asked <br/>
+            Well!!! You would like to take the privilege to be the first
+            one to ask. Won't you?
+        </section>
+                
+</article>
