@@ -18,6 +18,7 @@ our @ISA = qw(Exporter);
 sub new() {
     my $self = ();
     shift();
+
     $self->{RPC_SERVER_URL} = shift();;
     bless($self);
     return $self;
@@ -220,8 +221,7 @@ sub send_command() {
 sub get_system_variable {
    my $self = shift;
    my $param = shift;
-
-   my $Response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
+ my $Response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
                      ->call('Get', {Class => "SYSTEM", Attribute => $param})
                      ->result;
 
@@ -281,8 +281,13 @@ sub element_exists {
    my $potential_hash = shift;
    return (ref($potential_hash) eq "HASH");
 }
+sub reset_perf_counters {
+	my $self = shift;
+	return $self->call('ResetPerfCounters');
+}
 sub call {
-	my ($self, $method, $parameters);
+	my ($self, $method, $parameters) = @_;
+    print $self->{RPC_SERVER_URL};
    my $InfoResponse = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
               ->call($method,$parameters)
               ->result;

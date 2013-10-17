@@ -9,30 +9,31 @@ use warnings;
 use threads;
 use Data::Dumper;
 use XMLRPC::Lite;
-use Readonly;
+#use Readonly;
 
 # WANScaler Library
-use WANScaler::Utils::Log;
 use WANScaler::Scalability::Config;
 use WANScaler::XmlRpc::System;
+use WANScaler::Utils::Log;
 
-Readonly my $MAX_RPC_TRY => 3;
+my $MAX_RPC_TRY = 3;
 
 ####################### VARIABLE DECALARATION ##################################
-my (@cifs_threads, @ftp_threads, @http_threads,   $client_ip,
-	@iperf_threads, @threads_table, @ws_client_threads, @ws_install_threads, $i);
+my (@cifs_threads, @ftp_threads, @http_threads,   $client_ip,@iperf_threads,
+	@zperf_threads, @threads_table, @ws_client_threads, @ws_install_threads, $i);
 ################################################################################
 
 ########################### Create LOG File ####################################
 my $time = WANScaler::Utils::Log::get_time; $time =~ s/://g;
-syswrite(\*STDOUT, $LOG_DIR." does not exist.\n"),exit(1) unless (-e $LOG_DIR);
+mkdir($LOG_DIR) unless (-e $LOG_DIR);
+#syswrite(\*STDOUT, $LOG_DIR." does not exist.\n"),exit(1) unless (-e $LOG_DIR);
 my $log_file_name = $LOG_DIR. $time.' - Scalability.log';
 my $log = WANScaler::Utils::Log->new($log_file_name);
 ################################################################################
 
 #initialize the random number generator.
 srand($SEED_INITIALIZER);
-syswrite(\*STDOUT,$TEST);
+#syswrite(\*STDOUT,$TEST);
 
 # read the list of machines on which test need to be done
 my @client_ips = read_client_list($CLIENT_FILE_NAME);
@@ -43,20 +44,19 @@ if($REBOOT_ALL_CLIENTS == TRUE) {
 		restart($client_ip);
     }
 }
+
 ##################### INSTALL WANSCALER CLIENT #################################
 if($INSTALL_WANSCALER_CLIENT == TRUE) {
 	$i = 0;
 	foreach $client_ip (@client_ips) {
-
-		$ws_install_threads[$i] = threads->new(\&install_wanscaler_client,
-        										$client_ip,
+	$ws_install_threads[$i] = threads->new(\&install_wanscaler_client,
+						$client_ip,
                                                 \%wanscaler_install);
         $log->log_info('Installation started for '. $client_ip);
     }
     # WAIT for Threads to return...
     foreach my $ws_thread (@ws_install_threads) {
     	my $response = $ws_thread->join;
-#        $log->log_info($response);
     }
     exit(1);
 }
@@ -67,13 +67,14 @@ if($INSTALL_WANSCALER_CLIENT == TRUE) {
 if($CONFIGURE_WANSCALER == TRUE) {
 	# Configure each WANScaler Client and Exit
 	foreach my $ip (@client_ips) {
-    set_wanscaler_client($ip, \%wanscaler_client) ;
-    }
-    exit(1);
+	    set_wanscaler_client($ip, \%wanscaler_client) ;
+	}
+	exit(1);
 }
 ########################### START TESTS HERE ###################################
 
-$log->log_info('Test started');
+$log->log_info('Test started...');
+
 # Start the test here
 if($RESET_PERF_COUNTERS == TRUE) {
 	# Configure each WANScaler Client and Exit
@@ -84,6 +85,7 @@ if($RESET_PERF_COUNTERS == TRUE) {
 
 $i = 0;
 foreach $client_ip (@client_ips) {
+
     $log->log_info('Starting the test for '.$client_ip);
     if(($TEST & $CIFS_TEST) == $CIFS_TEST) {
 		$cifs_threads[$i] = threads->new(\&do_cifs, $client_ip, \%cifs);
@@ -108,7 +110,7 @@ foreach $client_ip (@client_ips) {
 													client_ip => $client_ip
                                                  };
     }
-    if(($TEST & $IPERF_TEST) == $IPERF_TEST) {
+        if(($TEST & $IPERF_TEST) == $IPERF_TEST) {
     	my $seed = undef;
 #        my %iperf_temp = %iperf;
 		my %iperf_temp = (
@@ -131,9 +133,41 @@ foreach $client_ip (@client_ips) {
             } while ($seed <= 0);
 
         }
+
 		$iperf_threads[$i] = threads->new(\&do_iperf, $client_ip, \%iperf_temp, $seed);
         $log->log_info('IPERF test initiated for '. $client_ip);
         $threads_table[$iperf_threads[$i]->tid] = { type => 'IPERF',
+													client_ip => $client_ip
+
+			                                      };
+    }
+
+    if(($TEST & $ZPERF_TEST) == $ZPERF_TEST) {
+    	my $seed = undef;
+#        my %iperf_temp = %iperf;
+		my %zperf_temp = (
+        				 'time' 	=> $zperf{'time'},
+                         'size' 	=> $zperf{'size'},
+                         'random' 	=> $zperf{'random'},
+                         'direction'=> $zperf{'direction'},
+                         'sessions'	=> $zperf{'sessions'}
+                         );
+        $zperf_temp{'server'} = @{$zperf{'servers'}}[ int ($i / (scalar @{$zperf{'ports'} }))];
+#        $iperf_temp{'server'} = ($i%2)?'172.32.2.41':'172.32.2.42';
+		$zperf_temp{'port'} = @{$zperf{'ports'}}[$i % (scalar @{$zperf{'ports'}})];
+
+    	if($zperf{'random'} == 1) {
+            do {
+            	$seed = rand;
+				$seed = int ( $seed * $MAX_RANDOM_VALUE);
+    	        $log->log_info("Seed value used is : $seed");
+                sleep(3);
+            } while ($seed <= 0);
+
+        }
+		$zperf_threads[$i] = threads->new(\&do_zperf, $client_ip, \%zperf_temp, $seed);
+        $log->log_info('ZPERF test initiated for '. $client_ip);
+        $threads_table[$zperf_threads[$i]->tid] = { type => 'ZPERF',
 													client_ip => $client_ip
 			                                      };
     }
@@ -143,15 +177,21 @@ foreach $client_ip (@client_ips) {
     $i++;
 }
 
+
 #################### READ WS Metrics HERE #####################
 if ($CAPTURE_CLIENT_METRICS == TRUE) {
-	$i = 0;
+       	$i = 0;
+    # print"hi metrics start here";
+    # print Dumper(\@client_ips);
+
 	foreach $client_ip (@client_ips) {
 		$ws_client_threads[$i] = threads->new(\&do_ws_client_stat,$client_ip,\%ws_stat);
 	    $log->log_info("Started thread for reading stats from $client_ip");
     	$threads_table[$ws_client_threads[$i]->tid] = { type => 'Client',	'client_ip' => $client_ip
 				                                      };
 		$i++;
+       # print"hi metrics start here";
+
 	}
 }
 
@@ -165,6 +205,8 @@ wait_to_join_threads(\@threads_table,
                      \@http_threads,
                      \@ws_client_threads);
 write_results($log,\@threads_table);
+syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+#calculate_summary($log,\@threads_table); #TODO ## IN PROGRESS [2nd April 07]
 
 if($CAPTURE_CLIENT_METRICS == TRUE) {
 	# Configure each WANScaler Client and Exit
@@ -175,13 +217,27 @@ if($CAPTURE_CLIENT_METRICS == TRUE) {
         	$result->{'CompressionRatioSend'} = $wanscaler->get_recv_compression_ratio();
             $result->{'CompressionRatioRecv'} = $wanscaler->get_send_compression_ratio();
         }
-#	    my $server_response = do_rpc_call('WANScaler.Scalability.Library.get_static_wanscaler_stats',$ip,\@static_ws_stat);
+	#    my $server_response = do_rpc_call('WANScaler.Scalability.Library.get_static_wanscaler_stats',$ip,\@static_ws_stat);
 		$log->log_result(Dumper($result));
         print Dumper($result);
    }
 }
+ if(($TEST & $ZPERF_TEST) == $ZPERF_TEST)
+ {
 syswrite(\*STDOUT,"\nCalculating Throughput...\n");
-calculate_summary($log, \@threads_table); #TODO ## IN PROGRESS [2nd April 07]
+calculate_summary_Zperf($log, \@threads_table); #TODO ## IN PROGRESS [2nd April 07]
+}
+elsif(($TEST & $IPERF_TEST) == $IPERF_TEST)
+{
+syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+calculate_summary_Iperf($log, \@threads_table); #TODO ## IN PROGRESS [2nd April 07]
+}
+ if(($TEST & $CIFS_TEST) == $CIFS_TEST)
+ {
+syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+calculate_summary_Cifs($log, \@threads_table); #TODO ## IN PROGRESS [2nd April 07]
+}
+
 
 
 
@@ -250,7 +306,22 @@ sub do_iperf {
                                       $seed);
 
 
-#	my $formatted = format_iperf_result($server_response);
+#my $formatted = format_iperf_result($server_response);
+    $server_response->{'IP'} = $server_ip;
+    syswrite(\*STDOUT,Dumper( $server_response));
+	return $server_response;
+
+}
+######################## STARTER FOR IPERF TEST ################################
+sub do_zperf {
+	my ($server_ip,$zperf_options,$seed) = @_;
+    my $server_response = do_rpc_call('WANScaler.Scalability.Library.start_zperf_sessions',
+    					    		  $server_ip,
+                                      $zperf_options,
+                                      $seed);
+
+
+  #	my $formatted = format_zperf_result($server_response);
     $server_response->{'IP'} = $server_ip;
     syswrite(\*STDOUT,Dumper( $server_response));
 	return $server_response;
@@ -263,7 +334,7 @@ sub do_ws_client_stat {
     my $server_response = do_rpc_call('WANScaler.Scalability.Library.get_wanscaler_stats',
     					    		  $server_ip,
                                       $wanscaler_stat);
-    @{$server_response}[ scalar @{$server_response}] = {'IP' => $server_ip};
+   # @{$server_response}[ scalar @{$server_response}] = {'IP' => $server_ip};
     syswrite(\*STDOUT,Dumper( $server_response));
 
     return $server_response;
@@ -300,6 +371,23 @@ sub restart {
     return $server_response;
 
 }
+
+sub stop_wanscaler_service {
+   	my $client_ip = shift;
+    my $server_response = do_rpc_call('WANScaler.Scalability.Library.stop_wanscaler_service',
+    					    		  $client_ip);
+    return $server_response;
+
+}
+
+sub start_wanscaler_service {
+   	my $client_ip = shift;
+    my $server_response = do_rpc_call('WANScaler.Scalability.Library.start_wanscaler_service',
+    					    		  $client_ip);
+    return $server_response;
+
+}
+
 ####################################################################################################################
 
 # ---------------------------------------------------------------------------- #
@@ -344,19 +432,73 @@ sub write_results {
 		$log->log_result(Dumper($test->{'RESULT'})); # TODO
 	}
 }
-
-sub calculate_summary {
+sub calculate_summary_Iperf {
 	my $log = shift;
+
 	my $threads_table = shift;
     my $iperf_sum = 0;
+
+
 	foreach my $test (@$threads_table) {
 		next if ( $test->{'type'} and ($test->{'type'} ne 'IPERF'));
         $iperf_sum = $iperf_sum + $test->{'RESULT'}->{'Total'} if ($test->{'RESULT'}
         													   and $test->{'RESULT'}->{'Total'});
+
+     #   print $iperf_sum;
     }
     $log->log_result('Throughput of Iperf is : '.$iperf_sum);
+   # syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+    syswrite(\*STDOUT,'Throughput of Iperf is : '.$iperf_sum);
+
 	return undef;
 }
+
+
+sub calculate_summary_Zperf {
+	my $log = shift;
+
+	my $threads_table = shift;
+    my $zperf_sum = 0;
+
+
+	foreach my $test (@$threads_table) {
+		next if ( $test->{'type'} and ($test->{'type'} ne 'ZPERF'));
+        $zperf_sum = $zperf_sum + $test->{'RESULT'}->{'Total'} if ($test->{'RESULT'}
+        													   and $test->{'RESULT'}->{'Total'});
+
+
+    }
+    $log->log_result('Throughput of Zperf is : '.$zperf_sum);
+    #syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+    syswrite(\*STDOUT,'Throughput of Zperf is : '.$zperf_sum);
+
+	return undef;
+
+}
+
+sub calculate_summary_Cifs {
+	my $log = shift;
+
+	my $threads_table = shift;
+    my $cifs_sum = 0;
+
+
+	foreach my $test (@$threads_table) {
+		next if ( $test->{'type'} and ($test->{'type'} ne 'CIFS'));
+        $cifs_sum = $cifs_sum + $test->{'RESULT'}->{'Total'} if ($test->{'RESULT'}
+        													   and $test->{'RESULT'}->{'Total'});
+
+
+    }
+    $log->log_result('Throughput of Cifs is : '.$cifs_sum);
+    #syswrite(\*STDOUT,"\nCalculating Throughput...\n");
+    syswrite(\*STDOUT,'Throughput of Cifs is : '.$cifs_sum);
+
+	return undef;
+
+}
+
+
 
 # ---------------------------------------------------------------------------- #
 #                      OTHER METHODS USED IN ABOVE SCRIPT                      #
@@ -387,11 +529,17 @@ sub wait_to_join_threads {
         my $http_result = $http_thread->join();
         $threads_table[$http_thread->tid]->{'RESULT'} = $http_result;
     }
-    foreach my $iperf_thread (@iperf_threads) {
+        foreach my $iperf_thread (@iperf_threads) {
 		$tid = $iperf_thread->tid;
 		$log->log_info('Waiting to join iperf thread '.$tid);
         my $iperf_result = $iperf_thread->join();
         $threads_table[$iperf_thread->tid]->{'RESULT'} = $iperf_result;
+    }
+    foreach my $zperf_thread (@zperf_threads) {
+		$tid = $zperf_thread->tid;
+		$log->log_info('Waiting to join zperf thread '.$tid);
+        my $zperf_result = $zperf_thread->join();
+        $threads_table[$zperf_thread->tid]->{'RESULT'} = $zperf_result;
     }
     foreach my $ws_client_thread (@ws_client_threads) {
     	$tid = $ws_client_thread->tid;
@@ -424,4 +572,4 @@ sub test {
 				                      -> result;
 	print Dumper($server_response);
 	exit 1;
-}
+    }

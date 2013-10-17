@@ -65,7 +65,8 @@ sub get_send_compression_ratio{
     	return 0;
     }
 
-	my $ratio = sprintf("%.2f", $response1->{$param1}->{"Total"}/$response2->{$param2}->{"Total"});
+	my $ratio = ($response2->{"Total"} != 0)? sprintf("%.2f", $response1->{"Total"}/$response2->{"Total"})
+    										: "0";
     return ($ratio >=1) ? $ratio : 0;
 }
 
@@ -91,8 +92,8 @@ sub get_recv_compression_ratio{
     and $response2->{$param2}->{'Fault'} ) {
     	return 0;
     }
-
-	my $ratio = sprintf("%.21f", $response1->{$param1}->{"Total"}/$response2->{$param2}->{"Total"});
+	my $ratio = ($response2->{"Total"} != 0)? sprintf("%.2f", $response1->{"Total"}/$response2->{"Total"})
+    										: "0";
     return ($ratio >=1) ? $ratio : 0;
 }
 

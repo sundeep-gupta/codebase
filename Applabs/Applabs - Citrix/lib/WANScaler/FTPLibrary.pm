@@ -76,6 +76,7 @@ sub put {
     }
     return $return
 }
+
 sub close {
 	my $self = shift;
     $self->{'FTP'}->close();

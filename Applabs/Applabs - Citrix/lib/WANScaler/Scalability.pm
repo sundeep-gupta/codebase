@@ -1,7 +1,6 @@
-#!/usr/bin/perl
-package Scalability;
+package WANScaler::Scalability;
 use strict;
-#use warnings;
+use warnings;
 use threads;
 use Data::Dumper;
 use WANScaler::CIFSLibrary;
