@@ -6,7 +6,6 @@ my $large_dir = 'LargeFile45';
 my $l_dir2 = 'LargeFile1.5';
 my $small_dir = 'SmallFiles';
 my $browse_dir = 'Browse';
-
 my $l_size = 1024*1024*10;
 my $l_size2 = 1024*1024;
 my $s_size = 512000;
@@ -15,12 +14,9 @@ my $s_file_name = 'SmallFile';
 my $l_file_name = 'LargeFile';
 my $s_no = 100;
 my $b_no = 5000;
-#my $session_size = 20;
-#my $office_dir = 'Office';
-
 my $dir_name = "CIFS_Share";
-#my $k = 19;
 $pwd = cwd;
+
 for($i= $start_dir;$i<$end_dir;$i++) {
 
 	chdir($pwd);
@@ -50,11 +46,4 @@ for($i= $start_dir;$i<$end_dir;$i++) {
     `perl ..\\..\\RFileGen.pl -s $s_size -f $s_file_name -n $s_no -r`;
 
     chdir($pwd);
-#    for($j = 0;$j<$session_size;$j++) {
- #   	$k++;
-#    	mkdir(".\\".$dir_name.$i."\\".$office_dir.$j);
-#        copy_file('.\\','Word.doc',".\\".$dir_name.$i."\\".$office_dir.$j."\\",$k.".doc");
-#        copy_file('.\\','Excel.xls',".\\".$dir_name.$i."\\".$office_dir.$j."\\",$k.".xls");
-#        copy_file('.\\','Powerpoint.ppt',".\\".$dir_name.$i."\\".$office_dir.$j."\\",$k.".ppt");
- #   }
 }
