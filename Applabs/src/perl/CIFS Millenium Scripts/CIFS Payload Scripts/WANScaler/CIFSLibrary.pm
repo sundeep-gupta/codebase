@@ -47,6 +47,7 @@ sub unshare_directory {
     	return 0;
     }
 }
+
 sub get_unc {
 	my ($drive_letter) = @_;
 	if (Win32::NetResource::GetUNCName( my $unc_name,$drive_letter )) {
@@ -71,6 +72,7 @@ sub unmap_drive {
     	return 0;
     }
 }
+
 sub map_drive {
 	my ($drive_letter, $server_name, $share_name) = @_;
     my %NetResource = (
@@ -88,6 +90,7 @@ sub map_drive {
     	return 0;
     }
 }
+
 sub share_available {
 	my ($server_name, $share_name) = @_;
 	 my $count = 0;
@@ -95,6 +98,7 @@ sub share_available {
 	return 0 if $count > 100;
     return 1;
 }
+
 sub is_available {
 	my ($server_name, $share_name) = @_;
 
@@ -123,6 +127,7 @@ sub cifs_read {
 	$err_msg = ($ret==1? undef:$!);
 	return $ret;
 }
+
 sub copy_file {
 	my ($source_path,$source_file_name,$dest_path,$dest_file_name) = @_;
     if (-e $source_path.$source_file_name) {
@@ -179,6 +184,7 @@ sub browse_directory {
 	my $time = $timer2[0]-$timer1[0] +($timer2[1]-$timer1[1])/1000000;
 	return $time;
 }
+
 sub delete_file {
 	my ($file_name) = @_;
 	unlink($file_name);

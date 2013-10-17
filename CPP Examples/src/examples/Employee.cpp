@@ -7,6 +7,7 @@ Employee::Employee(int eno, char* n, char* d, float s) {
     dept = d;
     salary = s;
 }
+
 void Employee::print() {
     cout << emp_no << "\t" << name << "\t" << dept <<"\t" << salary << endl;
 }

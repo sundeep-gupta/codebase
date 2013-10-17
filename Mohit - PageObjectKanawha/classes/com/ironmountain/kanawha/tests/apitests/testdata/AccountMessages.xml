@@ -291,4 +291,17 @@
 		<param name="messageType">0</param>
 		</output>
 </test>
+<test name="messageHTMLTagTest">
+	<input>
+		<param name="userName">autouser1@api.com</param>
+		<param name="password">1Connected</param>
+		<param name="Technician">admin</param>
+		<param name="message"><![CDATA[<p>You can contact Support using one of the following methods:</p>]]></param>
+		<param name="messageState">1</param>
+		</input>
+		<output>
+		<param name="messageAssert"><![CDATA[&lt;p&gt;You can contact Support using one of the following methods:&lt;/p&gt;]]></param>
+		<param name="messageType">0</param>
+		</output>
+</test>
 </suite>

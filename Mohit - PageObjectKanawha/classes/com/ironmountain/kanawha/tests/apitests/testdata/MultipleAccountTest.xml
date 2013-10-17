@@ -57,8 +57,8 @@
 	<input>
 		<param name="userName">multipleaccuser@test.com</param>
 		<param name="password">2_Connected</param>
-		<param name="accNumber">101009406</param>
-		<param name="DataUsageInBytes">3921569500</param>
+		<param name="accNumber">101009010</param>
+		<param name="DataUsageInBytes">208</param>
 	</input>
 </test>
 

@@ -2,179 +2,240 @@
 <!-- Less than 1KB -->
 <test name="GetRetrievalSetTest">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">Text File Of 1KB.txt</param>	
-		<param name="location">C:\\temp\\MyRoam.zip</param>		
+		<param name="location">C:\\temp\\MyRoam1.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>		
 		</input>
 </test>
 <!-- Less than 1MB -->
 <test name="GetRetrievalSetTest1">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
-		<param name="path">C:\\MyRoamRegressionData\\2GB Data Folder\\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">Word Document MyRoamRegression.docx</param>
-		<param name="location">C:\\temp\\MyRoam1.zip</param>
+		<param name="location">C:\\temp\\MyRoam2.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>
 		</input>
 </test>
 <!-- Less than 10MB -->
 <test name="GetRetrievalSetTest2">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">Emo Test PST File For Regression.pst</param>
-		<param name="location">C:\\temp\\MyRoam2.zip</param>
+		<param name="location">C:\\temp\\MyRoam3.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>
 		</input>
 </test>
 <!-- Less than 100MB -->
 <test name="GetRetrievalSetTest3">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\2GB Data Folder\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">Java6 Setup.exe</param>
-		<param name="location">C:\\temp\\MyRoam3.zip</param>
+		<param name="location">C:\\temp\\MyRoam4.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>
 		</input>
 </test>
 <!-- Less than 1000MB -->
 <test name="GetRetrievalSetTest4">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\2GB Data Folder\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">1File to Exclude.exe</param>
-		<param name="location">C:\\temp\\MyRoam4.zip</param>
+		<param name="location">C:\\temp\\MyRoam5.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>
 		</input>
 </test>
 <!-- Over than 1000MB -->
 <test name="GetRetrievalSetTest5">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\2GB Data Folder\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">Directory MDF File.mdf</param>
-		<param name="location">C:\\temp\\MyRoam5.zip</param>
+		<param name="location">C:\\temp\\MyRoam6.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>
 		</input>
 </test>
 <!-- Multiple file in a single retrieve -->
 <test name="MultiFileRetrieval">
 	<input>
-		<param name="userName">user1@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-04-26T08:33:59Z</param>
-		<param name="Filename">Xml File Sample For Backup.xml</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename1">Xml File Sample For Backup.xml</param>
 		<param name="Filename2">Word Document MyRoamRegression.docx</param>
 		<param name="Filename3">Text File Of 1KB.txt</param>
 		<param name="Filename4">SymLinkFile.txt</param>
 		<param name="Filename5">Picture File.jpg</param>
 		<param name="Filename6">Emo Test PST File For Regression.pst</param>
-		<param name="location">C:\\temp\\MyRoam.zip</param>		
+		<param name="location">C:\\temp\\MyRoam7.zip</param>		
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">6</param>
 		</input>
 </test>
-<!-- Search and Retrieve -->
-<test name="searchRetrieveTest">
-	<input>
-		<param name="userName">user2@retrival.com</param>
-		<param name="password">2_Connected</param>
-		<param name="searchFileName">Word Document MyRoamRegression.docx</param>
-		<param name="path">C:\MyRoamRegressionData\CommonTestData</param>
-		<param name="startBackupDate">All</param>
-		<param name="includeSubFolders">true</param>
-		<param name="caseSensitive">false</param>
-		<param name="searchScope">0</param>
-		<param name="fileContent"></param>
-		</input>
-		<output>
-		<param name="pathassert">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="searchFileName">Word Document MyRoamRegression.docx</param>
-		<param name="noOfFiles">1</param>
-		<param name="fileSize">697144</param>
-		</output>
-</test>
-<!-- Empty Folder Retrieve -->
-<test name="EmptyFolderRetrieveTest">
-	<input>
-		<param name="userName">user3@retrival.com</param>
-		<param name="password">2_Connected</param>
-		<param name="path">C:\MyRoamRegressionData\EmptyFolder\</param>
-		<param name="startBackupDate"></param>
-		<param name="location">C:\\temp\\MyRoam6.zip</param>		
-		</input>
-</test>
-<!-- Less than 1KB -->
+
+<!-- Retrieve all revisions -->
 <test name="RetrievalAllRecentDate">
 	<input>
-		<param name="userName">user3@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-05-11T08:59:53Z</param>
-		<param name="startBackupDate1">2011-05-11T09:04:16Z</param>
-		<param name="startBackupDate2">2011-05-11T09:06:25Z</param>
-		<param name="startBackupDate3">2011-05-11T09:07:56Z</param>
-		<param name="Filename">MultiVersion.txt</param>	
-		<param name="location">C:\\temp\\MyRoam7.zip</param>
-		<param name="location1">C:\\temp\\MyRoam8.zip</param>
-		<param name="location2">C:\\temp\\MyRoam9.zip</param>
-		<param name="location3">C:\\temp\\MyRoam10.zip</param>
-		<param name="location4">C:\\temp\\MyRoam11.zip</param>		
+		<param name="startBackupDate">All</param>
+		<param name="Filename">My Text File.log</param>	
+		<param name="location">C:\\temp\\MyRoam8.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">10</param>
 		</input>
 </test>
 <!-- File without extension -->
 <test name="FileWithoutExtensionTest">
 	<input>
-		<param name="userName">user3@retrival.com</param>
-		<param name="password">2_Connected</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
 		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-05-11T11:31:17Z</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">withoutExt</param>	
-		<param name="location">C:\\temp\\MyRoam12.zip</param>		
+		<param name="location">C:\\temp\\MyRoam9.zip</param>	
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>	
 		</input>
 </test>
 <!-- File rename and retrieve -->
 <test name="FileRenameTest">
 	<input>
-		<param name="userName">user3@retrival.com</param>
-		<param name="password">2_Connected</param>
-		<param name="path">E:\TextSearch\</param>
-		<param name="startBackupDate">2011-05-12T06:54:58Z</param>
-		<param name="Filename">File1.txt</param>
-		<param name="Filename2">File1Deepak.txt</param>	
-		<param name="location">C:\\temp\\MyRoam13.zip</param>		
-		<param name="location2">C:\\temp\\MyRoam14.zip</param>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\SubFolder01\</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename1">Test_backup.docx</param>
+		<param name="Filename2">Test_backup1.docx</param>	
+		<param name="location">C:\\temp\\MyRoam10.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">2</param>
 		</input>
 </test>
 <!-- Win 7 Agent retrieve -->
 <test name="WinSevenTest">
 	<input>
-		<param name="userName">r@kan.com</param>
+		<param name="userName">retrieve@user1.com</param>
 		<param name="password">1Connected</param>
-		<param name="path">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\CommonTestData\</param>
-		<param name="startBackupDate">2011-05-13T05:01:32Z</param>
+		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
+		<param name="startBackupDate">All</param>
 		<param name="Filename">SymLinkFile.txt</param>
-		<param name="location">C:\\temp\\MyRoam15.zip</param>		
+		<param name="location">C:\\temp\\MyRoam11.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>		
 		</input>
 </test>
 
 <!-- Alpha Numeric retrieve -->
 <test name="AlphaNumericPassTest">
 	<input>
-		<param name="userName">alphanumeric@test.com</param>
+		<param name="userName">retrieve@user2.com</param>
 		<param name="password"><![CDATA[@1pHa%^&*()-+=}\[]';:]]></param>
-		<param name="path">C:\kanawhaqa\Kanahwa test data\MyRoamRegressionData\Special char folder\</param>
-		<param name="startBackupDate">2011-07-05T11:26:02Z</param>
-		<param name="Filename">a_.txt</param>
-		<param name="location">C:\\temp\\MyRoam15.zip</param>		
+		<param name="path">C:\MyRoamRegressionData\CommonTestData\</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename">SymLinkFile.txt</param>
+		<param name="location">C:\\temp\\MyRoam12.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">1</param>		
 		</input>
 </test>
-
+<!-- Small Folder Retrieve -->
+<test name="SmallFolderRetrieveTest">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\CommonTestData\MSG\NOTE\</param>
+		<param name="startBackupDate"></param>
+		<param name="location">C:\\temp\\MyRoam13.zip</param>		
+		</input>
+</test>
+<!-- Large Folder Retrieve -->
+<test name="LargeFolderRetrieveTest">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\2GB Data Folder\</param>
+		<param name="startBackupDate"></param>
+		<param name="location">C:\\temp\\MyRoam14.zip</param>		
+		</input>
+</test>
+<!-- Compressed Files Retrieve Test-->
+<test name="compressedFilesRetrievalTest">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path1">C:\MyRoamRegressionData\CommonTestData\MSG\</param>
+		<param name="path2">C:\MyRoamRegressionData\2GB Data Folder\</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename1">New Folder.zip</param>
+		<param name="Filename2">Hudson.war</param>	
+		<param name="location">C:\\temp\\MyRoam15.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">2</param>
+		</input>
+</test>
+<!-- Retrieve PDF and NSF -->
+<test name="PDFAndNSFRetrieve">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path1">C:\MyRoamRegressionData\SubFolder02\SubFolder02.01\LongPathFolderName_01\Long Folder Name02\Long Folder Name03\LongPathFolderName To Test MyRoam Regression Automation HPQC-Test ID 6032\</param>
+		<param name="path2">C:\MyRoamRegressionData\SubFolder02\SubFolder02.01\</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename1">PDFDOC~1.PDF</param>
+		<param name="Filename2">Non_Emo_Notes File.nsf</param>	
+		<param name="location">C:\\temp\\MyRoam16.zip</param>
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">2</param>		
+		</input>
+</test>
+<!-- Office Documents retrieve -->
+<test name="OfficeDocsRetrieveTest">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\Office Docs\</param>
+		<param name="startBackupDate">All</param>
+		<param name="Filename1">CB-Intro.pptx</param>
+		<param name="Filename2">K1WebappFeedback.xls</param>	
+		<param name="Filename3">document.docx</param>
+		<param name="location">C:\\temp\\MyRoam17.zip</param>		
+		<param name="includeSubfolder">true</param>	
+		<param name="noOfFiles">3</param>
+		</input>
+</test>
+<!-- Large Folder Retrieve -->
+<test name="FiveThousandFilesFolderRetrieveTest">
+	<input>
+		<param name="userName">retrieve@user1.com</param>
+		<param name="password">1Connected</param>
+		<param name="path">C:\MyRoamRegressionData\eclipse-jee-galileo-SR1-win32\</param>
+		<param name="startBackupDate"></param>
+		<param name="location">C:\\temp\\MyRoam18.zip</param>		
+		</input>
+</test>
 </suite>

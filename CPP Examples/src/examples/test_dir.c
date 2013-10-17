@@ -1,8 +1,8 @@
-     #include <stdio.h>
-     #include <sys/types.h>
-     #include <dirent.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
      
-     int
+int
      main (void)
      {
        DIR *dp;

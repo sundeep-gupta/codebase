@@ -1,1 +1,0 @@
-RegWrite( "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer", "NoDrives", "REG_DWORD", "03ffffff" )
