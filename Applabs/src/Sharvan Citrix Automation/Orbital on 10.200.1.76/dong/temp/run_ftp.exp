@@ -1,0 +1,31 @@
+#!/usr/bin/expect --
+set argc [llength $argv]
+puts "ARGC: $argc"
+if {$argc < 3} {
+ puts "RUN: run_ftp.exp <server ip> remote dir local dir"
+} else {
+	spawn ftp [lindex $argv 0]
+	expect "Name"
+	send "test\r"
+	expect "Password"
+	send "test\r"
+	expect "ftp>"
+	send "prompt on\r"
+	expect "ftp>"
+#	send "ha\r"
+#	expect "ftp>"
+	send "bi\r"
+	expect "ftp>"
+	send "lcd [lindex $argv 2] \r"
+	expect "ftp>"
+	send "cd [lindex $argv 1] \r"
+	expect "ftp>"
+	send "mget srf*  \r"
+        while 1 {
+          expect {
+            "mget" {send "y \r"}
+            "ftp> " break          
+           }
+        }
+        send "bye \r"
+}

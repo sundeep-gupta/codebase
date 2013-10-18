@@ -1,0 +1,50 @@
+Connecting to: http://10.200.38.55:2050/RPC2
+
+Running:  /tools/bin/perl /tools/tests/dong/6800/6800_performance.pl  -o 10.200.38.55 -r 10.200.38.65 -s 30.30.10.76 -c 0 -b 1 -d 20.20.20.1 
+connect failed: Connection refused
+#     Failed test (/tools/tests/dong/6800/6800_performance.pl at line 226)
+#          got: '0'
+#     expected: '1'
+connect failed: Connection refused
+Connecting to: http://10.200.38.55:2050/RPC2
+
+Running:  /tools/bin/perl /tools/tests/dong/6800/6800_performance.pl  -o 10.200.38.55 -r 10.200.38.65 -s 30.30.10.76 -c 0 -b 1 -d 20.20.20.1 
+read on server close failed: Connection reset by peer
+#     Failed test (/tools/tests/dong/6800/6800_performance.pl at line 230)
+#          got: '0'
+#     expected: '1'
+#     Failed test (/tools/tests/dong/6800/6800_performance.pl at line 226)
+#          got: '0'
+#     expected: '1'
+getpeername failed: Transport endpoint is not connected
+#     Failed test (/tools/tests/dong/6800/6800_performance.pl at line 230)
+#          got: '0'
+#     expected: '1'
+#     Failed test (/tools/tests/dong/6800/6800_performance.pl at line 226)
+#          got: '0'
+#     expected: '1'
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+# Looks like you failed 4 tests of 12.
+Total sub-cases PASS: 8 
+Total sub-cases FAIL: 4 
+
+Running:  /tools/bin/perl /tools/tests/dong/6800/6800_performance.pl -o 10.200.38.55 -r 10.200.38.65 -s 30.30.10.76  -c 1 -b 1 -d 20.20.20.1 
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+remove: No such process
+Total sub-cases PASS: 12 
+Total sub-cases FAIL: 0 
+
+Running:  /tools/bin/perl  /tools/tests/dong/6800/6800_performance.pl -o 10.200.38.55 -r 10.200.38.65 -s 30.30.10.76  -f 1 -b 1 -d 20.20.20.1 

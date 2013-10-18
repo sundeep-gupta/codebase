@@ -1,0 +1,68 @@
+#!/tools/bin/perl 
+
+=head NAME 
+
+run_test.pl
+
+
+=head1 SYNOPSIS
+
+If run from the command line:
+
+run_test.pl -s <ip_address>
+
+=head1 DESCRIPTION
+
+This is a simple smoke test for the Orbital Data accelration appliance.
+The program is a wrapper for other tests, hence its a "suite".
+
+
+=cut
+
+
+=head1 ARGUMENTS
+
+-s <server ip address>
+
+=cut
+
+use Test::More  tests => 2 ; # the number of tests
+use Carp ;
+use strict ;
+
+
+use Getopt::Std ;
+use vars qw( $opt_s);
+getopt ("s") ;
+
+my $host ;
+if ( $opt_s ) {
+  $host = $opt_s ;
+}
+#print "HOST $host";
+die "\nNeed ip address: run_test.pl -s <ip address> \n" 
+  unless ($host);
+  chomp ($host ) ;
+
+is( run_test( "/tools/tests/dong/ping.pl" , $host, ) , 1, "ping , 1 request : $host") ;
+is( run_test( "/tools/tests/dong/scp_tmp.pl" , $host, ) , 1, "SCP Test: $host") ;
+
+
+sub run_test
+  {
+    my $test = shift ;
+    my $host = shift ;
+    my $invoke = "/tools/bin/perl $test -s  $host" ;
+    print "RUNNING:$invoke \n" ;
+#    my $out = `$invoke` ;
+    sleep 2 ;
+    my $response = `$invoke` ;
+    print "THE RESULTS ...\n $response\n";
+    if (  ($response =~/ok/gxm)  ) {
+#      print "\n\n$out\n\n" ;
+      return 1 ;
+    } else { print $response ; return 0 ; }
+  }
+
+
+

@@ -1,0 +1,12 @@
+#!/tools/bin/perl
+use Test::More tests => 1;
+use Getopt::Std;
+use strict;
+use warnings;
+
+#	my $scp = `scp root\@$host\:\/tools\/files\/\/$file \/logs\/tmp\/`;
+#	my $temp_file = '/logs/tmp/' . $file;
+#	if (-e $temp_file) {return 1;} else {return 0;}
+system("iperf -s &" );
+system ("ps -e |grep iperf");
+

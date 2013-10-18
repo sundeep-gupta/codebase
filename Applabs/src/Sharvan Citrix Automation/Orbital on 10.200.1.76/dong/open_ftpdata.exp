@@ -1,0 +1,18 @@
+#!/usr/bin/expect --
+set argc [llength $argv]
+puts "ARGC: $argc"
+if {$argc < 1} {
+ puts "RUN: open_ftpdata.exp <server ip> "
+} else {
+	spawn ftp [lindex $argv 0]
+	expect "Name"
+	send "ftp\r"
+	expect "Password"
+	send "test\r"
+	expect "ftp>"
+        while 1 {
+          send "ls -l \r"
+          expect "ftp>"
+        }
+        send "bye \r"
+}

@@ -1,0 +1,69 @@
+#dong (2/13/06
+#If the tested Orb pair has alerts,
+#this script will send it out to dong & then
+#clear all alerts
+#Check the testbed avery hour
+#------------------------------------
+
+#!/usr/bin/perl -w
+use lib '/tools/lib/perl5/site_perl/5.8.4'; 
+use lib '/tools/tests/regression';
+use XMLRPC::Lite;
+#use Data::Dumper;
+use orbital_rpc;
+use Getopt::Std; 
+#
+# Initialization code
+#
+my $testcase = get_alerts;
+my $log_file = "/tmp/log";
+
+getopt("o, r");
+if ( !$opt_o || !$opt_r) {
+   print "Usage: $testcase -o <locOrb> -r <remOrb> \n";
+   exit 1;
+   }
+
+my $locOrb=$opt_o; chomp($locOrb);
+my $locOrb_url = "http://$locOrb:2050/RPC2";
+my $locOrb_rpc = Orbital::Rpc->new("http://$locOrb:2050/RPC2");
+
+my $remOrb=$opt_r; chomp($remOrb);
+my $remOrb_url = "http://$remOrb:2050/RPC2";
+my $remOrb_rpc = Orbital::Rpc->new("http://$remOrb:2050/RPC2");
+
+#
+# If there was an Alert, display it
+#
+my @Alert;
+my @NumAlerts=0;
+
+while (1) {	
+
+   #Check alerts of the locOrb
+   ($NumAlerts, @Alerts) = $locOrb_rpc->get_alerts();
+    if ($NumAlerts) {
+    	print ("Displaying Alert!\n");
+    	print "There are: $NumAlerts Alerts \n";
+        open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+    	print LOG "@Alerts \n" ;
+        print `mail \-s \"Alert from $locOrb\" dong\@orbitaldata.com /< $log_file`;
+        $remOrb_rpc->send_command('Alerts.Clearall');
+        }
+    @Alerts="";
+    @NumAlerts=0;
+
+   #Check alerts of the remOrb
+   ($NumAlerts, @Alerts) = $remOrb_rpc->get_alerts();
+    if ($NumAlerts) {
+    	print ("Displaying Alert!\n");
+    	print "There are: $NumAlerts Alerts \n";
+        open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+    	print LOG "@Alerts \n" ;
+        print `mail \-s \"Alert from $remOrb\" dong\@orbitaldata.com \< $log_file`;
+        $remOrb_rpc->send_command('Alerts.Clearall');
+        }
+
+   sleep 600;	#check every 1 hr
+   
+   }
