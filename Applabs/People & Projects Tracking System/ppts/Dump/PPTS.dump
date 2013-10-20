@@ -1,0 +1,134 @@
+# MySQL dump 8.12
+#
+# Host: localhost    Database: PPTS
+#--------------------------------------------------------
+# Server version	3.23.32
+
+#
+# Table structure for table 'board'
+#
+
+CREATE TABLE board (
+  USERID int(11) NOT NULL default '0',
+  STATUS int(11) NOT NULL default '0',
+  MESSAGE text NOT NULL,
+  UPDATED timestamp(14) NOT NULL,
+  NEWENTRY int(11) NOT NULL default '0',
+  PRIMARY KEY (USERID),
+  UNIQUE KEY USERID(USERID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'clients'
+#
+
+CREATE TABLE clients (
+  ClientID int(11) NOT NULL auto_increment,
+  Name text NOT NULL,
+  ClientArchive char(1) NOT NULL default '0',
+  PRIMARY KEY (ClientID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'projectlog'
+#
+
+CREATE TABLE projectlog (
+  ProjectLogID int(11) NOT NULL auto_increment,
+  ProjectID int(11) NOT NULL default '0',
+  UserID text NOT NULL,
+  Date timestamp(14) NOT NULL,
+  Log longtext NOT NULL,
+  PRIMARY KEY (ProjectLogID),
+  UNIQUE KEY ProjectLogID(ProjectLogID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'projects'
+#
+
+CREATE TABLE projects (
+  ProjectID int(11) NOT NULL auto_increment,
+  ProjectName text NOT NULL,
+  ClientID int(11) NOT NULL default '0',
+  ProjectDescription text NOT NULL,
+  ProjectArchive char(1) NOT NULL default '0',
+  ProjectStatusID int(11) NOT NULL default '0',
+  ProjectPayRate int(11) NOT NULL default '0',
+  CoderChargeID int(11) NOT NULL default '0',
+  Languages longtext NOT NULL,
+  ModLib longtext NOT NULL,
+  Extras longtext NOT NULL,
+  EstDesignTime time NOT NULL default '00:00:00',
+  EstCodingTime time NOT NULL default '00:00:00',
+  EstManagementTime time NOT NULL default '00:00:00',
+  EstTestingTime time NOT NULL default '00:00:00',
+  EstMaintanenceTime time NOT NULL default '00:00:00',
+  ProdServerName longtext NOT NULL,
+  ProdServerPath longtext NOT NULL,
+  ProdContactID int(11) NOT NULL default '0',
+  DevServerName longtext NOT NULL,
+  DevServerPath longtext NOT NULL,
+  DevContactID int(11) NOT NULL default '0',
+  PRIMARY KEY (ProjectID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'projectstatus'
+#
+
+CREATE TABLE projectstatus (
+  PStatusID int(11) NOT NULL auto_increment,
+  StatusName text NOT NULL,
+  StatusDescription longtext NOT NULL,
+  PRIMARY KEY (PStatusID),
+  UNIQUE KEY PStatusID(PStatusID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'timelog'
+#
+
+CREATE TABLE timelog (
+  LogID int(11) NOT NULL auto_increment,
+  ProjectID int(11) NOT NULL default '0',
+  UserID text NOT NULL,
+  CodeID int(11) NOT NULL default '0',
+  Details longtext NOT NULL,
+  StartTime datetime NOT NULL default '0000-00-00 00:00:00',
+  EndTime datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY (LogID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'workcode'
+#
+
+CREATE TABLE workcode (
+  CodeID int(11) NOT NULL auto_increment,
+  CodeDescription text NOT NULL,
+  CodeActive char(1) NOT NULL default '',
+  CodeName text NOT NULL,
+  PRIMARY KEY (CodeID)
+) TYPE=MyISAM;
+
+#
+# Table structure for table 'workers'
+#
+
+CREATE TABLE workers (
+  fname text NOT NULL,
+  lname text NOT NULL,
+  title text NOT NULL,
+  worknum text NOT NULL,
+  homenum text NOT NULL,
+  cellnum text NOT NULL,
+  address longtext NOT NULL,
+  icq int(11) NOT NULL default '0',
+  bday date NOT NULL default '0000-00-00',
+  id int(11) NOT NULL auto_increment,
+  username text NOT NULL,
+  employee char(1) NOT NULL default '',
+  PRIMARY KEY (id)
+) TYPE=MyISAM;
+

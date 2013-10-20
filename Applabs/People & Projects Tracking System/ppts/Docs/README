@@ -1,0 +1,50 @@
+***************************************************************************
+                  People & Projects Tracking System (IPTS) 
+                             -------------------
+    begin                : Wed Oct 11 21:11:37 EDT 2000
+    programmed by        : 2000, 2001 by Anderson Silva
+    email                : anderson@whetstonelogic.com
+    version              : 2.0-alpha
+ ***************************************************************************
+
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************
+
+I. What is PPTS?
+	PPTS is a small project started at Whetstone Logic, Inc to track all
+the employees, projects, and man hours of the company. 
+
+II. Why do I need PPTS?
+	PPTS is a great tool for companies that have telecommuting workers, 
+or companies that have workers at different sites at a given time, like
+universities.
+
+III. What do I need to run PPTS?
+	The original IPTS was programmed in Perl, HTML, Javascript. And
+it uses MySQL as its back end.
+
+
+IV. What is the tables I need on MySQL to start using PPTS?
+
+        You will find a dump file w/ the entire DB structure for PPTS.
+	
+V. How to configure PPTS.
+	
+	* Make sure you have the following perl modules installed:
+        1. CGI_Lite
+	2. HTML::Template
+	3. DBI
+	4. DBD::mysql
+	5. Date::Calc
+
+	* Make sure your apache is configured so you can run .cgi scripts.
+
+        * Make sure you have mysql server running, and that you export the PPTS.dump file found on the Dump directory to the database.
+
+	* Configure the Configuration File found at Conf/Configuration.pm.	

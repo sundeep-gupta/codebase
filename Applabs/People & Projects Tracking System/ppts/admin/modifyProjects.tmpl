@@ -1,0 +1,293 @@
+<HTML>
+<HEAD>
+  <TITLE>Modify Worker</TITLE>
+  <style type=text/css>
+  .pstyle {
+        font-family: verdana, arial, helvetica;
+        font-size: 10pt;
+        margin-left: 6px;
+        margin-right: 6px;
+  }
+  </style>
+</HEAD>
+
+
+<BODY BGCOLOR="#ffc842" TEXT="#29085a">
+<H2><font face="Arial, Helvetica">Edit the following project under PPTS</font></H2>
+<FORM ACTION="modifyProjects.cgi" METHOD="POST">
+<TABLE BORDER="0">
+<TR>
+<TD colspan=2>
+ <B><font face="Arial, Helvetica">BASIC PROJECT INFO:</font></B></br>
+<TD>
+</TR>
+<TR>
+<TD CLASS="pstyle">
+  <B>Project Name: </B>
+</TD>
+<TD>
+  <INPUT TYPE="TEXT" NAME="ProjectName" SIZE="30" VALUE="<TMPL_VAR NAME="NAME">">
+  <INPUT TYPE="HIDDEN" NAME="id" VALUE="<TMPL_VAR NAME="ID">">
+</TD>
+</TR>
+<TR>
+<TD CLASS="pstyle">
+  <B>Client Name: </B>
+</TD>
+<TD>
+<SELECT NAME="ClientID" SIZE="1" >
+          <TMPL_LOOP NAME="CLIENTS_LOOP">
+               <OPTION VALUE="<TMPL_VAR NAME=CLIENTID>" <TMPL_VAR NAME=SELECTED>><TMPL_VAR NAME=CLIENTNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+
+</td></tr>
+<TR>
+<TD CLASS="pstyle">
+  <B>Project Description: </B>
+</TD>
+<TD>
+  <INPUT TYPE="TEXT" NAME="ProjectDescription" SIZE="30" VALUE="<TMPL_VAR NAME="DESCRIPTION">">
+</TD>
+</TR>
+
+
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Project Status: </B>
+</TD>
+<TD colspan=2>
+     <SELECT NAME="ProjectStatusID" SIZE="1" >
+          <TMPL_LOOP NAME="STATUS_LOOP">
+               <OPTION VALUE="<TMPL_VAR NAME=STATUSID>" <TMPL_VAR NAME="SELECTED">><TMPL_VAR NAME=STATUSNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+</TD>
+</TR>
+
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Pay Rate:</b><br><small>(US$/hour)</small> </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="ProjectPayRate" SIZE="5" VALUE="<TMPL_VAR NAME="PROJECTPAYRATE">">
+</TD>
+</tr>
+
+<TR>
+<TD>
+&nbsp;
+<TD>
+</TR>
+
+<TR valign=top>
+<TD colspan=2>
+ <B><font face="Arial, Helvetica">TECHNICAL INFO:</font></B>
+<TD>
+</TR>
+
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Language Implementation:</B><br><small>One Per Line</small>
+</TD>
+<TD colspan=2>
+  <TEXTAREA NAME="Languages" cols=30 rows=2 wrap=virtual><TMPL_VAR NAME="LANGUAGES"></textarea>
+</TD>
+</tr>
+
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Modules/Libraries Needed:</b><br><small>One Per Line</small> </B>
+</TD>
+<TD colspan=2>
+<TEXTAREA NAME="ModLib" cols=30 rows=5 wrap=virtual><TMPL_VAR NAME="MODLIB"></textarea></TD>
+</tr>
+
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Extra Info:</b><br><small>E.g.: Cron Jobs, Shell Commands, Majordomo</small>
+</TD>
+<TD colspan=2>
+<TEXTAREA NAME="Extras" cols=30 rows=5 wrap=virtual><TMPL_VAR NAME="EXTRAS"></textarea></TD>
+</tr>
+
+
+<TR valign=top>
+<TD CLASS="pstyle" width="25%">
+  <B>Coder in Charge: </B><br><small>Can't find coder? <a href="addWorkers.html" target="_new">Add New One</a>.</small>
+</TD>
+<TD colspan=2>
+  <SELECT NAME="CoderChargeID" SIZE="1" >
+                <OPTION VALUE="0">Select Person</OPTION>
+          <TMPL_LOOP NAME="CODER_LOOP">
+               <OPTION VALUE="<TMPL_VAR NAME=CODERID>" <TMPL_VAR NAME="SELECTED">><TMPL_VAR NAME=CODERNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+
+
+</TD>
+</TR>
+
+<TR>
+<TD>
+&nbsp;
+<TD>
+</TR>
+
+<TR valign=top>
+<TD colspan=2>
+ <B><font face="Arial, Helvetica">DEVELOPMENT SERVER INFO:</font></B>
+<TD>
+</TR>
+
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Development Server Name: </B>
+</TD>
+<TD colspan=2>
+<INPUT TYPE="TEXT" NAME="DevServerName" VALUE="<TMPL_VAR NAME="DEVSERVERNAME">" SIZE="30">
+</TD>
+</TR>
+
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Path Name for Scripts: </B>
+</TD>
+<TD colspan=2>
+<INPUT TYPE="TEXT" NAME="DevServerPath" VALUE="<TMPL_VAR NAME="DEVSERVERPATH">" SIZE="30">
+</TD>
+</TR>
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Contact Person: </B><br><small>in charge of server</small><br><small>Can't
+find contact? <a href="addWorkers.html" target="_new">Add New One</a>.</small>
+
+</TD>
+<TD colspan=2>
+     <SELECT NAME="DevContactID" SIZE="1" >
+               <OPTION VALUE="0">Select Person</OPTION>
+          <TMPL_LOOP NAME="DEV_LOOP">
+               <OPTION VALUE="<TMPL_VAR NAME=CONTACTID>" <TMPL_VAR NAME="SELECTED">><TMPL_VAR NAME=CONTACTNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD>
+&nbsp;
+<TD>
+</TR>
+
+<TR valign=top>
+<TD colspan=2>
+ <B><font face="Arial, Helvetica">PRODUCTION SERVER INFO:</font></B>
+<TD>
+</TR>
+
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Production Server Name: </B>
+</TD>
+<TD colspan=2>
+<INPUT TYPE="TEXT" NAME="ProdServerName" VALUE="<TMPL_VAR NAME="PRODSERVERNAME">" SIZE="30">
+</TD>
+</TR>
+
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Path Name for Scripts: </B>
+</TD>
+<TD colspan=2>
+<INPUT TYPE="TEXT" NAME="ProdServerPath" VALUE="<TMPL_VAR NAME="PRODSERVERPATH">" SIZE="30">
+</TD>
+</TR>
+<TR valign=top>
+<TD CLASS="pstyle">
+  <B>Contact Person: </B><br><small>in charge of server</small><br><small>Can't
+find contact? <a href="addWorkers.html" target="_new">Add New One</a>.</small>
+
+</TD>
+<TD colspan=2>
+     <SELECT NAME="ProdContactID" SIZE="1" >
+               <OPTION VALUE="0">Select Person</OPTION>
+          <TMPL_LOOP NAME="PROD_LOOP">
+               <OPTION VALUE="<TMPL_VAR NAME=CONTACTID>" <TMPL_VAR NAME="SELECTED">><TMPL_VAR NAME=CONTACTNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+</TD>
+</TR>
+
+<TR>
+<TD>
+&nbsp;
+<TD>
+</TR>
+
+<TR valign=top>
+<TD colspan=2>
+ <B><font face="Arial, Helvetica">TIME ESTIMATE INFO:</b></font></B>
+<TD>
+</TR>
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Estimated Design Time: </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="EstDesignTime" VALUE="<TMPL_VAR NAME="ESTDESIGNTIME">" SIZE="10">
+</TD>
+</TR>
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Estimated Management Time: </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="EstManagementTime" VALUE="<TMPL_VAR NAME="ESTMANAGEMENTTIME">" SIZE="10">
+</TD>
+</TR>
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Estimated Coding Time: </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="EstCodingTime" VALUE="<TMPL_VAR NAME="ESTCODINGTIME">" SIZE="10">
+</TD>
+</TR>
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Estimated Testing Time: </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="EstTestingTime" VALUE="<TMPL_VAR NAME="ESTTESTINGTIME">" SIZE="10">
+</TD>
+</TR>
+<TR valign="top">
+<TD CLASS="pstyle">
+  <B>Estimated Maintanence Time: </B>
+</TD>
+<TD colspan=2>
+  <INPUT TYPE="TEXT" NAME="EstMaintanenceTime" VALUE="<TMPL_VAR NAME="ESTMAINTANENCETIME">" SIZE="10">
+</TD>
+</TR>
+<TR>
+
+
+
+
+
+
+<TD colspan=2 class="pstyle">
+   <INPUT TYPE="SUBMIT" NAME="updateNow" VALUE="Update Client">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value="Forget Update" onClick="window.open('index.cgi', '_top')">
+
+</TD>
+</TR>
+
+</TABLE>
+
+</FORM>
+
+</BODY>
+</HTML>

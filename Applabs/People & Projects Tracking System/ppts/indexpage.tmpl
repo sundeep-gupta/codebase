@@ -1,0 +1,76 @@
+<HTML>
+  
+ <meta http-equiv="refresh" content="300">
+
+    <HEAD><TITLE>Welcome to People & Projects Tracking System</TITLE>
+  <style type=text/css>
+  .pstyle {
+        font-family: verdana, arial, helvetica;
+        font-size: 10pt;
+        margin-left: 6px;
+        margin-right: 6px;
+  }
+  </style>
+  <script language="javascript">
+    function go_submit( form )
+    {
+       form.submit() ;
+    }
+  </script>
+
+
+   </HEAD>
+  <BODY BGCOLOR ="#29085a" Text="#29085a">
+<h2><font face="verdana, arial, helvetica" color="white">People & Projects Tracking System -  Welcome <font color=#ffc842><TMPL_VAR NAME="WHOIS"></font>, to the board.</font></h2>
+<p class="pstyle"><font color="white"><b>The Board refreshes itself every <font color="#ffc842">5</font> minutes.</b></font> <font color="#ffc842" size="-2">Status Key: OTC = Off The Clock | WOR = Working</font></p>
+<table><tr>
+<td>
+<form><input type="button" value="  Projects  " onClick="window.open('prots/index.cgi','_top')"></form>
+</td>
+<td>
+<form><input type="button" value="Refresh Board" onClick="window.open('index.cgi','_top')"></form></td><td>
+
+<form><input type="button" value="Admin Tools" onClick="window.open('admin','_top')"></form></td>
+<td>
+
+<form><input type="button" value="Instant Report" onClick="window.open('reports/myreport.cgi','_top')"></form></td>
+<td><form><input type="button" value="Close Window" onClick="window.close()"></form></td>
+
+
+</tr>
+</table>
+<table border=1 width="750" bordercolor="white" bgcolor="#ffc842" cellpadding=4 cellspacing=0>
+   <tr><td class="pstyle" align="center" width="120"><b>Worker's Name</b></td>
+       <td class="pstyle" align="center"><b>Status</b></td>
+       <td class="pstyle" align="center" width="280"><b>Message</b></td>
+       <td class="pstyle" align="center"><b>Last Updated</b></td>
+       <td class="pstyle" align="center"><b>Check In/Out</b></td>
+   </tr>
+   <TMPL_LOOP NAME=WORKERS_LOOP>
+    <tr><td class="pstyle" align="center">
+    <a target="detail" href="viewWorkers.cgi?id=<TMPL_VAR NAME=ID>" onClick="window.open('','detail','width=450,height=350,toolbar=no,directories=no,status=no,scrollbars=yes,resize=no');"><TMPL_VAR NAME="NAME"></a>  
+    </td>
+    <td  class="pstyle" align="center">
+      <a href="" onClick="window.alert('<TMPL_VAR NAME=ALTTEXT>'); return false;" onMouseOver="window.status='<TMPL_VAR NAME=ALTTEXT>'; return true;" onMouseOut="window.status=''; return true;"><img src="images/<TMPL_VAR NAME="STATUS">.gif" ALT="<TMPL_VAR NAME="ALTTEXT">" border="0"></a>
+    </td>
+    <td  class="pstyle">
+      <TMPL_VAR NAME="MESSAGE">&nbsp;
+    </td>
+    <td  class="pstyle" align="center">
+<TMPL_VAR NAME="UPDATED">&nbsp;
+    </td>
+   <td  class="pstyle" align="center">
+   <form action="in_out.cgi" target="new_window" method="post">
+       <input type="hidden" name="userid" value="<TMPL_VAR NAME=ID>">
+       <input type="hidden" name="newentry" value="<TMPL_VAR NAME=NEWENTRY>">      
+
+       <input name="checkNow" type="submit" value="In/Out" onClick="window.name='parent';window.open('','new_window','width=500,height=350,toolbar=no,directories=no,status=no,scrollbars=yes,resize=no');">   
+   </form>
+    </td>
+    </tr>
+   </TMPL_LOOP>
+
+</table>
+
+</BODY>
+</HTML>
