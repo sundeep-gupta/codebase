@@ -1,0 +1,142 @@
+#!/tools/bin/perl  
+
+#use Test::More  tests => 2 ; # the number of tests
+use lib '/tools/lib/perl5/site_perl/5.8.4';
+use lib '/tools/tests/regression';
+use Carp;
+use Getopt::Std ;
+#use strict;
+use Time::localtime;
+use XMLRPC::Lite;
+use orbital_rpc;
+#my $log_dir = '/var/tmp/';
+#my $log_dir = '/logs/regression_results/';
+my $log_dir = '/logs/TestResult/';
+
+getopt ("m");
+my $send_mail = 0;	#default is not sending email result out
+if ($opt_m) { $send_mail = $opt_m; chomp ($send_mail) }
+my $testcase = 'regress';
+my $loc_orb = '10.104.1.3';
+my $rem_server = '10.104.2.2';
+my $tm=localtime; $tm = sprintf("%02d%02d%04d", $tm->mday,($tm->mon)+1, $tm->year+1900);
+my $orb_url = "http://$loc_orb:2050/RPC2";
+my $orb_rpc = Orbital::Rpc->new($orb_url);
+
+#Find the Orb tested version
+my $version= $orb_rpc->get_system_variable("Version");
+my @version = split(/\s+/, $version);
+my $i = 0; my $release ="";
+while ($version[$i]) {
+   if ($version[$i++] eq "Release") {
+      $release = "$version[$i++]"."-";
+      my $subversion = int ($version[++$i]);
+      $release = "$release"."$subversion";}
+}
+
+my $log_file = "$log_dir"."$testcase"."_$release"."_$tm".".log";
+   open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+
+#print the header result
+print LOG '*' x50, "\n";
+print LOG "REGRESSION TEST RESULT OF RELEASE:  $release \n";
+print LOG '*' x50, "\n\n";
+
+
+#Run Iperf Performance test with Compression OFF & SB On
+#sleep 10;
+#if (run_test('/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 0 -b 1',$log_file)) {
+#   print LOG  "\nNon_Compression-SB Performance Regression:  PASS \n"
+#   } else { print LOG  "\nNon_Compression-SB Performance Regression:  FAIL \n"}
+#   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression ON (highly_compressible) & SB On
+sleep 10;
+if (run_test('/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 1 -b 1',$log_file)) {
+   print LOG  "\nHigh_Compression-SB Performance Regression:  PASS \n"
+   } else { print LOG  "\nHigh_Compression-SB Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression ON (3X) & SB On
+sleep 10;
+if (run_test('/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 1 -f 1 -b 1',$log_file)) {
+   print LOG  "\n3X_Compression-SB Performance Regression:  PASS \n"
+   } else { print LOG  "\n3X_Compression-SB Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression OFF & HB
+#sleep 10;
+#if (run_test('/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 0',$log_file)) {
+#   print LOG  "\nNon_Compression-HB Performance Regression:  PASS \n"
+#   } else { print LOG  "\nNon_Compression-HB Performance Regression:  FAIL \n"}
+#   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression ON (highly_comp) & HB
+if (run_test("/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 1",$log_file)) {
+   print LOG  "\nHigh_Compression-HB Performance Regression:  PASS \n"
+   } else { print LOG  "\nHigh_Compression-HB Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression ON (3X) & HB
+if (run_test("/tools/tests/regression/paris_performance.pl -o 10.104.1.3 -r 10.104.2.3 -s 10.104.2.2 -c 1 -f 1 -m $send_mail",$log_file)) {
+   print LOG  "\nHigh_Compression-HB Performance Regression:  PASS \n"
+   } else { print LOG  "\nHigh_Compression-HB Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+#Run Apache test with Compression ON, OFF
+sleep 10;
+if (run_test("/tools/tests/regression/monaco_apache.pl -o 10.104.1.3 -s 10.104.2.2 -m $send_mail", $log_file)) {
+   print LOG  "\nApache Benchmark Regression:  PASS \n"
+   } else { print LOG  "\nApache Benchmark Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+sleep 10;
+#TEST COMPLETED ...EMAIL IF NEEDED
+print "\nTEST COMPLETED ....\nEMAIL  $log_file \n";
+ 
+if ($send_mail) {
+#   print `mail \-s \"Regression Test Results Of Release $release\" engineering\@orbitaldata.com \< $log_file`; 
+   print `mail \-s \"Regression Test Results Of Release $release\" dong\@orbitaldata.com \< $log_file`; 
+   }
+  
+
+
+
+
+#*******************************************************************************
+sub run_test
+{
+    my $test = shift ;
+    my $log_file = shift;
+    my $case_pass = 0;        #set result to FAIL by default;
+    my $case_fail = 0;
+    open (LOG,  ">> $log_file") || die "Could not open the file $log_file \n";
+    my $invoke = "/tools/bin/perl $test" ;
+    print "\nRunning:  $invoke \n" ;
+    print LOG "\nRunning: $invoke \n\n";
+    sleep 2 ;
+    my @result = `$invoke` ;
+    my $i = 0;
+    while ($result[$i]) {
+      if ($result[$i]=~ /not ok\s/) {
+         print LOG "Sub-Case $result[$i]";
+         $case_fail++;
+#         print "\nTotal cases fail: $case_fail \n";
+         } elsif ($result[$i] =~ /ok\s/) {
+             print LOG  "Sub-Case $result[$i]\n";
+             $case_pass++;      #test fails because at least one sub-case fails.
+#             print "\nTotal cases pass: $case_pass \n";
+             }
+      $i++;
+    }  #end of while, means all sub-cases pass!
+    
+    if ($case_fail) {                
+        print LOG "\nTest Failed!!! \n";
+        print LOG "Check the logs of individual testcase for more details.\n";
+        }   
+
+    print "Total sub-cases PASS: $case_pass \n";
+    print "Total sub-cases FAIL: $case_fail \n";
+    if ($case_fail) {return 0} else {return 1}
+}
+
+

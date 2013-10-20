@@ -1,0 +1,5 @@
+2005-04-07:18:45.44[  4]  0.0-61.8 sec  2.06 MBytes   280 Kbits/sec
+[  6]  0.0-62.6 sec  2.06 MBytes   180 Kbits/sec
+[  7]  0.0-62.7 sec  2.29 MBytes   306 Kbits/sec
+[  3]  0.0-62.8 sec  2.17 MBytes   290 Kbits/sec
+[  5]  0.0-62.9 sec  2.34 MBytes   312 Kbits/sec

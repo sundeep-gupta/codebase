@@ -1,0 +1,16 @@
+<NodeConfig delay="5">
+
+    <CPUStats delay="5" ProcsToWatchFor="WatchedProcesses.dat" TempFile="CPUJunk.tmp" OutputPath=""
+              OutputFile="CPUStats.txt" ExternalProgram="PSList.exe"/>
+
+    <MemoryStats delay="5" ProcsToWatchFor="WatchedProcesses.dat" TempFile="MemoryJunk.tmp" OutputPath=""
+                 OutputFile="MemoryStats.txt" ExternalProgram="PSList.exe -T"/>
+
+    <DiskIOStats delay="5" ProcsToWatchFor="WatchedProcesses.dat" TempFile="DiskIOJunk.tmp" OutputPath=""
+                 OutputFile="DiskIOStats.txt" ExternalProgram="DiskIO.exe"/>
+
+    <FileCounter delay="5" DirectoryToScan="C:\Cache" OutputPath="" OutputFile="FileCounter.txt"/>
+
+    <JarLauncher jarname1="FileCounter" jarname2="DiskIOStats" jarname3="MemoryStats" jarname4="CPUStats"/>
+
+</NodeConfig>

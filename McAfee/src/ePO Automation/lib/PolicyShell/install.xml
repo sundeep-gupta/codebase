@@ -1,0 +1,20 @@
+<project name='PolicyShellExtension' default='install' basedir='.'>
+	<property file="extension.properties"/>
+
+	<target name="install">
+		<!-- These scripts need to have uninstall equivalents -->
+		<!--<execute-sql file="sql/install/HipsTables.sql"/>-->
+
+		<install-webapp dir="webapp" context="/PolicyShell"/>
+	</target>
+	
+	<target name="uninstall">
+		<remove-webapp context="/PolicyShell"/>
+		
+		<!-- execute uninstall scripts in reverse order. -->
+		<!--<execute-sql file="sql/uninstall/DropTables.sql"/>-->
+	</target>
+	
+	<target name="upgrade"/>
+	<target name="downgrade"/>
+</project>

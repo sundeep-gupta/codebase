@@ -1,7 +1,0 @@
-<!ELEMENT initialization_variables (server_ip, user, test_case, share, password)>
-<!ELEMENT server_ip (#PCDATA)>
-<!ELEMENT user (#PCDATA)>
-<!ELEMENT test_case (#PCDATA)>
-<!ELEMENT share (#PCDATA)>
-<!ELEMENT password (#PCDATA)>
-

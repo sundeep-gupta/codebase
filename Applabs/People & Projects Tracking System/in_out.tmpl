@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+  <TITLE>Update Status:</TITLE>
+  <style type=text/css>
+  .pstyle {
+        font-family: verdana, arial, helvetica;
+        font-size: 10pt;
+        margin-left: 6px;
+        margin-right: 6px;
+  }
+  </style>
+  <script>
+    function textValue()
+    {
+        var stationInteger, stationString
+        stationInteger=document.UPDATEFORM.STATUS.selectedIndex
+        stationString=document.UPDATEFORM.STATUS.options[stationInteger].text
+        document.UPDATEFORM.MESSAGE.value = stationString   
+    }
+    function textValue2()
+    {
+        var stationInteger, stationString
+        stationInteger=document.UPDATEFORM.CODE.selectedIndex
+        stationString=document.UPDATEFORM.CODE.options[stationInteger].text
+        document.UPDATEFORM.Details.value = stationString
+    }
+
+
+  </script>
+
+
+</HEAD>
+
+<BODY BGCOLOR="#ffc842" TEXT="#29085a" onLoad="window.focus()">
+<H2><font face="Arial, Helvetica">Change Your Status:</font></H2>
+<FORM NAME="UPDATEFORM" ACTION="in_out.cgi" METHOD="POST">
+<TABLE BORDER="0">
+<TR>
+<TD CLASS="pstyle">
+  <B>Name: </B>
+</TD>
+<TD>
+  <TMPL_VAR NAME="LNAME">, <TMPL_VAR NAME="FNAME">
+  <INPUT TYPE="HIDDEN" NAME="USERID" VALUE="<TMPL_VAR NAME="ID">">
+  <INPUT TYPE="HIDDEN" NAME="username" VALUE="<TMPL_VAR NAME="USERNAME">">
+  <INPUT TYPE="HIDDEN" NAME="newentry" VALUE="<TMPL_VAR NAME="NEWENTRY">">
+</TD>
+</TR>
+<TR>
+<TD  CLASS="pstyle">
+   <B>Project: </B>
+</TD>
+<TD>
+     <SELECT NAME="STATUS" SIZE="1" onChange="textValue()" >
+          <TMPL_LOOP NAME="PROJECT">
+               <OPTION VALUE="<TMPL_VAR NAME=PID>" <TMPL_VAR NAME=SELECTED>><TMPL_VAR NAME=CLIENT> :: <TMPL_VAR NAME=PNAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+
+</TD>
+</TR>
+
+<TR>
+<TD  CLASS="pstyle">
+   <B>Work Code: </B>
+</TD>
+<TD>
+     <SELECT NAME="CODE" SIZE="1">
+          <TMPL_LOOP NAME="CODE">
+               <OPTION VALUE="<TMPL_VAR NAME=CODEID>" <TMPL_VAR NAME=SELECTED>><TMPL_VAR NAME=CODENAME></OPTION>
+          </TMPL_LOOP>
+     </SELECT>
+
+</TD>
+</TR>
+
+<TR>
+<TD  CLASS="pstyle">
+   <B>Board<br>Message: </B>
+</TD>
+<TD>
+   <TEXTAREA Name="MESSAGE" COLS=30 ROWS=4 WRAP="Virtual"><TMPL_VAR NAME="MESSAGE"></TEXTAREA>
+   <INPUT TYPE=HIDDEN Name="Details" Value="<TMPL_VAR NAME="MESSAGE">">
+</TD>
+</TR>
+<TR>
+<TD colspan=2 class="pstyle">
+   <INPUT TYPE="SUBMIT" NAME="updateNow" VALUE="Update Status">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value="Forget Update" onClick="window.close()">
+
+</TD>
+</TR>
+
+</TABLE>
+
+</FORM>
+
+</BODY>
+</HTML>

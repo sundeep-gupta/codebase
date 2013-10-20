@@ -1,0 +1,105 @@
+#!/tools/bin/perl  
+
+#use Test::More  tests => 2 ; # the number of tests
+#use lib '/tools/lib/perl5/site_perl/5.8.4';
+use FindBin;
+use lib $FindBin::Bin;
+use Carp;
+use strict;
+use Time::localtime;
+use XMLRPC::Lite;
+use orbital_rpc;
+
+my $testcase = 'dong_regress';
+my $loc_orb = '10.200.38.50';
+my $rem_orb = '10.200.38.60';
+my $server = '30.30.20.76';
+my $host = '20.20.20.36';
+my $log_dir = '/logs/TestResult';
+my $test_dir = '/tools/tests/dong';
+my $orb_url = "http://$loc_orb:2050/RPC2";
+my $orb_rpc = Orbital::Rpc->new($orb_url);
+my $tm=localtime; $tm = sprintf("%02d%02d%04d", $tm->mday,($tm->mon)+1, $tm->year+1900);
+
+#Find the Orb tested version
+my $version= $orb_rpc->get_system_variable("Version");
+my @version = split(/\s+/, $version);
+my $i = 0; my $release ="";
+while ($version[$i]) {
+   if ($version[$i++] eq "Release") {
+      $release = "$version[$i++]"."-";
+      my $subversion = int ($version[++$i]);
+      $release = "$release"."$subversion";}
+}
+
+my $log_file = "$log_dir\/"."$testcase"."_$tm"."_$release".".log";
+   open (LOG,  "> $log_file") || die "Could not open the file $log_file \n";
+
+#print the header result
+print LOG '*' x50, "\n";
+print LOG "REGRESSION TEST RESULT OF RELEASE:  $release \n";
+print LOG '*' x50, "\n\n";
+
+
+#Run Iperf Performance test with Compression OFF
+sleep 10;
+if (run_test("$test_dir\/dong_performance.pl -o $loc_orb -s $server -c 0",$log_file)) {
+   print LOG  "\nNon_Compression Performance Regression:  PASS \n"
+   } else { print LOG  "\nNon_Compression Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#Run Iperf Performance test with Compression ON
+if (run_test("$test_dir\/dong_performance.pl -o $loc_orb -s $server -c 1",$log_file)) {
+   print LOG  "\nCompression Performance Regression:  PASS \n"
+   } else { print LOG  "\nCompression Performance Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+#Run Apache test
+sleep 10;
+if (run_test("$test_dir\/dong_apache.pl -o $loc_orb -s $server", $log_file)) {
+   print LOG  "\nApache Benchmark Regression:  PASS \n"
+   } else { print LOG  "\nApache Benchmark Regression:  FAIL \n"}
+   print LOG '*' x80, "\n\n";
+
+sleep 10;
+print "\nTEST COMPLETED ....\nEMAIL  $log_file \n";
+print `mail \-s \"DONG - Regression Test Results Of Release $release\" dong\@orbitaldata.com \< $log_file`; 
+
+#*******************************************************************************
+sub run_test
+{
+    my $test = shift ;
+    my $log_file = shift;
+    my $case_pass = 0;        #set result to FAIL by default;
+    my $case_fail = 0;
+    open (LOG,  ">> $log_file") || die "Could not open the file $log_file \n";
+    my $invoke = "/tools/bin/perl $test" ;
+    print "\nRunning:  $invoke \n" ;
+    print LOG "\nRunning: $invoke \n\n";
+    sleep 2 ;
+    my @result = `$invoke` ;
+    my $i = 0;
+    while ($result[$i]) {
+      if ($result[$i]=~ /not ok\s/) {
+         print LOG "Sub-Case $result[$i]";
+         $case_fail++;
+#         print "\nTotal cases fail: $case_fail \n";
+         } elsif ($result[$i] =~ /ok\s/) {
+             print LOG  "Sub-Case $result[$i]\n";
+             $case_pass++;      #test fails because at least one sub-case fails.
+#             print "\nTotal cases pass: $case_pass \n";
+             }
+      $i++;
+    }  #end of while, means all sub-cases pass!
+    
+    if ($case_fail) {                
+        print LOG "\nTest Failed!!! \n";
+        print LOG "Check the logs of individual testcase for more details.\n";
+        }   
+
+    print "Total sub-cases PASS: $case_pass \n";
+    print "Total sub-cases FAIL: $case_fail \n";
+    if ($case_fail) {return 0} else {return 1}
+}
+
+

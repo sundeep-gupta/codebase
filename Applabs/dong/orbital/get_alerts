@@ -1,0 +1,51 @@
+#!/usr/bin/perl -w
+ 
+use FindBin;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_constants;
+use orbital_rpc;
+use Getopt::Std; 
+#
+# Initialization code
+#
+getopt("o, r");
+if ( !$opt_o || !$opt_r) {
+   print "Usage: $testcase -o <locOrb> -r <remOrb> \n";
+   exit 1;
+   }
+
+my $locOrb=$opt_o; chomp($locOrb)}
+my $locOrb_url = "http://$locOrb:2050/RPC2";
+my $locOrb_rpc = Orbital::Rpc->new("http://$locOrb:2050/RPC2");
+
+my $remOrb=$opt_r; chomp($remOrb)}
+my $remOrb_url = "http://$remOrb:2050/RPC2";
+my $remOrb_rpc = Orbital::Rpc->new("http://$remOrb:2050/RPC2");
+
+#
+# If there was an Alert, display it
+#
+my @Alert;
+my @NumAlerts=0;
+
+while true {	
+
+   #Check alerts of the locOrb
+   ($NumAlerts, @Alerts) = $locOrb_rpc->get_alerts();
+    print("Displaying Alert!\n");
+    print "There are: $NumAlerts Alerts \n";
+    print" @Alerts \n";
+    
+    @Alert;
+    @NumAlerts=0;
+
+   #Check alerts of the remOrb
+   ($NumAlerts, @Alerts) = $remOrb_rpc->get_alerts();
+    print("Displaying Alert!\n");
+    print "There are: $NumAlerts Alerts \n";
+    print" @Alerts \n";
+
+   Sleep 6000;	#check every 1 hr
+   
+   }

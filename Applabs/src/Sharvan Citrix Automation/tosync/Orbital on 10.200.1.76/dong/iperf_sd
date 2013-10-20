@@ -1,1 +1,0 @@
-sudo sh -c "ulimit -s 256 && ulimit -n 8192 && ulimit -a && iperf -s -D" 

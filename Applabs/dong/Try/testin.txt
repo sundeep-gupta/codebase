@@ -1,0 +1,16 @@
+------------------------------------------------------------
+Client connecting to 30.30.20.76, TCP port 5001
+TCP window size: 16.0 KByte (default)
+------------------------------------------------------------
+[  7] local 20.20.20.36 port 33369 connected with 30.30.20.76 port 5001
+[  3] local 20.20.20.36 port 33365 connected with 30.30.20.76 port 5001
+[  4] local 20.20.20.36 port 33366 connected with 30.30.20.76 port 5001
+[  5] local 20.20.20.36 port 33367 connected with 30.30.20.76 port 5001
+[  6] local 20.20.20.36 port 33368 connected with 30.30.20.76 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-61.8 sec  2.06 MBytes   280 Kbits/sec
+[  6]  0.0-62.6 sec  2.06 MBytes   180 Kbits/sec
+[  7]  0.0-62.7 sec  2.29 MBytes   306 Kbits/sec
+[  3]  0.0-62.8 sec  2.17 MBytes   290 Kbits/sec
+[  5]  0.0-62.9 sec  2.34 MBytes   312 Kbits/sec
+[SUM]  0.0-62.9 sec  91.6 Mbits  1.46 Mbits/sec

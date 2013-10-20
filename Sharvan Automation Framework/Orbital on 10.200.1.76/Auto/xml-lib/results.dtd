@@ -1,6 +1,0 @@
-<!ELEMENT test_results (test_case name+)>
-<!ELEMENT test_case name (test_procedure+)>
-<!ELEMENT test_procedure (checksum, filename)>
-<!ELEMENT checksum (#PCDATA)>
-<!ELEMENT filename (#PCDATA)>
-

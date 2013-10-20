@@ -1,0 +1,35 @@
+#!/usr/bin/perl -w
+use lib '/tools/lib/perl5/site_perl/5.8.4'; 
+use lib '/tools/tests/regression';
+use XMLRPC::Lite;
+use orbital_rpc;
+use Getopt::Std; 
+use Data::Dumper;
+#
+# Initialization code
+#
+my $testcase = get_memstat;
+my $log_file = "/tmp/log";
+
+getopt("o");
+if ( !$opt_o ) {
+   print "Usage: $testcase -o <Orb> \n";
+   exit 1;
+   }
+
+my $locOrb=$opt_o; chomp($locOrb);
+my $locOrb_url = "http://$locOrb:2050/RPC2";
+my $locOrb_rpc = Orbital::Rpc->new("http://$locOrb:2050/RPC2");
+
+#
+# If there was an Alert, display it
+#
+my $memstat = "";
+
+   #Check alerts of the locOrb
+#   print "Memstat of the Orb $locOrb is \n", $locOrb_rpc->get_parameter("System.VMUsage");  
+   print "Memstat of the Orb $locOrb is \n", $locOrb_rpc->get_system_variable("System.VMUsage");  
+   $memstat = $locOrb_rpc->get_system_variable("System.VMUsage");
+   print "\n\n";
+   print "Value of atmemstat is \n", Dumper($memstat);
+#   }

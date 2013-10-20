@@ -1,9 +1,0 @@
-#!/bin/sh
-if [ $# -ne 1 ]; then
-   echo "usage $0 <FTP Server> "
-   exit 1
-fi
-while true
-do 
-wget ftp://$1/* -O /dev/null
-done

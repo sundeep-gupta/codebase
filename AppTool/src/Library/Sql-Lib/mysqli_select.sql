@@ -1,1 +1,0 @@
-SELECT * FROM adodb_results WHERE Result = 'fail'

@@ -1,0 +1,23 @@
+#!/usr/bin/perl -w
+ 
+use FindBin;
+use XMLRPC::Lite;
+use Data::Dumper;
+use orbital_constants;
+use orbital_rpc;
+use Getopt::Std; 
+#
+# Initialization code
+#
+getopt("o");
+if ( !$opt_o){
+   print "Usage: $testcase  -o <OrbIP>  \n" ;
+   exit 1 ;
+  }
+
+$orb=$opt_o; chomp($orb);
+my $url = "http://$orb:2050/RPC2";
+my $Rpc = Orbital::Rpc->new("http://$orb:2050/RPC2");
+my $res=$Rpc->get_adapter_info();
+print Dumper($res);
+

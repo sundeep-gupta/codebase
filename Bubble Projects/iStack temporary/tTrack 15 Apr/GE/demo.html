@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Building a Modern Grid</title>
+	
+	<link rel="stylesheet" href="modern-grid.css">
+
+  <style type="text/css">
+    body { font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; }
+    
+    .example { margin-bottom: 30px; }
+    .example .row:first-child { border-top: 1px dashed #ddd;  }
+    .example .column, .example .columns { border-right: 1px dashed #ddd; border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px; }
+    .example .column:first-child, .example .columns:first-child { border-left: 1px dashed #ddd; }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Building a Modern Grid (Example)</h1>
+    </div>
+  </div>
+  
+  <div class="example">
+    <div class="row">
+      <div class="two columns">2</div>
+      <div class="ten columns">10</div>
+    </div>
+    <div class="row">
+      <div class="three columns">3</div>
+      <div class="nine columns">9</div>
+    </div>
+    <div class="row">
+      <div class="four columns">4</div>
+      <div class="eight columns">8</div>
+    </div>
+    <div class="row">
+      <div class="five columns">5</div>
+      <div class="seven columns">7</div>
+    </div>
+    <div class="row">
+      <div class="six columns">6</div>
+      <div class="six columns">6</div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="three columns"><img src="http://placehold.it/400x400" /></div>
+    <div class="nine columns">
+      <h2>This is a content block with nested rows.</h2>
+      <p>We'll embed another row right after this one, inside the nine column block.</p>
+      
+      <em>Ipsum courtesy of <a href="http://baconipsum.com/">Bacon Ipsum</a></em>
+      
+      <div class="row">
+        <div class="six columns">
+          Bacon ipsum dolor sit amet enim tenderloin sirloin irure pork chop, magna flank hamburger short ribs culpa venison t-bone tempor boudin. Bacon magna irure beef salami filet mignon, tenderloin tempor reprehenderit. Sunt voluptate prosciutto nostrud tongue. Ground round officia ham hock jowl, commodo pork anim sint. Sausage kielbasa pastrami eiusmod, ut venison drumstick beef ribs nulla nisi. Sausage in pariatur laborum ut enim. Magna nostrud jowl rump, pig cow fugiat ad filet mignon.
+        </div>
+        <div class="six columns">Flank corned beef aute beef pariatur nisi. Pig fatback quis turkey shoulder andouille. Sed officia ut, t-bone aliqua exercitation sausage adipisicing eu minim aliquip flank tongue. Reprehenderit exercitation sirloin excepteur. Do deserunt shoulder, andouille biltong tail velit et ad.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

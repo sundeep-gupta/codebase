@@ -18,10 +18,38 @@ our @ISA = qw(Exporter);
 sub new() {
     my $self = ();
     shift();
-
     $self->{RPC_SERVER_URL} = shift();;
     bless($self);
     return $self;
+}
+
+sub get {
+
+   my $self = shift;
+   my $class = shift;
+   my $param = shift;
+   my $response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
+              ->call('Get', {Class => $class, Attribute => $param })
+              ->result;
+#   if ( (element_exists(${$Response}{$param})) && ( exists(${$Response}{$param}{'Fault'}))
+
+#) {
+ #    return undef;
+#   }
+   return $response;
+}
+
+sub call {
+
+   my $self = shift;
+   my $method = shift;
+   my $args = shift;
+
+   my $response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
+              ->call($method, $args)
+              ->result;
+   return $response;
+
 }
 
 sub get_virtual_clients {
@@ -154,14 +182,52 @@ sub reboot_required {
     $self->set_system_variable("UnitRequiresReboot",1);
 }
 
-sub get_active_connections {
+sub get_active_connection_count {
 	my $self = shift;
-    my $response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
-    			   				->call('GetInstances',{Class=>'CONNECTION'})
-                                ->result;
-    return $response;
+    my $response = $self->get_connection('ACTIVE',{'Count' => 0, 'InstanceCount' => 0});
+    return  ($response and exists($response->{'Count'})) ? $response->{'Count'} : undef;
 }
 
+sub get_all_active_connections {
+	my $self = shift;
+    my $response = $self->get_connection('ACTIVE',{'Count' => 0});
+    return $response;
+}
+sub get_active_connection_details {
+	my $self = shift;
+    my $instance = shift;
+    my $response = $self->get_instance($instance);
+    return $response;
+}
+sub get_instance {
+	my $self = shift;
+    my $instance = shift;
+    my $response = $self->call('Get',{'Class'=>'CONNECTION','Instance' => [$instance]});
+}
+sub get_connection {
+	my $self 	 = shift;
+    my $type 	 = shift;
+    my $args 	 = shift;
+    $args->{'Class'} = ($type eq 'ACTIVE') ? 'CONNECTION' : 'NOORB_CONNECTION';
+    my $response = $self->call('GetInstances', $args);
+    return $response;
+}
+sub get_cifs_accelerated_connection_count {
+	my $self = shift;
+	my $response = $self->get_system_variable('CifsActiveCount');
+    return $response;
+}
+sub get_cifs_unacclerated_connection_count {
+	my $self = shift;
+	my $response = $self->get_system_variable('CifsPassthroughCount');
+    return $response;
+
+}
+sub get_cifs_accelerated_connections {
+	my $self = shift;
+    my $response = $self->call('GetInstances',{'Class'=>'CIFS'});
+    return $response;
+}
 #
 # Get the management adapters network info
 #
@@ -221,7 +287,8 @@ sub send_command() {
 sub get_system_variable {
    my $self = shift;
    my $param = shift;
- my $Response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
+
+   my $Response = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
                      ->call('Get', {Class => "SYSTEM", Attribute => $param})
                      ->result;
 
@@ -267,9 +334,7 @@ sub set_adapter_info( ) {
    my ($self, $AdapterNum, $LinkDuplex) = @_;
    my @Attributes = {LinkSpeedDuplex=>$LinkDuplex};
    my $InfoResponse = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
-              ->call('Get', {Class => "ADAPTER", Instance => $AdapterNum, Attribute =>
-
-\@Attributes})
+              ->call('Get', {Class => "ADAPTER", Instance => $AdapterNum, Attribute =>\@Attributes})
               ->result;
    return $InfoResponse;
 
@@ -281,17 +346,12 @@ sub element_exists {
    my $potential_hash = shift;
    return (ref($potential_hash) eq "HASH");
 }
-sub reset_perf_counters {
-	my $self = shift;
-	return $self->call('ResetPerfCounters');
-}
-sub call {
-	my ($self, $method, $parameters) = @_;
-    print $self->{RPC_SERVER_URL};
-   my $InfoResponse = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
-              ->call($method,$parameters)
-              ->result;
-   return $InfoResponse;
-
-}
+#sub call {
+#	my ($self, $method, $parameters);
+#   my $InfoResponse = XMLRPC::Lite->proxy($self->{RPC_SERVER_URL})
+#              ->call($method,$parameters)
+#              ->result;
+#   return $InfoResponse;
+#
+#}
 1;

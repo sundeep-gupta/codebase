@@ -1,0 +1,299 @@
+<html>
+	<head>
+		<style type="text/css">
+		/* style of the error message START */
+		#errorMsg {
+			display:none;
+		}
+		.validationError {
+			position:relative;
+			color:#ff0000;
+			text-decoration:none;
+			font-weight:700;
+		}
+		.validationError:hover, .validationError:focus, .validationError:active {
+			background-color:#F0F0F0;
+		}
+		.validationError span {
+			position:absolute;
+			border:2px solid #900000;
+			background-color:#e0e0e0;
+			color:#000000;
+			padding:0.25em 0.5em;
+			display:none;
+			z-index:2;
+		}
+		.validationError:hover span, .validationError:focus span, .validationError:active span {
+			top:-1.5em;
+			left:1.5em;
+			display:block;
+		}
+		/* style of the error message END */
+		/* style of the form START */
+		form {
+			margin:1em;
+			padding:0em;
+			width:20em;
+			background-color:#0000ff;
+		}
+		fieldset {
+			margin:1em auto;
+			padding:0em 1.5em 0.5em 1.5em;
+			border:2px solid #0000c0;
+			background-color:#f0f0f0;
+		}
+		legend {
+			color:#0000ff;
+			background-color:#f0f0f0;
+			border:3px solid #0000c0;
+			margin-top:0.25em;
+			padding:0.125em 0.25em;
+			font-weight:700;
+		}
+		label {
+			width:5em;
+			display:block;
+			float:left;
+		}
+		input, textarea {
+			width:11em;
+		}
+		.line {
+			padding-top:0.25em;
+		}
+		.line * {
+			vertical-align:top;
+		}
+		.radio, .checkbox {
+			width:1em;
+		}
+		.button {
+			text-align:center;
+		}
+		.button input {
+			width:4em;
+		}
+		/* style of the form END */
+		</style>
+		<script type="text/javascript">
+		/* these may be changed
+			skip:
+				the specified form elements are not checked for validity
+				form elements are specified as values of the array in the format FORM_NAME.FORM_ELEMENT_NAME
+			callBack:
+				calls a user-defined function for the specified form elements
+				form elements are specified as keys of the array in the format FORM_NAME.FORM_ELEMENT_NAME, the associated functions are the corresponding values
+				the user-defined function must return true on valid input and false if the input could not be validated
+			eMsg:
+				if this is set within a user-defined function and noEMsg == false, an error message with the value of eMsg is created instead of a standard error message
+				eMsg is set to '' after the user-defined function executed (if you want to use a user-defined error message you have to set eMsg on every call of the user-defined function)
+			noEMsg:
+				if this is set within a user-defined function to true, no error message is generated (the user-defined function may create a more appropriate error message)
+				noEMsg is set to false after the user-defind function executed
+			eIcon:
+				this is the icon which if hovered over displays the error message
+				must be a valid node
+		*/
+		var skip = [], callBack = [], eMsg = '', eIcon = document.createTextNode('\240E\240'), noEMsg = false;
+		
+		/* these may not be changed */
+		var errors = 0, lastForm = null, radioSkip = [], done = [], showWho = [];
+		function initValidate() {
+			var f, fNum;
+			for(fNum in document.forms) {
+				if(isNode(f = document.forms.item(fNum)) && !done.inArray(f)) {
+					done.push(f);
+					f.onsubmit = new Function('{return validate(document.forms.item("' + fNum + '")); };');
+				}
+			}
+		}
+		function validate(f) {
+			var eNum, e, send = true, o, i = 0;
+			cleanUp();
+			for(eNum in f.elements) {
+				if(isNode(e = f.elements.item(eNum)) && !done.inArray(e)) {
+					send = checkElement(f, e) && send;
+					done.push(e);
+				}
+				else {
+					if(isObject(o = f.elements.item(eNum)) && typeof o.length != 'undefined') {
+						for(; i < o.length; i++) {
+							if(isNode(o[i]) && !done.inArray(o[i])) {
+								send = checkElement(f, o[i]) && send;
+								done.push(o[i]);
+							}
+						}
+					}
+				}
+			}
+			lastForm = f;
+			return send;
+		}
+		function checkElement(f, e) {
+			var isOK = true, stdEMsg = ' Error: Invalid input / not filled in ', nodeName, nodes;
+			if(skip.inArray(f.name + '.' + e.name)) return true;
+			if((f.name + '.' + e.name) in callBack) {
+				if(!callBack[f.name + '.' + e.name](e)) {
+					if(!noEMsg) {
+						if(eMsg == '') eMsg = stdEMsg;
+						e.parentNode.insertBefore(createEElement(), e.nextSibling);
+					}
+					noEMsg = false;
+					return false;
+				}
+				return true;
+			}
+			else {
+				nodeName = e.tagName.toUpperCase();
+				if(nodeName == 'TEXTAREA') isOK = (e.value != '');
+				else if(nodeName == 'INPUT') {
+					if(['text', 'file', 'password'].inArray(e.type)) isOK = (e.value != '');
+					else if(e.type == 'radio') {
+						if(radioSkip.inArray(e.name)) return true;
+						radioSkip.push(e.name);
+						isOK = radioIsChecked(e.name);
+						nodes = document.getElementsByName(e.name);
+						e = nodes[nodes.length - 1]
+					}
+				}
+				if(!isOK) {
+					eMsg = stdEMsg;
+					e.parentNode.insertBefore(createEElement(), e.nextSibling);
+					return false;
+				}
+				return true;
+			}
+		}
+		function isObject(object) {
+			return (object != null && typeof object == 'object');
+		}
+		function isNode(element) {
+			return (isObject(element) && typeof element.tagName != 'undefined');
+		}
+		function radioIsChecked(name) {
+			var radios = document.getElementsByName(name), i = 0;
+			for(i = 0; i < radios.length; i++) {
+				if(radios[i].checked) return true;
+			}
+			return false;
+		}
+		function createEElement() {
+			var eNode = document.getElementById('errorMsg').cloneNode(true), eMsgNode = eNode.getElementsByTagName('span')[0];
+			if(typeof document.all == 'undefined' || typeof window.opera != 'undefined') {
+				eNode.onmouseout = null;
+				eNode.onmouseover = null;
+				eNode.onblur = null;
+				eNode.onfocus = null;
+			}
+			eNode.id += errors++;
+			eNode.insertBefore(eIcon.cloneNode(true), eMsgNode);
+			eMsgNode.appendChild(document.createTextNode(eMsg));
+			eMsg = '';
+			return eNode;
+		}
+		// the reason why the next two functions exist, can be described with 2 words: Internet Explorer
+		function hideErrorMsg(eNode, who) {
+			showWho[eNode.id] -= who;
+			if(showWho[eNode.id] == 0) {
+				var eMsgNode = eNode.getElementsByTagName('span')[0];
+				eMsgNode.style.display = 'none';
+			}
+		}
+		function showErrorMsg(eNode, who) {
+			if(typeof showWho[eNode.id] == 'undefined') showWho[eNode.id] = 0;
+			var eMsgNode = eNode.getElementsByTagName('span')[0];
+			eMsgNode.style.display = 'block';
+			showWho[eNode.id] |= who;
+		}
+		function cleanUp() {
+			var i = 0, e;
+			for(; i < errors; i++) {
+				e = document.getElementById('errorMsg' + i);
+				e.parentNode.removeChild(e);
+			}
+			errors = 0;
+			radioSkip = [];
+			done = [];
+			showWho = [];
+		}
+		Array.prototype.inArray = function(val) {
+			for(var x in this) {
+				if(typeof(this[x]) == 'function') continue;
+				if(this[x] == val) return true;
+			}
+			return false;
+		}
+		window.onload = initValidate;
+		
+		/* adjust the script to your needs */
+		
+		// let the user-defined function abc handle the validation of field "a" of form "aForm" and field "c" of form "anotherForm"
+		callBack['aForm.a'] = abc;
+		callBack['anotherForm.c'] = abc;
+		// don't check field "b" of form "aForm" and field "a" of form "anotherForm"
+		skip = ['aForm.b', 'anotherForm.a'];
+		// user-defined function; the form element, which should be checked, is passed to it
+		function abc(e) {
+			// if the user typed a 9 into the field, the input is valid
+			if(e.value == 9) return true;
+			// we disable the standard error message for this field
+			noEMsg = true;
+			// ..and make a customized one
+			eMsg = ' Type "9" into the field ';
+			// .. and insert it right after the field (before the next sibling)
+			e.parentNode.insertBefore(createEElement(), e.nextSibling);
+			// it didn't pass the validation check
+			return false;
+		}
+		</script>
+	</head>
+	<body>
+		<a href="javascript:void(0);" id="errorMsg" class="validationError" onMouseOut="hideErrorMsg(this, 1);" onBlur="hideErrorMsg(this, 2);" onMouseOver="showErrorMsg(this, 1);" onFocus="showErrorMsg(this, 2);"><span></span></a>
+		<form name="aForm">
+			<fieldset>
+				<legend>Form 1</legend>
+				<div class="line">
+					<label for="a"> Input 1: </label>
+					<input type="text" name="a" id="a">
+				</div>
+				<div class="line">
+					<label for="b"> Input 2: </label>
+					<input type="password" name="b" id="b">
+				</div>
+				<div class="line">
+					<label for="c"> Input 3: </label>
+					<textarea name="c" id="c"></textarea>
+				</div>
+				<div class="line">
+					<label for="d"> Input 4: </label>
+					<input type="text" name="d" id="d">
+				</div>
+				<div class="line">
+					<label for="z"> Input 5: </label>
+					<input type="radio" name="z" value="1" id="z" class="radio">
+					<input type="radio" name="z" value="2" class="radio">
+					<input type="radio" name="z" value="3" class="radio">
+				</div>
+				<div class="button"><input type="submit" value="Go!"></div>
+			</fieldset>
+		</form>
+		<form name="anotherForm">
+			<fieldset>
+				<legend>Form 2</legend>
+				<div class="line">
+					<label for="a2"> Input 1: </label>
+					<input type="text" name="a" id="a2">
+				</div>
+				<div class="line">
+					<label for="b2"> Input 2: </label>
+					<input type="password" name="b" id="b2">
+				</div>
+				<div class="line">
+					<label for="c2"> Input 3: </label>
+					<textarea name="c" id="c2"></textarea>
+				</div>
+				<div class="button"><input type="submit" value="Go!"></div>
+			</fieldset>
+		</form>
+	</body>
+</html>

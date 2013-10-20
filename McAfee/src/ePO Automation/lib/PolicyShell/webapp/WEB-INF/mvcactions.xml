@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<mvc-action-config version="1.0">
+	<action-set bean="policyshell.actions.Shell">
+		<action name="Display.do" execute="display"/>
+		<action name="Refresh.do" execute="refresh"/>
+		<action name="Apply.do" execute="apply"/>
+	</action-set>
+</mvc-action-config>

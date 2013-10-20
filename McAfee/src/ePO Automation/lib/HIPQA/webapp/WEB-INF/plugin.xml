@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- Plugin -->
+    <bean id="hipqa.resource" class="com.mcafee.orion.core.spring.SpringResource">
+        <constructor-arg index="0" value="ResourceBundle"/>
+    </bean>
+
+    <bean id="hipqa.context" class="java.lang.String">
+        <constructor-arg index="0" value="/HIPQA" />
+    </bean>
+
+    <bean id="hipqa.plugin" class="com.mcafee.orion.core.plugin.DefaultPlugin">
+        <property name="name" value="HIPQAeX"/>
+        <property name="resource" ref="hipqa.resource"/>
+        <property name="displayKey" value="extension.name" />
+        <property name="requires">
+            <list>
+                <value>core</value>
+                <value>console</value>
+                <value>EPOCore</value>
+                <value>PolicyMgmt</value>
+                <value>ComputerMgmt</value>
+            </list>
+        </property>
+     </bean>
+
+</beans>

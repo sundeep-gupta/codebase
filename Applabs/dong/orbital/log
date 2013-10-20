@@ -1,0 +1,380 @@
+Connecting to: http://10.200.38.63:2050/RPC2
+Test started.
+$VAR1 = {
+          'SC.Definitions' => {
+                              'Default' => '0',
+                              'TypeName' => 'XML',
+                              'XML' => [
+                                       {
+                                         'ClassName' => 'POP3',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '0',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '110',
+                                                                                                       'Right' => '111',
+                                                                                                       'Left' => '110',
+                                                                                                       'Begin' => '110'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1011'
+                                       },
+                                       {
+                                         'ClassName' => 'SSH',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '1',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '22',
+                                                                                                       'Right' => '23',
+                                                                                                       'Left' => '22',
+                                                                                                       'Begin' => '22'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1010'
+                                       },
+                                       {
+                                         'ClassName' => 'SMTP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '2',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '110',
+                                                                                                       'Right' => '111',
+                                                                                                       'Left' => '110',
+                                                                                                       'Begin' => '110'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1009'
+                                       },
+                                       {
+                                         'ClassName' => 'LDAP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '3',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '389',
+                                                                                                       'Right' => '390',
+                                                                                                       'Left' => '389',
+                                                                                                       'Begin' => '389'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1008'
+                                       },
+                                       {
+                                         'ClassName' => 'Terminal Service',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '4',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '3389',
+                                                                                                       'Right' => '3390',
+                                                                                                       'Left' => '3389',
+                                                                                                       'Begin' => '3389'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1007'
+                                       },
+                                       {
+                                         'ClassName' => 'CIFS',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '5',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '445',
+                                                                                                       'Right' => '446',
+                                                                                                       'Left' => '445',
+                                                                                                       'Begin' => '445'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1006'
+                                       },
+                                       {
+                                         'ClassName' => 'NFS',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '6',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '111',
+                                                                                                       'Right' => '112',
+                                                                                                       'Left' => '111',
+                                                                                                       'Begin' => '111'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1005'
+                                       },
+                                       {
+                                         'ClassName' => 'HTTPS',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '7',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '443',
+                                                                                                       'Right' => '444',
+                                                                                                       'Left' => '443',
+                                                                                                       'Begin' => '443'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1004'
+                                       },
+                                       {
+                                         'ClassName' => 'SMTP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '8',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '888',
+                                                                                                       'Right' => '889',
+                                                                                                       'Left' => '888',
+                                                                                                       'Begin' => '888'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1003'
+                                       },
+                                       {
+                                         'ClassName' => 'FTP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '9',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '21',
+                                                                                                       'Right' => '22',
+                                                                                                       'Left' => '20',
+                                                                                                       'Begin' => '20'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1002'
+                                       },
+                                       {
+                                         'ClassName' => 'HTTP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '10',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'PortRange' => {
+                                                                                                       'End' => '80',
+                                                                                                       'Right' => '81',
+                                                                                                       'Left' => '80',
+                                                                                                       'Begin' => '80'
+                                                                                                     }
+                                                                                      }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1001'
+                                       },
+                                       {
+                                         'ClassName' => 'host-165',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'Index' => '11',
+                                         'SRC_DEST_IP_PORT_ARRAY' => [
+                                                                     {
+                                                                       'Destination' => {
+                                                                                        'IPAddressMask' => {
+                                                                                                           'Display' => '30.30.30.165',
+                                                                                                           'Mask' => {
+                                                                                                                     'IntegerAddress' => '-1',
+                                                                                                                     'Dotted' => '255.255.255.255',
+                                                                                                                     'Byte' => [
+                                                                                                                               '255',
+                                                                                                                               '255',
+                                                                                                                               '255',
+                                                                                                                               '255'
+                                                                                                                             ]
+                                                                                                                   },
+                                                                                                           'MaskSpecified' => '0',
+                                                                                                           'Address' => {
+                                                                                                                        'IntegerAddress' => '-1524752866',
+                                                                                                                        'Dotted' => '30.30.30.165',
+                                                                                                                        'Byte' => [
+                                                                                                                                  '30',
+                                                                                                                                  '30',
+                                                                                                                                  '30',
+                                                                                                                                  '165'
+                                                                                                                                ]
+                                                                                                                      },
+                                                                                                           'Printable' => '[Address:[Byte:{30,30,30,165},Dotted:30.30.30.165,IntegerAddress:-1524752866],Mask:[Byte:{255,255,255,255},Dotted:255.255.255.255,IntegerAddress:-1]]'
+                                                                                                         }
+                                                                                      }
+                                                                     },
+                                                                     {
+                                                                       'Source' => {
+                                                                                   'IPAddressMask' => {
+                                                                                                      'Display' => '30.30.30.165',
+                                                                                                      'Mask' => {
+                                                                                                                'IntegerAddress' => '-1',
+                                                                                                                'Dotted' => '255.255.255.255',
+                                                                                                                'Byte' => [
+                                                                                                                          '255',
+                                                                                                                          '255',
+                                                                                                                          '255',
+                                                                                                                          '255'
+                                                                                                                        ]
+                                                                                                              },
+                                                                                                      'MaskSpecified' => '0',
+                                                                                                      'Address' => {
+                                                                                                                   'IntegerAddress' => '-1524752866',
+                                                                                                                   'Dotted' => '30.30.30.165',
+                                                                                                                   'Byte' => [
+                                                                                                                             '30',
+                                                                                                                             '30',
+                                                                                                                             '30',
+                                                                                                                             '165'
+                                                                                                                           ]
+                                                                                                                 },
+                                                                                                      'Printable' => '[Address:[Byte:{30,30,30,165},Dotted:30.30.30.165,IntegerAddress:-1524752866],Mask:[Byte:{255,255,255,255},Dotted:255.255.255.255,IntegerAddress:-1]]'
+                                                                                                    }
+                                                                                 }
+                                                                     }
+                                                                   ],
+                                         'ClassID' => '1012'
+                                       },
+                                       {
+                                         'ClassName' => 'UnclassifiedTCP',
+                                         'Policy' => {
+                                                     'Compression' => '1',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '1'
+                                                   },
+                                         'ClassID' => '1'
+                                       },
+                                       {
+                                         'ClassName' => 'Other Passthrough Traffic',
+                                         'Policy' => {
+                                                     'Compression' => '0',
+                                                     'CIFS' => '0',
+                                                     'FlowControl' => '0'
+                                                   },
+                                         'ClassID' => '2'
+                                       }
+                                     ],
+                              'Text' => '<value><array><data><value><struct><member><name>ClassID</name><value><i4>1011</i4></value></member><member><name>ClassName</name><value>POP3</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>110</i4></value></member><member><name>End</name><value><i4>110</i4></value></member><member><name>Left</name><value><i4>110</i4></value></member><member><name>Right</name><value><i4>111</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1010</i4></value></member><member><name>ClassName</name><value>SSH</value></member><member><name>Index</name><value><i4>1</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>22</i4></value></member><member><name>End</name><value><i4>22</i4></value></member><member><name>Left</name><value><i4>22</i4></value></member><member><name>Right</name><value><i4>23</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1009</i4></value></member><member><name>ClassName</name><value>SMTP</value></member><member><name>Index</name><value><i4>2</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>110</i4></value></member><member><name>End</name><value><i4>110</i4></value></member><member><name>Left</name><value><i4>110</i4></value></member><member><name>Right</name><value><i4>111</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1008</i4></value></member><member><name>ClassName</name><value>LDAP</value></member><member><name>Index</name><value><i4>3</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>389</i4></value></member><member><name>End</name><value><i4>389</i4></value></member><member><name>Left</name><value><i4>389</i4></value></member><member><name>Right</name><value><i4>390</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1007</i4></value></member><member><name>ClassName</name><value>Terminal Service</value></member><member><name>Index</name><value><i4>4</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>3389</i4></value></member><member><name>End</name><value><i4>3389</i4></value></member><member><name>Left</name><value><i4>3389</i4></value></member><member><name>Right</name><value><i4>3390</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1006</i4></value></member><member><name>ClassName</name><value>CIFS</value></member><member><name>Index</name><value><i4>5</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>445</i4></value></member><member><name>End</name><value><i4>445</i4></value></member><member><name>Left</name><value><i4>445</i4></value></member><member><name>Right</name><value><i4>446</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1005</i4></value></member><member><name>ClassName</name><value>NFS</value></member><member><name>Index</name><value><i4>6</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>111</i4></value></member><member><name>End</name><value><i4>111</i4></value></member><member><name>Left</name><value><i4>111</i4></value></member><member><name>Right</name><value><i4>112</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1004</i4></value></member><member><name>ClassName</name><value>HTTPS</value></member><member><name>Index</name><value><i4>7</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>443</i4></value></member><member><name>End</name><value><i4>443</i4></value></member><member><name>Left</name><value><i4>443</i4></value></member><member><name>Right</name><value><i4>444</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1003</i4></value></member><member><name>ClassName</name><value>SMTP</value></member><member><name>Index</name><value><i4>8</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>888</i4></value></member><member><name>End</name><value><i4>888</i4></value></member><member><name>Left</name><value><i4>888</i4></value></member><member><name>Right</name><value><i4>889</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1002</i4></value></member><member><name>ClassName</name><value>FTP</value></member><member><name>Index</name><value><i4>9</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>20</i4></value></member><member><name>End</name><value><i4>21</i4></value></member><member><name>Left</name><value><i4>20</i4></value></member><member><name>Right</name><value><i4>22</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1001</i4></value></member><member><name>ClassName</name><value>HTTP</value></member><member><name>Index</name><value><i4>10</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>80</i4></value></member><member><name>End</name><value><i4>80</i4></value></member><member><name>Left</name><value><i4>80</i4></value></member><member><name>Right</name><value><i4>81</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1012</i4></value></member><member><name>ClassName</name><value>host-165</value></member><member><name>Index</name><value><i4>11</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>IPAddressMask</name><value><struct><member><name>Address</name><value><struct><member><name>Byte</name><value><array><data><value><i4>30</i4></value><value><i4>30</i4></value><value><i4>30</i4></value><value><i4>165</i4></value></data></array></value></member><member><name>Dotted</name><value>30.30.30.165</value></member><member><name>IntegerAddress</name><value><i4>-1524752866</i4></value></member></struct></value></member><member><name>Display</name><value>30.30.30.165</value></member><member><name>Mask</name><value><struct><member><name>Byte</name><value><array><data><value><i4>255</i4></value><value><i4>255</i4></value><value><i4>255</i4></value><value><i4>255</i4></value></data></array></value></member><member><name>Dotted</name><value>255.255.255.255</value></member><member><name>IntegerAddress</name><value><i4>-1</i4></value></member></struct></value></member><member><name>MaskSpecified</name><value><boolean>0</boolean></value></member><member><name>Printable</name><value>[Address:[Byte:{30,30,30,165},Dotted:30.30.30.165,IntegerAddress:-1524752866],Mask:[Byte:{255,255,255,255},Dotted:255.255.255.255,IntegerAddress:-1]]</value></member></struct></value></member></struct></value></member></struct></value><value><struct><member><name>Source</name><value><struct><member><name>IPAddressMask</name><value><struct><member><name>Address</name><value><struct><member><name>Byte</name><value><array><data><value><i4>30</i4></value><value><i4>30</i4></value><value><i4>30</i4></value><value><i4>165</i4></value></data></array></value></member><member><name>Dotted</name><value>30.30.30.165</value></member><member><name>IntegerAddress</name><value><i4>-1524752866</i4></value></member></struct></value></member><member><name>Display</name><value>30.30.30.165</value></member><member><name>Mask</name><value><struct><member><name>Byte</name><value><array><data><value><i4>255</i4></value><value><i4>255</i4></value><value><i4>255</i4></value><value><i4>255</i4></value></data></array></value></member><member><name>Dotted</name><value>255.255.255.255</value></member><member><name>IntegerAddress</name><value><i4>-1</i4></value></member></struct></value></member><member><name>MaskSpecified</name><value><boolean>0</boolean></value></member><member><name>Printable</name><value>[Address:[Byte:{30,30,30,165},Dotted:30.30.30.165,IntegerAddress:-1524752866],Mask:[Byte:{255,255,255,255},Dotted:255.255.255.255,IntegerAddress:-1]]</value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1</i4></value></member><member><name>ClassName</name><value>UnclassifiedTCP</value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>2</i4></value></member><member><name>ClassName</name><value>Other Passthrough Traffic</value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>0</boolean></value></member><member><name>FlowControl</name><value><boolean>0</boolean></value></member></struct></value></member></struct></value></data></array></value>',
+                              'DefaultText' => '<value><array><data><value><struct><member><name>ClassID</name><value><i4>1001</i4></value></member><member><name>ClassName</name><value>HTTP</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>80</i4></value></member><member><name>End</name><value><i4>80</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1002</i4></value></member><member><name>ClassName</name><value>FTP Data</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>20</i4></value></member><member><name>End</name><value><i4>20</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1003</i4></value></member><member><name>ClassName</name><value>SMTP</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>888</i4></value></member><member><name>End</name><value><i4>888</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1004</i4></value></member><member><name>ClassName</name><value>HTTPS</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>0</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>443</i4></value></member><member><name>End</name><value><i4>443</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1005</i4></value></member><member><name>ClassName</name><value>NFS</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>111</i4></value></member><member><name>End</name><value><i4>111</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1006</i4></value></member><member><name>ClassName</name><value>CIFS</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>445</i4></value></member><member><name>End</name><value><i4>445</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1007</i4></value></member><member><name>ClassName</name><value>Terminal Services</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>3389</i4></value></member><member><name>End</name><value><i4>3389</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1008</i4></value></member><member><name>ClassName</name><value>LDAP</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>389</i4></value></member><member><name>End</name><value><i4>389</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1009</i4></value></member><member><name>ClassName</name><value>SMTP</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>110</i4></value></member><member><name>End</name><value><i4>110</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1010</i4></value></member><member><name>ClassName</name><value>SSH</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>0</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>22</i4></value></member><member><name>End</name><value><i4>22</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1011</i4></value></member><member><name>ClassName</name><value>POP3</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>110</i4></value></member><member><name>End</name><value><i4>110</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1012</i4></value></member><member><name>ClassName</name><value>Kerbos</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>1494</i4></value></member><member><name>End</name><value><i4>1494</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1013</i4></value></member><member><name>ClassName</name><value>ICA</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>88</i4></value></member><member><name>End</name><value><i4>88</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1014</i4></value></member><member><name>ClassName</name><value>BitTorrent</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>6881</i4></value></member><member><name>End</name><value><i4>6991</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1015</i4></value></member><member><name>ClassName</name><value>DNS</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>53</i4></value></member><member><name>End</name><value><i4>53</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1016</i4></value></member><member><name>ClassName</name><value>Lotus Notes</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>1</boolean></value></member><member><name>Compression</name><value><boolean>1</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>1352</i4></value></member><member><name>End</name><value><i4>1352</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1017</i4></value></member><member><name>ClassName</name><value>FTP Control</value></member><member><name>Index</name><value><i4>0</i4></value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>0</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member><member><name>SRC_DEST_IP_PORT_ARRAY</name><value><array><data><value><struct><member><name>Destination</name><value><struct><member><name>PortRange</name><value><struct><member><name>Begin</name><value><i4>21</i4></value></member><member><name>End</name><value><i4>21</i4></value></member></struct></value></member></struct></value></member></struct></value></data></array></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>1</i4></value></member><member><name>ClassName</name><value>UnclassifiedTCP</value></member><member><name>Policy</name><value><struct><member><name>CIFS</name><value><boolean>0</boolean></value></member><member><name>Compression</name><value><boolean>0</boolean></value></member><member><name>FlowControl</name><value><boolean>1</boolean></value></member></struct></value></member></struct></value><value><struct><member><name>ClassID</name><value><i4>2</i4></value></member><member><name>ClassName</name><value>Other Passthrough Traffic</value></member><member><name>Policy</name><value><struct><member><name>FlowControl</name><value><boolean>0</boolean></value></member></struct></value></member></struct></value></data></array></value>'
+                            }
+        };
+THIS IS THE RECORD: 
+$VAR1 = {
+          'ClassName' => 'UnclassifiedTCP',
+          'Policy' => {
+                      'Compression' => '1',
+                      'CIFS' => '0',
+                      'FlowControl' => '1'
+                    },
+          'ClassID' => '1'
+        };
+THIS IS THE VALUE OF COMP:1
+P2  $VAR1 = 'XML';
+$VAR2 = \{
+            'ClassName' => 'UnclassifiedTCP',
+            'Policy' => {
+                          'CIFT' => '0',
+                          'Compression' => '0',
+                          'FlowControl' => '1'
+                        },
+            'ClassID' => '1'
+          };
+
+P3  $VAR1 = 'SC.Definitions';
+$VAR2 = {
+          'XML' => \{
+                       'ClassName' => 'UnclassifiedTCP',
+                       'Policy' => {
+                                     'CIFT' => '0',
+                                     'Compression' => '0',
+                                     'FlowControl' => '1'
+                                   },
+                       'ClassID' => '1'
+                     }
+        };
+
+$VAR1 = {
+          'Fault' => 'Bad Request Data Type, not an array or a structure'
+        };

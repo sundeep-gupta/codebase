@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo Content-type: text/plain
+echo 
+echo Server name is "$SERVER_NAME"
+echo Server is listening on port "$SERVER_PORT"
+echo Request method was "$REQUEST_METHOD"
+echo Query string is "$QUERY_STRING"
+echo Client IP address is "$REMOTE_ADDR"
+echo Content type is "$CONTENT_TYPE"
+echo Content length is "$CONTENT_LENGTH"
+echo Client will accept the MIME types "$HTTP_ACCEPT"
+echo Client Browser is "$HTTP_USER_AGENT"
+echo
+#echo stdin follows:
+#read l
+#while [ -n "$l" ]; do
+#    echo $l
+#    read l
+#done
+#echo end of stdin
+echo 
+

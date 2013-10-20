@@ -1,0 +1,193 @@
+/* Crea2ive.com. A Bubble company */
+/*Developed by Razikh. 22/11/2008*/
+
+body {
+  text-align:center;
+  /*text-align: -moz-center; only for FF :)*/
+  font-family: Georgia, Paletino linotype, Serif;
+    margin:0;
+  /*  scrollbar-face-color: #fff538;
+    scrollbar-shadow-color: #333333;
+    scrollbar-highlight-color: #ffbe07;
+    scrollbar-3dlight-color: #ffcb0e;
+    scrollbar-darkshadow-color: #333333;
+    scrollbar-track-color: #726b3d;
+    scrollbar-arrow-color: #000000; */
+   background-image: url(../images/lgrey091.gif);
+ /* background-color: #BFBBAA;   */
+}
+
+#frame {
+  width:900px;
+  margin-top:0px;
+  text-align:left;
+
+}
+
+#topmenubar {
+  /*float: left;
+  width: 900px;
+  margin:0px;
+  background-image: url(../images/topmenubar.png);     */
+  width:900px;
+  height:20px;
+  background: url(../images/topmenubar.png);
+  float: left;
+}
+#topmenubarmenu{
+  float:left;
+  margin-left: 600px;
+}
+
+#titlebar{
+  width:900px;
+  height:70px;
+  background: url(../images/title900.png);
+  float: left;
+}
+#mainmenu{
+  width:900px;
+  height:23px;
+  background-image: url(../images/mainmenubar.png);
+  float: left;
+}
+
+
+#pictureslide{
+  width:900px;
+  float:left;
+  height:120px;
+  background-color: #CCCCCC;
+}
+
+
+#main {
+background-image: url(../images/whitblur.jpg);
+
+width: 900px;
+height:410px;
+float: left;
+
+}
+#dul {
+
+float: left;
+width: 70px;
+}
+
+#cdata {
+/* margin: 50px,0px,0px,50px; */
+margin-top: 50px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:50px;
+ float: left;
+ width: 600px;
+ height: 410px;
+overflow: auto;
+
+ font: 13px Bodani MT;
+  text-align: justify;
+}
+#rm {
+  /*margin:10px,0px,0px,10px; */
+  margin-top: 10px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:10px;
+  float:left;
+  width:70px;
+
+}
+
+#footer {
+
+   float: left;
+   width: 900px;
+  background-color: #565555;
+  color: silver;
+}
+
+
+
+
+h1 {
+
+  color: #761508;
+  font: 24px Book Antiqua;
+  font-weight: bold ;
+}
+
+h2 {
+  color: #11edfe;
+}
+
+
+h3 {
+  font: 15px Paletino Linotype;
+}
+
+p {
+
+font: 13px Bodani MT;
+}
+
+p.pline
+{
+
+font: 13px Paletino Linotype;
+  font-style: italic;
+}
+
+
+a:link,a:visited,a:active{
+	text-decoration:none;
+	border-bottom: gray 1px dotted;
+  color: #FFCC00;
+  font-style: italic;
+
+  font-weight: bold;
+
+}
+
+a:hover {
+  color: #330000;
+
+}
+
+b {
+ color: #71051a;
+ font: 15px Book Antiqua;
+  font-weight: bold;
+}
+
+p.footer{
+font: 11px Book Antiqua;
+  text-align: center;
+  font-weight: bold;
+}
+
+b.q {
+  color: red;
+  font: 15px Book Antiqua;
+  font-weight: bold;
+}
+
+p.plans{
+font: 13px Book Antiqua;
+ font-weight: bold;
+}
+
+.icon_mail{
+padding:6px 0px 3px 18px;
+background:url(../images/emailicon1.gif) no-repeat left;
+}
+
+p.topmenu  {
+ font: 16px Book Antiqua;
+ margin:0px;
+ color: #FFCC00;
+
+}
+
+

@@ -1,2 +1,0 @@
-lftp dbc:dbc@20.20.20.36 -e 'get 1GB-RANDOM -o /dev/null -v 1;bye' &
-#lftp dbc:dbc@20.20.20.36 -e 'get 1GB-RANDOM-79A -o /dev/null;bye' > /root/log2 &

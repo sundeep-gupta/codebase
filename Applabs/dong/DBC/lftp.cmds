@@ -1,0 +1,4 @@
+open dbc:dbc@20.20.20.36
+ls
+lcd
+ls

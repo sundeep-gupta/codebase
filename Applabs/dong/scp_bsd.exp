@@ -1,0 +1,14 @@
+#!/usr/bin/expect --
+set argc [llength $argv]
+puts "ARGC: $argc"
+if {$argc < 2} {
+ puts "RUN: ssh_bsd.exp <server ip> <directory> "
+} else {
+	spawn ssh [lindex $argv 0]
+	expect "word:"
+	send "ARS!jr\r"
+	expect "root]"
+        send "ls -rtl [lindex $argv 1] \r"
+	expect "root]"
+     
+}
