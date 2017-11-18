@@ -1,0 +1,571 @@
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time, input{display:inline;} 
+
+/* Global properties ======================================================== */
+html {width:100%;}
+
+body {font-family:bookman old style,garamond,Arial,Helvetica,sans-serif; color:#808080;min-width:960px;background:#fff}
+.ic {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
+.bg {width:100%; background:url(../images/bg-tail.gif) center top repeat;}
+
+.main {
+	width:800px; 	
+	padding:0;
+	margin:0 auto;
+	font-size:0.8125em;
+	line-height:1.932em;
+}
+
+#link
+{
+margin-left:450px;
+margin-bottom:-80px;
+color:#d43400;
+font-size:14px;
+}
+#link a
+{
+color:#d43400;
+font-size:12px;
+}
+
+a {color:#d43400; outline:none;}
+a:hover {text-decoration:none;}
+
+.col-1, .col-2 {float:left;}
+
+.wrapper {width:100%; overflow:hidden;}
+.extra-wrap {overflow:hidden;}
+ 
+
+.p0 {margin-bottom:0px;}
+.p1 {margin-bottom:8px;}
+.p2 {margin-bottom:15px;}
+.p3 {margin-bottom:1px;}
+.p4 {margin-bottom:40px;}
+.p5 {margin-bottom:53px;}
+
+.reg {text-transform:uppercase;}
+
+.fleft {float:left;}
+.fright {float:right;}
+
+.alignright {text-align:right;}
+.aligncenter {text-align:center; color:#d43400; }
+
+.it {font-style:italic;}
+
+.color-1 {color:#fff;}
+.color-2 {color:#000;}
+.color-3 {color:#d43400;}
+
+/*********************************boxes**********************************/
+.indent {padding:2px 0px 2px 5px; border: 0px solid Brown;}
+.indent-left {padding-left:19px;}
+.indent-left2 {padding-left:10px;}    
+.indent-right {padding-right:5px;}
+
+.indent-bot {margin-bottom:20px;}
+.indent-bot2 {margin-bottom:30px;}
+.indent-bot3 {margin-bottom:45px;}
+
+.prev-indent-bot {margin-bottom:10px;}
+.img-indent-bot {margin-bottom:25px;}
+.margin-bot {margin-bottom:35px;}
+
+.img-indent {float:left; margin:0px 20px 0px 0px;}	
+.img-indent2 {float:left; margin:0 25px 0px 0;}	
+.img-indent-r {float:right; margin:2px 2px 0px 2px; width:200px; height:150px; border: 0px solid green;}	
+
+.buttons a:hover {cursor:pointer;}
+
+.menu li a,
+.list-1 li a,
+.list-2 li a,
+.link,
+.button a,
+h1 a {text-decoration:none;}	
+
+/*********************************header*************************************/
+header {
+	width:100%;
+	position:relative; 
+	z-index:2;
+}
+
+h1 {
+	padding:2px 0 0 5px; 
+	position:relative;
+	float:left;
+}
+	h1 a {
+		display:block; 
+		width:206px;
+		height:91px;
+		text-indent:-9999em;
+    background:url(../images/logo.png) 0 0 no-repeat; width:170px; height:76px;                                                                       
+	}
+	
+/***** menu *****/
+.menu-row {
+	width:100%;
+	padding-bottom:2px;
+	background:url(../images/menu-row-tail.gif) center bottom repeat-x #fff;
+}
+.menu {
+	padding:22px 0 0 0; 
+	border-left:1px solid #e5e5e5;   
+}
+.menu > li {
+	float:left; 
+position:relative;
+	border-right:1px solid #e5e5e5;      
+}
+.menu > li > a {
+	display:block; 
+	width:120px;
+	font-size:14px; 
+	line-height:1.5em; 
+	padding:4px 0 2px; 
+	color:#272727; 
+ /*	text-transform:lowercase; */ 
+	text-align:center; 
+}
+.menu li.active,
+.menu li a.active,
+.menu > li > a:hover {color:#fff; background:#c32300;}
+
+/***** tabs *****/
+ul.tabs {
+	list-style: none;
+	width: 800px;
+	margin:0 auto;
+	overflow:hidden;
+}
+ul.tabs li {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	padding-left:12px;
+}
+ul.tabs li:first-child {padding:0;}
+ul.tabs li a {
+	text-decoration: none;
+	color: #fff;
+  background:url(../images/tabs-a.png) right top no-repeat; 
+	display: block;
+	width:90px;
+	height:37px;
+	text-align:center;
+	font-size:14px;
+	line-height:57px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+ul.tabs li.active a, ul.tabs li a:hover  {background-position:left top;}
+
+.tab_container {
+	width:100%;
+	height:230px;
+	overflow:hidden;
+	background:url(../images/tabs-content-tail.gif) center top repeat-x;  
+}    
+
+.tab_containersl {
+	width:100%;
+	height:100px;
+	overflow:hidden;
+	background:url(../images/tabs-content-tail.gif) center top repeat-x;  
+}  
+
+.tab_containermenu {
+	width:100%;
+	height:160px;
+	overflow:hidden;
+	background:url(../images/tabs-content-tail.gif) center top repeat-x;  
+}   
+         
+.tab_content {
+	width:100%;
+/*	background:url(../images/tabs-bg.jpg) center top no-repeat; */
+	padding:20px 0 0 0;    
+}
+.tab_content p {
+	font-size:8px;
+	line-height:14px;
+	text-transform:uppercase;
+	color:#fff;
+	text-align:left;
+}
+
+.tab_content h6 {
+	font-size:14px;
+	line-height:14px;
+	text-transform:uppercase;
+	color:#fff;
+	text-align:left;
+}
+
+.title3 {
+	display:block;
+	font-size:16px;
+	line-height:1.2em;
+	color:#f0f0f0;
+	text-align:left;
+
+	margin-bottom:-2px;
+}
+
+.title2 {
+	display:block;
+	font-size:16px;
+	line-height:1.2em;
+	color:#f0f0f0;
+	text-align:left;
+	letter-spacing:-2px;
+	margin-bottom:-2px;
+}
+
+.title {
+	display:block;
+	font-size:20px;
+	line-height:1.2em;
+	color:#f0f0f0;
+	text-align:left;
+	letter-spacing:-2px;
+	margin-bottom:-2px;
+}
+
+/*********************************content*************************************/
+#content {
+	width:100%; 
+	padding:37px 0 45px;
+	position:relative;
+	z-index:1;
+}
+
+.spacer-1 {
+	width:100%; 
+	background:url(../images/pic-1.gif) 217px 0 repeat-y;
+}
+
+h2 {
+	font-size:28px; 
+	line-height:2em; 
+	color:#272727;
+	font-weight:normal;
+	margin-top:-10px;
+	margin-bottom:8px;
+}
+h3 {
+	font-size:21px; 
+	line-height:2em; 
+	color:#272727;
+	font-weight:normal;
+	margin-bottom:6px;
+}
+h5 {color:#d43400; font-weight:normal; margin-bottom:3px;}
+h6 {color:#272727; margin-bottom:5px;}
+
+.border-bot {
+	width:100%; 
+	padding-bottom:20px; 
+	background:url(../images/pic-1.gif) 0 bottom repeat-x;
+}
+
+.box {
+	width:100%; 
+	background:url(../images/box-tail.gif) 0 0 repeat-x;
+}
+
+.button {
+	display:inline-block; 
+	padding-bottom:4px;
+	background:url(../images/button-shadow.png) center bottom no-repeat;
+	position:relative;
+}
+	.button a {
+		display:inline-block;
+		padding:5px 10px 5px 30px;
+		font-size:15px;
+		line-height:2em;
+		text-transform:uppercase;
+		color:#fff;
+		background:url(../images/button-tail.gif) 0 0 repeat-x #ad0100;
+		border-radius:20px;
+		cursor:pointer;
+	}
+	.button strong {
+		display:inline-block;
+		padding-right:39px;
+		background:url(../images/button-marker.png) right 5px no-repeat;
+	}
+.button a:hover {background:#ad0100;}
+
+.button-2 {
+	display:inline-block;
+	padding:5px 20px;
+	font-size:13px;
+	line-height:1.23em;
+	color:#fff;
+	background:#d43400;
+	text-decoration:none;
+}
+.button-2:hover {background:#222;}
+
+.button-3 {
+	display:inline-block;
+	padding:5px 10px;
+	font-size:10px;
+	line-height:1.23em;
+	color:#fff;
+	background:#a8a7a7;
+	text-decoration:none;
+}
+.button-3:hover {background:#222;}
+
+
+
+
+.btn-wrap {
+	padding-left:45px;
+}
+
+.list-1 li {
+	line-height:18px; 
+	padding:6px 0 6px 15px; 
+	background:url(../images/marker-1.gif) 0 12px no-repeat;
+}
+	.list-1 li a {
+		display:inline-block;
+		color:#808080;
+	}
+	.list-1 li a:hover {color:#d43400; text-decoration:underline;}
+
+.list-2 li {
+	font-size:14px; 
+	line-height:24px; 
+	padding:0px; 
+	background:url(../images/pic-1.gif) 0 bottom repeat-x;
+}
+	.list-2 li a {
+		display:block; 
+		color:#1799cf; 
+		padding-left:12px; 
+		background:url(../images/marker-1.gif) 0 10px no-repeat;
+	}
+	.list-2 li a:hover {color:#fff;}
+	.list-2 .last-item {background:none;}
+
+.link:hover {text-decoration:underline;} 
+
+.link-1 {
+	display:inline-block; 
+	font-size:14px; 
+	padding-right:8px; 
+	background:url(../images/marker-3.gif) right 8px no-repeat;
+}
+.link-1:hover {color:#fff;} 
+
+.text-1 {font-size:14px;} 
+.text-2 {font-size:14px; line-height:1.285em;}  
+
+dl dt {margin-bottom:5px;}
+dl span {float:left; width:88px;}
+
+/***** contact form *****/
+#contact-form {
+	display:block;
+	width:100%;
+}
+	#contact-form label {
+		display:block; 
+		height:40px; 
+		overflow:hidden;
+	}
+	#contact-form .border {
+		display:block;
+		border:1px solid #fff;
+		overflow:hidden;
+	}
+	#contact-form input {
+		float:left; 
+		width:497px; 
+		font-size:12px; 
+		line-height:1.25em;
+		color:#808080;
+		padding:9px 8px; 
+		margin:0; 
+		font-family:Arial, Helvetica, sans-serif; 
+		border:1px solid #e4e4e4; 
+		background:#fff;
+		outline:none;
+	}
+	#contact-form textarea {
+		float:left;
+		height:195px; 
+		width:497px; 
+		font-size:12px; 
+		line-height:1.25em;
+		color:#808080;
+		padding:9px 8px; 
+		margin:0; 
+		font-family:Arial, Helvetica, sans-serif; 
+		border:1px solid #e4e4e4;
+		background:#fff;
+		overflow:auto;
+		outline:none;
+	}
+.text-form {
+	float:left; 
+	display:block; 
+	font-size:13px;
+	line-height:32px;
+	width:103px; 
+	color:#808080;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.buttons {padding:8px 0 0 0; text-align:right;}
+.buttons a {margin-left:7px; padding:5px 35px;}		
+/****************************footer************************/
+footer {
+	width:100%; 
+	padding:25px 0 30px;
+	background:url(../images/footer-tail.gif) center top repeat-x;
+}
+
+footer span {display:block;}
+
+
+/* CSS for Restaurant Listing */
+*.left-marginal { position:relative; margin-left:200px; }
+*.marginal-heading { position:absolute; left:-200px; top:0; margin:0; }
+
+.restList                    { width: 600px; margin: 1px 1px 10px 1px; position: relative; cursor: pointer; border: 0px solid red; height: 86px}
+
+.restListHeader                  { padding: 0px 0 0px 1px; width: 600px; height: 20px; color: black; border: 0px solid blue; background: #b50f00;}
+
+.restTitle                 { padding: 0px 0 0px 4px; width: 230px; float: left; font: bold  15px times new roman, Sans-Serif; color: white; border: 0px solid red;  }
+.restIcons               { padding: 1px 3px 0px 4px; width: 340px; float: right; font: bold  15px times new roman, Sans-Serif; color: white; border: 0px solid red; text-align: right;}
+/*.restIcons                     { width: 58%; float: right; text-align: right; text-transform: uppercase; letter-spacing: 1px; padding: 0 2px 0px 0; border: 2px solid blue; text-align: left;}  */
+
+
+
+.listContent         { background:#f7f7f7 url(../images/pattern4.png) repeat top left; position: absolute; padding: 0px 0px 0px 0px; border: 0px solid black;}
+.listAddress         { padding: 0px 0px 0px 10px; width: 180px; float: left; font: bold 12px times new roman, Sans-Serif; border: 0px solid brown; text-align: left; }
+.listIcons          {  width: 140px; float: left; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 45px 5px 0 2px; border: 0px solid blue; }
+/*.listIconsTop       {  width: 140px; float: left; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 6px 5px 0 10px; border: 0px solid red; }
+.listIconsBottom    {  width: 140px; float: left; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 2px 5px 0 10px; border: 0px solid green; }*/
+.listIcons2         { width: 254px; float: right; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 12px 5px 0 4px; border: 0px solid blue; font: bold 8px times new roman, Sans-Serif;}
+.iconHight                       {position: relative; height: 15px; padding: 0px 0px 0px 3px;}
+.iconHight2                       {position: relative; height: 20px; padding: 0px 0px 0px 3px; border: 0px dotted gray;}
+.iconHight3                       {position: relative; height: 55px; padding: 0px 0px 0px 2px;}
+table {text-align: right; border: 0px solid brown; padding: 0px 0px 0px 40px; font: bold 12px times new roman;}
+
+a:link,a:visited,a:active{
+	text-decoration:none;
+	border-bottom: Orange 0px dotted;
+	color:white;
+  font-style: none;
+  font-weight: bold;
+}   
+
+.searchMulti      { width:500px; position: absolute; padding: 0px 0px 0px 0px; border: 0px solid red;}
+
+.searchLocation       { width: 190px; float: left; text-align: left; text-transform: uppercase; letter-spacing: 0px; padding: 0px 5px 0 0; border: 0px solid blue; font: bold 8px times new roman, Sans-Serif;}
+.searchType       { width: 190px; float: left; text-align: left; text-transform: uppercase; letter-spacing: 0px; padding: 0px 5px 0 0; border: 0px solid blue; font: bold 8px times new roman, Sans-Serif;}
+.searchButton     { width: 80px; float: left; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 0px 5px 0 0; border: 0px solid green; font: bold 8px times new roman, Sans-Serif;}
+.searchZip        { width: 300px; float: left; text-align: right; text-transform: uppercase; letter-spacing: 0px; padding: 60px 5px 0 0; border: 0px solid green; font: bold 8px times new roman, Sans-Serif;}
+
+
+/* Map Slider Properties */
+
+.container_19		{ margin-left: 10px; margin-right: auto; width: 300px; }
+.container_19 .grid_12 { width: 280px; }
+.all-rounded						{ border-radius:7px; -moz-border-radius:7px; -webkit-border-radius: 7px; background-clip: padding-box; }
+
+#featured-wrapper					{ padding:0px; margin-top:30px; margin-bottom:30px; height:157px; }
+#featured-wrapper .arrowleft		{ position:absolute; display:block; width:49px; height:55px; float:left; margin-left:-29px; margin-top:17px; z-index:100;
+									  background:url('../images/arrowleftbl.png') no-repeat; }
+#featured-wrapper .arrowright		{ position:relative; display:block; width:49px; height:55px; float:right; margin-right:-32px; margin-top:17px; z-index:100;
+									  background:url('../images/arrowrightbl.png') no-repeat; }
+#featured-thumb						{ position:absolute; border:0px solid #CCC; text-align:center; z-index:50;
+									  padding:4px 0px; overflow:hidden; }
+#featured-thumb-list 				{ width:900px; float:left; margin:0px; padding:0px; }
+#featured-thumb-list li a			{ text-decoration:none; }
+#featured-thumb-list li img			{ background-color:#F1F1F1; border:1px solid #CCC; margin-bottom:3px; }
+
+
+/****************** Style - Slider .css *********************************************/
+
+/* RESET */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent
+}
+
+body{
+  line-height:1
+}
+
+ol,ul{
+  list-style:none
+}
+
+blockquote,q{ quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}
+ins{text-decoration:none}del{text-decoration:line-through}
+
+table{border-collapse:collapse;border-spacing:0}
+*{ margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-size:inherit; }
+
+
+body { font-family:bookman old style,garamond,Arial,Helvetica,sans-serif; font-size:12px;
+}
+
+p { font-size:9px; 
+    font-family:verdana; 
+    font-weight:bold; 
+} 
+
+.f1 { font-family:bookman old style,garamond,Arial,Helvetica,sans-serif; font-size:18px; color:white;}  
+.f2 { font-family:bookman old style,garamond,Arial,Helvetica,sans-serif; font-size:10px; color:fff;}        
+
+
+/*CSS for Menu Listing*/
+.menuItemList { width: 430px; margin: 3px 3px 3px 3px; position: relative; border: 0px solid red; height: 19px; 	background:url(../images/pattern.png) center bottom repeat-x #fff;}
+.menuItemName { padding: 0px 0px 0px 3px; width: 210px; float: left; font: bold  15px times new roman, Sans-Serif; color:#666666; border: 0px solid green;  }
+.menuItemSpeciality {padding: 0px 5px 0px 0px; width: 150px; float: left; text-align:right; font: bold  15px times new roman, Sans-Serif; color: #3D3D3D; border:0px solid brown;  }
+.menuItemProperties {padding: 0px 2px 0px 2px; width: 77px; height:19px; float: left; text-align:right; font: bold  12px times new roman, Sans-Serif; color: #3D3D3D; border: 0px solid blue;  }
+.menuItemServes {display:inline-block; padding: 1px 8px 0px 2px; width: 55px; height:18px; float: left; font: bold  13px Garamond, Sans-Serif; color:#666666; border: 0px solid blue; }
+.menuItemCostSymbol {padding: 3px 0px 0px 6px; width: 20px; float: left; font: bold  15px times new roman, Sans-Serif; text-align:right; color: #3D3D3D; border: 0px solid blue;}
+.menuItemCost {padding: 0px 2px 0px 1px; width: 35px; float: left; font: bold  15px times new roman, Sans-Serif; color:#666666; border: 0px solid blue;}
+
+.serves {
+	display:inline-block;
+	padding:2px 18px;
+	font-size:8px;
+	line-height:1.23em;
+	color:#fff;
+	background:#d43400;
+	text-decoration:none;
+}
+
+
+/*Restaurant page - Title Icons CSS */
+.indent_RestSlider { width:180px; float:left; border:0px solid red; }
+.indent_RestContent  { width:300px; float:left; border:0px solid yellow; }
+.indent_RestTitle {  width:290px; float:left; border:0px solid red; height:30px; font: bold  25px Garamond, Sans-Serif; color:white; }
+.indent_RestIcons  { width:290px; float:left; border:0px solid blue; height: 48px; padding: 40px 1px 1px 1px;}
+
+
+
+
+           
